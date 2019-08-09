@@ -1,7 +1,15 @@
-.banner .nav li {
-  @extend .nav-item;
+.banner .brand {
+  @apply mr-2;
+}
+
+.banner .nav {
+  @apply list-none p-0 flex flex-wrap;
 }
 
 .banner .nav a {
-  @extend .nav-link;
+  @apply inline-block border-none ml-2;
+
+  &:hover {
+    color: darken(#525ddc, 30%);
+  }
 }
