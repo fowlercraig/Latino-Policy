@@ -4,7 +4,7 @@
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
 
-    <div class="carousel">
+    <div class="carousel" data-carousel-options='{"single":true}'>
       <div><div class="aspect-ratio aspect-ratio--16x9 bg-grey-lighter"></div></div>
       <div><div class="aspect-ratio aspect-ratio--16x9 bg-grey-darker"></div></div>
       <div><div class="aspect-ratio aspect-ratio--16x9 bg-grey-dark"></div></div>

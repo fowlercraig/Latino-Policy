@@ -3,7 +3,6 @@ import Swup from 'swup';
 import 'formstone/dist/js/core';
 import 'formstone/dist/js/mediaquery';
 import 'formstone/dist/js/touch';
-
 // Formstone Plugins
 import 'formstone/dist/js/swap';
 import 'formstone/dist/js/carousel';
