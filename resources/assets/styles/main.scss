@@ -1,14 +1,18 @@
 @tailwind base;
 @tailwind components;
-
+// Stuff
 @import "common/variables";
 @import "./autoload/**/*";
 @import "common/global";
+// Plugins
+@import "~formstone/dist/css/carousel";
+@import "~formstone/dist/css/themes/light";
 // Components
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
+@import "components/aspect";
 // Layouts
 @import "layouts/header";
 @import "layouts/sidebar";
@@ -16,5 +20,14 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
-
+// More Stuff
 @tailwind utilities;
+
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
