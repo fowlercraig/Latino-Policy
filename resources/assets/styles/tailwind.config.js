@@ -106,9 +106,7 @@ module.exports = {
       padding: '1rem',
     },
     fontFamily: {
-      sans: ['GT-Walsheim', 'sans-serif'],
-      body: ['Tisa', 'Georgia', 'serif'],
-      serif: ['Hermann', 'Georgia', 'serif'],
+      sans: ['Lynstone', 'sans-serif'],
     },
     extend: {
       inset: {
