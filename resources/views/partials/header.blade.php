@@ -1,5 +1,5 @@
-<header class="banner py-4 border-b border-grey-lighter">
-  <div class="container">
+<header class="banner py-4">
+  <div class="px-4">
     <div class="flex justify-between">
       <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
       <nav class="nav-primary">
