@@ -78,8 +78,10 @@
   "dependencies": {
     "bootstrap": "v4.3.1",
     "formstone": "^1.4.16-1",
+    "glob-all": "^3.1.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
+    "purgecss-webpack-plugin": "^1.5.0",
     "swup": "^2.0.5",
     "tailwindcss": "^1.1.0"
   }
