@@ -4,10 +4,10 @@
 @import "common/variables";
 @import "./autoload/**/*";
 @import "common/global";
-@import "common/fonts";
 // Plugins
-@import "~formstone/dist/css/carousel";
-@import "~formstone/dist/css/themes/light";
+@import url(~formstone/dist/css/carousel.css);
+@import url(~formstone/dist/css/themes/light.css);
+
 // Components
 @import "components/buttons";
 @import "components/comments";

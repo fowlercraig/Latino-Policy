@@ -8,8 +8,8 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-content/themes/howler",
-  "devUrl": "http://madebyhowler.dev.cc",
+  "publicPath": "/wp-content/themes/sage",
+  "devUrl": "http://athleticclub.dev.cc",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
