@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 let colors = {
 
   'primary': '#d74200',
@@ -100,13 +101,13 @@ let colors = {
 
 module.exports = {
   theme: {
-    colors: colors,
+    //colors: colors,
     container: {
       center: true,
       padding: '1rem',
     },
     fontFamily: {
-      sans: ['Lynstone', 'sans-serif'],
+      sans: ['Inter var', 'sans-serif'],
     },
     extend: {
       inset: {
@@ -145,7 +146,7 @@ module.exports = {
     textColor: ['responsive', 'hover', 'focus','group-hover'],
     opacity: ['responsive', 'hover', 'focus','group-hover'],
   },
-  corePlugins: {
-    //container: false
-  }
+  plugins: [
+    require('@tailwindcss/ui'),
+  ]
 }

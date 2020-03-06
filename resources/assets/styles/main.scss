@@ -3,24 +3,24 @@
 // Stuff
 @import "common/variables";
 @import "./autoload/**/*";
-@import "common/global";
+//@import "common/global";
 // Plugins
 @import url(~formstone/dist/css/carousel.css);
 @import url(~formstone/dist/css/themes/light.css);
 
 // Components
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
-@import "components/wp-classes";
-@import "components/aspect";
-// Layouts
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
+// @import "components/buttons";
+// @import "components/comments";
+// @import "components/forms";
+// @import "components/wp-classes";
+// @import "components/aspect";
+// // Layouts
+// @import "layouts/header";
+// @import "layouts/sidebar";
+// @import "layouts/footer";
+// @import "layouts/pages";
+// @import "layouts/posts";
+// @import "layouts/tinymce";
 // More Stuff
 @tailwind utilities;
 
