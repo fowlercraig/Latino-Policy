@@ -1,5 +1,5 @@
-<div class="border-t border-gray-100 pt-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+<div class="border-t border-gray-100 pt-20 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 relative z-10">
     <div>
       <h2 class="text-2xl text-blue-800 font-bold">News & Updates</h2> 
       <a class="text-base font-medium text-gray-500 border-b pb-1">View all {!! App::title() !!} News</a> 
@@ -27,5 +27,8 @@
         wp_reset_postdata();
       @endphp 
     </div>
+  </div>
+  <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
+    <img class="opacity-50" src="@asset('images/Pattern.png')" srcset="@asset('images/Pattern.png') 1x, @asset('images/Pattern@2x.png') 2x, @asset('images/Pattern@3x.png') 3x">
   </div>
 </div>

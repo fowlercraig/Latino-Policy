@@ -2,12 +2,22 @@
 @php while( have_rows('page_content') ): the_row(); @endphp
 
 @if( get_row_layout() == 'image_text' )
-@include('partials.builder.image_text')
+  @if (is_front_page())
+    @include('partials.home.image_text')
+  @else
+    @include('partials.builder.image_text')
+  @endif
 @endif
 
 @if( get_row_layout() == 'featured_reports' )
-@include('partials.builder.featured_reports')
+  @if (is_front_page())
+    @include('partials.home.featured_reports')
+  @else
+    @include('partials.builder.featured_reports')
+  @endif
 @endif
+
+
 
 @if( get_row_layout() == 'featured_news' )
 @include('partials.builder.featured_news')
