@@ -1,4 +1,8 @@
-import Swup from 'swup';
+//import Swup from 'swup';
+import 'alpinejs'
+import AOS from 'aos';
+const feather = require('feather-icons')
+
 // Formstone Core
 import 'formstone/dist/js/core';
 import 'formstone/dist/js/mediaquery';
@@ -17,10 +21,15 @@ export default {
   finalize() {
     function build() {
       $('.carousel').carousel();  
+      $('.sticky').sticky();  
+      feather.replace();
+      AOS.init({
+        duration: 1200,
+      });
     }
     build();
-    const swup = new Swup();
-    swup.on('contentReplaced', build);
+    //const swup = new Swup();
+    //swup.on('contentReplaced', build);
   },
 }; 
 

@@ -1,21 +1,24 @@
 @tailwind base;
 @tailwind components;
 // Stuff
+@import url("https://use.typekit.net/kti3btr.css");
 @import "common/variables";
 @import "./autoload/**/*";
 //@import "common/global";
 // Plugins
 @import url(~formstone/dist/css/carousel.css);
+@import url(~formstone/dist/css/sticky.css);
 @import url(~formstone/dist/css/themes/light.css);
+@import url(~aos/dist/aos.css);
 
 // Components
-// @import "components/buttons";
 // @import "components/comments";
-// @import "components/forms";
-// @import "components/wp-classes";
-// @import "components/aspect";
+@import "components/buttons";
+@import "components/forms";
+@import "components/wp-classes";
+@import "components/aspect";
 // // Layouts
-// @import "layouts/header";
+@import "layouts/header";
 // @import "layouts/sidebar";
 // @import "layouts/footer";
 // @import "layouts/pages";

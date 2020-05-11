@@ -8,13 +8,51 @@
 }
 
 .search-form .search-field {
-  @apply block appearance-none w-full py-2 px-2 leading-normal bg-white text-grey-darker bg-grey-lightest;
+  @apply block appearance-none w-full py-2 px-2 leading-normal bg-white;
 }
 
 .search-form .search-submit {
-  @apply inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 text-base leading-normal no-underline text-grey-lightest bg-grey cursor-pointer;
+  @apply inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 text-base leading-normal no-underline cursor-pointer;
 
   &:hover {
-    @apply bg-grey-dark;
+    //@apply ;
   }
+}
+
+.searchandfilter {
+  @apply text-gray-500;
+}
+
+.searchandfilter h4 {
+  @apply text-brand-darker font-medium font-brand border-b border-gray-200 pb-2 uppercase tracking-wider text-sm mt-0;
+}
+
+.searchandfilter > div > ul > li {
+  @apply mb-10;
+}
+
+.searchandfilter > div > ul > li > ul > li {
+  @apply block text-sm mb-1;
+}
+
+input[type="radio"] + label span,
+input[type="checkbox"] + label span {
+  transition: background 0.2s, transform 0.2s;
+}
+
+input[type="radio"] + label span:hover,
+input[type="checkbox"] + label span:hover,
+input[type="radio"] + label:hover span,
+input[type="checkbox"] + label:hover span {
+  transform: scale(1.2);
+}
+
+input[type="radio"]:checked + label span,
+input[type="checkbox"]:checked + label span {
+  @apply shadow;
+}
+
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  color: #1f9d55; //text-green-dark
 }
