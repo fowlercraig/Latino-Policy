@@ -4,8 +4,8 @@
     x-state:on="Item active" 
     x-state:off="Item inactive" 
     @click="flyoutMenuOpen = !flyoutMenuOpen" 
-    :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-500': !flyoutMenuOpen }" 
-    class="group inline-flex items-center space-x-2 <?php echo $classes; ?>">
+    :class="{ 'text-white': flyoutMenuOpen, 'text-white': !flyoutMenuOpen }" 
+    class="group inline-flex items-center space-x-1 <?php echo $classes; ?>">
     <span>Issues</span>
     <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-400" :class="{ 'text-gray-600': flyoutMenuOpen, 'text-gray-400': !flyoutMenuOpen }" x-bind-class="{ 'text-gray-600': flyoutMenuOpen, 'text-gray-400': !flyoutMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
       <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
