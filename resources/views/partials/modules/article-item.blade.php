@@ -1,9 +1,9 @@
 <div data-aos="fade">
-  <div class="overflow-hidden">
-    <div class="bg-gray-700 relative mb-4">
+  <div class="overflow-hidden flex flex-wrap items-center lg:block">
+    <div class="bg-gray-700 relative mb-4 w-1/3 lg:w-full">
       <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover w-full h-full' ) ); ?>
     </div>
-    <div class="space-y-2">
+    <div class="w-2/3 space-y-2 lg:w-full lg:space-y-2 pl-6 lg:pl-0">
       <h4 class="text-sm uppercase tracking-wide md:tracking-wider font-medium text-brand font-brand">
         Our Vision
       </h4>

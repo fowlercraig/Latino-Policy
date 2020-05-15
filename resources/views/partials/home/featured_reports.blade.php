@@ -1,5 +1,4 @@
-<div class="relative">
-  <div class="h-64 bg-brand-darker absolute w-full top-0 z-0"></div>
+<div class="relative -mt-64">
   <div class="pt-20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
       <div>

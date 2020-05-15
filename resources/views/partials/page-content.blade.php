@@ -39,7 +39,11 @@
 @endif
 
 @if( get_row_layout() == 'donate_module' )
-@include('partials.home.donate')
+  @if (is_page(586))
+    @include('partials.home.donate-voting')
+  @else
+    @include('partials.home.donate')
+  @endif
 @endif
 
 @php endwhile; @endphp

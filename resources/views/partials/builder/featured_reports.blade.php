@@ -1,4 +1,4 @@
-<div class="border-t border-gray-100 pt-20">
+<div class="pt-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
     <div>
       <h2 class="text-2xl text-blue-800 font-bold">Featured Reports</h2> 
@@ -8,7 +8,7 @@
         $post_slug = $post->post_name;
       ?>
     </div>
-    <div class="grid grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       @php 
         $args = array (
           'post_type'       => 'research',

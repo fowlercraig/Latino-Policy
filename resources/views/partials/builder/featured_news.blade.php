@@ -5,7 +5,7 @@
         <h2 class="text-2xl text-blue-800 font-bold">News & Updates</h2> 
         <a class="text-base font-medium text-gray-500 border-b pb-1">View all {!! App::title() !!} News</a> 
       </div>
-      <div class="grid grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         @php 
           $args = array (
             'posts_per_page' => 3,

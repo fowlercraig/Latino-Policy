@@ -1,5 +1,5 @@
 <div class="h-2"></div>
-<div class="bg-brand-darker relative">
+<div class="bg-brand-darker relative pb-64 overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 relative pt-20" data-aos="fade">
     @if(get_sub_field('align'))
     <div class="opacity-25 absolute top-0 right-0">
@@ -49,5 +49,11 @@
   </div>
   <div class="opacity-50 absolute top-0 left-0 pointer-events-none z-0">
     <img src="@asset('images/Pattern.png')" srcset="@asset('images/Pattern.png') 1x, @asset('images/Pattern@2x.png') 2x, @asset('images/Pattern@3x.png') 3x">
+  </div>
+  <div class="opacity-50 absolute bottom-0 right-0 pointer-events-none z-0">
+    <img src="@asset('images/Pattern_reversed.png')" srcset="@asset('images/Pattern_reversed.png') 1x, @asset('images/Pattern_reversed@2x.png') 2x, @asset('images/Pattern_reversed@3x.png') 3x">
+  </div>
+  <div class="opacity-50 absolute inset-0 pointer-events-none z-0">
+    <img src="@asset('images/Group-3.png')" srcset="@asset('images/Pattern_reversed.png') 1x, @asset('images/Group-3@2x.png') 2x, @asset('images/Group-3@3x.png') 3x">
   </div>
 </div>
