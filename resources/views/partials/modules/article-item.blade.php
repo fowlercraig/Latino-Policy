@@ -1,12 +1,15 @@
-<div class="w-1/3 px-md">
-  <div class="shadow-md rounded overflow-hidden">
-    <div class="aspect-ratio aspect-ratio--8x5 bg-gray-700"></div>
-    <div class="bg-white p-8 space-y-2">
-      <h4 class="text-sm uppercase tracking-wide md:tracking-wider font-semibold text-blue-500">
+<div data-aos="fade">
+  <div class="overflow-hidden">
+    <div class="bg-gray-700 relative mb-4">
+      <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover w-full h-full' ) ); ?>
+    </div>
+    <div class="space-y-2">
+      <h4 class="text-sm uppercase tracking-wide md:tracking-wider font-medium text-brand font-brand">
         Our Vision
       </h4>
       <h3 class="text-xl font-bold leading-6 text-gray-800 sm:text-xl sm:leading-7">
         <a 
+        class="text-primary-darker" 
         title="Opens @php the_title() @endphp in the same window" 
         href="@php the_permalink() @endphp">
           @php the_title() @endphp
@@ -19,7 +22,7 @@
       <a 
         title="Opens @php the_title() @endphp in the same window" 
         href="@php the_permalink() @endphp" 
-        class="py-1 border-t-2 border-blue-500 text-blue-800 inline-block uppercase text-sm tracking-wider font-semibold">Learn More</a>
+        class="py-2 border-t-2 border-brand inline-block font-brand uppercase text-sm tracking-wider font-semibold text-brand">Learn More</a>
     </div>
   </div>
 </div>

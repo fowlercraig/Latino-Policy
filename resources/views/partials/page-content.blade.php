@@ -18,7 +18,6 @@
 @endif
 
 
-
 @if( get_row_layout() == 'featured_news' )
 @include('partials.builder.featured_news')
 @endif
@@ -37,6 +36,10 @@
 
 @if( get_row_layout() == 'need_know' )
 @include('partials.builder.need_know')
+@endif
+
+@if( get_row_layout() == 'donate_module' )
+@include('partials.home.donate')
 @endif
 
 @php endwhile; @endphp

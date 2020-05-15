@@ -10,7 +10,7 @@
           $post_slug = $post->post_name;
         ?>
       </div>
-      <div class="grid grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         @php 
           $args = array (
             'post_type'       => 'research',

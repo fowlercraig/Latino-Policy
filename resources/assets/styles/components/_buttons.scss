@@ -1,5 +1,5 @@
 .btn,
-input[type="submit"] {
+.button {
   @apply bg-brand-dark rounded-full px-5 py-3 text-white leading-none font-brand uppercase tracking-wider text-sm font-medium;
 
   transition: 0.2s ease;

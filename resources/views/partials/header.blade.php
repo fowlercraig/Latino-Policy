@@ -4,11 +4,13 @@
 ?>
 
 
+@if (get_field('enable_alert_banner','options'))
 <div class="max-w-7xl mx-auto px-4 sm:px-6">
   <div class="@if (!is_front_page()): border-b border-gray-200 @endif py-2 text-sm text-gray-500">
-    <p class="leading-7">Lorem ipsum solor dot sit amet</p>
+    <p class="leading-7"><?php the_field('alert_banner_message','options'); ?></p>
   </div>
 </div>
+@endif
 
 @if (is_front_page())
 <div class="absolute w-full z-50">
