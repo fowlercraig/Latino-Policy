@@ -1,7 +1,22 @@
 <!-- Solutions menu -->
-<div x-description="'Solutions' flyout menu, show/hide based on flyout menu state." x-show="solutionsMenuOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-1" class="hidden md:block absolute inset-x-0 transform shadow-lg" style="display: none;">
+<div 
+  x-description="'Solutions' flyout menu, show/hide based on flyout menu state." 
+  x-show="solutionsMenuOpen" 
+  x-transition:enter="transition ease-out duration-200" 
+  x-transition:enter-start="opacity-0" 
+  x-transition:enter-end="opacity-100" 
+  x-transition:leave="transition ease-in duration-150" 
+  x-transition:leave-start="opacity-100" 
+  x-transition:leave-end="opacity-0" 
+  class="hidden md:block absolute inset-x-0 transform shadow-lg" 
+  style="display: none;"
+>
   <div class="bg-white">
-    <div class="max-w-7xl mx-auto grid row-gap-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
+    <div class="max-w-7xl mx-auto px-4 py-6 pb-0">
+      <a href="/work" class="text-4xl font-bold font-extrabold text-brand-darker border-b-4 border-brand-lighter">Work</a>
+    </div>
+    <div class="max-w-7xl mx-auto grid row-gap-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:pb-8 lg:grid-cols-4 lg:px-4 lg:pb-12 xl:pb-16">
+
 
       @php 
         $args = array (
@@ -21,15 +36,15 @@
       <a href="<?php the_permalink(); ?>" class="-m-3 p-3 flex flex-col justify-between space-y-6 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
         <div class="space-x-4 flex md:h-full lg:flex-col lg:space-x-0 lg:space-y-4">
           <div class="flex-shrink-0">
-            <div class="w-12 rounded relative">
+            <div class="w-32 lg:w-full rounded relative">
               @php $image = get_field('icon'); @endphp
               <img class="mx-auto" src="@php echo $image['url']; @endphp" alt="@php echo $image['alt']; @endphp">
-              <div class="aspect-ratio aspect-ratio--1x1 bg-brand-darker rounded"></div>
+              <div class="aspect-ratio aspect-ratio--1x1 lg:aspect-ratio--16x9 bg-brand-darker rounded"></div>
             </div>
           </div>
           <div class="space-y-2 md:flex-1 md:flex md:flex-col md:justify-between lg:space-y-4">
             <div class="space-y-1">
-              <p class="text-base leading-6 font-medium text-gray-900">
+              <p class="text-lg leading-6 font-bold text-gray-900">
                 @php the_title(); @endphp
               </p>
               <p class="text-sm leading-5 text-gray-500">

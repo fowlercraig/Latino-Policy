@@ -1,9 +1,24 @@
 <article @php post_class() @endphp>
-  <header>
-    <h1 class="entry-title">{!! get_the_title() !!}</h1>
+  <header class="py-8">
+
+
+    <ul>@php
+      $categories = get_the_category();
+      foreach ( $categories as $category ): @endphp
+      <li class="inline-block">
+        <span class="bg-primary text-white inline-block py-1 px-2 text-xs font-bold mb-3">
+          @php echo $category->name; @endphp
+        </span>
+      </li>
+      @php endforeach;
+    @endphp</ul>
+
+    <h1 class="entry-title text-5xl font-bold">
+      {!! get_the_title() !!}
+    </h1>
     @include('partials/entry-meta')
   </header>
-  <div class="entry-content">
+  <div class="entry-content w-2/3 text-grey-darker">
     @php the_content() @endphp
   </div>
   <footer>

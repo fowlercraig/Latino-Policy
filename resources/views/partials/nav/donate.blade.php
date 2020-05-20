@@ -47,9 +47,13 @@
         </div>
         <div class="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
           <div class="flow-root">
-            <a href="#" class="-m-3 p-3 flex items-center space-x-3 rounded-md text-base leading-6 text-gray-900 hover:bg-gray-100 transition ease-in-out duration-150">
+            <a 
+              href="https://giveto.ucla.edu/fund/latino-policy-politics-initiative/" 
+              target="_blank"
+              title="Opens UCLA Giving page in a new window"
+              class="-m-3 p-3 flex items-center space-x-3 rounded-md text-sm leading-6 text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150">
               <i class="opacity-50" data-feather="info"></i>
-              <span>Donation information</span>
+              <span>More info on Donations</span>
             </a>
           </div>
         </div>

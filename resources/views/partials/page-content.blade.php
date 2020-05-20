@@ -26,6 +26,10 @@
 @include('partials.builder.featured_experts')
 @endif
 
+@if( get_row_layout() == 'featured_experts_issues' )
+@include('partials.builder.featured_experts_issues')
+@endif
+
 @if( get_row_layout() == 'research_library' )
 @include('partials.builder.research_library')
 @endif
@@ -44,6 +48,14 @@
   @else
     @include('partials.home.donate')
   @endif
+@endif
+
+@if( get_row_layout() == 'page_blocks' )
+@include('partials.builder.page_blocks')
+@endif
+
+@if( get_row_layout() == 'report_list' )
+@include('partials.builder.report_list')
 @endif
 
 @php endwhile; @endphp

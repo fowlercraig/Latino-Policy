@@ -1,17 +1,8 @@
-<div class="pt-10 relative border-b border-gray-100 pb-10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-20">  
+<div class="pt-20 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 relative z-20">  
     @if (33 != $post->post_parent)
-    <div class="flex items-center pb-3 mb-10">
-      <div class="w-1/3 flex space-x-3 items-center">
-        <h2 class="text-5xl font-display uppercase text-brand-darker leading-11"><?php the_sub_field('role'); ?></h2> 
-        <a 
-          class="text-brand-darker hover:text-white bg-white hover:bg-brand-darker transition duration-200 ease shadow-lg rounded-full border-gray-100 h-10 px-4 flex items-center font-brand uppercase text-xs tracking-wider font-medium" 
-          href="/people/<?php the_sub_field('role'); ?>">View all <?php the_sub_field('role'); ?>s</a>
-      </div>
-      <div class="w-2/3 text-gray-700 leading-6">
-        @php the_sub_field('description'); @endphp
-      </div>
-    </div>
+    <h2 class="text-5xl font-display uppercase text-brand-darker leading-11"><?php the_sub_field('role'); ?></h2> 
+    <a class="text-brand-dark underline" href="/people/<?php the_sub_field('role'); ?>">View all <?php the_sub_field('role'); ?>s</a>
     @endif
     <div class="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-8">
       @php
@@ -62,5 +53,8 @@
         wp_reset_postdata();
       @endphp 
     </div>
+  </div>
+  <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
+    <img class="opacity-50" src="@asset('images/Pattern.png')" srcset="@asset('images/Pattern.png') 1x, @asset('images/Pattern@2x.png') 2x, @asset('images/Pattern@3x.png') 3x">
   </div>
 </div>

@@ -57,17 +57,14 @@ module.exports = {
         lg: '0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .03)',
         xl: '0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .02)',
       }
-    },
-    variants: {
-      opacity: ['responsive', 'hover', 'focus', 'group-hover'],
-      padding: ['responsive', 'hover', 'focus', 'group-hover'],
-      scale: ['responsive', 'hover', 'focus', 'group-hover'],
-      shadow: ['responsive', 'hover', 'focus', 'group-hover'],
-      translate: ['responsive', 'hover', 'focus', 'group-hover'],
-    },
-    corePlugins: {
-      scale: true,
     }
+  },
+  variants: {
+    padding: ['responsive', 'hover', 'focus', 'group-hover'],
+    opacity: ['responsive', 'hover', 'focus', 'group-hover'],
+    scale: ['responsive', 'hover', 'focus', 'group-hover'],
+    shadow: ['responsive', 'hover', 'focus', 'group-hover'],
+    translate: ['responsive', 'hover', 'focus', 'group-hover'],
   },
   plugins: [
     require('@tailwindcss/ui'),
