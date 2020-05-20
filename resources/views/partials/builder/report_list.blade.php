@@ -33,10 +33,14 @@
       <a
         title="Downloads <?php the_title(); ?> to your computer"
         href="#"
-        class="bg-gray-50 hover:bg-gray-100 transition duration-150 eases flex flex-wrap px-6 py-5 rounded justify-between items-center">
-        <div class="w-1/4 font-brand uppercase tracking-wider text-sm font-medium text-brand-dark"><?php the_field('publish_date'); ?></div>
-        <div class="w-1/2 text-gray-500"><?php the_title(); ?></div>
-        <div class="w-1/4 text-right font-brand uppercase tracking-wider text-sm font-medium text-brand-dark">Download</div>
+        class="bg-gray-50 hover:bg-gray-100 transition duration-150 eases flex px-6 py-5 rounded justify-between items-center space-x-6 relative overflow-hidden">
+        <div class="h-16 w-16 bg-white flex items-center justify-center sm:flex-shrink-0 rounded shadow">
+          <i class="text-brand-darker mx-auto block" data-feather="download"></i>
+        </div>
+        <div class="text-gray-500">
+          <div class="font-bold text-brand-darker -mt-1"><?php the_title(); ?></div>
+          <div class="text-sm"><?php the_excerpt(); ?></div>
+        </div>
       </a>
 
       <?php

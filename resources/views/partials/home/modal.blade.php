@@ -32,14 +32,7 @@
           <br class="hidden sm:inline" />
           <span class="text-gray-400">Sign up for our newsletter.</span>
         </h2>
-        <form class="mt-8 sm:flex">
-          <input aria-label="Email address" type="email" required class="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out" placeholder="Enter your email" />
-          <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-            <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-brand-darker hover:bg-brand-dark focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-              Subscribe
-            </button>
-          </div>
-        </form>
+        @include('partials.mailchimp')
       </div>
     </div>
     <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0 w-1/2">

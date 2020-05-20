@@ -33,17 +33,29 @@
       </div>
       <div class="w-full lg:w-2/5 w-4/12 px-lg space-y-4 lg:space-y-4">
         <h4 class="text-sm uppercase tracking-wide md:tracking-wider font-medium text-brand font-brand font-semibold -ml-2">
-          <span class="text-white p-2">Our Vision</span>
+          @if (get_sub_field('subtitle'))
+          <span class="bg-white p-2">@php the_sub_field('subtitle') @endphp</span>
+          @else
+          <span class="bg-white p-2">Our Vision</span>
+          @endif
         </h4>
         <h3 class="text-2xl font-bold leading-7 text-white sm:text-4xl sm:leading-11">
+          @if (get_sub_field('subtitle'))
+          @php the_sub_field('subtitle') @endphp
+          @else
           There is no American Agenda without the Latino Agenda
+          @endif
         </h3>
         <div class="text-white-75">
+          @if (get_sub_field('description'))
+          @php the_sub_field('description') @endphp
+          @else
           Maecenas augue metus, tempor quis nibh egestas, accumsan posuere magna. 
           Ut ornare, justo ut rhoncus ullamcorper, ipsum lorem fermentum nisi, vel 
           tincidunt leo turpis at mauris. Etiam non magna ante. 
+          @endif
         </div>
-        <a href="#" class="py-2 border-t-2 border-brand inline-block font-brand uppercase text-sm tracking-wider font-semibold text-white">Learn More</a>
+        <a href="/about" class="py-2 border-t-2 border-brand inline-block font-brand uppercase text-sm tracking-wider font-semibold text-white">Learn More</a>
       </div>
     </div>
   </div>
