@@ -6,6 +6,7 @@
     @include('partials.page-header-people')
     <div class="space-y-20 relative z-40">
       @include('partials.page-content')
+      @include('partials.page-back')
     </div>
   @endwhile
 @endsection
