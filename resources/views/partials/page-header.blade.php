@@ -7,8 +7,8 @@
   <?php endif; ?>
   <div class="bg-brand-darker relative z-20 @if(!has_post_thumbnail()) -mt-16 pt-16 @endif">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-      <div class="flex flex-wrap">
-        <div class="w-2/5 sm:py-xl relative">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-8">
+        <div class="sm:py-xl relative">
           @php 
             $parent = $post->post_parent; 
             $parent_url = get_the_permalink($parent);
@@ -26,8 +26,8 @@
             {!! App::title() !!}
           </h2>
         </div>
-        <div class="w-3/5">
-          <div class="text-white opacity-75 text-lg p-xl">
+        <div class="">
+          <div class="text-white opacity-75 text-lg py-xl">
             @php the_content() @endphp
           </div>
         </div>
