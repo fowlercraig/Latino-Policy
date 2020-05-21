@@ -2,7 +2,7 @@
   <a
     target="Opens <?php the_title(); ?> in the same window"
     href="<?php the_permalink(); ?>"
-    class="block aspect-ratio aspect-ratio--16x9 lg:aspect-ratio--8x5 bg-black relative" data-aos="fade">
+    class="block aspect-ratio aspect-ratio--16x9 lg:aspect-ratio--8x5 bg-black relative" data-aos="fade-up">
     <div class="p-10 text-white space-y-4 relative z-10">
       <div class="absolute top-0 text-white bg-brand py-sm px-md uppercase text-sm font-brand tracking-wider font-medium inline-block">
         <?php 

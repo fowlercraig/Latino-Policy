@@ -35,7 +35,7 @@
         <span class="bg-white p-2">@php the_sub_field('subtitle') @endphp</span>
       </h4>
       @endif
-      <h3 class="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">
+      <h3 class="text-3xl leading-9 font-bold tracking-tight text-brand-darker sm:text-4xl sm:leading-10">
         @if (get_sub_field('title'))
         @php the_sub_field('title') @endphp
         @else
