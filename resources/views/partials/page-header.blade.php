@@ -27,7 +27,7 @@
           </h2>
         </div>
         <div class="w-3/5">
-          <div class="text-white opacity-75 text-sm p-xl">
+          <div class="text-white opacity-75 text-lg p-xl">
             @php the_content() @endphp
           </div>
         </div>

@@ -1,14 +1,13 @@
 <div class="pt-10 relative border-b border-gray-100 pb-10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-20">  
     @if (33 != $post->post_parent)
-    <div class="flex items-center pb-3 mb-10">
-      <div class="w-1/3 flex space-x-3 items-center">
-        <h2 class="text-5xl font-display uppercase text-brand-darker leading-11"><?php the_sub_field('role'); ?></h2> 
-        <a 
-          class="text-brand-darker hover:text-white bg-white hover:bg-brand-darker transition duration-200 ease shadow-lg rounded-full border-gray-100 h-10 px-4 flex items-center font-brand uppercase text-xs tracking-wider font-medium" 
-          href="/people/<?php the_sub_field('role'); ?>">View all <?php the_sub_field('role'); ?>s</a>
+    <div class="pb-3 mb-6">
+      <div class="w-full flex space-x-3 items-center">
+        <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10  mb-2">
+          <?php the_sub_field('title'); ?>
+        </h2> 
       </div>
-      <div class="w-2/3 text-gray-700 leading-6">
+      <div class="w-1/2 text-gray-700 leading-6">
         @php the_sub_field('description'); @endphp
       </div>
     </div>
@@ -36,7 +35,7 @@
           }
           $args = array (
             'post_type'      => 'faculty',
-            'posts_per_page' => 8,
+            'posts_per_page' => -1,
             'order'          => 'ASC',
             'meta_key'        => 'role',
             'meta_value'      => $role

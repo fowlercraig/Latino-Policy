@@ -30,16 +30,14 @@
       @endif
     </div>
     <div class="w-full lg:w-2/5 w-4/12 px-lg space-y-4 lg:space-y-4">
+      @if (get_sub_field('subtitle'))
       <h4 class="text-sm uppercase tracking-wide md:tracking-wider font-medium text-brand font-brand font-semibold -ml-2">
-        @if (get_sub_field('subtitle'))
         <span class="bg-white p-2">@php the_sub_field('subtitle') @endphp</span>
-        @else
-        <span class="bg-white p-2">Our Vision</span>
-        @endif
       </h4>
-      <h3 class="text-2xl font-bold leading-7 text-brand-darker sm:text-4xl sm:leading-11">
-        @if (get_sub_field('subtitle'))
-        @php the_sub_field('subtitle') @endphp
+      @endif
+      <h3 class="text-3xl leading-9 font-bold tracking-tight text-brand-darker sm:text-4xl sm:leading-10">
+        @if (get_sub_field('title'))
+        @php the_sub_field('title') @endphp
         @else
         There is no American Agenda without the Latino Agenda
         @endif
@@ -53,6 +51,12 @@
         tincidunt leo turpis at mauris. Etiam non magna ante. 
         @endif
       </div>
+      @if (get_sub_field('page_link'))
+      <a
+        target="Opens <?php the_sub_field('page_link'); ?> in the same window" 
+        href="<?php the_sub_field('page_link'); ?>" 
+        class="py-2 border-t-2 border-b-0 text-brand-darker border-brand inline-block font-brand uppercase text-sm tracking-wider font-semibold">Learn More</a>
+      @endif
     </div>
   </div>
 </div>

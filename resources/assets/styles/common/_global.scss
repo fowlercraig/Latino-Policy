@@ -4,19 +4,33 @@ h3,
 h4,
 h5,
 h6 {
-  @apply mb-2 leading-tight;
+  @apply mb-2 leading-tight font-bold text-brand-darker;
+}
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
 }
 
 p {
-  @apply mb-3 leading-normal;
+  @apply mb-4;
 }
 
-a {
-  @apply text-primary no-underline border-b border-transparent;
+.entry-content ul,
+.entry-content ol {
+  @apply mb-4 list-disc pl-4;
+}
 
-  transition: 0.2s ease;
+.entry-content ul li,
+.entry-content ol li {
+  @apply relative;
+}
 
-  &:hover {
-    @apply border-primary;
-  }
+.entry-content a {
+  @apply text-brand underline;
 }

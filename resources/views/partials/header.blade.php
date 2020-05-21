@@ -8,14 +8,9 @@
 <div class="@if (!is_front_page()): bg-brand-lightest @endif relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="py-3 text-xs text-gray-500">
-      <p class="leading-tight text-center"><?php the_field('alert_banner_message','options'); ?></p>
+      <div class="leading-tight"><?php the_field('alert_banner_message','options'); ?></div>
     </div>
   </div>
-  @if (!is_front_page())
-  <div class="opacity-25 md:w-2/5 absolute top-0 left-0 pointer-events-none z-0">
-    <img class="opacity-50" src="@asset('images/Pattern.png')" srcset="@asset('images/Pattern.png') 1x, @asset('images/Pattern@2x.png') 2x, @asset('images/Pattern@3x.png') 3x">
-  </div>
-  @endif
 </div>
 @endif
 

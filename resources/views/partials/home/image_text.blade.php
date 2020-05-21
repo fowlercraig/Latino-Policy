@@ -39,9 +39,9 @@
           <span class="bg-white p-2">Our Vision</span>
           @endif
         </h4>
-        <h3 class="text-2xl font-bold leading-7 text-white sm:text-4xl sm:leading-11">
-          @if (get_sub_field('subtitle'))
-          @php the_sub_field('subtitle') @endphp
+        <h3 class="text-3xl leading-9 font-bold tracking-tight text-brand-darker sm:text-4xl sm:leading-10">
+          @if (get_sub_field('title'))
+          @php the_sub_field('title') @endphp
           @else
           There is no American Agenda without the Latino Agenda
           @endif

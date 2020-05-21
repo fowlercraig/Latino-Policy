@@ -4,7 +4,7 @@
 @import url("https://use.typekit.net/kti3btr.css");
 @import "common/variables";
 @import "./autoload/**/*";
-//@import "common/global";
+@import "common/global";
 // Plugins
 @import url(~formstone/dist/css/carousel.css);
 @import url(~formstone/dist/css/sticky.css);

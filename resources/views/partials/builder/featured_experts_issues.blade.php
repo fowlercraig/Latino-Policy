@@ -1,38 +1,28 @@
 <div class="pt-20 relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 relative z-20">  
     @if (33 != $post->post_parent)
-    <h2 class="text-5xl font-display uppercase text-brand-darker leading-11"><?php the_sub_field('role'); ?></h2> 
-    <a class="text-brand-dark underline" href="/people/<?php the_sub_field('role'); ?>">View all <?php the_sub_field('role'); ?>s</a>
+    <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10">
+      Our {!! App::title() !!} Experts
+    </h2> 
     @endif
     <div class="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-8">
       @php
-        if (33 == $post->post_parent) {
-          // If we're on the people page
-          global $post;
-          $post_slug = $post->post_name;
-          $args = array (
-            'post_type'       => 'faculty',
-            'posts_per_page'  => -1,
-            'orderby'         => 'title',
-            'order'           => 'ASC',
-            'meta_key'        => 'role',
-            'meta_value'      => $post_slug
-          );
-        } else {
-          // If we're not!
-          if(get_sub_field('role')) {
-            $role = get_sub_field('role');
-          } else {
-            $role = '';
-          }
-          $args = array (
-            'post_type'      => 'faculty',
-            'posts_per_page' => 8,
-            'order'          => 'ASC',
-            'meta_key'        => 'role',
-            'meta_value'      => $role
-          );
-        } 
+        $issue = get_sub_field('issue');
+        //var_dump($issue);
+        $args = array (
+          'post_type'       => 'faculty',
+          'posts_per_page'  => -1,
+          'order'           => 'ASC',
+          'meta_key'        => 'role',
+          'meta_value'      => 'expert',
+          'tax_query' => array(
+            array (
+              'taxonomy' => 'issue',
+              'field' => 'term_id',
+              'terms' => $issue
+            )
+          )
+        );
         $temp = $wp_query;
         $wp_query = null;
         $wp_query = new WP_Query();

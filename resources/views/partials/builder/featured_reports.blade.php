@@ -1,8 +1,8 @@
 <div class="pt-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
     <div>
-      <h2 class="text-2xl text-blue-800 font-bold">Featured Reports</h2> 
-      <a class="text-base font-medium text-gray-500 border-b pb-1">View all {!! App::title() !!} Reports</a> 
+      <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 mb-0">Featured Reports</h2> 
+      <a href="#" class="text-base text-brand font-bold border-b-2 border-brand pb-1">View all {!! App::title() !!} Reports</a> 
       <?php 
         global $post;
         $post_slug = $post->post_name;
