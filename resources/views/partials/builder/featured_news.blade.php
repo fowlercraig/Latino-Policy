@@ -1,4 +1,8 @@
+@if (is_front_page())
+<div class="relative pt-10 lg:pt-20">
+@else
 <div class="relative">
+@endif
   <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 relative z-10">
     <div>
       <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10  mb-0">News & Press</h2> 

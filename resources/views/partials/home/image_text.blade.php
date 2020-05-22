@@ -32,7 +32,7 @@
         @endif
       </div>
       <div class="w-full lg:w-2/5 w-4/12 px-lg space-y-4 lg:space-y-4">
-        <h4 class="text-sm uppercase tracking-wide md:tracking-wider font-medium text-brand font-brand font-semibold -ml-2">
+        <h4 class="text-sm uppercase tracking-wide md:tracking-wider font-medium text-brand font-brand font-semibold">
           @if (get_sub_field('subtitle'))
           <span class="bg-white p-2">@php the_sub_field('subtitle') @endphp</span>
           @else

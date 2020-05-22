@@ -65,6 +65,10 @@
 @include('partials.builder.report_list')
 @endif
 
+@if( get_row_layout() == 'featured_events' )
+@include('partials.builder.events')
+@endif
+
 @if( get_row_layout() == 'spacer' )
 @include('partials.builder.spacer')
 @endif

@@ -79,6 +79,7 @@
               </svg>
             </button>
           </div>
+          <a href="@php echo get_permalink(586); @endphp" class="<?php echo $classes; ?> hidden md:inline-block" title="Opens page in same window">@php echo get_the_title(586); @endphp</a>
           <div class="relative">
             <button 
               type="button" 
@@ -94,7 +95,6 @@
             </button>
           </div>
           <a href="@php echo get_permalink(38); @endphp" class="<?php echo $classes; ?>" title="Opens page in same window">@php echo get_the_title(38); @endphp</a>
-          <a href="@php echo get_permalink(586); @endphp" class="<?php echo $classes; ?> hidden md:inline-block" title="Opens page in same window">@php echo get_the_title(586); @endphp</a>
         </nav>
         <nav class="flex space-x-3">
           <a href="#" class="<?php echo $classes; ?>" title="Opens page in same window"><i data-feather="instagram"></i></a>
