@@ -2,6 +2,7 @@
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
   <body @php body_class() @endphp>
+    <a class="sr-only" href="#MainContent" title="Skips to content">Skip to Content</a>
     @php do_action('get_header') @endphp
     @include('partials.header')
     <div class="wrap" role="document">
