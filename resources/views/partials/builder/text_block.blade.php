@@ -1,10 +1,10 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 relative pt-20" data-aos="fade">
-  <div class="border-4 lg:border-8 border-brand-darker p-4 lg:p-10 bg-white">
-    <div class="flex flex-wrap md:items-center md:-mx-lg space-y-5 lg:space-y-0 relative z-10">
+  <div class="border-4 md:border-8 border-brand-darker p-4 md:p-10 bg-white">
+    <div class="space-y-5 lg:space-y-0 relative z-10">
       <div class="space-y-4 lg:space-y-4">
         @if (get_sub_field('subtitle'))
-        <h4 class="text-sm uppercase tracking-wide md:tracking-wider font-medium text-brand font-brand font-semibold -ml-2">
-          <span class="bg-white p-2">@php the_sub_field('subtitle') @endphp</span>
+        <h4 class="text-base text-brand font-bold border-b-2 border-b-2 border-brand pb-1 inline-block capitalize mb-0">
+          @php the_sub_field('subtitle') @endphp
         </h4>
         @endif
         <h3 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 mb-0">
