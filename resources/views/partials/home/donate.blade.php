@@ -4,7 +4,7 @@
       <div class="w-full md:w-3/5 mb-4 md:mb-0 space-y-4">
         <div class="h-1 bg-red-600 w-32"></div>
         <div class="h-1 bg-transparent w-32"></div>
-        <h2 class="text-3xl md:text-7xl font-display uppercase leading-16 text-brand-darker"><?php the_field('donate_headline','option'); ?></h2>
+        <h2 class="text-5xl md:text-7xl font-display uppercase leading-11 md:leading-16 text-brand-darker"><?php the_field('donate_headline','option'); ?></h2>
         <div class="text-gray-500 pr-lg">@php the_field('donate_description','option'); @endphp</div>
       </div>
       <div class="w-full md:w-2/5">
@@ -26,7 +26,7 @@
           </div>
           @php endforeach; @endphp
         </div>
-        <div class="text-right">
+        <div class="md:text-right">
           <a
             target="_blank"
             href="https://giving.ucla.edu/campaign/?amount=10&OrgType=S&OrgNum=800&fund=63922O" 
