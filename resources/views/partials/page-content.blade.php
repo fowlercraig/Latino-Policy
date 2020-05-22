@@ -33,6 +33,10 @@
 @include('partials.builder.featured_experts_issues')
 @endif
 
+@if( get_row_layout() == 'featured_experts_selected' )
+@include('partials.builder.featured_experts_selected')
+@endif
+
 @if( get_row_layout() == 'research_library' )
 @include('partials.builder.research_library')
 @endif
@@ -59,6 +63,10 @@
 
 @if( get_row_layout() == 'report_list' )
 @include('partials.builder.report_list')
+@endif
+
+@if( get_row_layout() == 'spacer' )
+@include('partials.builder.spacer')
 @endif
 
 @php endwhile; @endphp

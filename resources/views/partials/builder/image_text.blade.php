@@ -1,4 +1,4 @@
-<div class="max-w-7xl mx-auto px-4 sm:px-6 relative pt-20" data-aos="fade">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 relative pt-20">
   @if(get_sub_field('align'))
   <div class="opacity-25 absolute top-0 right-0">
     <img 
@@ -9,7 +9,7 @@
   </div>
   @endif
   <div class="flex flex-wrap md:items-center md:-mx-lg space-y-5 lg:space-y-0 relative z-10">
-    <div class="w-full lg:w-3/5 w-8/12 @if(!get_sub_field('align')): lg:order-last @endif px-lg">
+    <div class="w-full lg:w-3/5 w-8/12 @if(!get_sub_field('align')): lg:order-last @endif px-lg"  data-aos="fade-up">
       @php $image = get_sub_field('image') @endphp
       @php $size = 'large'; @endphp
       @if( $image )
@@ -55,7 +55,7 @@
       <a
         target="Opens <?php the_sub_field('page_link'); ?> in the same window" 
         href="<?php the_sub_field('page_link'); ?>" 
-        class="py-2 border-t-2 border-b-0 text-brand-darker border-brand inline-block font-brand uppercase text-sm tracking-wider font-semibold">Learn More</a>
+        class="inline-block text-base text-brand font-bold border-b-2 border-brand pb-1">Learn More</a>
       @endif
     </div>
   </div>
