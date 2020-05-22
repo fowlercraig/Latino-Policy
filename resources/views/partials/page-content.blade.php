@@ -1,6 +1,10 @@
 @if( have_rows('page_content') )
 @php while( have_rows('page_content') ): the_row(); @endphp
 
+@if( get_row_layout() == 'text_block' )
+@include('partials.builder.text_block')
+@endif
+
 @if( get_row_layout() == 'image_text' )
   @if (is_front_page())
     @include('partials.home.image_text')
@@ -16,7 +20,6 @@
     @include('partials.builder.featured_reports')
   @endif
 @endif
-
 
 @if( get_row_layout() == 'featured_news' )
 @include('partials.builder.featured_news')
