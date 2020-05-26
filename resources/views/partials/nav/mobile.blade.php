@@ -1,4 +1,4 @@
-<div x-description="Mobile menu, show/hide based on mobile menu state." x-show="mobileMenuOpen" x-transition:enter="duration-200 ease-out" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute z-20  top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+<div x-description="Mobile menu, show/hide based on mobile menu state." x-show="mobileMenuOpen" x-transition:enter="duration-200 ease-out" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute z-20  top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden">
     <div class="rounded-lg shadow-lg">
       <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
         <div class="pt-5 pb-6 px-5 space-y-6 sm:space-y-8 sm:pb-8">
@@ -68,37 +68,14 @@
         </div>
         <div class="py-6 px-5 space-y-6">
           <div class="grid grid-cols-2 gap-4">
-            <a href="#" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
-              Pricing
-            </a>
-            <a href="#" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
-              Docs
-            </a>
-            <a href="#" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
-              Company
-            </a>
-            <a href="#" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-600 transition ease-in-out duration-150">
-              Resources
-            </a>
-            <a href="#" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-600 transition ease-in-out duration-150">
-              Blog
-            </a>
-            <a href="#" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-600 transition ease-in-out duration-150">
-              Contact Sales
-            </a>
-          </div>
-          <div class="space-y-6">
-            <span class="w-full flex rounded-md shadow-sm">
-              <a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-brand-darker focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
-                Sign up
-              </a>
-            </span>
-            <p class="text-center text-base leading-6 font-medium text-gray-500">
-              Existing customer?
-              <a href="#" class="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150">
-                Sign in
-              </a>
-            </p>
+            <a class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150" href="@php echo get_permalink(14); @endphp"  title="Opens @php echo get_the_title(14); @endphp in the same window">@php echo get_the_title(14); @endphp</a>
+            <a class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150" href="@php echo get_permalink(14); @endphp"  title="Opens Archive in the same window">Archive</a>
+            <a class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150" href="@php echo get_permalink(16); @endphp"  title="Opens @php echo get_the_title(16); @endphp in the same window">@php echo get_the_title(16); @endphp</a>
+            <a class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150" href="@php echo get_permalink(38); @endphp"  title="Opens @php echo get_the_title(38); @endphp in the same window">@php echo get_the_title(38); @endphp</a>
+            <a class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150" href="/research" title="Opens @php echo get_the_title(282); @endphp in same window">@php echo get_the_title(282); @endphp</a>
+            <a class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150" href="/press" title="Opens @php echo get_the_title(284); @endphp in same window">@php echo get_the_title(284); @endphp</a>
+            <a class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150" href="@php echo get_permalink(14); @endphp"  title="Opens Careers in same window">Careers</a>
+            <a class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150" href="@php echo get_permalink(14); @endphp"  title="Opens Campus Resources in same window">Campus Resources</a>
           </div>
         </div>
       </div>
