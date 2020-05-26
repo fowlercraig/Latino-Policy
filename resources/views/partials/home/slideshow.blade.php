@@ -19,7 +19,10 @@
           <div class="text-lg text-white-75">
             <?php echo $item['description']; ?>
           </div>
-          <a href="#" class="py-2 border-t-2 border-brand inline-block font-brand uppercase text-sm tracking-wider font-semibold">Learn More</a>
+          <a 
+            href="<?php echo $item['url']; ?>"
+            target="Opens carousel item in same window"
+            class="inline-block text-base font-bold border-t-2 border-b-0 border-brand pt-1 text-white">Learn More</a> 
         </div>
       </div>
       <div class="absolute top-0 inset-0 z-10">

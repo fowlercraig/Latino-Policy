@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="text-2xl sm:text-3xl font-bold leading-7 sm:leading-9 tracking-tight"><?php the_title(); ?></div>
-      <span class="py-2 border-t-2 border-b-0 border-brand inline-block font-brand uppercase text-sm tracking-wider font-semibold">Learn More</span>
+      <span class="inline-block text-base font-bold border-t-2 border-b-0 border-brand pt-1 text-white">Learn More</span> 
     </div>
     <div class="absolute inset-0 opacity-50 group-hover:opacity-75 transition duration-300">
       <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover w-full h-full' ) ); ?>

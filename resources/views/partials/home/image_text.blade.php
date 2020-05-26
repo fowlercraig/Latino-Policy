@@ -55,7 +55,10 @@
           tincidunt leo turpis at mauris. Etiam non magna ante. 
           @endif
         </div>
-        <a href="/about" class="py-2 border-t-2 border-brand inline-block font-brand uppercase text-sm tracking-wider font-semibold text-white">Learn More</a>
+        <a 
+          href="/about"
+          target="Opens About page in same window"
+          class="inline-block text-base font-bold border-t-2 border-b-0 border-brand pt-1 text-white">Learn More</a> 
       </div>
     </div>
   </div>
