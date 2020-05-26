@@ -1,5 +1,5 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6">
-  <h3 class="font-bold text-xl">Related</h3>
+  <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 mb-10">Related</h2> 
 
   <?php
     $tasks = get_posts(array(
@@ -14,12 +14,12 @@
     ));
   ?>
 
-  <?php if( $tasks ): ?>
+  @if( $tasks )
     <div class="w-full md:w-3/4 sm:-mx-5">
-      <?php foreach( $tasks as $tasks ):?>
+      @php foreach( $tasks as $tasks ): @endphp
       @include('partials.people.people-item')
-      <?php endforeach; ?>
+      @php endforeach; @endphp
     </div>
-  <?php endif; ?>
+  @endif
   
 </div>
