@@ -10,4 +10,7 @@
       <img src="@asset('images/Pattern.png')" srcset="@asset('images/Pattern.png') 1x, @asset('images/Pattern@2x.png') 2x, @asset('images/Pattern@3x.png') 3x">
     </div>
   </div>
+
+  @include('partials.newsroom.press')
+
 @endsection
