@@ -2,6 +2,7 @@
 import 'alpinejs'
 import AOS from 'aos';
 const feather = require('feather-icons')
+import Rellax from 'rellax';
 
 // Formstone Core
 import 'formstone/dist/js/core';
@@ -26,6 +27,7 @@ export default {
       AOS.init({
         duration: 1200,
       });
+      new Rellax('.rellax');
     }
     build();
     //const swup = new Swup();

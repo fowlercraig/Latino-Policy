@@ -35,7 +35,7 @@
           @if (get_sub_field('subtitle'))
           <span class="bg-white p-2">@php the_sub_field('subtitle') @endphp</span>
           @else
-          <span class="bg-white p-2">Our Vision</span>
+          <span class="bg-white p-2">Featured</span>
           @endif
         </h4>
         <h3 class="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">

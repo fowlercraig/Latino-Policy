@@ -21,6 +21,9 @@ module.exports = {
         'black-50': 'rgba(0,0,0,.50)',
         'black-75': 'rgba(0,0,0,.75)',
       },
+      inset: {
+        '1/2': '50%',
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         'display': ['alternate-gothic-atf','Inter var','Helvetica'],
