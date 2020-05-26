@@ -1,6 +1,6 @@
 <div class="h-2"></div>
 <div class="bg-brand-darker relative pb-64 overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative pt-20" data-aos="fade">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative pt-20 z-30" data-aos="fade">
     @if(get_sub_field('align'))
     <div class="opacity-25 absolute top-0 right-0">
       <img 
@@ -10,8 +10,8 @@
           @asset('images/Pattern@3x.png') 3x">
     </div>
     @endif
-    <div class="flex flex-wrap md:items-center md:-mx-lg space-y-5 lg:space-y-0 relative z-10">
-      <div class="w-full lg:w-3/5 w-8/12 @if(!get_sub_field('align')): lg:order-last @endif px-lg">
+    <div class="flex flex-wrap md:items-center lg:-mx-lg space-y-5 lg:space-y-0 relative z-10">
+      <div class="w-full lg:w-3/5 w-8/12 @if(!get_sub_field('align')): lg:order-last @endif lg:px-lg">
         @php $image = get_sub_field('image') @endphp
         @php $size = 'large'; @endphp
         @if( $image )
@@ -31,7 +31,7 @@
         </div>
         @endif
       </div>
-      <div class="w-full lg:w-2/5 w-4/12 px-lg space-y-4 lg:space-y-4">
+      <div class="w-full lg:w-2/5 w-4/12 lg:px-lg space-y-4 lg:space-y-4">
         <h4 class="text-sm uppercase tracking-wide md:tracking-wider font-medium text-brand font-brand font-semibold">
           @if (get_sub_field('subtitle'))
           <span class="bg-white p-2">@php the_sub_field('subtitle') @endphp</span>
@@ -68,7 +68,7 @@
   <div class="opacity-50 absolute bottom-0 right-0 pointer-events-none z-0">
     <img src="@asset('images/Pattern_reversed.png')" srcset="@asset('images/Pattern_reversed.png') 1x, @asset('images/Pattern_reversed@2x.png') 2x, @asset('images/Pattern_reversed@3x.png') 3x">
   </div>
-  <div class="opacity-50 absolute inset-0 pointer-events-none z-0">
+  <div class="opacity-75 absolute inset-0 pointer-events-none z-0">
     <img src="@asset('images/Group-3.png')" srcset="@asset('images/Pattern_reversed.png') 1x, @asset('images/Group-3@2x.png') 2x, @asset('images/Group-3@3x.png') 3x">
   </div>
 </div>

@@ -30,10 +30,10 @@
           @endif
         </a>
       </div>
-      <div class="hidden md:flex items-center space-x-8">
+      <div class="hidden lg:flex items-center space-x-8">
         @include('partials.nav.donate')
       </div>
-      <div class="-mr-2 -my-2 md:hidden">
+      <div class="-mr-2 -my-2 lg:hidden">
         <button @click="mobileMenuOpen = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
           <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -43,7 +43,7 @@
     </div>
     @if (is_front_page()) <div class="h-px bg-white-25"></div> @endif
     <div 
-      class="hidden md:block sticky-header transition duration-200" 
+      class="hidden lg:block sticky-header transition duration-200" 
       :class="{ 'bg-black': menusOpen }" 
       >
       <div class="h-16 md:flex-1 md:flex md:items-center md:justify-between md:space-x-12 max-w-7xl mx-auto px-4 sm:px-6">

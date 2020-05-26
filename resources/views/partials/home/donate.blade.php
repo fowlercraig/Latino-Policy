@@ -4,7 +4,7 @@
       <div class="w-full md:w-3/5 mb-4 md:mb-0 space-y-4">
         <div class="h-1 bg-red-600 w-32"></div>
         <div class="h-1 bg-transparent w-32"></div>
-        <h2 class="text-5xl md:text-7xl font-display uppercase leading-11 md:leading-16 text-brand-darker"><?php the_field('donate_headline','option'); ?></h2>
+        <h2 class="text-5xl lg:text-7xl font-display uppercase leading-11 lg:leading-16 text-brand-darker"><?php the_field('donate_headline','option'); ?></h2>
         <div class="text-gray-500 pr-lg">@php the_field('donate_description','option'); @endphp</div>
       </div>
       <div class="w-full md:w-2/5">
@@ -17,7 +17,7 @@
           <div class="w-full">
             <div class="aspect-ratio aspect-ratio--16x9 relative">
               <a  
-                class="absolute inset-0 flex items-center justify-center bg-white shadow rounded transition ease duration-200 hover:shadow-2xl hover:border-transparent" 
+                class="absolute inset-0 flex items-center justify-center bg-white shadow rounded transform transition ease duration-200 hover:shadow-2xl hover:border-transparent hover:scale-105" 
                 href="https://giving.ucla.edu/campaign/?amount=@php echo $amount @endphp&OrgType=S&OrgNum=800&fund=63922O"
                 title="Opens link to Donate Page in the amout of $@php echo $amount @endphp">
               <span class="font-bold text-3xl font-display text-brand-darker">$@php echo $amount @endphp</span>

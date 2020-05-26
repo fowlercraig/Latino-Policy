@@ -5,7 +5,7 @@
 <div class="bg-brand-darker mt-20">
   <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 xl:col-span-2">
         <div class="md:grid md:grid-cols-1 md:gap-8">
           <div class="space-y-2">
             <a class="brand block mb-3 w-2/3" href="{{ home_url('/') }}" title="Opens in the same window">
@@ -15,7 +15,7 @@
             <p class="text-gray-300 text-base leading-6"><?php the_field('address','option'); ?></p>
           </div>
         </div>
-        <div class="md:grid md:grid-cols-2 md:gap-8">
+        <div class="grid grid-cols-2 md:grid-cols-2 md:gap-8">
           <div>
             <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
               Solutions
@@ -27,7 +27,7 @@
               <li class="mt-4"><a class="@php echo $classes; @endphp" href="@php echo get_permalink(38); @endphp"  title="Opens @php echo get_the_title(38); @endphp in the same window">@php echo get_the_title(38); @endphp</a></li>
             </ul>
           </div>
-          <div class="mt-12 md:mt-0">
+          <div class="md:mt-12 md:mt-0">
             <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
               Support
             </h4>

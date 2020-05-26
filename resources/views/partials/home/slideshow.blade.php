@@ -7,7 +7,7 @@
     class="carousel" 
     data-carousel-options='{"autoAdvance":false,"pagination":false,"controls":{"container":".controls","previous":".prev","next":".next"}}'>
     @php foreach($items as $item): @endphp
-    <div class="carousel-slide sm:pt-80 sm:pb-16 relative">
+    <div class="carousel-slide pt-80 pb-16 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
         <div class="max-w-md space-y-3 md:space-y-4 text-white relative z-20">
           <span class="py-1 px-2 bg-brand font-brand inline-block uppercase text-sm text-white font-semibold tracking-wider">
