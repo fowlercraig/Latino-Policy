@@ -20,7 +20,7 @@
         @php echo $parent_title @endphp
       </a>
       @endif
-      <div class="space-y-4 md:grid md:grid-cols-2 md:gap-8 pt-xl pb-lg lg:py-xl">
+      <div class="space-y-4 md:space-y-0 md:grid md:grid-cols-2 md:gap-8 pt-xl pb-lg lg:py-xl">
         <h2 class="text-5xl font-display uppercase font-medium leading-7 text-white sm:text-7xl sm:leading-16 tracking-tight mb-0">
           {!! App::title() !!}
         </h2>
