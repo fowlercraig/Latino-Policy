@@ -5,5 +5,6 @@
     @include('partials.page-header-faculty')
     @include('partials.content-single-'.get_post_type())
     @include('partials.content-relationship')
+    @include('partials.people.experts')
   @endwhile
 @endsection

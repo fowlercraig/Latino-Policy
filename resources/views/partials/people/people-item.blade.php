@@ -5,6 +5,7 @@
     </div>
     <div class="w-full sm:w-2/3 sm:px-3">
       <div class="space-y-4">
+        
         <?php if(get_the_terms(get_the_ID(), 'issue')): ?>
         <ul>
           <?php foreach (get_the_terms(get_the_ID(), 'issue') as $cat): ?>
