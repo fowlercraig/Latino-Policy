@@ -18,7 +18,7 @@
 <div class="absolute w-full z-50">
 @endif
 
-<div x-data="{ menusOpen: false, mobileMenuOpen: true, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false }" class="z-50 relative">
+<div x-data="{ menusOpen: false, mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false }" class="z-50 relative">
   <div class="relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center py-5 sm:py-6 md:justify-between md:space-x-10">
       <div>
