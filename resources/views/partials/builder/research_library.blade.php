@@ -6,9 +6,9 @@
       <h3 class="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">
         Research Library
       </h3>
-      <div>
+      <p>
         Our research library provides opportunities to explore and engage with our work across various issue areas.
-      </div>
+      </p>
       <span class="text-base text-white font-bold border-t-2 border-b-0 border-white pt-1">Learn More</span> 
     </div>
   </div>
