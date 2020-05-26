@@ -27,7 +27,7 @@
               <li class="mt-4"><a class="@php echo $classes; @endphp" href="@php echo get_permalink(38); @endphp"  title="Opens @php echo get_the_title(38); @endphp in the same window">@php echo get_the_title(38); @endphp</a></li>
             </ul>
           </div>
-          <div class="md:mt-12 md:mt-0">
+          <div class="lg:mt-12 md:mt-0">
             <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
               Support
             </h4>
