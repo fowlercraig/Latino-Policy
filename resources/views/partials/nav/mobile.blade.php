@@ -51,7 +51,7 @@
                     </svg>
                   </div>
                   <div class="text-lg leading-6 font-medium text-gray-900">
-                    The Voting Rights Project
+                    Voting Rights Project
                   </div>
                 </a>
                 <a href="/people" class="-m-3 space-x-4 flex items-center p-3 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
