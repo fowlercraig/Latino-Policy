@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="absolute top-0 inset-0 z-10">
-        <img class="object-cover h-48 w-full h-full" src='@php echo $item["image"]["url"]; @endphp'>
+        <img alt='@php echo $item["image"]["alt"]; @endphp' class="object-cover h-48 w-full h-full" src='@php echo $item["image"]["url"]; @endphp'>
       </div>
     </div>
     @php endforeach; @endphp

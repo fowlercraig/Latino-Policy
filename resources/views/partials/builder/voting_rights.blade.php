@@ -16,7 +16,13 @@
         class="inline-block text-base text-white font-bold border-t-2 border-b-0 border-red-600 pt-1">Learn More</a> 
       </div>
       <div class="w-full">
-        <img src="<?php echo get_the_post_thumbnail_url($vote,'full'); ?>" />
+        <?php
+          $alt = get_post_meta($vote, '_wp_attachment_image_alt', true);
+          if(count($alt)) echo $alt;
+        ?>
+        <img 
+          alt="@php echo $alt @endphp"
+          src="<?php echo get_the_post_thumbnail_url($vote,'full'); ?>" />
       </div>
     </div>
   </div>

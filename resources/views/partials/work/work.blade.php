@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="opacity-25 group-hover:opacity-25 absolute top-0 left-0 pointer-events-none">
-      <img src="@asset('images/Pattern-white.png')" srcset="@asset('images/Pattern-white.png') 1x, @asset('images/Pattern-white@2x.png') 2x, @asset('images/Pattern-white@3x.png') 3x">
+      <img alt="Pattern" src="@asset('images/Pattern-white.png')" srcset="@asset('images/Pattern-white.png') 1x, @asset('images/Pattern-white@2x.png') 2x, @asset('images/Pattern-white@3x.png') 3x">
     </div>
   </div>
 </div>

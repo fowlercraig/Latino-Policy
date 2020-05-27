@@ -3,6 +3,7 @@
     @if(get_sub_field('align'))
     <div class="opacity-25 absolute top-0 right-0">
       <img 
+        alt="Pattern" 
         src="@asset('images/Pattern.png')" 
         srcset="@asset('images/Pattern.png') 1x, 
           @asset('images/Pattern@2x.png') 2x, 
