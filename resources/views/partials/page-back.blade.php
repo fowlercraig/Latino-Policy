@@ -4,6 +4,7 @@
   $parent_title = get_the_title($parent);
 @endphp
 
+@if ($parent)
 <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
   <div class="">
     <a 
@@ -18,3 +19,4 @@
     </a>
   </div>
 </div>
+@endif
