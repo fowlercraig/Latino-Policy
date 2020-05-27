@@ -1,7 +1,7 @@
 <a
   href="<?php the_permalink(); ?>" title="Opens @php the_title(); @endphp in the same window"
   class="block w-full relative group rounded overflow-hidden" data-aos="fade-up">
-  <div class="bg-brand-lightest group-hover:bg-brand-darker md:items-center transition transform ease duration-300 hover:shadow-xl hover:-translate-y-2 overflow-hidden">
+  <div class="border-2 bg-white-75 group-hover:bg-brand-darker md:items-center transition transform ease duration-300 hover:shadow-xl hover:-translate-y-2 overflow-hidden">
     <div class="rounded flex flex-wrap items-center relative z-20">
       <div class="w-full md:w-1/2 lg:w-1/5 mb-3 sm:mb-0 p-md pr-0">
         <div 

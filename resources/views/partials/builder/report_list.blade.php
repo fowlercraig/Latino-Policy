@@ -1,13 +1,11 @@
 <div id="page_blocks" class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 pt-10 relative z-20">
 
-  <div class="flex flex-wrap lg:-mx-6 space-y-6">
+  <div class="flex flex-wrap lg:-mx-6 space-y-6 items-center">
 
-    <div class="w-full lg:w-1/3 lg:px-6 space-y-3 lg:space-y-6">
-      <div class="text-brand-darker font-bold uppercase text-xl tracking-wider font-brand"><?php the_sub_field('title'); ?></div>
+    <div class="w-full lg:w-1/2 lg:px-6 space-y-3 lg:space-y-6">
+      @php $image = get_sub_field('image'); @endphp
+      <div class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 mb-0"><?php the_sub_field('title'); ?></div>
       <div class="text-gray-500"><?php the_sub_field('description'); ?></div>
-    </div>
-
-    <div class="w-full lg:w-2/3 space-y-3 lg:px-6">
 
       <?php
 
@@ -50,6 +48,9 @@
         wp_reset_postdata();
       ?>
 
+    </div>
+    <div class="w-full lg:w-1/2 space-y-3 lg:px-6">
+      <img alt="@php echo $image['alt']; @endphp" src="@php echo $image['sizes']['large']; @endphp">
     </div>
   </div>
 </div>

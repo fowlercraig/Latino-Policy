@@ -1,8 +1,10 @@
 <div id="page_blocks" class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 pt-10 relative z-20">
 
-  <div class="space-y-6">
-    <div class="text-brand-darker font-bold uppercase text-xl tracking-wider font-brand"><?php the_sub_field('title'); ?></div>
-    <div class="text-gray-500 lg:w-1/2"><?php the_sub_field('description'); ?></div>
+  <div class="space-y-6 lg:space-y-0 lg:space-x-6 lg:flex">
+    <div class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 mb-0 flex-shrink-0">
+      <?php the_sub_field('title'); ?>
+    </div>
+    <div class="text-gray-500 lg:w-1/2 lg:border-l lg:pl-6"><?php the_sub_field('description'); ?></div>
   </div>
 
   <?php
