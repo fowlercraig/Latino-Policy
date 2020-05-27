@@ -29,6 +29,10 @@
 @include('partials.builder.featured_news')
 @endif
 
+@if( get_row_layout() == 'selected_news' )
+@include('partials.builder.selected_news')
+@endif
+
 @if( get_row_layout() == 'featured_experts' )
 @include('partials.builder.featured_experts')
 @endif

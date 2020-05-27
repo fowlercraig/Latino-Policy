@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 relative z-20">  
     @if (33 != $post->post_parent)
     <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10">
-      Our {!! App::title() !!} Experts
+      {!! App::title() !!} Experts
     </h2> 
     @endif
     <div class="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-8">

@@ -7,7 +7,7 @@
     @php 
       $ids = get_sub_field('reports', false, false);
       $args = array (
-        'post_type'       => 'research',
+        'post_type'       => array('research', 'press'),
         'posts_per_page'  => -1,
         'order'           => 'ASC',
         'post__in'        => $ids,
