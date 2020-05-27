@@ -18,7 +18,7 @@
       <div class="w-full">
         <?php
           $alt = get_post_meta($vote, '_wp_attachment_image_alt', true);
-          if(count($alt)) echo $alt;
+          //if(count($alt)) echo $alt;
         ?>
         <img 
           alt="@php echo $alt @endphp"

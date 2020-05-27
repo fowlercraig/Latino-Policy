@@ -21,6 +21,10 @@
   @endif
 @endif
 
+@if( get_row_layout() == 'selected_reports' )
+@include('partials.builder.selected_reports')
+@endif
+
 @if( get_row_layout() == 'featured_news' )
 @include('partials.builder.featured_news')
 @endif
