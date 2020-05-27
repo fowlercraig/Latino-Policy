@@ -5,9 +5,10 @@
 @endphp
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-  <div class=" bg-brand-lightest">
+  <div class="">
     <a 
-      class="inline-block text-base text-white bg-brand-darker font-bold py-6 px-8 pl-6 items-center relative group hover:bg-brand-dark transition ease duration-300" 
+      class="rounded-full inline-block text-base text-white bg-brand-darker font-bold py-6 px-8 pl-6 items-center relative group 
+      hover:bg-brand-dark transition ease duration-300 hover:shadow-xl" 
       href="@php echo $parent_url @endphp" 
       title="Opens @php echo $parent_title @endphp in same window">
       <span class="flex items-center space-x-2">

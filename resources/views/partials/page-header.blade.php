@@ -1,4 +1,8 @@
+@if ( has_post_thumbnail() )
 <div class="page-header bg-brand-darker relative">
+@else
+<div class="page-header bg-brand-darker relative pt-24 -mt-16">
+@endif
   <?php if ( has_post_thumbnail() ) : ?>
     <div class="h-64 md:h-header bg-blue-800 -mt-16 relative">
       <div class="absolute inset-0 bg-black z-10 opacity-25"></div>
@@ -14,7 +18,7 @@
       @endphp
       @if ($parent)
       <a 
-        class="inline-block uppercase font-brand tracking-wider bg-brand-dark text-white font-medium py-1 px-3 absolute top-0" 
+        class="inline-block uppercase font-brand tracking-wider bg-red-500 hover:bg-red-600 transition duration-200 ease text-white font-medium py-1 px-3 absolute top-0" 
         href="@php echo $parent_url @endphp" 
         title="Opens @php echo $parent_title @endphp in same window">
         @php echo $parent_title @endphp
