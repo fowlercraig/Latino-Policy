@@ -1,7 +1,8 @@
+<div class="relative -mt-64">
+  <div class="pt-20 relative">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
   <div>
-    <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 mb-0">Featured Projects</h2> 
-    <a href="#" class="text-base text-brand font-bold border-b-2 border-brand pb-1">View all {!! App::title() !!} Projects</a> 
+    <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10 mb-0">Featured Projects</h2> 
   </div>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     @php 
@@ -30,4 +31,6 @@
       wp_reset_postdata();
     @endphp 
   </div>
+</div>
+</div>
 </div>

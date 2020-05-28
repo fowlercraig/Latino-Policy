@@ -22,7 +22,11 @@
 @endif
 
 @if( get_row_layout() == 'selected_reports' )
-@include('partials.builder.selected_reports')
+  @if (is_front_page())
+    @include('partials.home.selected_reports')
+  @else
+    @include('partials.builder.selected_reports')
+  @endif
 @endif
 
 @if( get_row_layout() == 'featured_news' )
