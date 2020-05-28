@@ -6,13 +6,13 @@
     @include('partials.page-header-people')
 
     <div class="md:space-y-20">
-      <div id="staff"></div>
+      <section id="staff"></section>
       @include('partials.people.staff')
-      <div id="experts" class="h-px bg-gray-100"></div>
+      <section id="experts" class="h-px bg-gray-100"></section>
       @include('partials.people.experts')
-      <div id="fellows" class="h-px bg-gray-100"></div>
+      <section id="fellows" class="h-px bg-gray-100"></section>
       @include('partials.people.fellows')
-      <div id="advisors" class="h-px bg-gray-100"></div>
+      <section id="advisors" class="h-px bg-gray-100"></section>
       @include('partials.people.advisors')
     </div>
 

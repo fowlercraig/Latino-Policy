@@ -18,7 +18,7 @@
   <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10  mb-8">
     @php the_field('staff_title') @endphp
   </h2> 
-  <div class="grid grid-cols-4 gap-8">
+  <div class="grid grid-cols-4 gap-12">
     @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
     @include('partials.modules.experts-item')
     @php endwhile; @endphp
@@ -26,7 +26,7 @@
   <a 
     class="rounded-full inline-block text-base text-white bg-brand-darker font-bold py-6 px-8 pr-6 items-center relative group 
     hover:bg-brand-dark transition ease duration-300 hover:shadow-xl" 
-    href="@php echo $parent_url @endphp" 
+    href="@php echo $link['url']; @endphp" 
     title="Opens @php echo $parent_title @endphp in same window">
     <span class="flex items-center space-x-2">
       <span>@php echo $link['title'] @endphp</span>
