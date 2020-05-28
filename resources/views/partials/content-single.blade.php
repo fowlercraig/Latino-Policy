@@ -1,3 +1,4 @@
+hello
 <article @php post_class() @endphp>
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <header class="py-8">
