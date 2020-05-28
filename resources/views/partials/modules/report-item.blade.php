@@ -7,9 +7,7 @@
       <div class="absolute top-0 text-white bg-brand py-sm px-md uppercase text-sm font-brand tracking-wider font-medium inline-block">
         <div class="space-x-2">
           <?php if(get_the_terms(get_the_ID(), 'issue')): ?>
-            <?php foreach (get_the_terms(get_the_ID(), 'issue') as $cat): ?>
-            <span><?php echo $cat->name; ?></span>
-            <?php endforeach; ?>
+          <span><?php echo get_the_terms(get_the_ID(), 'issue')[0]->name; ?></span>
           <?php endif; ?>
         </div>
       </div>

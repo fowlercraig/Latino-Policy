@@ -4,7 +4,7 @@
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
     @include('partials.page-header-people')
-    <div class="space-y-20 relative z-40">
+    <div class="space-y-20 relative z-40 mb-20">
       @include('partials.page-content')
     </div>
     <!-- Overview -->
