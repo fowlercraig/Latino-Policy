@@ -34,3 +34,7 @@ p {
 .entry-content a {
   @apply text-brand underline;
 }
+
+.nav-links > div {
+  @apply inline-block;
+}

@@ -1,13 +1,19 @@
 <div class="pt-20 relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 relative z-20">  
-    <div class="space-y-4 lg:space-y-0 grid grid-cols-2">
-      <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10">
-        @if (get_sub_field('title'))
-          @php the_sub_field('title') @endphp
-        @else
-          {!! App::title() !!} Experts
-        @endif
-      </h2> 
+    <div class="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-8">
+      <div class="space-y-0">
+        <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10">
+          @if (get_sub_field('title'))
+            @php the_sub_field('title') @endphp
+          @else
+            {!! App::title() !!} Experts
+          @endif
+        </h2> 
+        <a 
+          href="/people/experts"
+          target="Opens Experts in same window"
+          class="inline-block text-base font-bold border-b-2 border-b-0 border-brand pb-1 text-brand">View all Experts</a> 
+      </div>
       <div class="text-base text-gray-600"><?php the_sub_field('description'); ?></div> 
     </div>
     <div class="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-8">

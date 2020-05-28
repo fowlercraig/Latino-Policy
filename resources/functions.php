@@ -139,3 +139,12 @@ function themify_custom_excerpt_more($more) {
    return '';
 }
 add_filter('excerpt_more', 'themify_custom_excerpt_more');
+
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+  return 'class="inline-block mr-1 rounded-full inline-block text-sm text-white bg-brand-darker font-bold py-4 px-6 items-center relative group 
+      hover:bg-brand-dark transition ease duration-300 hover:shadow-xl"';
+}

@@ -2,12 +2,12 @@
 
 
 @section('content')
-@include('partials.page-header')
+@include('partials.archive-header')
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 relative pt-10">
   <div class="flex flex-wrap -mx-lg">
     <div class="w-1/3 px-lg">
-      <div class="p-lg bg-white">
+      <div class="p-lg bg-white sticky">
         <?php echo do_shortcode('[searchandfilter show_count="1" types="checkbox,checkbox" fields="resource_type,issue" headings="Resource Type,Issue"]'); ?>
       </div>
     </div>
@@ -24,7 +24,7 @@
       @include('partials.issues.issues-item')
       @endwhile
 
-      <div class="w-full px-5">
+      <div class="w-full">
         {!! get_the_posts_navigation() !!}
       </div>
     </div>
