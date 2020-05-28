@@ -18,7 +18,7 @@
       @endphp
       @if ($parent)
       <a 
-        class="inline-block uppercase font-brand tracking-wider bg-red-500 hover:bg-red-600 transition duration-200 ease text-white font-medium py-1 px-3 absolute top-0" 
+        class="inline-block uppercase font-brand tracking-wider bg-brand hover:bg-brand-dark transition duration-200 ease text-white font-medium py-1 px-3 absolute top-0" 
         href="@php echo $parent_url @endphp" 
         title="Opens @php echo $parent_title @endphp in same window">
         @php echo $parent_title @endphp

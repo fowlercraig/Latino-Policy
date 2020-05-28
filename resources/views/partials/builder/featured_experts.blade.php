@@ -14,7 +14,7 @@
     @endif
     <div class="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-8">
       @php
-        if (33 == $post->post_parent) {
+        if (777 == $post->post_parent) {
           // If we're on the people page
           global $post;
           $post_slug = $post->post_name;

@@ -35,12 +35,12 @@
       <div class="w-full lg:w-2/5 w-4/12 lg:px-lg space-y-4 lg:space-y-4">
         <h4 class="text-sm uppercase tracking-wide md:tracking-wider font-medium text-brand font-brand font-semibold">
           @if (get_sub_field('subtitle'))
-          <span class="bg-white p-2">@php the_sub_field('subtitle') @endphp</span>
+          <span class="bg-brand text-white p-2">@php the_sub_field('subtitle') @endphp</span>
           @else
-          <span class="bg-white p-2">Our Vision</span>
+          <span class="bg-brand text-white p-2">Our Vision</span>
           @endif
         </h4>
-        <h3 class="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">
+        <h3 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
           @if (get_sub_field('title'))
           @php the_sub_field('title') @endphp
           @else

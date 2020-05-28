@@ -26,9 +26,11 @@
       <div class="flex flex-wrap md:items-center lg:-mx-lg space-y-5 lg:space-y-0 relative z-10">
         <div class="w-full lg:w-3/5 w-8/12 @if(!get_sub_field('align')): lg:order-last @endif lg:px-lg">
           <div class="aspect-ratio aspect-ratio--6x4 bg-gray-400 relative">
-            <div class="absolute inset-0 flex items-center justify-center text-white">
+            <a
+              href="<?php the_permalink( ); ?>" title="<?php the_title(); ?>" 
+              class="absolute inset-0 flex items-center justify-center text-white">
               <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover w-full h-full' ) ); ?>
-            </div>
+            </a>
           </div>
         </div>
         <div class="w-full lg:w-2/5 w-4/12 lg:px-lg space-y-4 lg:space-y-4">
