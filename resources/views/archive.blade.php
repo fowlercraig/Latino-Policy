@@ -8,7 +8,7 @@
   <div class="flex flex-wrap -mx-lg">
     <div class="w-1/3 px-lg">
       <div class="p-lg bg-white sticky">
-        <?php echo do_shortcode('[searchandfilter show_count="1" types="checkbox,checkbox" fields="resource_type,issue" headings="Resource Type,Issue"]'); ?>
+        @php dynamic_sidebar('sidebar-primary') @endphp
       </div>
     </div>
     <div class="w-2/3 px-lg space-y-10 pt-lg">
