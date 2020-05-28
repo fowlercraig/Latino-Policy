@@ -14,7 +14,7 @@
           There is no American Agenda without the Latino Agenda
           @endif
         </h3>
-        <div class="text-gray-500">
+        <div class="text-gray-600">
           @if (get_sub_field('description'))
           @php the_sub_field('description') @endphp
           @else

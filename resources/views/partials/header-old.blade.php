@@ -1,5 +1,5 @@
 <?php
-  //$classes = 'inline-block text-sm uppercase tracking-wide md:tracking-wider leading-6 font-medium font-brand text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150';
+  //$classes = 'inline-block text-sm uppercase tracking-wide md:tracking-wider leading-6 font-medium font-brand text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150';
   $classes = 'inline-block uppercase tracking-wider md:tracking-wider leading-6 font-medium font-brand text-white hover:text-white focus:outline-none focus:text-gray-900 transition ease-in-out duration-150';
 ?>
 
@@ -7,7 +7,7 @@
 @if (get_field('enable_alert_banner','options'))
 <div class="@if (!is_front_page()): bg-brand-lightest @endif relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="py-3 text-xs text-gray-500">
+    <div class="py-3 text-xs text-gray-600">
       <p class="leading-tight text-center"><?php the_field('alert_banner_message','options'); ?></p>
     </div>
   </div>
@@ -46,9 +46,9 @@
       <div class="hidden md:flex justify-between items-center h-16">
         <nav class="flex space-x-4 lg:space-x-8">
           <a href="@php echo get_permalink(14); @endphp" class="<?php echo $classes; ?>" title="Opens page in same window">@php echo get_the_title(14); @endphp</a>
-          <button type="button" @click="solutionsMenuOpen = !solutionsMenuOpen; moreMenuOpen = false" x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': solutionsMenuOpen, 'text-gray-500': !solutionsMenuOpen }" class="<?php echo $classes; ?> group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 text-gray-900">
+          <button type="button" @click="solutionsMenuOpen = !solutionsMenuOpen; moreMenuOpen = false" x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': solutionsMenuOpen, 'text-gray-600': !solutionsMenuOpen }" class="<?php echo $classes; ?> group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 text-gray-900">
             <span class="text-white">Work</span>
-            <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-white group-focus:text-gray-500 transition ease-in-out duration-150 text-white" :class="{ 'text-gray-600': solutionsMenuOpen, 'text-gray-400': !solutionsMenuOpen }" x-bind-class="{ 'text-gray-600': solutionsMenuOpen, 'text-gray-400': !solutionsMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
+            <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-white group-focus:text-gray-600 transition ease-in-out duration-150 text-white" :class="{ 'text-gray-600': solutionsMenuOpen, 'text-gray-400': !solutionsMenuOpen }" x-bind-class="{ 'text-gray-600': solutionsMenuOpen, 'text-gray-400': !solutionsMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
             </svg>
           </button>

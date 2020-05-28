@@ -2,7 +2,7 @@
   $classes = 'pb-1 sm:pb-2 block hover:text-brand-darker transition ease duration-150'
 @endphp
 
-<footer class="border-t border-gray-100 py-10 sm:py-20 px-2 md:px-10 mt-20 text-gray-500">
+<footer class="border-t border-gray-100 py-10 sm:py-20 px-2 md:px-10 mt-20 text-gray-600">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="flex flex-wrap sm:space-y-6 lg:space-y-0">
 
@@ -60,7 +60,7 @@
   </div>
 </footer>
 
-<div class="border-t border-gray-100 py-4 px-2 md:px-10 text-gray-500 text-sm">
+<div class="border-t border-gray-100 py-4 px-2 md:px-10 text-gray-600 text-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <nav class="text-sm md:space-x-4 space-y-2 md:space-y-0">
       <a class="block md:inline" href="http://www.universityofcalifornia.edu/" title="Opens Facebook in a new window">© 2020 Regents of the University of California</a>

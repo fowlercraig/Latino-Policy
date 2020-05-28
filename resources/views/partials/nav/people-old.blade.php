@@ -12,7 +12,7 @@
       x-state:on="Item active" 
       x-state-off="Item inactive" 
       x-state:off="Item inactive" 
-      class="h-5 w-5 group-hover:text-gray-200 group-focus:text-gray-500 transition ease-in-out duration-150 text-white" 
+      class="h-5 w-5 group-hover:text-gray-200 group-focus:text-gray-600 transition ease-in-out duration-150 text-white" 
       :class="{ 'text-gray-200': flyoutMenuOpen, 'text-white': !flyoutMenuOpen }" 
       x-bind-class="{ 'text-gray-600': flyoutMenuOpen, 'text-gray-400': !flyoutMenuOpen }" 
       fill="currentColor" viewBox="0 0 20 20" null="[object Object]">

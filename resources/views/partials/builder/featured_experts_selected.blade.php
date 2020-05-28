@@ -1,14 +1,14 @@
 <div class="pt-20 relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 relative z-20">  
-    <div class="space-y-4 lg:space-y-0 grid grid-cols-4">
+    <div class="space-y-4 lg:space-y-0 grid grid-cols-2">
       <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10">
         @if (get_sub_field('title'))
           @php the_sub_field('title') @endphp
         @else
-          Our {!! App::title() !!} Experts
+          {!! App::title() !!} Experts
         @endif
       </h2> 
-      <div class="text-base text-gray-500 col-span-3"><?php the_sub_field('description'); ?></div> 
+      <div class="text-base text-gray-600"><?php the_sub_field('description'); ?></div> 
     </div>
     <div class="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-8">
       @php

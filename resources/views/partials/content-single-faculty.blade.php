@@ -1,6 +1,6 @@
 <article @php post_class() @endphp>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-20">
-    <div class="text-gray-500 pt-10">
+    <div class="text-gray-600 pt-10">
       <div class="md:grid md:grid-cols-2 gap-10">
         <?php the_post_thumbnail( 'large', array( 'class' => 'w-full' ) ); ?>
         <div class="order-first space-y-4">

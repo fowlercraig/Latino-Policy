@@ -18,7 +18,7 @@ hello
         {!! get_the_title() !!}
       </h1>
     </header>
-    <div class="entry-content w-2/3 text-gray-500">
+    <div class="entry-content w-2/3 text-gray-600">
       @php the_content() @endphp
     </div>
     <footer>

@@ -16,7 +16,7 @@
         <div class="relative">
           @php echo wp_get_attachment_image( $image, $size ); @endphp
           @if (wp_get_attachment_caption($image))
-            <span class="pt-2 pr-4 bg-white text-xs inline-block text-gray-500 absolute bottom-0">
+            <span class="pt-2 pr-4 bg-white text-xs inline-block text-gray-600 absolute bottom-0">
               @php echo wp_get_attachment_caption($image); @endphp
             </span>
           @endif
@@ -42,7 +42,7 @@
         There is no American Agenda without the Latino Agenda
         @endif
       </h3>
-      <div class="text-gray-500">
+      <div class="text-gray-600">
         @if (get_sub_field('description'))
         @php the_sub_field('description') @endphp
         @else

@@ -4,7 +4,7 @@
     <div class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 mb-0 flex-shrink-0">
       <?php the_sub_field('title'); ?>
     </div>
-    <div class="text-gray-500 lg:w-1/2 lg:border-l lg:pl-6"><?php the_sub_field('description'); ?></div>
+    <div class="text-gray-600 lg:w-1/2 lg:border-l lg:pl-6"><?php the_sub_field('description'); ?></div>
   </div>
 
   <?php

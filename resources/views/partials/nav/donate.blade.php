@@ -9,7 +9,7 @@
     x-state:on="Item active" 
     x-state:off="Item inactive" 
     @click="flyoutMenuOpen = !flyoutMenuOpen" 
-    :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-500': !flyoutMenuOpen }"     
+    :class="{ 'text-gray-900': flyoutMenuOpen, 'text-gray-600': !flyoutMenuOpen }"     
     class="group inline-flex items-center space-x-2 border border-transparent text-base leading-6 font-medium rounded-sm text-white bg-brand hover:bg-brand-dark focus:outline-none focus:border-blue-900 focus:shadow-outline-blue active:bg-blue-700 transition ease duration-150">
     <span class="inline-flex items-center space-x-1 px-4 py-3 bg-brand-dark group-hover:bg-brand-darker transition ease duration-150">
       <span class="text-white font-brand uppercase tracking-wider">$@php echo $amounts[0]; @endphp</span>

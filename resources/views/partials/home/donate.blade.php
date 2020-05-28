@@ -5,7 +5,7 @@
         <div class="h-1 bg-red-600 w-32"></div>
         <div class="h-1 bg-transparent w-32"></div>
         <h2 class="text-5xl lg:text-7xl font-display uppercase leading-11 lg:leading-16 text-brand-darker"><?php the_field('donate_headline','option'); ?></h2>
-        <div class="text-gray-500 pr-lg">@php the_field('donate_description','option'); @endphp</div>
+        <div class="text-gray-600 pr-lg">@php the_field('donate_description','option'); @endphp</div>
       </div>
       <div class="w-full md:w-2/5">
         <div class="grid grid-cols-4 gap-2 mb-4">

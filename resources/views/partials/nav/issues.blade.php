@@ -45,7 +45,7 @@
               <p class="text-lg leading-6 font-bold text-gray-900">
                 @php the_title(); @endphp
               </p>
-              <p class="text-sm leading-5 text-gray-500">
+              <p class="text-sm leading-5 text-gray-600">
                 @php the_field('excerpt'); @endphp
               </p>
             </div>

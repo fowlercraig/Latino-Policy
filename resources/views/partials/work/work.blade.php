@@ -41,7 +41,7 @@
         <h2 class="text-brand-darker font-bold mb-0 md:text-2xl lg:text-3xl xl:text-4xl group-hover:text-white transition ease duration-400 tracking-tight leading-tight">
           @php the_title(); @endphp
         </h2>
-        <div class="text-gray-500 group-hover:text-white-75 text-sm md:text-base lg:text-lg"><?php the_field('excerpt'); ?></div>
+        <div class="text-gray-600 group-hover:text-white-75 text-sm md:text-base lg:text-lg"><?php the_field('excerpt'); ?></div>
         <div></div>
         <a 
           class="inline-block font-brand text-brand-dark uppercase font-medium tracking-wider text-sm border-t-2 border-brand-dark pt-2 group-hover:border-white group-hover:text-white transition duration-300 ease" 

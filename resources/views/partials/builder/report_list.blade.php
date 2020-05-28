@@ -5,7 +5,7 @@
     <div class="w-full lg:w-1/2 lg:px-6 space-y-3 lg:space-y-6">
       @php $image = get_sub_field('image'); @endphp
       <div class="text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 mb-0"><?php the_sub_field('title'); ?></div>
-      <div class="text-gray-500"><?php the_sub_field('description'); ?></div>
+      <div class="text-gray-600"><?php the_sub_field('description'); ?></div>
 
       <?php
 
@@ -35,7 +35,7 @@
         <div class="h-16 w-16 bg-white flex items-center justify-center sm:flex-shrink-0 rounded shadow">
           <i class="text-brand-darker mx-auto block" data-feather="download"></i>
         </div>
-        <div class="text-gray-500">
+        <div class="text-gray-600">
           <div class="font-bold text-brand-darker -mt-1"><?php the_title(); ?></div>
           <div class="text-sm"><?php the_excerpt(); ?></div>
         </div>
