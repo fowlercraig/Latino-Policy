@@ -24,10 +24,9 @@
       <h2 class="font-bold text-lg sm:text-lg md:text-2xl text-brand-darker leading-7 relative">
         <a class="z-20 relative border-b-4 border-transparent hover:border-brand-lighter transition ease duration-150" href="@php the_permalink(); @endphp" title="Opens @php the_title(); @endphp Page in Same Window">@php the_title(); @endphp</a>
       </h2>
-      <div><?php the_excerpt(); ?></div>
       <a
         title="Opens {!! get_the_title() !!} in same window" 
-        class="border-t-2 border-brand pt-1 text-xs text-primary uppercase font-brand uppercase tracking-wider text-brand font-medium inline-block" 
+        class="inline-block text-base font-bold border-t-2 border-b-0 border-brand pt-1 text-brand" 
         href="@php the_permalink() @endphp">Read More
       </a>
     </div>

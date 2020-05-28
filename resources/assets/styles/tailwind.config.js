@@ -17,6 +17,8 @@ module.exports = {
         'white-25': 'rgba(255,255,255,.25)',
         'white-50': 'rgba(255,255,255,.50)',
         'white-75': 'rgba(255,255,255,.75)',
+        'black-5' : 'rgba(0,0,0,.05)',
+        'black-10': 'rgba(0,0,0,.10)',
         'black-25': 'rgba(0,0,0,.25)',
         'black-50': 'rgba(0,0,0,.50)',
         'black-75': 'rgba(0,0,0,.75)',
