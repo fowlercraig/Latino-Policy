@@ -2,7 +2,7 @@
   $classes = 'text-base leading-6 text-gray-300 hover:text-white'
 @endphp
 
-<div class="bg-brand-darker mt-20 relative overflow-hidden">
+<div class="bg-brand-darker relative overflow-hidden">
   <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 relative z-10">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 xl:col-span-2">

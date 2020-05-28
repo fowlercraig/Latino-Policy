@@ -1,4 +1,4 @@
-<div class="relative overflow-hidden pt-20">
+<div class="relative overflow-hidden" data-aos="fade-up">
   <div class="py-20 bg-brand-lightest overflow-hidden relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap justify-between items-center relative z-10">
       <div class="w-full md:w-3/5 mb-4 md:mb-0 space-y-4">
