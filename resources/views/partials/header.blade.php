@@ -1,4 +1,4 @@
-<div x-data="{ mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false }" class="z-10 relative bg-white sticky">
+<div x-data="{ mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false }" class="z-50 relative bg-white sticky">
   <div class="relative z-10 shadow">
     <div class="flex justify-between items-center py-5 sm:py-4 md:justify-start md:space-x-10 container">
       <div>
