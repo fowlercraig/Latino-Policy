@@ -1,0 +1,34 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-2 leading-tight font-bold text-brand-darker;
+}
+
+.entry-content p {
+  @apply mb-4;
+}
+
+.entry-content ul,
+.entry-content ol {
+  @apply mb-4 list-disc pl-4;
+}
+
+.entry-content ul li,
+.entry-content ol li {
+  @apply relative;
+}
+
+.entry-content a {
+  @apply text-brand underline;
+}
+
+.entry-content blockquote {
+  @apply p-4 bg-gray-200 rounded;
+}
+
+.nav-links > div {
+  @apply inline-block;
+}
