@@ -15,8 +15,8 @@
 
 <section id="reports" class="-mt-48">
   <div class="container">
-    <div class="space-y-2 lg:space-y-0 grid lg:grid lg:grid-cols-2 gap-8 lg:gap-12">
-      <header class="col-span-1 lg:col-span-2"> 
+    <div class="space-y-2 lg:space-y-0 grid lg:grid lg:grid-cols-2 gap-8 lg:gap-1">
+      <header class="col-span-1 lg:col-span-2 pb-8"> 
         <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10 mb-0">
           @php the_field('reports_headline') @endphp
         </h2> 
