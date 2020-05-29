@@ -1,19 +1,19 @@
 <div x-data="{ mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false }" class="z-50 relative bg-white sticky">
   <div class="relative z-10 shadow">
-    <div class="flex justify-between items-center py-5 sm:py-4 md:justify-start md:space-x-10 container">
+    <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 container">
       <div>
         <a href="/" class="flex">
-          <img alt="{{ get_bloginfo('name', 'display') }}" class="h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
+          <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
         </a>
       </div>
-      <div class="-mr-2 -my-2 md:hidden">
+      <div class="-mr-2 -my-2 xl:hidden">
         <button @click="mobileMenuOpen = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
           <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
-      <div class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
+      <div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between xl:space-x-12">
         <nav class="flex space-x-6">
           <a 
             @php $link = 658; @endphp
@@ -68,12 +68,9 @@
           </a>
         </nav>
         <div class="flex items-center space-x-8">
-          <a href="#" class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-            Sign in
-          </a>
-          <span class="inline-flex rounded-md shadow-sm">
+          <span class="inline-flex rounded shadow-sm">
             <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-brand-dark hover:bg-brand-darker focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
-              Sign up
+              Donate
             </a>
           </span>
         </div>
