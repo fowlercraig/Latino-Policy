@@ -5,7 +5,7 @@
     @php do_action('get_header') @endphp
     @include('partials.header')
     @if (is_front_page())
-    <div class="wrap" role="document">
+    <div class="wrap overflow-hidden" role="document">
     @else
     <div class="wrap container" role="document">
     @endif

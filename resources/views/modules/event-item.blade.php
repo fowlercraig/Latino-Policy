@@ -6,7 +6,7 @@
       </a>
     </div>
     <div class="col-span-2 space-y-2">
-      <h2 class="text-3xl leading-9 font-bold tracking-tight text-white sm:text-3xl sm:leading-9">
+      <h2 class="text-2xl leading-8 font-bold tracking-tight text-white sm:text-3xl sm:leading-9">
         @php the_title(); @endphp
       </h2>
       <div class="text-brand-lighter">@php the_excerpt(); @endphp</div>

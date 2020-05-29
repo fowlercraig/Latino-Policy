@@ -6,7 +6,7 @@
         <div class="h-1 bg-red-600 w-32"></div>
       </div>
       <div class="w-full col-span-1 md:col-span-3 md:mb-0 sm:space-y-2">
-        <h2 class="text-5xl lg:text-6xl xl:text-7xl font-display uppercase leading-11 lg:leading-14 xl:leading-16 text-brand-darker">@php echo $donate['title'] @endphp</h2>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display uppercase leading-9 sm:leading-11 lg:leading-14 xl:leading-16 text-brand-darker">@php echo $donate['title'] @endphp</h2>
         <div class="h-1 bg-transparent w-32"></div>
         <p>@php echo $donate['description'] @endphp</p>
       </div>
@@ -23,7 +23,7 @@
                 class="absolute inset-0 flex items-center justify-center bg-white shadow rounded transform transition ease duration-200 hover:shadow-2xl hover:border-transparent hover:scale-105" 
                 href="https://giving.ucla.edu/campaign/?amount=@php echo $amount @endphp&OrgType=S&OrgNum=800&fund=63922O"
                 title="Opens link to Donate Page in the amout of $@php echo $amount @endphp">
-              <span class="font-bold text-3xl md:text-2xl lg:text-3xl font-display text-brand-darker">$@php echo $amount @endphp</span>
+              <span class="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-display text-brand-darker">$@php echo $amount @endphp</span>
               </a>
             </div>
           </div>

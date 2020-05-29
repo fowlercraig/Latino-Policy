@@ -4,8 +4,11 @@
     
     @foreach ($items as $item)
     
-    <div class="slide pt-48 pb-32 bg-black relative">
-      <div class="container relative z-10">
+    <div class="slide pb-10 sm:pt-48 sm:pb-32 bg-black relative">
+      <div class="sm:absolute inset-0 z-0 order-first">
+        <img alt='@php echo $item["image"]["alt"]; @endphp' class="object-cover w-full h-full" src='@php echo $item["image"]["url"]; @endphp'>
+      </div>
+      <div class="container relative z-10 order-last -mt-8">
         <div class="max-w-md space-y-4">
           @if ($item['subtitle'])
           <div class="inline-block bg-brand px-2 py-1">
@@ -27,9 +30,6 @@
             class="{{ $learnmore }}">@php echo $item['link']['title'] @endphp</a>
           @endif
         </div>
-      </div>
-      <div class="absolute inset-0 z-0">
-        <img alt='@php echo $item["image"]["alt"]; @endphp' class="object-cover w-full h-full" src='@php echo $item["image"]["url"]; @endphp'>
       </div>
     </div>
     

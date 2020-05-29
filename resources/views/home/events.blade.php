@@ -14,10 +14,10 @@
 @endphp
 
 <section id="events" class="bg-brand-dark pt-10 lg:pt-20 overflow-hidden">
-  <div class="container space-y-2 lg:space-y-0">
-    <header class="col-span-1 lg:col-span-2">
-      <div class="grid grid-cols-2 items-center">
-        <div>
+  <div class="container space-y-4 sm:space-y-0">
+    <header class="col-span-1 lg:col-span-2 ">
+      <div class="grid grid-cols-4 items-center gap-4">
+        <div class="col-span-4 sm:col-span-3">
           <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10 mb-0">
             @php the_field('events_headline') @endphp
           </h2> 
@@ -28,10 +28,10 @@
           </a>
           @endif
         </div>
-        <div class="controls">
-          <div class="flex justify-end space-x-px">
-            <div><button class="prev rounded-full h-6 w-6 md:h-12 md:w-12 flex items-center justify-center text-white bg-brand hover:opacity-75 transition transition ease-in-out duration-150 hover:scale-110"><i data-feather="chevron-left"></i></button></div>
-            <div><button class="next rounded-full h-6 w-6 md:h-12 md:w-12 flex items-center justify-center text-white bg-brand hover:opacity-75 transition transition ease-in-out duration-150 hover:scale-110"><i data-feather="chevron-right"></i></button></div>
+        <div class="controls col-span-4 sm:col-span-1">
+          <div class="flex sm:justify-end space-x-2 sm:space-x-px">
+            <div><button class="prev rounded-full h-10 w-10 sm:h-12 md:w-12 flex items-center justify-center text-white bg-brand hover:opacity-75 transition transition ease-in-out duration-150 hover:scale-110"><i data-feather="chevron-left"></i></button></div>
+            <div><button class="next rounded-full h-10 w-10 sm:h-12 md:w-12 flex items-center justify-center text-white bg-brand hover:opacity-75 transition transition ease-in-out duration-150 hover:scale-110"><i data-feather="chevron-right"></i></button></div>
           </div>
         </div>
       </div>
