@@ -14,7 +14,7 @@
     </div>
     <div>
       <p class="text-brand-dark font-medium text-sm">@php echo get_the_title( $people->ID ); @endphp</p>
-      <p class="text-gray-400 font-medium text-xs">@php echo get_the_terms($people->ID, 'role')[0]->name; @endphp</p>
+      <p class="text-gray-500 font-medium text-xs">@php echo get_the_terms($people->ID, 'role')[0]->name; @endphp</p>
     </div>
   </a>
   @php endforeach; wp_reset_postdata(); @endphp

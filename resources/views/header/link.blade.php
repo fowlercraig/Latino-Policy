@@ -10,7 +10,7 @@
     @endif
     <div class="ml-4">
       <h5 class="text-2xl sm:text-xl leading-6 sm:leading-6 font-extrabold tracking-tight text-brand-dark mb-0">@php the_title(); @endphp</h5>
-      <p class="text-gray-400 font-medium text-sm">
+      <p class="text-gray-500 font-medium text-sm">
         Learn more
       </p>
     </div>

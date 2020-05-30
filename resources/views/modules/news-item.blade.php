@@ -4,7 +4,7 @@
   <div class="h-1"></div>
   <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">
     @if(get_the_terms(get_the_ID(), 'issue'))
-    <span class="text-gray-400">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp → </span> 
+    <span class="text-gray-500">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp → </span> 
     @endif
     @php the_title(); @endphp
   </h5>
