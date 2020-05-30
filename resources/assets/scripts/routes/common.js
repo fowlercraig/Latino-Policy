@@ -21,6 +21,8 @@ export default {
     function build() {
       AOS.init({
         duration: 1200,
+        offset: 120,
+        once: true,
       });
       feather.replace();
       new Rellax('.rellax');
