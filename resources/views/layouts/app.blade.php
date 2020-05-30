@@ -2,6 +2,7 @@
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
   <body @php body_class('text-gray-500') @endphp>
+    <a class="sr-only" href="#main" title="Skips to content">Skip to Content</a>
     @php do_action('get_header') @endphp
     @include('partials.header')
     @if (is_front_page())
@@ -10,7 +11,7 @@
     <div class="wrap container" role="document">
     @endif
       <div class="content">
-        <main class="main transition-fade">
+        <main id="main" class="main transition-fade">
           @yield('content')
         </main>
       </div>
