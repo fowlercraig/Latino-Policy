@@ -18,7 +18,7 @@
           @endif
         </div>
         <div class="col-span-2 space-y-2">
-          <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
+          <h2 class="text-2xl sm:text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10">
             @php echo $items['title'] @endphp
           </h2>
           <div class="text-brand-lighter">@php echo $items['description'] @endphp</div>

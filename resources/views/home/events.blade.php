@@ -18,7 +18,7 @@
     <header class="col-span-1 lg:col-span-2 ">
       <div class="grid grid-cols-4 items-center gap-4">
         <div class="col-span-4 sm:col-span-3">
-          <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10 mb-0">
+          <h2 class="text-2xl sm:text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10 mb-0">
             @php the_field('events_headline') @endphp
           </h2> 
           @if($link)
