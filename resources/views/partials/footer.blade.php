@@ -3,5 +3,8 @@
 @else
 <div class="bg-gray-100 mt-20">
 @endif
-  <div class="h-64"></div>
+  <div class="container py-20">
+    Footer coming shortly
+  </div>
 </div>
+

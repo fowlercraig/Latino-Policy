@@ -19,7 +19,7 @@
         <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-extrabold tracking-tight text-brand-dark mb-0">
           @php echo get_the_title($link); @endphp
         </h2> 
-        <div class="text-sm text-gray-500">@php echo get_the_excerpt($link) @endphp</div>
+        <div class="text-sm">@php echo get_the_excerpt($link) @endphp</div>
         <a class="inline-block font-bold border-b-2 border-brand pb-1 text-brand transition ease duration-200 hover:border-brand-light" href="@php echo $link['url'] @endphp">
           View Work
         </a>
