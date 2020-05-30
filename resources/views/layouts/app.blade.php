@@ -10,7 +10,7 @@
     <div class="wrap container" role="document">
     @endif
       <div class="content">
-        <main class="main text-gray-500">
+        <main class="main text-gray-500 transition-fade">
           @yield('content')
         </main>
         @if (App\display_sidebar())

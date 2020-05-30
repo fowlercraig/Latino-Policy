@@ -1,4 +1,4 @@
-<div id="parent-<?php the_ID(); ?>" class="parent-page hover">
+<div id="parent-<?php the_ID(); ?>" class="parent-page hover" data-aos="fade">
   <div class="transform transition duration-300 ease group hover:-translate-y-1 hover:scale-105 hover:shadow-xl">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="block space-y-2">
       <div>

@@ -1,3 +1,4 @@
+//import Swup from 'swup';
 import 'alpinejs'
 import AOS from 'aos';
 const feather = require('feather-icons')
@@ -17,12 +18,17 @@ export default {
     // JavaScript to be fired on all pages
   },
   finalize() {
-    AOS.init({
-      duration: 1200,
-    });
-    feather.replace();
-    new Rellax('.rellax');
-    $('.carousel').carousel();  
-    $('.sticky').sticky();  
+    function build() {
+      AOS.init({
+        duration: 1200,
+      });
+      feather.replace();
+      new Rellax('.rellax');
+      $('.carousel').carousel();  
+      $('.sticky').sticky(); 
+    }
+    build();
+    //const swup = new Swup();
+    //swup.on('contentReplaced', build); 
   },
 };
