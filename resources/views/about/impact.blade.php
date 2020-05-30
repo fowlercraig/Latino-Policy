@@ -15,7 +15,7 @@
   <div class="space-y-20 lg:space-y-40">
     <div data-aos="fade-up">
       <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-2 gap-12 lg:items-center">
-        <div class="lg:order-first">
+        <div class="lg:order-last">
           <div class="aspect-ratio aspect-ratio--8x5 bg-gray-100"></div>
         </div>
         <div class="space-y-2">

@@ -5,7 +5,7 @@
         <div class="lg:order-last">
           <div class="aspect-ratio aspect-ratio--8x5 bg-gray-100"></div>
         </div>
-        <div class="space-y-2">
+        <div class="space-y-2 lg:order-last">
           <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-brand-dark sm:text-4xl sm:leading-10">
             @php the_field('title') @endphp
           </h2>

@@ -22,16 +22,22 @@
             @php echo $work['description'] @endphp
           </div>
         </div>
-        <div class="lg:order-last">
-          <div class="space-y-4">
+        <div class="col-span-2">
+        <div class="lg:order-first col-span-2">
+          <div class="space-y-4 lg:space-y-0 lg:grid grid-cols-2 gap-8">
             @php if ( $parent->have_posts() ): @endphp
             @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
             <a 
               href="@php the_permalink(); @endphp" 
               title="@php the_title(); @endphp" 
-              class="p-6 block space-y-2 justify-start rounded-lg bg-gray-50 hover:bg-gray-100 transition ease-in-out duration-150">
-                <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">@php the_title(); @endphp</h5>
-                <p class="text-sm">@php echo get_the_excerpt(); @endphp</p>
+              class="p-6 block justify-start rounded-lg bg-gray-50 hover:bg-gray-100 transition ease-in-out duration-150 flex items-center">
+                <div class="w-32 flex-none mr-4">
+                  <div class="aspect-ratio aspect-ratio--1x1 bg-gray-500"></div>
+                </div>
+                <div class="space-y-2">
+                  <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">@php the_title(); @endphp</h5>
+                  <p class="text-sm">@php echo get_the_excerpt(); @endphp</p>
+                </div>
             </a>
             @php endwhile @endphp
             @php endif @endphp
