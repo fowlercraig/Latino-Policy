@@ -3,7 +3,8 @@
     <div data-aos="fade-up">
       <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-2 gap-12 lg:items-center">
         <div class="lg:order-last">
-          <div class="aspect-ratio aspect-ratio--8x5 bg-gray-100"></div>
+          @php $image = get_field('image'); $size = 'large'; @endphp
+          @php echo wp_get_attachment_image( $image, $size ); @endphp
         </div>
         <div class="space-y-2 lg:order-last">
           <h2 class="text-2xl sm:text-3xl leading-9 font-extrabold tracking-tight text-brand-dark sm:text-4xl sm:leading-10">

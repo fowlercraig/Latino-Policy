@@ -1,5 +1,5 @@
 <div x-data="{ mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false }" class="z-50 relative bg-white sticky">
-  <div class="relative z-10">
+  <div class="relative z-10 border-b border-gray-100">
     <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 max-w-7xl mx-auto px-4 sm:px-6">
       <div>
         <a href="/" class="flex">

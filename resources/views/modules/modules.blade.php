@@ -1,18 +1,33 @@
 @php $items = get_field('modules') @endphp
 @if ($items)
 <section id="modules">
-  <div class="space-y-20 lg:space-y-40">
+  <div class="space-y-20 lg:space-y-20">
     @php $i = 0; @endphp
     @foreach ($items as $item)
     <div data-aos="fade-up">
       <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12 lg:items-center">
         <div class="col-span-3 @if ($i % 2 != 0): lg:order-last @endif">
+          @php $image = $item['image']; $size = 'large'; @endphp
           @if ($item['link'])
           <a href="@php echo $item['link']['url'] @endphp" class="block">
-            <div class="aspect-ratio aspect-ratio--8x5 bg-gray-100"></div>
+            <div class="bg-gray-100">
+              @if (wp_get_attachment_caption($image))
+              <span class="pt-2 pr-4 bg-white text-xs font-medium inline-block text-brand-dark absolute bottom-0">
+                @php echo wp_get_attachment_caption($image); @endphp
+              </span>
+            @endif
+              @php echo wp_get_attachment_image( $image, $size ); @endphp
+            </div>
           </a>
           @else
-          <div class="aspect-ratio aspect-ratio--8x5 bg-gray-100"></div>
+          <div class="bg-gray-100">
+            @if (wp_get_attachment_caption($image))
+              <span class="pt-2 pr-4 bg-white text-xs font-medium inline-block text-brand-dark absolute bottom-0">
+                @php echo wp_get_attachment_caption($image); @endphp
+              </span>
+            @endif
+            @php echo wp_get_attachment_image( $image, $size ); @endphp
+          </div>
           @endif
         </div>
         <div class="col-span-2 space-y-2">
