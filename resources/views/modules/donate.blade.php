@@ -6,7 +6,7 @@
         <div class="h-1 bg-red-600 w-32"></div>
       </div>
       <div class="w-full col-span-1 md:col-span-3 md:mb-0 sm:space-y-2">
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display uppercase leading-9 sm:leading-11 lg:leading-14 xl:leading-16 text-brand-darker">@php echo $donate['title'] @endphp</h2>
+        <p class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display uppercase leading-9 sm:leading-11 lg:leading-14 xl:leading-16 text-brand-darker">@php echo $donate['title'] @endphp</p>
         <div class="h-1 bg-transparent w-32"></div>
         <p>@php echo $donate['description'] @endphp</p>
       </div>

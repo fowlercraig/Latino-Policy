@@ -30,8 +30,14 @@
         </div>
         <div class="controls col-span-4 sm:col-span-1">
           <div class="flex sm:justify-end space-x-2 sm:space-x-px">
-            <div><button class="prev rounded-full h-10 w-10 sm:h-12 md:w-12 flex items-center justify-center text-white bg-brand hover:opacity-75 transition transition ease-in-out duration-150 hover:scale-110"><i data-feather="chevron-left"></i></button></div>
-            <div><button class="next rounded-full h-10 w-10 sm:h-12 md:w-12 flex items-center justify-center text-white bg-brand hover:opacity-75 transition transition ease-in-out duration-150 hover:scale-110"><i data-feather="chevron-right"></i></button></div>
+            <div><button class="prev rounded-full h-10 w-10 sm:h-12 md:w-12 flex items-center justify-center text-white bg-brand hover:opacity-75 transition transition ease-in-out duration-150 hover:scale-110">
+              <span class="sr-only">Previous Slide</span>
+              <i data-feather="chevron-left"></i>
+            </button></div>
+            <div><button class="next rounded-full h-10 w-10 sm:h-12 md:w-12 flex items-center justify-center text-white bg-brand hover:opacity-75 transition transition ease-in-out duration-150 hover:scale-110">
+              <span class="sr-only">Next Slide</span>
+              <i data-feather="chevron-right"></i>
+            </button></div>
           </div>
         </div>
       </div>

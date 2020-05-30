@@ -2,6 +2,9 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
+
+    <h1 class="sr-only">{{ get_bloginfo('name', 'display') }}</h1>
+
     @include('home.slideshow')
 
     <div class="relative z-10">
