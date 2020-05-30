@@ -7,17 +7,12 @@
     @if (is_front_page())
     <div class="wrap" role="document">
     @else
-    <div class="wrap max-w-7xl mx-auto px-4 sm:px-6" role="document">
+    <div class="wrap container" role="document">
     @endif
       <div class="content">
         <main class="main text-gray-500 transition-fade">
           @yield('content')
         </main>
-        @if (App\display_sidebar())
-          <aside class="sidebar">
-            @include('partials.sidebar')
-          </aside>
-        @endif
       </div>
     </div>
     @php do_action('get_footer') @endphp

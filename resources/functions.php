@@ -111,3 +111,26 @@ function remove_draft_widget(){
     remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
 }
 // End remove post type
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+  return 'class="inline-block mr-1 rounded-full inline-block text-sm text-white bg-brand-darker font-bold py-4 px-6 items-center relative group 
+      hover:bg-brand-dark transition ease duration-300 hover:shadow-xl"';
+}
+
+
+add_filter('sage/display_sidebar', function ($display) {
+    static $display;
+
+    isset($display) || $display = in_array(true, [
+      // The sidebar will be displayed if any of the following return true
+      is_single(),
+      is_404(),
+      is_archive(),
+      is_page_template('views/template-custom.blade.php')
+    ]);
+
+    return $display;
+});
