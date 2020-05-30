@@ -16,7 +16,7 @@
 <section id="reports">
   <div class="space-y-2 lg:space-y-0 grid lg:grid lg:grid-cols-2">
     <header class="col-span-1 lg:col-span-2 pb-8"> 
-      <h2 class="text-2xl sm:text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 mb-0">
+      <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-extrabold tracking-tight text-brand-darker mb-0">
         Reports from @php the_title() @endphp
       </h2> 
       <div class="h-1"></div>

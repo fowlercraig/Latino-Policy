@@ -18,7 +18,7 @@
             </div>
             <div class="sm:h-2"></div>
             <h2 class="text-2xl sm:text-3xl leading-7 sm:leading-10 font-bold tracking-tight text-white">
-              <span class="bg-transparent group-hover:bg-brand-darker transition ease duration-150 p-1"><?php the_title(); ?></span>
+              <span class="bg-transparent group-hover:bg-brand-darker transition ease duration-150 py-1"><?php the_title(); ?></span>
             </h2>
             <div><a href="@php echo $item['link']['url'] @endphp" class="{{ $learnmore }}">Learn More</a></div>
           </div>
