@@ -1,6 +1,6 @@
-<div x-data="{ mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false }" class="z-50 relative bg-white sticky">
+<div x-data="{ mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: true, peopleMenuOpen: false }" class="z-50 relative bg-white sticky">
   <div class="relative z-10 border-b border-gray-100">
-    <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 container">
       <div>
         <a href="/" class="flex">
           <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">

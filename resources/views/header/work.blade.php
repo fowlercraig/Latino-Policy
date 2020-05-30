@@ -14,10 +14,21 @@
 <!-- Work menu -->
 <div x-description="'Work' flyout menu, show/hide based on flyout menu state." x-show="solutionsMenuOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-1" class="hidden md:block absolute inset-x-0 transform shadow-lg" style="display: none;">
   <div class="bg-white">
-    <div class="container grid row-gap-6 py-6 sm:grid-cols-2 sm:gap-8 sm:py-8 lg:grid-cols-3 lg:py-12">
-      @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
-      @include('header.link')
-      @php endwhile @endphp
+    <div class="container py-6 sm:py-8 lg:py-12 grid grid-cols-3 col-gap-10">
+      <div class="col-span-1 space-y-2 pr-10 border-r border-gray-100">
+        <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-extrabold tracking-tight text-brand-dark mb-0">
+          @php echo get_the_title($link); @endphp
+        </h2> 
+        <div class="text-sm text-gray-500">@php echo get_the_excerpt($link) @endphp</div>
+        <a class="inline-block font-bold border-b-2 border-brand pb-1 text-brand transition ease duration-200 hover:border-brand-light" href="@php echo $link['url'] @endphp">
+          View Work
+        </a>
+      </div>
+      <div class="col-span-2 grid sm:grid-cols-2 sm:gap-4 lg:grid-cols-2">
+        @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
+        @include('header.link')
+        @php endwhile @endphp
+      </div>
     </div>
   </div>
 </div>
