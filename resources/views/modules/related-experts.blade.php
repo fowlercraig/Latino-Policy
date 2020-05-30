@@ -1,5 +1,6 @@
 @php
   $terms = get_the_terms( $post->ID , 'issue', 'string');
+  if($terms):
   $term_ids = wp_list_pluck($terms,'term_id');
   $args = array(
     'post_type'      => 'person',
@@ -40,4 +41,4 @@
 </section>
 
 @endif
-@php wp_reset_postdata() @endphp
+@php wp_reset_postdata(); endif; @endphp
