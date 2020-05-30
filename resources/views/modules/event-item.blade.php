@@ -6,6 +6,7 @@
       </div>
     </div>
     <div class="col-span-2 space-y-2">
+      <div class="text-brand-lighter font-medium"><?php the_field('event_date'); ?></div>
       <h2 class="text-2xl leading-8 font-bold tracking-tight text-white sm:text-3xl sm:leading-9">
         @php the_title(); @endphp
       </h2>

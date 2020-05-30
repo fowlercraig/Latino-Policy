@@ -33,7 +33,7 @@
           <a
             target="_blank"
             href="https://giving.ucla.edu/campaign/?amount=10&OrgType=S&OrgNum=800&fund=63922O" 
-            class="bg-brand-dark rounded px-5 py-3 text-white leading-none font-brand uppercase tracking-wider text-sm font-medium">Make a Donation</a>
+            class="bg-brand-dark rounded px-5 py-3 text-white leading-none text-white font-medium">Make a Donation</a>
         </div>
       </div>
     </div>
