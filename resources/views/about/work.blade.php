@@ -32,7 +32,10 @@
               title="@php the_title(); @endphp" 
               class="p-6 block justify-start rounded-lg bg-gray-50 hover:bg-gray-100 transition ease-in-out duration-150 flex items-center">
                 <div class="w-32 flex-none mr-4">
-                  <div class="aspect-ratio aspect-ratio--1x1 bg-gray-500"></div>
+                  <div class="aspect-ratio aspect-ratio--1x1 bg-brand-dark rounded">
+                    @php $image = get_field('icon'); $size = 'large'; @endphp
+                    @php echo wp_get_attachment_image( $image, $size ); @endphp
+                  </div>
                 </div>
                 <div class="space-y-2">
                   <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">@php the_title(); @endphp</h5>
