@@ -20,7 +20,7 @@
           @php echo get_the_title($link); @endphp
         </h2> 
         <div class="text-sm">@php echo get_the_excerpt($link) @endphp</div>
-        <a class="inline-block font-bold border-b-2 border-brand pb-1 text-brand transition ease duration-200 hover:border-brand-light" href="@php echo $link['url'] @endphp">
+        <a class="inline-block font-bold border-b-2 border-brand pb-1 text-brand transition ease duration-200 hover:border-brand-light" href="@php echo get_the_permalink($link); @endphp">
           View Work
         </a>
       </div>
