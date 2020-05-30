@@ -18,7 +18,7 @@ h6 {
 
 .entry-content ul li,
 .entry-content ol li {
-  @apply relative;
+  @apply relative block;
 }
 
 .entry-content a {
