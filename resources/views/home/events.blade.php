@@ -37,7 +37,7 @@
       </div>
     </header>
 
-    <div class="carousel" data-carousel-options='{"autoAdvance":false,"pagination":false, "contained":false, "controls":{"container":".controls","previous":".prev","next":".next"} }'>
+    <div class="carousel carousel-events" data-carousel-options='{"autoAdvance":false,"pagination":false, "contained":false, "controls":{"container":".controls","previous":".prev","next":".next"} }'>
       @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
       <div class="mr-20">
         @include('modules.event-item')

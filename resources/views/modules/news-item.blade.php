@@ -5,5 +5,5 @@
   <div class="h-1"></div>
   <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">@php the_title(); @endphp</h5>
   <div class="flex-grow h-2"></div>
-  <p class="mt-auto text-sm leading-5 font-medium text-brand align-bottom">Learn more →</p>
+  <p class="mt-auto text-sm leading-5 font-medium text-brand align-bottom">Read More →</p>
 </a>

@@ -1,6 +1,6 @@
 <div x-data="{ mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false }" class="z-50 relative bg-white sticky">
   <div class="relative z-10 shadow">
-    <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 container">
+    <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 max-w-7xl mx-auto px-4 sm:px-6">
       <div>
         <a href="/" class="flex">
           <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
@@ -68,11 +68,15 @@
           </a>
         </nav>
         <div class="flex items-center space-x-8">
-          <span class="inline-flex rounded shadow-sm">
-            <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-brand-dark hover:bg-brand-darker focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+          <button class="inline-flex rounded shadow-sm overflow-hidden bg-brand-dark font-medium text-white">
+            <span href="#" class="px-4 py-2 leading-6">
               Donate
-            </a>
-          </span>
+            </span>
+            <span class="px-4 pl-3 py-2 leading-6 bg-black-25 flex items-center">
+              $10
+              <i height="12" width="12" class="ml-1" data-feather="chevron-down"></i>
+            </span>
+          </button>
         </div>
       </div>
     </div>
