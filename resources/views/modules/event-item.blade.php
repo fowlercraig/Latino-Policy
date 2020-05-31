@@ -6,13 +6,16 @@
       </div>
     </div>
     <div class="col-span-2 space-y-2">
-      <div class="text-brand-lighter font-medium"><?php the_field('event_date'); ?></div>
+      <div class="text-white font-medium">
+        <span class="text-brand-light">Event Date →</span>
+        <?php the_field('event_date'); ?>
+      </div>
       <h2 class="text-2xl leading-8 font-bold tracking-tight text-white sm:text-3xl sm:leading-9">
         @php the_title(); @endphp
       </h2>
       <div class="text-brand-lighter">@php the_excerpt(); @endphp</div>
       <div class="h-px"></div>
-      <div><p class="{{ $learnmore }}">Learn More</p></div>
+      <div><p class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white">Learn More</p></div>
     </div>
   </div>
 </a>
