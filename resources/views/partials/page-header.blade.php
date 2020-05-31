@@ -5,11 +5,11 @@
 @endphp
 <div class="page-header">
   @if ( has_post_thumbnail() )
-  <div class="-mx-64 bg-gray-900 h-64 text-center rellax z-10">
+  <div class="bg-gray-900 h-64 text-center rellax z-10">
     <?php the_post_thumbnail( 'large', array( 'class' => 'opacity-75 object-cover transition ease duration-300 w-full h-full' ) ); ?>
   </div>
   @endif
-  <div class="-mx-64 py-6 pb-6 bg-brand-dark space-y-2 relative z-20">
+  <div class="py-6 pb-6 bg-brand-dark space-y-2 relative z-20">
     <div class="container">
       <div class="grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12">
         <div class="relative space-y-2">

@@ -76,6 +76,7 @@ module.exports = {
     scale: ['responsive', 'hover', 'focus', 'group-hover'],
     shadow: ['responsive', 'hover', 'focus', 'group-hover'],
     translate: ['responsive', 'hover', 'focus', 'group-hover'],
+    zIndex: ['responsive', 'hover', 'focus', 'group-hover'],
   },
   plugins: [
     require('@tailwindcss/ui'),

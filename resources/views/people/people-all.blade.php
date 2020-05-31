@@ -19,7 +19,7 @@
 
   <div class="h-px bg-gray-100"></div>
 
-  <section id="experts-@php echo $member_group_term->name; @endphp">
+  <section id="experts-@php echo $member_group_term->slug; @endphp">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-12">
       <header class="col-span-2 lg:col-span-4"> 
         <h2 class="text-2xl sm:text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10  mb-0">

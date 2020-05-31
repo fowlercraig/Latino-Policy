@@ -3,7 +3,7 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
-    <div class="space-y-20">
+    <div class="space-y-20 container">
       <div class="h-px"></div>
       @if (!is_page('leadership'))
         @if (is_page(9))

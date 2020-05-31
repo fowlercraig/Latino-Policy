@@ -8,7 +8,7 @@
     @if (is_front_page())
     <div class="wrap" role="document">
     @else
-    <div class="wrap container" role="document">
+    <div class="wrap" role="document">
     @endif
       <div class="content">
         <main id="main" class="main transition-fade">
