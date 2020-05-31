@@ -23,7 +23,7 @@
     <div class="h-px bg-gray-100">
   </div>
 </div>
-<div x-data="{ mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false }" class="z-50 relative bg-white sticky">
+<div @click.away="donateMenuOpen = false" x-data="{ mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-50 relative bg-white sticky">
   <div class="relative z-10 border-b border-gray-100">
     <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 container">
       <div>
@@ -94,15 +94,18 @@
           </a>
         </nav>
         <div class="flex items-center space-x-8">
-          <button class="inline-flex rounded shadow-sm overflow-hidden bg-brand-dark font-medium text-white">
-            <span href="#" class="px-4 py-2 leading-6">
-              Donate
-            </span>
-            <span class="px-4 pl-3 py-2 leading-6 bg-black-25 flex items-center">
-              $10
-              <i height="12" width="12" class="ml-1" data-feather="chevron-down"></i>
-            </span>
-          </button>
+          <div class="relative">
+            <button 
+              @click="donateMenuOpen = !donateMenuOpen" x-state:on="Item active" x-state:off="Item inactive"
+              :class="{ 'bg-brand-darker': donateMenuOpen, 'bg-brand-dark': !donateMenuOpen }"
+              class="inline-flex rounded shadow-sm overflow-hidden bg-brand-dark hover:bg-brand-darker font-medium transition ease duration-200">
+              <span href="#" class="px-4 py-2 leading-6 text-white flex items-center space-x-1">
+                <span class="text-white">Make a Donation</span>
+                <i height="20" width="16" class="block mt-px" data-feather="chevron-down"></i>
+              </span>
+            </button>
+            @include('header.donate')
+          </div>
         </div>
       </div>
     </div>
