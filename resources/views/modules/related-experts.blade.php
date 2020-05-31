@@ -28,7 +28,7 @@
         Related Experts
       </h2> 
       <div class="h-1"></div>
-      <a class="inline-block font-bold border-b-2 border-brand pb-1 text-brand transition ease duration-200 hover:border-brand-light" href="@php echo $link['url'] @endphp">
+      <a class="inline-block font-bold border-b-2 border-brand pb-1 text-brand transition ease duration-200 hover:border-brand-light" href="/people/experts">
         More Experts
       </a>
     </header>

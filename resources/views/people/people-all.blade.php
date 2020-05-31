@@ -5,6 +5,13 @@
     $member_group_query = new WP_Query( array(
       'post_type' => 'person',
       'posts_per_page' => 8,
+      'orderby'        => 'rand',
+      'meta_query' => array (
+        array(
+          'key' => '_thumbnail_id',
+          'compare' => 'EXISTS'
+        ),
+      ),
       'tax_query' => array(
         array(
           'taxonomy' => 'role',
