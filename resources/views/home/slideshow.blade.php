@@ -27,7 +27,7 @@
           <a
             title="@php echo $item['title'] @endphp"
             href="@php echo $item['link']['url'] @endphp" 
-            class="{{ $learnmore }}">@php echo $item['link']['title'] @endphp</a>
+            class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white">@php echo $item['link']['title'] @endphp</a>
           @endif
         </div>
       </div>

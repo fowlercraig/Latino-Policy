@@ -101,7 +101,9 @@
               class="inline-flex rounded shadow-sm overflow-hidden bg-brand-dark hover:bg-brand-darker font-medium transition ease duration-200">
               <span href="#" class="px-4 py-2 leading-6 text-white flex items-center space-x-1">
                 <span class="text-white">Make a Donation</span>
-                <i height="20" width="16" class="block mt-px" data-feather="chevron-down"></i>
+                <div class="block pt-px transition ease duration-400" :class="{ 'pt-1': donateMenuOpen, 'pt-px': !donateMenuOpen }" >
+                  <i height="16" width="16" data-feather="chevron-down"></i>
+                </div>
               </span>
             </button>
             @include('header.donate')

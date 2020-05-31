@@ -10,10 +10,11 @@
     </div>
     <div class="space-y-4 p-4 sm:p-8">
       <h2 class="text-white font-display uppercase text-5xl lg:text-6xl leading-12 lg:leading-15">@php echo get_the_title($page); @endphp</h2>
+      <div class="border-t-2 border-red-500 w-28"></div>
       <div class="text-gray-300">@php echo get_the_excerpt($page) @endphp</div>
       <div>
         <a
-          class="{{ $learnmore }}"
+          class="inline-block font-bold border-t-2 border-b-0 border-red-500 pt-1 text-white"
           title="Opens @php the_title() @endphp in the same window"  
           href="@php echo get_the_permalink($page) @endphp"  
         >Learn More</a>
