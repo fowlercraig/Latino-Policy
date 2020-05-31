@@ -2,8 +2,8 @@
 
 @section('content')
   @include('partials.page-header')
-  <div class="container space-y-20">
-    <div class="h-px"></div>
+  <div class="container">
+    <div class="h-10"></div>
     @if (App\display_sidebar())
     <div class="grid grid-cols-3 gap-12">
     <div class="col-span-2">
@@ -28,7 +28,7 @@
     @if (App\display_sidebar())
     </div>
 
-    <aside class="sidebar order-first border-r border-gray-100 h-full">
+    <aside class="sidebar order-first">
     @include('partials.sidebar')
     </aside>
 
