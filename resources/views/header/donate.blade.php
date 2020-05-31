@@ -20,7 +20,7 @@
           @endphp
           <a 
             href="https://giving.ucla.edu/campaign/?amount=@php echo $amount @endphp&OrgType=S&OrgNum=800&fund=63922O" 
-            class="p-3 block space-y-1 rounded-md bg-gray-100 hover:bg-gray-100 transition ease-in-out duration-150 text-center">
+            class="p-3 block space-y-1 rounded-md bg-gray-100 hover:bg-brand-lightest transition ease-in-out duration-150 text-center">
             <p class="text-base leading-6 font-medium text-brand-dark">
               $@php echo $amount @endphp
             </p>
@@ -28,14 +28,14 @@
           @php endforeach; @endphp
         </div>
       </div>
-      <div class="p-4 bg-gray-50 sm:p-8">
+      <div class="p-4 bg-gray-50 hover:bg-brand-lightest transition ease duration-300">
         <a 
           href="https://giveto.ucla.edu/fund/latino-policy-politics-initiative/" 
-          class="-m-3 rounded-md transition ease-in-out duration-150 flex items-center justify-between space-x-4">
+          class="rounded-md transition ease-in-out duration-150 flex items-center justify-between space-x-4 text-gray-500">
           <div class="text-brand flex-0 order-last">
             <i height="40" width="40" class="block mt-px" data-feather="help-circle"></i>
           </div>
-          <p class="text-sm leading-5 text-gray-500">
+          <p class="text-sm leading-5">
             Learn more about out how <br>LPPI utilizes your donation.
           </p>
         </a>
