@@ -10,12 +10,13 @@
     'orderby'        => 'post__in',
   );
   $parent = new WP_Query( $args );
+  $variable_data = 3;
   if ( $parent->have_posts() ):
 @endphp
 
 <section id="reports">
-  <div class="space-y-2 lg:space-y-0 grid lg:grid lg:grid-cols-2">
-    <header class="col-span-1 lg:col-span-2 pb-8"> 
+  <div class="space-y-2 lg:space-y-0">
+    <header class="pb-8"> 
       <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-extrabold tracking-tight text-brand-darker mb-0">
         @php the_field('reports_headline') @endphp
       </h2> 
@@ -27,8 +28,16 @@
       @endif
     </header>
 
+    @php $variable_name = 3 @endphp
+    @php $variable_data = 3 @endphp
+
+    @if ( $parent->post_count == 3)
+    <div class="grid lg:grid lg:grid-cols-3">
+    @else
+    <div class="grid lg:grid lg:grid-cols-2">
+    @endif
     @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
-    <div class="-m-px">@include('research.report')</div>
+    <div class="-m-px">@include('research.report',['count' => $parent->post_count])</div>
     @php endwhile; @endphp
 
   </div>

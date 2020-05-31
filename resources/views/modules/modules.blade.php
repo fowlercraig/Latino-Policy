@@ -9,7 +9,7 @@
         <div class="col-span-3 @if ($i % 2 != 0): lg:order-last @endif">
           @php $image = $item['image']; $size = 'large'; @endphp
           @if ($item['link'])
-          <a href="@php echo $item['link']['url'] @endphp" class="block">
+          <a href="@php echo $item['link']['url'] @endphp" class="block transition duration-300 ease hover:shadow-xl">
             <div class="bg-gray-100">
               @if (wp_get_attachment_caption($image))
               <span class="pt-2 pr-4 bg-white text-xs font-medium inline-block text-brand-dark absolute bottom-0">
