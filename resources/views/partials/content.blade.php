@@ -11,17 +11,17 @@
     <div class="flex text-brand space-x-1 text-sm font-medium">
 
       @if(get_the_terms(get_the_ID(), 'resource'))
-      <a href="@php echo $resource @endphp" class="hover:underline">@php echo get_the_terms(get_the_ID(), 'resource')[0]->name; @endphp</a>
+      <a href="@php echo $resource @endphp" class="bg-brand-darker text-white px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'resource')[0]->name; @endphp</a>
       <span class="text-gray-400">→</span>
       @endif
 
       @if(get_the_terms(get_the_ID(), 'issue'))
-      <a href="@php echo $issue @endphp" class="hover:underline">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</a>
+      <a href="@php echo $issue @endphp" class="bg-brand-dark text-white px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</a>
       @if (get_the_terms(get_the_ID(), 'issue')[1]->name)
-      ,<a href="@php echo $issue @endphp" class="hover:underline">@php echo get_the_terms(get_the_ID(), 'issue')[1]->name; @endphp</a>
+      <a href="@php echo $issue @endphp" class="bg-brand text-white px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'issue')[1]->name; @endphp</a>
       @endif
       @if (get_the_terms(get_the_ID(), 'issue')[2]->name)
-      ,<a href="@php echo $issue @endphp" class="hover:underline">@php echo get_the_terms(get_the_ID(), 'issue')[2]->name; @endphp</a>
+      <a href="@php echo $issue @endphp" class="bg-brand-light text-white px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'issue')[2]->name; @endphp</a>
       @endif
       @endif
     </div>
