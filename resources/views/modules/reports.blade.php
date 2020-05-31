@@ -10,7 +10,6 @@
     'orderby'        => 'post__in',
   );
   $parent = new WP_Query( $args );
-  $variable_data = 3;
   if ( $parent->have_posts() ):
 @endphp
 
@@ -28,16 +27,19 @@
       @endif
     </header>
 
-    @php $variable_name = 3 @endphp
-    @php $variable_data = 3 @endphp
-
     @if ( $parent->post_count == 3)
     <div class="grid lg:grid lg:grid-cols-3">
+    @elseif ( $parent->post_count == 1)
+    <div class="grid lg:grid lg:grid-cols-1">
     @else
     <div class="grid lg:grid lg:grid-cols-2">
     @endif
     @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
-    <div class="-m-px">@include('research.report',['count' => $parent->post_count])</div>
+      @if ( $parent->post_count == 1)
+      <div class="-m-px">@include('research.report-wide')</div>
+      @else
+      <div class="-m-px">@include('research.report',['count' => $parent->post_count])</div>
+      @endif
     @php endwhile; @endphp
 
   </div>

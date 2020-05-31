@@ -14,8 +14,8 @@
 @endphp
 
 <section id="news">
-  <div class="space-y-10 lg:space-y-0 sm:grid lg:grid lg:grid-cols-4 gap-8 lg:gap-12">
-    <header class="col-span-1 lg:col-span-4"> 
+  <div class="space-y-10 lg:space-y-0">
+    <header class="col-span-1 lg:col-span-4 pb-8"> 
       <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-extrabold tracking-tight text-brand-darker mb-0">
         @php the_field('press_headline') @endphp
       </h2> 
@@ -27,9 +27,15 @@
       @endif
     </header>
 
-    @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
-    @include('modules.news-item')
-    @php endwhile; @endphp
+    @if ( $parent->post_count == 2)
+    <div class="sm:grid lg:grid lg:grid-cols-2 gap-8 lg:gap-12">
+    @else
+    <div class="sm:grid lg:grid lg:grid-cols-4 gap-8 lg:gap-12">
+    @endif
+      @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
+      @include('modules.news-item',['count' => $parent->post_count])
+      @php endwhile; @endphp
+    </div>
 
   </div>
 </section>

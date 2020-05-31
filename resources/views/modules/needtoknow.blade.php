@@ -8,8 +8,11 @@
       </h2> 
     </header>
     @foreach ($items as $item)
-    <div class="bg-gray-100 p-8">
-      @php echo $item['description'] @endphp
+    <div class="bg-gray-50 rounded overflow-hidden" data-aos="fade-up">
+      <div class="border-l-4 border-brand flex h-full">
+        <div class="p-6 py-8 flex-none text-brand"><i height="40" width="40" class="block" data-feather="alert-circle"></i></div>
+        <div class="p-8 pl-0">@php echo $item['description'] @endphp</div>
+      </div>
     </div>
     @endforeach
   </div>
