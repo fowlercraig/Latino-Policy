@@ -1,4 +1,4 @@
-<div id="parent-@php the_ID(); @endphp" class="parent-page relative hover:z-50" data-aos="fade-up">
+<div id="parent-@php the_ID(); @endphp" class="parent-page relative hover:z-40" data-aos="fade-up">
   <div class="transform transition duration-300 ease group hover:-translate-y-1 hover:scale-105 hover:shadow-xl relative">
     <a href="@php the_permalink(); @endphp" title="@php the_title(); @endphp" class="inset-0 absolute z-50"><span class="sr-only">@php the_title(); @endphp</span></a>
     <div class="block space-y-2">
@@ -9,7 +9,7 @@
         $rdiv = array("bg-brand", "bg-brand-dark", "bg-brand-darker"); 
         $rand_keys = array_rand($rdiv, 1); 
       @endphp
-      <div class="@php echo $rdiv[$rand_keys]; @endphp duration-300 ease group-hover:bg-gray-900">
+      <div class="@php echo $rdiv[$rand_keys]; @endphp duration-300 ease group-hover:bg-brand-dark">
       @endif
         <div class="aspect-ratio aspect-ratio--1x1 md:aspect-ratio--16x9 @if ( $count == 3)lg:aspect-ratio--3x4 @else lg:aspect-ratio--7x5 @endif overflow-hidden">
           <div class="absolute inset-0 p-4 sm:p-8 space-y-2 sm:space-y-6 z-20 flex flex-col">
