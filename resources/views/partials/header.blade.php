@@ -23,7 +23,7 @@
     <div class="h-px bg-gray-100">
   </div>
 </div>
-<div @click.away="donateMenuOpen = false" x-data="{ mobileMenuOpen: false, solutionsMenuOpen: false, moreMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-50 relative bg-white sticky">
+<div @click.away="donateMenuOpen = false" x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-50 relative bg-white sticky">
   <div class="relative z-10 border-b border-gray-100">
     <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 container">
       <div>
@@ -50,10 +50,10 @@
           <div class="relative">
             <button 
               type="button" 
-              @click="solutionsMenuOpen = !solutionsMenuOpen; moreMenuOpen = false; peopleMenuOpen = false" 
-              x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': solutionsMenuOpen, 'text-gray-500': !solutionsMenuOpen }" class="group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 text-gray-500">
+              @click="workMenuOpen = !workMenuOpen; issuesMenuOpen = false; peopleMenuOpen = false" 
+              x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': workMenuOpen, 'text-gray-500': !workMenuOpen }" class="group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 text-gray-500">
               <span>Work</span>
-              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': solutionsMenuOpen, 'text-gray-500': !solutionsMenuOpen }" x-bind-class="{ 'text-gray-600': solutionsMenuOpen, 'text-gray-500': !solutionsMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
+              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': workMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': workMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
               </svg>
             </button>
@@ -61,10 +61,10 @@
           <div class="relative">
             <button 
               type="button" 
-              @click="moreMenuOpen = !moreMenuOpen; solutionsMenuOpen = false; peopleMenuOpen = false" 
-              x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': moreMenuOpen, 'text-gray-500': !moreMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+              @click="issuesMenuOpen = !issuesMenuOpen; workMenuOpen = false; peopleMenuOpen = false" 
+              x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': issuesMenuOpen, 'text-gray-500': !issuesMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
               <span>Issues</span>
-              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': moreMenuOpen, 'text-gray-500': !solutionsMenuOpen }" x-bind-class="{ 'text-gray-600': moreMenuOpen, 'text-gray-500': !solutionsMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
+              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': issuesMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': issuesMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
               </svg>
             </button>
@@ -72,10 +72,10 @@
           <div class="relative">
             <button 
               type="button" 
-              @click="peopleMenuOpen = !peopleMenuOpen; solutionsMenuOpen = false; moreMenuOpen = false" 
+              @click="peopleMenuOpen = !peopleMenuOpen; workMenuOpen = false; issuesMenuOpen = false" 
               x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': peopleMenuOpen, 'text-gray-500': !peopleMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
               <span>People</span>
-              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !solutionsMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !solutionsMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
+              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
               </svg>
             </button>

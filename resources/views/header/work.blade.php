@@ -12,7 +12,16 @@
 @endphp
 
 <!-- Work menu -->
-<div x-description="'Work' flyout menu, show/hide based on flyout menu state." x-show="solutionsMenuOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-1" class="hidden md:block absolute inset-x-0 transform shadow-lg" style="display: none;">
+<div 
+  x-description="'Work' flyout menu, show/hide based on flyout menu state." 
+  x-show="workMenuOpen" 
+  x-transition:enter="transition ease-out duration-200" 
+  x-transition:enter-start="opacity-0 -translate-y-1" 
+  x-transition:enter-end="opacity-100 translate-y-0" 
+  x-transition:leave="transition ease-in duration-150" 
+  x-transition:leave-start="opacity-100 translate-y-0" 
+  x-transition:leave-end="opacity-0 -translate-y-1" 
+  class="hidden md:block absolute inset-x-0 transform shadow-lg" style="display: none;">
   <div class="bg-white">
     <div class="container py-6 sm:py-8 lg:py-12 grid grid-cols-5 col-gap-10">
       <div class="col-span-2 space-y-2 pr-10 border-r border-gray-100">

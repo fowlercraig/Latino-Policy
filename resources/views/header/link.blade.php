@@ -1,4 +1,4 @@
-<a href="@php the_permalink(); @endphp" title="@php the_title(); @endphp" class="sm:-m-2 sm:p-2 flex items-center hover:bg-gray-50 justify-between group rounded-lg transition ease-in-out duration-150">
+<a href="@php the_permalink(); @endphp" title="@php the_title(); @endphp" class="flex hover:bg-gray-50 transition ease duration-300">
   <div class="flex items-center">
     @if (is_tree(7) || is_tree(154))
     <div class="flex-shrink-0">
