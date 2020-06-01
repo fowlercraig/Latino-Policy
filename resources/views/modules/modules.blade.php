@@ -16,7 +16,11 @@
                 @php echo wp_get_attachment_caption($image); @endphp
               </span>
             @endif
+              @if (!$image)
+              <div class="aspect-ratio aspect-ratio--7x5 bg-gray-200"></div>
+              @else
               @php echo wp_get_attachment_image( $image, $size ); @endphp
+              @endif
             </div>
           </a>
           @else
@@ -26,7 +30,11 @@
                 @php echo wp_get_attachment_caption($image); @endphp
               </span>
             @endif
+            @if (!$image)
+            <div class="aspect-ratio aspect-ratio--7x5 bg-gray-200"></div>
+            @else
             @php echo wp_get_attachment_image( $image, $size ); @endphp
+            @endif
           </div>
           @endif
         </div>
