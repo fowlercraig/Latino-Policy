@@ -13,8 +13,8 @@
   if ( $parent->have_posts() ):
 @endphp
 
-<section id="reports" class="-mt-48">
-  <div class="container">
+<section id="reports" class="-mt-48 relative">
+  <div class="container relative z-10">
     <div class="space-y-2 lg:space-y-0 sm:grid lg:grid lg:grid-cols-2 gap-8 lg:gap-0">
       <header class="col-span-1 lg:col-span-2 pb-8"> 
         <h2 class="text-2xl sm:text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10 mb-0">
@@ -32,6 +32,7 @@
       @php endwhile; @endphp
     </div>
   </div>
+  <div class="absolute inset-x-0 bg-brand-dark top-0 h-48 rellax"></div>
 </section>
 
 @endif
