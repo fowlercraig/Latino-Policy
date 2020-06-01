@@ -5,8 +5,8 @@
 @endphp
 <div class="page-header bg-brand-darker">
   <div class="containers">
-    <div class="grid grid-cols-2">
-      <div class="container col-span-2  @if ( has_post_thumbnail() ) lg:col-span-1 @endif py-10 space-y-4">
+    <div class="grid grid-cols-5">
+      <div class="container col-span-5  @if ( has_post_thumbnail() ) lg:col-span-2 @endif py-10 space-y-4">
         @if (is_tax( 'issue' ))
         <a
           title="Opens @php echo $parent_title @endphp in same window"
@@ -25,15 +25,15 @@
         @endif
         <h1 class="font-extrabold text-white tracking-tight sm:leading-18 sm:text-6xl mb-0">{!! App::title() !!}</h1>
         @if (!is_archive() || !is_search())
-        <div class="font-medium text-gray-300 -mt-1">
+        <div class="font-medium text-gray-300 -mt-1 max-w-3xl">
           @php the_content() @endphp
         </div>
         @endif
       </div>
       @if (!is_archive())
       @if ( has_post_thumbnail() )
-      <div class="col-span-2 lg:col-span-1 order-first lg:order-last">
-        <div class="h-48 lg:h-0 lg:aspect-ratio lg:aspect-ratio--6x4 xl:aspect-ratio--6x4 bg-brand-darker">
+      <div class="col-span-5 lg:col-span-3 order-first lg:order-last">
+        <div class="h-48 lg:h-0 lg:aspect-ratio lg:aspect-ratio--6x4 xl:aspect-ratio--16x9 bg-brand-darker">
           <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover transition ease duration-300 w-full h-full' ) ); ?>
         </div>
       </div>
