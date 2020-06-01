@@ -1,5 +1,5 @@
 <div class="">
-  <div class="container">
+  <div class="container max-w-none">
     <nav class="flex space-x-3 py-2 justify-between md:justify-end items-center">
       <a class="text-sm font-medium" href="/press">Press Archive</a>
       <a class="text-sm font-medium" href="/research">Research Archive</a>
@@ -30,7 +30,7 @@
 </div>
 <div @click.away="donateMenuOpen = false" x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-40 relative bg-white sticky">
   <div class="relative z-10 border-b border-gray-100">
-    <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 container">
+    <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 container  max-w-none">
       <div>
         <a href="/" class="flex">
           <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
