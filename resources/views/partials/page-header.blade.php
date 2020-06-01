@@ -30,7 +30,7 @@
         </div>
         @endif
       </div>
-      <div class="col-span-5 lg:col-span-3 order-first lg:order-last">
+      <div class="col-span-5 lg:col-span-3 order-first lg:order-last rellax">
         <div class="h-48 lg:h-0 lg:aspect-ratio lg:aspect-ratio--6x4 xl:aspect-ratio--16x9 bg-brand-darker">
           @if (!is_archive())
           @if ( has_post_thumbnail() )
