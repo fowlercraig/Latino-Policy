@@ -3,6 +3,7 @@
   <div class="bg-gray-50 py-4 md:py-10 mb-20">
     <div class="container space-y-4">
       <header class="py-4 border-b border-gray-200">
+
         <div class="text-xs sm:text-base font-medium rounded overflow-hidden">
           @if(get_the_terms(get_the_ID(), 'resource'))
           <a href="@php echo $resource @endphp" class="text-brand px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'resource')[0]->name; @endphp</a>

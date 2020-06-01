@@ -23,7 +23,7 @@
           &larr; Back to @php echo $parent_title @endphp
         </a>
         @endif
-        <h1 class="uppercase font-display font-extrabold text-white tracking-tight sm:leading-16 xl:leading-21 sm:text-7xl xl:text-8xl mb-0">{!! App::title() !!}</h1>
+        <h1 class="font-extrabold text-white tracking-tight sm:leading-18 sm:text-6xl mb-0">{!! App::title() !!}</h1>
         @if (!is_archive() || !is_search())
         <div class="font-medium text-gray-300 -mt-1">
           @php the_content() @endphp

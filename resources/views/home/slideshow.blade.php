@@ -8,15 +8,15 @@
       <div class="sm:absolute inset-0 z-0 order-first">
         <img alt='@php echo $item["image"]["alt"]; @endphp' class="object-cover w-full h-full" src='@php echo $item["image"]["url"]; @endphp'>
       </div>
-      <div class="container relative z-10 order-last -mt-8">
-        <div class="max-w-md space-y-4">
+      <div class="container max-w-none relative z-10 order-last -mt-8">
+        <div class="max-w-lg xl:max-w-2xl space-y-4">
           @if ($item['subtitle'])
           <div class="inline-block bg-brand px-2 py-1">
             <span class="text-white font-medium">@php echo $item['subtitle'] @endphp</span>
           </div>
           @endif
           @if ($item['title'])
-          <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl sm:leading-10 mb-0">
+          <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl xl:text-5xl sm:leading-10 xl:leading-13 mb-0">
             @php echo $item['title'] @endphp
           </h2>
           @endif
