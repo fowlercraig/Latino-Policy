@@ -1,4 +1,4 @@
-<a href="@php the_permalink(); @endphp" title="@php the_title(); @endphp" class="sm:-m-6 sm:-mt-8 sm:p-6 flex flex-col space-y-1 justify-start rounded-lg sm:hover:bg-gray-50 transition ease-in-out duration-150">
+<a data-aos="fade-up" href="@php the_permalink(); @endphp" title="@php the_title(); @endphp" class="sm:-m-6 sm:-mt-8 sm:p-6 flex flex-col space-y-1 justify-start rounded-lg sm:hover:bg-gray-50 transition ease-in-out duration-150">
   <div class="aspect-ratio aspect-ratio--3x4 bg-gray-300 relative">
     <div class="absolute inset-0">
       <?php the_post_thumbnail( 'medium', array( 'class' => 'object-cover object-top w-full h-full' ) ); ?>
