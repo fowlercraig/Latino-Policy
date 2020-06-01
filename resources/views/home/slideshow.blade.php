@@ -1,6 +1,6 @@
 @php $items = get_field('carousel') @endphp
 <section id="slideshow" class="bg-black min-h-64 rellax">
-  <div class="carousel carousel-fade" data-carousel-options='{"autoAdvance":false,"pagination":false,"single":true}'>
+  <div class="carousel carousel-fades" data-carousel-options='{"autoAdvance":false,"pagination":false,"single":false}'>
     
     @foreach ($items as $item)
     

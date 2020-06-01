@@ -1,4 +1,7 @@
-<div x-show="open" class="fixed bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center z-50">
+<div 
+  x-show="open" 
+  :class="{ 'block': open, 'hidden': !open }"
+  class="fixed bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center z-50 hidden">
   
   <div @click="open = false;" x-show="open" x-description="Background overlay, show/hide based on modal state." x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 transition-opacity">
     <div class="absolute inset-0 bg-brand-darker opacity-50"></div>
@@ -27,12 +30,12 @@
         
       </div>
       <div class="sm:text-center md:max-w-2xl md:mx-auto lg:text-left grid-cols-1 md:col-span-2 px-4 pt-10 pb-4 sm:p-10">
-        <h2 class="mt-1 text-4xl tracking-tight leading-10 font-bold text-brand sm:leading-none sm:text-6xl lg:text-5xl">
+        <h2 class="mt-1 text-4xl tracking-tight leading-10 font-bold text-brand sm:leading-none sm:text-6xl md:text-4xl lg:text-5xl">
           Stay informed, join
           <br class="hidden md:inline">
           <span class="text-brand-darker">the LPPI newsletter</span>
         </h2>
-        <p class="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+        <p class="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xl md:text-lg lg:text-lg xl:text-xl">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
         </p>
         <div class="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
