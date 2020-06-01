@@ -33,7 +33,7 @@
           </a>
           @endif
         </div>
-        @if (!is_archive())
+        @if (!is_archive() || !is_search())
         <div class="font-medium text-gray-300 -mt-1">
           @php the_content() @endphp
         </div>
