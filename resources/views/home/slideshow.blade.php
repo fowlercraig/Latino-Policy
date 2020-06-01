@@ -4,13 +4,13 @@
     
     @foreach ($items as $item)
     
-    <div class="slide pb-10 sm:pt-48 sm:pb-32 bg-black relative">
-      <div class="sm:absolute inset-0 z-0 order-first">
+    <div class="slide pb-10 lg:pt-48 lg:pb-32 bg-black relative">
+      <div class="lg:absolute inset-0 z-0 order-first">
         <img alt='@php echo $item["image"]["alt"]; @endphp' class="object-cover w-full h-full" src='@php echo $item["image"]["url"]; @endphp'>
       </div>
       <div class="container max-w-none relative z-10 order-last -mt-8">
         <div class="lg:px-10">
-          <div class="max-w-lg xl:max-w-2xl space-y-4">
+          <div class="lg:max-w-lg xl:max-w-2xl space-y-4">
             @if ($item['subtitle'])
             <div class="inline-block bg-brand px-2 py-1">
               <span class="text-white font-medium">@php echo $item['subtitle'] @endphp</span>
