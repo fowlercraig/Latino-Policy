@@ -1,4 +1,4 @@
-<div class="bg-gray-50 rounded p-8 font-medium text-xs space-y-8">
+<div class="bg-gray-50 rounded p-8 font-medium text-xs space-y-8"  data-sticky-container=".sticky-container">
   
   <form role="search" method="get" id="searchform" class="searchform mt-3 sm:flex" action="/">
     <div class="flex rounded overflow-hidden">
@@ -20,6 +20,7 @@
 
     </div>
   </form>
+  @php echo do_shortcode('[ajax_load_more_filters id="issues" target="your_alm_id"]'); @endphp
   @php dynamic_sidebar('sidebar-primary') @endphp
 
 </div>

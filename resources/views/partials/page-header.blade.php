@@ -6,7 +6,7 @@
 <div class="page-header bg-brand-darker">
   <div class="containers">
     <div class="grid grid-cols-5">
-      <div class="container col-span-5 lg:col-span-2 py-10 space-y-4">
+      <div class="container col-span-5  @if ( has_post_thumbnail() ) lg:col-span-2 @endif py-10 space-y-4">
         @if (is_tax( 'issue' ))
         <a
           title="Opens @php echo $parent_title @endphp in same window"
@@ -30,15 +30,15 @@
         </div>
         @endif
       </div>
+      @if (!is_archive())
+      @if ( has_post_thumbnail() )
       <div class="col-span-5 lg:col-span-3 order-first lg:order-last rellax">
         <div class="h-48 lg:h-0 lg:aspect-ratio lg:aspect-ratio--6x4 xl:aspect-ratio--16x9 bg-brand-darker">
-          @if (!is_archive())
-          @if ( has_post_thumbnail() )
           <?php the_post_thumbnail( 'large', array( 'class' => 'opacity-75 object-cover transition ease duration-300 w-full h-full' ) ); ?>
-          @endif
-          @endif
         </div>
       </div>
+      @endif
+      @endif
     </div>
   </div>
 </div>

@@ -5,7 +5,7 @@
   <div class="container">
     <div class="h-10"></div>
     @if (App\display_sidebar())
-    <div class="grid grid-cols-3 gap-12">
+    <div class="sticky-container grid grid-cols-3 gap-12">
     <div class="col-span-2">
     @endif
 
@@ -17,19 +17,22 @@
     @endif
 
     <div class="space-y-6">
-    @while (have_posts()) @php the_post() @endphp
-    @include('partials.content-'.get_post_type())
-    @endwhile
+      @php echo do_shortcode('
+         [ajax_load_more 
+            id="your_alm_id" 
+            filters="true"
+            placeholder="true" transition_container="false" 
+            archive="true" 
+            no_results_text="Sorry, nothing found"
+         ]'); 
+      @endphp
     </div>
-
-    <div class="h-20"></div>
-    {!! get_the_posts_navigation() !!}
 
     @if (App\display_sidebar())
     </div>
 
-    <aside class="sidebar order-first">
-    @include('partials.sidebar')
+    <aside class="sidebar order-first relative">
+      @include('partials.sidebar')
     </aside>
 
     </div>
