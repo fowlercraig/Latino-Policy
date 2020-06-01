@@ -1,5 +1,5 @@
 <div class="bg-brand">
-  <div class="container max-w-none py-3 font-medium space-x-6">
+  <div class="container py-3 font-medium space-x-6">
     @php $member_group_terms = get_terms( 'role' ); @endphp
     @foreach ( $member_group_terms as $member_group_term )
     <a 

@@ -32,7 +32,6 @@
       @php endwhile; @endphp
     </div>
   </div>
-  <div class="absolute inset-x-0 bg-brand-dark top-0 h-48 rellax"></div>
 </section>
 
 @endif

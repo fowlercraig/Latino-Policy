@@ -1,4 +1,4 @@
-<div class="bg-gray-50 rounded p-8 font-medium text-xs space-y-8"  data-sticky-container=".sticky-container">
+<div class="bg-gray-50 rounded p-8 font-medium text-xs space-y-8">
   
   <form role="search" method="get" id="searchform" class="searchform mt-3 sm:flex" action="/">
     <div class="flex rounded overflow-hidden">
