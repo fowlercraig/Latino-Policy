@@ -27,7 +27,7 @@
     </div>
 
     <header>
-      <h2 class="text-xl sm:text-2xl leading-7 sm:leading-8 font-bold tracking-tight text-brand-dark">
+      <h2 class="text-xl sm:text-2xl leading-7 sm:leading-8 font-bold tracking-tight text-gray">
         <a href="{{ get_permalink() }}">{!! get_the_title() !!}</a>
       </h2>
     </header>
