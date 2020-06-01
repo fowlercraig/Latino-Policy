@@ -9,7 +9,7 @@
         <img alt='@php echo $item["image"]["alt"]; @endphp' class="object-cover w-full h-full" src='@php echo $item["image"]["url"]; @endphp'>
       </div>
       <div class="container max-w-none relative z-10 order-last -mt-8">
-        <div class="container max-w-none">
+        <div class="lg:px-10">
           <div class="max-w-lg xl:max-w-2xl space-y-4">
             @if ($item['subtitle'])
             <div class="inline-block bg-brand px-2 py-1">
