@@ -13,9 +13,9 @@
     x-transition:leave="ease-in duration-200" 
     -transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
     x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
-    class="relative bg-white rounded  overflow-hidden shadow-xl transform transition-all sm:max-w-4xl sm:w-full " 
+    class="relative bg-white rounded overflow-hidden shadow-xl transform transition-all sm:max-w-4xl sm:w-full " 
     role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-    <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
+    <div class="block absolute top-0 right-0 pt-4 pr-4">
       <button @click="open = false;" type="button" class="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150" aria-label="Close">
         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -23,7 +23,7 @@
       </button>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-gray-900 col-span-1 h-64 md:h-full">
+      <div class="bg-gray-900 col-span-1 h-64 md:h-full hidden md:block">
         
       </div>
       <div class="sm:text-center md:max-w-2xl md:mx-auto lg:text-left grid-cols-1 md:col-span-2 px-4 pt-10 pb-4 sm:p-10">
