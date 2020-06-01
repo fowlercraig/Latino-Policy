@@ -22,11 +22,11 @@
         </svg>
       </button>
     </div>
-    <div class="grid grid-cols-3 gap-8">
-      <div class="bg-gray-900 col-span-1">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-900 col-span-1 h-64 md:h-full">
         
       </div>
-      <div class="sm:text-center md:max-w-2xl md:mx-auto lg:text-left col-span-2 px-4 pt-10 pb-4 sm:p-10">
+      <div class="sm:text-center md:max-w-2xl md:mx-auto lg:text-left grid-cols-1 md:col-span-2 px-4 pt-10 pb-4 sm:p-10">
         <h2 class="mt-1 text-4xl tracking-tight leading-10 font-bold text-brand sm:leading-none sm:text-6xl lg:text-5xl">
           Stay informed, join
           <br class="hidden md:inline">

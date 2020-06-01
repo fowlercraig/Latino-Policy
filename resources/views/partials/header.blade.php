@@ -1,6 +1,6 @@
 <div class="">
   <div class="container">
-    <nav class="flex space-x-3 py-2 justify-end items-center">
+    <nav class="flex space-x-3 py-2 justify-between md:justify-end items-center">
       @include('header.subscribe')
       <a class="text-sm font-medium" href="/press">Press Archive</a>
       <a class="text-sm font-medium" href="/research">Research Archive</a>
