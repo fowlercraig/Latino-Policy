@@ -1,6 +1,12 @@
 <div class="">
   <div class="container max-w-none">
     <nav class="flex space-x-3 py-2 justify-between md:justify-end items-center">
+      <a 
+        @php $link = 637; @endphp
+        href="@php echo get_the_permalink($link) @endphp" 
+        class="text-sm font-medium hidden lg:block xl:hidden">
+        @php echo get_the_title($link); @endphp
+      </a>
       <a class="text-sm font-medium" href="/press">Press Archive</a>
       <a class="text-sm font-medium" href="/research">Research Archive</a>
       <span class="text-gray-300">|</span>
@@ -30,13 +36,13 @@
 </div>
 <div @click.away="donateMenuOpen = false" x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-40 relative bg-white sticky">
   <div class="relative z-10 border-b border-gray-100">
-    <div class="flex justify-between items-center py-5 sm:py-4 xl:justify-start xl:space-x-10 container  max-w-none">
+    <div class="flex justify-between items-center py-5 sm:py-4 lg:justify-start lg:space-x-10 container  max-w-none">
       <div>
         <a href="/" class="flex">
           <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
         </a>
       </div>
-      <div class="-mr-2 -my-2 xl:hidden">
+      <div class="-mr-2 -my-2 lg:hidden">
         <button @click="mobileMenuOpen = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
           <span class="sr-only">Open Mobile Menu</span>
           <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -44,8 +50,8 @@
           </svg>
         </button>
       </div>
-      <div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between xl:space-x-12">
-        <nav class="flex space-x-6">
+      <div class="hidden lg:flex-1 lg:flex lg:items-center lg:justify-between lg:space-x-12">
+        <nav class="flex space-x-3 xl:space-x-6">
           <a 
             @php $link = 658; @endphp
             href="@php echo get_the_permalink($link) @endphp" 
@@ -88,7 +94,7 @@
           <a 
             @php $link = 637; @endphp
             href="@php echo get_the_permalink($link) @endphp" 
-            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+            class="hidden xl:inline text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
             @php echo get_the_title($link); @endphp
           </a>
           <a 
