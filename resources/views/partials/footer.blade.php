@@ -72,7 +72,7 @@
         <div class="space-y-2">
           <p>3250 Public Affairs Building<br>Los Angeles, CA 90065</p>
           <p>(334) 269-1803 </p>
-          <p><a class="leading-6 text-gray-500 hover:text-gray-900" href="">contact_us@eji.org</a></p>
+          <p><a class="leading-6 text-gray-500 hover:text-gray-900" href="mailto:contact@latino.ucla.edu">contact@latino.ucla.edu</a></p>
         </div>
       </div>
     </div>
