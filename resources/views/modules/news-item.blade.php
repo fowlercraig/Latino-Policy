@@ -1,5 +1,5 @@
 @php
-  if(get_field('press_link') {
+  if(get_field('press_link')) {
     $link = get_field('press_link');
     $target = '_blank';
     $title = 'Opens' . get_the_title() . 'in new window';
