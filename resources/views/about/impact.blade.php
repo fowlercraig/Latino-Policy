@@ -32,13 +32,13 @@
             @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
             @php $file = get_field('file'); @endphp
             <a 
-              download
+              target="blank"
               @if ($file)
                 href="@php echo $file['url']; @endphp" 
               @else 
                 href="@php the_permalink(); @endphp" 
               @endif
-              title="Downloads @php the_title(); @endphp to your computer" 
+              title="Opens @php the_title(); @endphp in new window" 
               class="p-6 block space-y-2 justify-start rounded-lg bg-gray-50 hover:bg-gray-100 transition ease-in-out duration-150">
                 <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">@php the_title(); @endphp</h5>
                 <p class="text-sm">@php echo get_the_excerpt(); @endphp</p>
@@ -47,7 +47,7 @@
                   <span class="flex items-center py-1">
                     <i height="20" width="20" class="mr-2" data-feather="download"></i>
                     @if ($file)
-                      Download Report
+                      View Report
                     @else 
                       View Report
                     @endif

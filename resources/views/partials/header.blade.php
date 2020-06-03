@@ -8,7 +8,7 @@
         @php echo get_the_title($link); @endphp
       </a>
       <a class="text-sm font-medium" href="/press-archive">Press Archive</a>
-      <a class="text-sm font-medium" href="/research">Research Archive</a>
+      <a class="text-sm font-medium" href="/research">Research Library</a>
       <span class="text-gray-300">|</span>
       <button @click="open = true;" class="text-sm font-medium">Subscribe</button>
       <a href="<?php the_field('facebook','option'); ?>" title="Opens Facebook in a new window" class="text-gray-500 hover:text-gray-300 hidden md:block">
@@ -80,6 +80,12 @@
               </svg>
             </button>
           </div>
+          <a 
+            @php $link = 637; @endphp
+            href="@php echo get_the_permalink($link) @endphp" 
+            class="hidden xl:inline text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+            @php echo get_the_title($link); @endphp
+          </a>
           <div class="relative">
             <button 
               type="button" 
@@ -91,12 +97,6 @@
               </svg>
             </button>
           </div>
-          <a 
-            @php $link = 637; @endphp
-            href="@php echo get_the_permalink($link) @endphp" 
-            class="hidden xl:inline text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-            @php echo get_the_title($link); @endphp
-          </a>
           <a 
             @php $link = 656; @endphp
             href="@php echo get_the_permalink($link) @endphp" 

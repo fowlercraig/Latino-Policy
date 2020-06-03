@@ -1,6 +1,8 @@
 <article @php post_class() @endphp>
-  
-  <div class="bg-gray-50 py-4 md:py-10 mb-20">
+  <div class="bg-brand-darker rellax">
+    <?php the_post_thumbnail( 'large', array( 'class' => 'transition ease duration-300 w-full h-full' ) ); ?>
+  </div>
+  <div class="bg-gray-50 py-4 md:py-10 mb-20 relative z-50">
     <div class="container space-y-4">
       <header class="py-4 border-b border-gray-200">
 

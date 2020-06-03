@@ -34,7 +34,7 @@
       @if ( has_post_thumbnail() )
       <div class="col-span-5 lg:col-span-3 order-first lg:order-last">
         <div class="h-48 lg:h-0 lg:aspect-ratio lg:aspect-ratio--6x4 xl:aspect-ratio--16x9 bg-brand-darker">
-          <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover transition ease duration-300 w-full h-full' ) ); ?>
+          <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover object-top transition ease duration-300 w-full h-full' ) ); ?>
         </div>
       </div>
       @endif

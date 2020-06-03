@@ -4,14 +4,15 @@
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
     <div class="space-y-20 container">
-      <div class="h-px"></div>
       @if (!is_page('leadership'))
         @if (is_page(9))
           @include('vrp.voting')
         @endif
-        @include('modules.reports')
-        <div class="h-px bg-gray-100"></div>
-        @include('modules.experts')
+        @if (is_page(15))
+          @include('modules.reports')
+          <div class="h-px bg-gray-100"></div>
+          @include('modules.experts')
+        @endif
         <div class="h-px bg-gray-100"></div>
         @include('modules.modules')
       @else
