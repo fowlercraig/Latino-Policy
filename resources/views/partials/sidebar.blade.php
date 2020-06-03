@@ -1,4 +1,4 @@
-<div class="bg-gray-50 rounded p-8 font-medium text-xs space-y-8">
+<div class="bg-gray-50 rounded p-8 font-medium text-xs space-y-6" x-data="{ openPanel: 1 }">
   
   <form role="search" method="get" id="searchform" class="searchform mt-3 sm:flex" action="/">
     <div class="flex rounded overflow-hidden">
@@ -20,7 +20,15 @@
 
     </div>
   </form>
-  @php echo do_shortcode('[ajax_load_more_filters id="issues" target="your_alm_id"]'); @endphp
+  
+  @if ( is_archive( 'research' ) )
+  @include('partials.sidebar-research-filters')
+  @endif 
+
+  @if ( is_page(696) )
+  @include('partials.sidebar-press-filters')
+  @endif 
+
   @php dynamic_sidebar('sidebar-primary') @endphp
 
 </div>

@@ -7,7 +7,7 @@
         class="text-sm font-medium hidden lg:block xl:hidden">
         @php echo get_the_title($link); @endphp
       </a>
-      <a class="text-sm font-medium" href="/press">Press Archive</a>
+      <a class="text-sm font-medium" href="/press-archive">Press Archive</a>
       <a class="text-sm font-medium" href="/research">Research Archive</a>
       <span class="text-gray-300">|</span>
       <button @click="open = true;" class="text-sm font-medium">Subscribe</button>

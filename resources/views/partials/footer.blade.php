@@ -1,8 +1,8 @@
-<div class="bg-white">
+<div class="bg-white text-sm xl:text-base">
   <div class="container py-12 lg:py-16 space-y-8">
     <div class="h-px bg-gray-100"></div>
-    <div class="grid md:grid-cols-5 gap-8">
-      <div class="col-span-2 border-r border-gray-100">
+    <div class="grid lg:grid-cols-5 gap-8">
+      <div class="col-span-2 xl:border-r border-gray-100">
         <div class="space-y-4">
           <a href="/" class="flex">
             <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <div class="col-span-3 flex justify-between">
+      <div class="col-span-3 md:flex justify-between">
         <ul class="space-y-2">
           @php
             $menu_name = 'primary_navigation';
