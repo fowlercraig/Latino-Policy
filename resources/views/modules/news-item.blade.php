@@ -1,6 +1,6 @@
 @php
-  if(get_field('press_link')) {
-    $link = get_field('press_link');
+  if(get_field('publication_link')) {
+    $link = get_field('publication_link')['url'];
     $target = '_blank';
     $title = 'Opens' . get_the_title() . 'in new window';
   } else {
