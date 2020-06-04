@@ -45,3 +45,7 @@ h6 {
 html.is-animating .transition-fade {
   opacity: 0;
 }
+
+.container {
+  @apply max-w-none;
+}

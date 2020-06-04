@@ -8,7 +8,7 @@
   <div class="h-px bg-gray-100"></div>
   <div class="lg:grid grid-cols-3 gap-12">
     <header> 
-      <h2 class="text-2xl sm:text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10  mb-0">
+      <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-extrabold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13">
         @php echo $section['title'] @endphp
       </h2> 
     </header>
@@ -24,7 +24,7 @@
 
   <div class="lg:grid grid-cols-3 gap-12">
     <header> 
-      <h2 class="text-2xl sm:text-3xl leading-9 font-extrabold tracking-tight text-brand-darker sm:text-4xl sm:leading-10  mb-0">
+      <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-extrabold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13">
         Frequently Asked Questions
       </h2> 
     </header>
