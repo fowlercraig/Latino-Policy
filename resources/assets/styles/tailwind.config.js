@@ -86,5 +86,8 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/ui'),
-  ]
+  ],
+  corePlugins: {
+    container: false,
+  }
 }

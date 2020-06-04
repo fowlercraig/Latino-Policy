@@ -1,7 +1,7 @@
 <div 
   x-show="open" 
   :class="{ 'block': open, 'hidden': !open }"
-  class="fixed bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center z-50 hidden">
+  class="fixed bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center z-50 hidden" style="display: none">
   
   <div @click="open = false;" x-show="open" x-description="Background overlay, show/hide based on modal state." x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 transition-opacity">
     <div class="absolute inset-0 bg-brand-darker opacity-50"></div>
