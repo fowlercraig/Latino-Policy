@@ -34,7 +34,7 @@
   </div>
   @include('header.subscribe')
 </div>
-<div @click.away="donateMenuOpen = false" x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-40 relative bg-white sticky">
+<div @click.away="donateMenuOpen = false" x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-40 relative bg-white sticky">
   <div class="relative z-10 border-b border-gray-100">
     <div class="flex justify-between items-center py-5 sm:py-4 lg:justify-start lg:space-x-10 container  max-w-none">
       <div>
@@ -80,12 +80,17 @@
               </svg>
             </button>
           </div>
-          <a 
-            @php $link = 637; @endphp
-            href="@php echo get_the_permalink($link) @endphp" 
-            class="hidden xl:inline text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-            @php echo get_the_title($link); @endphp
-          </a>
+          <div class="relative">
+            <button 
+              type="button" 
+              @click="vrpMenuOpen = !vrpMenuOpen; workMenuOpen = false; issuesMenuOpen = false" 
+              x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': vrpMenuOpen, 'text-gray-500': !vrpMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+              <span>Voting Rights Project</span>
+              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': vrpMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
           <div class="relative">
             <button 
               type="button" 
@@ -126,6 +131,7 @@
 
   @include('header.work')
   @include('header.issues')
+  @include('header.vrp')
   @include('header.people')
   @include('header.mobile')
 
