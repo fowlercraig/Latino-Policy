@@ -26,14 +26,18 @@
       </button>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-gray-900 col-span-1 h-64 md:h-full hidden md:block">
-        
+      <div class="bg-gray-900 col-span-1 min-h-64 md:h-full hidden md:block">
+        @php
+          $image = get_field('image','options');
+          $size = 'full';
+          if( $image ) {
+            echo wp_get_attachment_image( $image, $size, '', array( 'class' => 'object-cover transition ease duration-300 w-full h-full' ) );
+          }
+        @endphp
       </div>
       <div class="sm:text-center md:max-w-2xl md:mx-auto lg:text-left grid-cols-1 md:col-span-2 px-4 pt-10 pb-4 sm:p-10">
         <h2 class="mt-1 text-4xl tracking-tight leading-10 font-bold text-brand sm:leading-none sm:text-6xl md:text-4xl lg:text-5xl">
-          Stay informed, join
-          <br class="hidden md:inline">
-          <span class="text-brand-darker">the LPPI newsletter</span>
+          @php the_field('subscribe_headline','options'); @endphp
         </h2>
         <div class="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
           @include('partials.mailchimp')
