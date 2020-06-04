@@ -24,7 +24,7 @@ if ( $parent->have_posts() ) : @endphp
     endif;
   @endphp
 
-  <div class="h-px bg-gray-100"></div>
+  <div class="h-px bg-black-5"></div>
   
   <section id="section-@php echo $post->post_name; @endphp" class="panel" data-color="@php echo $bgColor @endphp">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-12">

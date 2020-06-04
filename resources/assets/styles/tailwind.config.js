@@ -39,6 +39,11 @@ module.exports = {
       },
       height: {
         'header': '350px',
+        'circle': '500px',
+      },
+      width: {
+        'header': '350px',
+        'circle': '500px',
       },
       minHeight: {
         '48': '12rem',
