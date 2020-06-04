@@ -1,36 +1,23 @@
 @php
 
-  $member_group_terms = get_terms( 'role' );
-  foreach ( $member_group_terms as $member_group_term ):
-    $member_group_query = new WP_Query( array(
-      'post_type' => 'person',
-      'posts_per_page' => 4,
-      'orderby'        => 'rand',
-      'meta_query' => array (
-        array(
-          'key' => '_thumbnail_id',
-          'compare' => 'EXISTS'
-        ),
-      ),
-      'tax_query' => array(
-        array(
-          'taxonomy' => 'role',
-          'field'    => 'slug',
-          'terms'     => array( $member_group_term->slug ),
-          'operator' => 'IN'
-        )
-      )
-    ));
+$args = array(
+  'post_type'      => 'page',
+  'posts_per_page' => -1,
+  'post_parent'    => $post->ID,
+  'order'          => 'ASC',
+  'orderby'        => 'menu_order'
+);
 
-  @endphp
+$parent = new WP_Query( $args );
+if ( $parent->have_posts() ) : @endphp
+@php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
 
-  <div class="h-px bg-gray-100"></div>
-
-  <section id="experts-@php echo $member_group_term->slug; @endphp">
+<div class="h-px bg-gray-100"></div>
+  <section id="experts">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-12">
       <header class="col-span-2 lg:col-span-4"> 
         <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-extrabold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13">
-          Featured @php echo $member_group_term->name; @endphp
+          Featured @php the_title(); @endphp
         </h2> 
         <div class="h-1"></div>
         <a 
@@ -40,18 +27,29 @@
         </a>
       </header>
 
-      @php if ( $member_group_query->have_posts() ) : while ( $member_group_query->have_posts() ) : $member_group_query->the_post(); @endphp
-      @include('people.person')
-      @php endwhile; endif; @endphp
+      @php
+        $ids = get_field('people', false, false);
+        $args = array(
+          'post_type'      => 'person',
+          'posts_per_page' => 8,
+          'order'          => 'ASC',
+          'post__in'       => $ids,
+          'post_status'    => 'any',
+          'orderby'        => 'post__in',
+        );
+        $children = new WP_Query( $args );
+        if ( $parent->have_posts() ):
+      @endphp
 
+      @php while ( $children->have_posts() ) : $children->the_post(); @endphp
+      @include('people.person')
+      @php endwhile; @endphp
+
+      @endif
+      @php wp_reset_postdata() @endphp
+      
     </div>
   </section>
-  
-  @php
-    $member_group_query = null;
-    wp_reset_postdata();
-    endforeach;
-  @endphp
 
-
-
+@php endwhile; @endphp
+@php endif; wp_reset_postdata(); @endphp
