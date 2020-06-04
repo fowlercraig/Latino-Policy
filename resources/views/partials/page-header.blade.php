@@ -25,7 +25,7 @@
         @endif
         <h1 class="font-extrabold text-white tracking-tight sm:leading-18 sm:text-6xl mb-0">{!! App::title() !!}</h1>
         @if (!is_archive() || !is_search())
-        <div class="font-medium text-gray-300 -mt-1 max-w-3xl">
+        <div class="font-medium xl:font-normal text-gray-300 -mt-1 max-w-3xl xl:text-xl">
           @php the_content() @endphp
         </div>
         @endif

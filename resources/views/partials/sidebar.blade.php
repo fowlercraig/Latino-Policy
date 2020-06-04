@@ -1,6 +1,6 @@
 <div class="bg-gray-50 rounded p-8 font-medium text-xs space-y-6" x-data="{ openPanel: 1 }">
   
-  <form role="search" method="get" id="searchform" class="searchform mt-3 sm:flex" action="/">
+  <form role="search" method="get" id="searchform" class="searchform mt-3 flex" action="/">
     <div class="flex rounded overflow-hidden">
       
       <label class="sr-only" for="s">Search for:</label>

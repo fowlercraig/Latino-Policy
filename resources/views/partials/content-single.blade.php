@@ -32,11 +32,11 @@
         <h1 class="entry-title mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl">{!! get_the_title() !!}</h1>
 
         @if(get_field('title'))
-        <span class="px-1 text-gray-500">@php the_field('title') @endphp</span>
+        <div class="px-1 text-gray-500">@php the_field('title') @endphp</div>
         @endif
 
         @if(get_field('association'))
-        <span class="px-1 text-gray-500">@php the_field('association') @endphp</span>
+        <div class="px-1 text-gray-500">@php the_field('association') @endphp</div>
         @endif
 
       </header>

@@ -5,8 +5,8 @@
   <div class="container">
     <div class="h-10"></div>
     @if (App\display_sidebar())
-    <div class="sticky-container grid grid-cols-3 gap-12">
-    <div class="col-span-2">
+    <div class="sticky-container grid grid-col-1 lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2">
     @endif
 
     @if (!have_posts())
@@ -31,7 +31,7 @@
     @if (App\display_sidebar())
     </div>
 
-    <aside class="sidebar order-first relative sticky">
+    <aside class="sidebar order-first relative">
       @include('partials.sidebar')
     </aside>
 

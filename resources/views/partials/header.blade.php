@@ -2,7 +2,7 @@
   <div class="container max-w-none">
     <nav class="flex space-x-3 py-2 justify-between md:justify-end items-center">
       <a 
-        @php $link = 637; @endphp
+        @php $link = 656; @endphp
         href="@php echo get_the_permalink($link) @endphp" 
         class="text-sm font-medium hidden lg:block xl:hidden">
         @php echo get_the_title($link); @endphp
@@ -105,7 +105,7 @@
           <a 
             @php $link = 656; @endphp
             href="@php echo get_the_permalink($link) @endphp" 
-            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+            class="hidden xl:block text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
             @php echo get_the_title($link); @endphp
           </a>
         </nav>

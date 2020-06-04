@@ -5,7 +5,7 @@
   <div class="container">
     <div class="h-10"></div>
     @if (App\display_sidebar())
-    <div class="sticky-container grid grid-cols-3 gap-12">
+    <div class="sticky-container grid grid-col-1 lg:grid-cols-3 gap-12">
     <div class="col-span-2">
     @endif
 
