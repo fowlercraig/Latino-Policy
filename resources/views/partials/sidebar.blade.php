@@ -1,4 +1,4 @@
-<div class="bg-gray-50 rounded p-8 font-medium text-xs space-y-6" x-data="{ openPanel: 1 }">
+<div class="bg-gray-50 rounded p-8 font-medium text-xs space-y-3 lg:space-y-6" x-data="{ openPanel: 0 }">
   
   <form role="search" method="get" id="searchform" class="searchform mt-3 flex" action="/">
     <div class="flex rounded overflow-hidden">

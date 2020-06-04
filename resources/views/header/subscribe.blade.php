@@ -35,17 +35,14 @@
           <br class="hidden md:inline">
           <span class="text-brand-darker">the LPPI newsletter</span>
         </h2>
-        <p class="mt-3 text-base text-gray-400 sm:mt-5 sm:text-xl md:text-lg lg:text-lg xl:text-xl">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
-        </p>
         <div class="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
           <p class="text-base font-medium text-gray-900">
-            Sign up to get notified when it’s ready.
+            Sign up to get our email newsletter
           </p>
           @include('partials.mailchimp')
           <p class="mt-3 text-sm leading-5 text-gray-500">
             We care about the protection of your data. Read our
-            <a href="#" class="font-medium text-gray-900 underline">Privacy Policy</a>.
+            <a href="http://www.ucla.edu/terms-of-use/" class="font-medium text-gray-900 underline">Terms of Use</a>.
           </p>
         </div>
       </div>

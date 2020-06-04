@@ -1,4 +1,4 @@
-<div class="border-t-2 border-gray-200 pt-6">
+<div class="border-t-2 border-gray-200 pt-3 lg:pt-6">
   <dt class="text-lg leading-7">
     <button x-description="Expand/collapse question button" @click="openPanel = (openPanel === 1 ? null : 1)" class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900" x-bind:aria-expanded="openPanel === 1" aria-expanded="true">
       <span class="font-medium text-gray-900">
@@ -15,7 +15,7 @@
     @php echo do_shortcode('[ajax_load_more_filters id="resource" target="your_alm_id"]'); @endphp
   </dd>
 </div>
-<div class="border-t-2 border-gray-200 pt-6">
+<div class="border-t-2 border-gray-200 pt-3 lg:pt-6">
   <dt class="text-lg leading-7">
     <button x-description="Expand/collapse question button" @click="openPanel = (openPanel === 2 ? null : 2)" class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900" x-bind:aria-expanded="openPanel === 2" aria-expanded="true">
       <span class="font-medium text-gray-900">
@@ -32,7 +32,7 @@
     @php echo do_shortcode('[ajax_load_more_filters id="issues" target="your_alm_id"]'); @endphp
   </dd>
 </div>
-<div class="border-t-2 border-gray-200 pt-6">
+<div class="border-t-2 border-gray-200 pt-3 lg:pt-6">
   <dt class="text-lg leading-7">
     <button x-description="Expand/collapse question button" @click="openPanel = (openPanel === 3 ? null : 3)" class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900" x-bind:aria-expanded="openPanel === 3" aria-expanded="true">
       <span class="font-medium text-gray-900">
@@ -49,7 +49,7 @@
     @php echo do_shortcode('[ajax_load_more_filters id="issues" target="your_alm_id"]'); @endphp
   </dd>
 </div>
-<div class="border-t-2 border-gray-200 pt-6">
+<div class="border-t-2 border-gray-200 pt-3 lg:pt-6">
   <dt class="text-lg leading-7">
     <button x-description="Expand/collapse question button" @click="openPanel = (openPanel === 4 ? null : 4)" class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900" x-bind:aria-expanded="openPanel === 3" aria-expanded="true">
       <span class="font-medium text-gray-900">
