@@ -2,7 +2,11 @@
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
   <body @php body_class('text-gray-500') @endphp>
+    @if (is_front_page())
     <div x-data="{ open: true }" @click.away="open = false">
+    @else
+    <div x-data="{ open: false }" @click.away="open = false">
+    @endif
       <a class="sr-only" href="#main" title="Skips to content">Skip to Content</a>
       @php do_action('get_header') @endphp
       @include('partials.header')

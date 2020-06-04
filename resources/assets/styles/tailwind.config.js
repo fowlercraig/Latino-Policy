@@ -88,6 +88,6 @@ module.exports = {
     require('@tailwindcss/ui'),
   ],
   corePlugins: {
-    container: false,
+    //container: false,
   }
 }
