@@ -1,7 +1,7 @@
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
-  <body @php body_class('text-gray-500') @endphp>
+  <body <?php body_class('text-gray-500 transition duration-500') ?>>
     @if (is_front_page())
     <div x-data="{ open: true }" @click.away="open = false">
     @else
