@@ -4,7 +4,7 @@
   foreach ( $member_group_terms as $member_group_term ):
     $member_group_query = new WP_Query( array(
       'post_type' => 'person',
-      'posts_per_page' => 8,
+      'posts_per_page' => 4,
       'orderby'        => 'rand',
       'meta_query' => array (
         array(

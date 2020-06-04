@@ -36,9 +36,6 @@
           <span class="text-brand-darker">the LPPI newsletter</span>
         </h2>
         <div class="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-          <p class="text-base font-medium text-gray-900">
-            Sign up to get our email newsletter
-          </p>
           @include('partials.mailchimp')
           <p class="mt-3 text-sm leading-5 text-gray-500">
             We care about the protection of your data. Read our

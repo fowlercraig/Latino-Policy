@@ -7,7 +7,7 @@
           <a href="/" class="flex">
             <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
           </a>
-          <p class="font-display uppercase text-3xl text-gray-900 leading-8">There is No American Agenda <br>Without the Latino Agenda</p>
+          <p class="font-display uppercase text-2xl sm:text-3xl text-gray-900 leading-6 sm:leading-8">There is No American Agenda <br>Without the Latino Agenda</p>
           <div class="flex space-x-4 items-center">
             <a href="#" class="text-brand hover:text-gray-500">
               <span class="sr-only">Facebook</span>
