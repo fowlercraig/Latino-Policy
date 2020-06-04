@@ -21,7 +21,7 @@
         </h2> 
         <div class="text-sm">@php echo get_the_excerpt($link) @endphp</div>
         <a class="inline-block font-bold border-b-2 border-brand pb-1 text-brand transition ease duration-200 hover:border-brand-light" href="@php echo get_the_permalink($link); @endphp">
-          View People
+          Learn More
         </a>
       </div>
       <div class="col-span-3 grid sm:grid-cols-2 sm:gap-4 lg:grid-cols-2">
