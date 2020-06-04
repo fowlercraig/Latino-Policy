@@ -6,6 +6,7 @@
     @include('people.people-header')
     <div class="space-y-20 container">
       @include('people.people-all')
+      <div class=""></div>
     </div>
   @endwhile
 @endsection
