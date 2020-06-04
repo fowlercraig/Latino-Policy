@@ -40,6 +40,13 @@ module.exports = {
       height: {
         'header': '350px',
       },
+      minHeight: {
+        '48': '12rem',
+        '56': '14rem',
+        '64': '16rem',
+        '72': '18rem',
+        '84': '20rem'
+      },
       lineHeight: {
         '11': '2.75rem',
         '12': '3rem',
