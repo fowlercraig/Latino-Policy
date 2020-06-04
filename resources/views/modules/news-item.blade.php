@@ -14,18 +14,20 @@
   target="@php echo $target @endphp" 
   href="@php echo $link @endphp" 
   title="@php echo $title @endphp" 
-  class="sm:-m-6 sm:-mt-8 sm:p-6 flex flex-col space-y-2 justify-start rounded-lg sm:hover:bg-gray-50 transition ease-in-out duration-150">
+  class="sm:-m-6 sm:-mt-8 sm:p-6 flex flex-col justify-start rounded-lg sm:hover:bg-gray-50 transition ease-in-out duration-150">
   <span class="sr-only"><?php the_title(); ?></span>
   <div class="relative @if ( $count == 2) aspect-ratio lg:aspect-ratio--4x3 @endif">
     <div class="@if ( $count == 2) absolute inset-0 @endif">
       <?php the_post_thumbnail( 'medium', array( 'class' => 'object-cover object-top transition ease duration-300 w-full h-full' ) ); ?>
     </div>
   </div>
+  @if(get_the_terms(get_the_ID(), 'issue'))
+  <div class="-mt-px">
+    <span class="text-sm inline-block bg-brand-dark px-1 py-px text-white">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</span> 
+  </div>
+  @endif
   <div class="h-1"></div>
   <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">
-    @if(get_the_terms(get_the_ID(), 'issue'))
-    <span class="text-gray-500">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp → </span> 
-    @endif
     @php the_title(); @endphp
   </h5>
   <div class="flex-grow h-2"></div>
