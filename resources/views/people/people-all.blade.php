@@ -27,26 +27,12 @@ if ( $parent->have_posts() ) : @endphp
         </a>
       </header>
 
-      @php
-        $ids = get_field('people', false, false);
-        $args = array(
-          'post_type'      => 'person',
-          'posts_per_page' => 8,
-          'order'          => 'ASC',
-          'post__in'       => $ids,
-          'post_status'    => 'any',
-          'orderby'        => 'post__in',
-        );
-        $children = new WP_Query( $args );
-        if ( $parent->have_posts() ):
-      @endphp
-
-      @php while ( $children->have_posts() ) : $children->the_post(); @endphp
-      @include('people.person')
-      @php endwhile; @endphp
-
+      @php $posts = get_field('featured_people'); @endphp
+      @if( $posts )
+        @php foreach( $posts as $p ): @endphp
+          @include('people.person-alt')
+        @php endforeach; @endphp
       @endif
-      @php wp_reset_postdata() @endphp
       
     </div>
   </section>
