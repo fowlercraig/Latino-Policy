@@ -33,7 +33,7 @@
         @php the_field('current_title') @endphp
       </h2> 
     </div>
-    <div id="past" class="flex flex-wrap -m-6">
+    <div id="current" class="flex flex-wrap -m-6">
       @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
       @include('people.fellow')
       @php endwhile; endif; @endphp
