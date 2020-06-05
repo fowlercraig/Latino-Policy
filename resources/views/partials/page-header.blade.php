@@ -4,9 +4,9 @@
   $parent_title = get_the_title($parent);
 @endphp
 <div class="page-header bg-brand-darker relative">
-  <div class="container relative z-10">
+  <div class="relative z-10">
     <div class="grid grid-cols-5">
-      <div class="col-span-5  @if ( has_post_thumbnail() ) lg:col-span-2 @endif py-10 space-y-4">
+      <div class="container col-span-5  @if ( has_post_thumbnail() ) lg:col-span-2 @endif py-10 space-y-4">
         @if (is_tax( 'issue' ))
         <a
           title="Opens @php echo $parent_title @endphp in same window"
