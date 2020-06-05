@@ -1,5 +1,5 @@
 <div class="">
-  <div class="container max-w-none">
+  <div class="container bg-white max-w-none">
     <nav class="flex space-x-3 py-2 justify-between md:justify-end items-center">
       <a 
         @php $link = 656; @endphp
