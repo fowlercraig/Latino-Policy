@@ -1,10 +1,12 @@
 <article @php post_class() @endphp>
   
   <div class="bg-gray-50 py-4 md:py-10 mb-20 relative">
-    <div class="container space-y-4 lg:space-y-0 lg:grid grid-cols-4 xl:grid-cols-4 gap-12">
+    <div class="container space-y-4 lg:space-y-0 lg:grid grid-cols-4 xl:grid-cols-4 gap-12 sticky-container">
 
       <div class="col-span-2 xl:col-span-2 flex-none -ml-1 overflow-hidden lg:order-last">
-        <?php the_post_thumbnail( 'large', array( 'class' => 'w-full' ) ); ?>
+        <div class="sticky w-full" data-sticky-container='.sticky-container'>
+          <?php the_post_thumbnail( 'large', array( 'class' => 'w-full' ) ); ?>
+        </div>
       </div>
 
       <div class="col-span-2 xl:col-span-2 space-y-4">
