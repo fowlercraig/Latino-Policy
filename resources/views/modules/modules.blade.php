@@ -19,7 +19,7 @@
               @if (!$image)
               <div class="aspect-ratio aspect-ratio--7x5 bg-gray-200"></div>
               @else
-              @php echo wp_get_attachment_image( $image, $size ); @endphp
+              @php echo wp_get_attachment_image( $image, $size, '', array( 'class' => 'w-full' ) ) @endphp
               @endif
             </div>
           </a>

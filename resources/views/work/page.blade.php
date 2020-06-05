@@ -17,6 +17,7 @@
         <div class="h-px bg-gray-100"></div>
         @include('modules.modules')
       @else
+        @include('work.overview')
         @include('modules.experts')
         @include('work.leadership')
       @endif
