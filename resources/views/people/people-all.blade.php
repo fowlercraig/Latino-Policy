@@ -24,6 +24,11 @@ if ( $parent->have_posts() ) : @endphp
     endif;
   @endphp
 
+  <div class="sr-only">
+    Hidden Classes
+    <div class="bg-blue-100 bg-red-100 bg-teal-100 bg-purple-100"></div>
+  </div>
+
   <div class="h-px bg-black-5"></div>
   
   <section id="section-@php echo $post->post_name; @endphp" class="panel" data-color="@php echo $bgColor @endphp">

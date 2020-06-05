@@ -1,7 +1,7 @@
 @php $items = get_field('mission') @endphp
 @if ($items)
-<section id="about" class="bg-brand-dark pt-10 lg:pt-20 pb-64">
-  <div class="container space-y-20 lg:space-y-40">
+<section id="about" class="bg-brand-dark pt-10 lg:pt-20 pb-64 relative">
+  <div class="container space-y-20 lg:space-y-40 relative z-10">
     <div>
       <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12 lg:items-center">
         <div class="col-span-3 lg:order-last">
@@ -31,6 +31,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="opacity-50 absolute top-0 left-0 pointer-events-none z-0 -mt-24">
+    <img class="w-1/2" data-rellax-speed="5" alt="Pattern" src="@asset('images/halftone.png')">
   </div>
 </section>
 @endif
