@@ -27,7 +27,7 @@
     <div class="sm:grid lg:grid lg:grid-cols-3 gap-8 lg:gap-12">
     @endif
       @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
-      @include('modules.news-item',['count' => $parent->post_count])
+      @include('newsroom.event-item',['count' => $parent->post_count])
       @php endwhile; @endphp
     </div>
 
