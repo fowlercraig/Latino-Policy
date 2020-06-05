@@ -14,7 +14,7 @@ if ( $parent->have_posts() ) : @endphp
 
   @php
     if ($post->post_name == 'staff'):
-      $bgColor = 'white';
+      $bgColor = 'blue-100';
     elseif ($post->post_name == 'fellows'):
       $bgColor = 'red-100';
     elseif ($post->post_name == 'experts'):
