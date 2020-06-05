@@ -3,7 +3,7 @@
   <div class="bg-gray-50 py-4 md:py-10 mb-20">
     <div class="container space-y-4 lg:space-y-0 lg:grid grid-cols-4 xl:grid-cols-4 gap-12">
 
-      <div class="col-span-2 xl:col-span-2 flex-none -ml-1 overflow-hidden">
+      <div class="col-span-2 xl:col-span-2 flex-none -ml-1 overflow-hidden lg:order-last">
         <?php the_post_thumbnail( 'medium', array( 'class' => 'w-full' ) ); ?>
       </div>
 
