@@ -3,8 +3,8 @@
   <div class="bg-gray-50 py-4 md:py-10 mb-20 relative">
     <div class="container space-y-4 lg:space-y-0 lg:grid grid-cols-4 xl:grid-cols-4 gap-12 sticky-container">
 
-      <div class="col-span-2 xl:col-span-2 flex-none -ml-1 overflow-hidden lg:order-last">
-        <div class="sticky w-full" data-sticky-options='{"offset":100}' data-sticky-container='.sticky-container'>
+      <div class="col-span-2 xl:col-span-2 flex-none -ml-1 overflow-hidden lg:order-last relative">
+        <div class="sticky w-full" data-sticky-options='{"offset":100, "minWidth":"1024px"}' data-sticky-container='.sticky-container'>
           <?php the_post_thumbnail( 'large', array( 'class' => 'w-full' ) ); ?>
         </div>
       </div>
@@ -32,10 +32,10 @@
             @endif
 
             @if(get_the_terms(get_the_ID(), 'issue'))
-            <div class="font-medium issues inline-flex space-x-px">
+            <div class="font-medium issues inline-flex flex-wrap space-x-px">
               @php $terms = get_the_terms(get_the_ID(), 'issue'); @endphp
               @foreach ($terms as $term)
-              <a href="@php echo $term->slug; @endphp" class="text-brand hover:underline">@php echo $term->name; @endphp</a>
+              <a href="@php echo $term->slug; @endphp" class="flex-none text-brand hover:underline">@php echo $term->name; @endphp</a>
               <span class="last:hidden">,</span>
               @endforeach
             </div>
