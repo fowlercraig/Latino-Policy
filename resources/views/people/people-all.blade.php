@@ -24,12 +24,8 @@ if ( $parent->have_posts() ) : @endphp
     endif;
   @endphp
 
-  <div class="sr-only">
-    Hidden Classes <div class="bg-blue-100 bg-red-100 bg-pink-100 bg-indigo-100"></div>
-  </div>
+  <div class="h-px"></div>
 
-  <div class="h-px bg-black-5"></div>
-  
   <section id="section-@php echo $post->post_name; @endphp" class="panel" data-color="@php echo $bgColor @endphp">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-12">
       <header class="col-span-2 lg:col-span-4"> 
@@ -51,6 +47,9 @@ if ( $parent->have_posts() ) : @endphp
         @php endforeach; @endphp
       @endif
       
+    </div>
+    <div class="sr-only">
+      Hidden Classes <div class="bg-blue-100 bg-red-100 bg-pink-100 bg-indigo-100"></div>
     </div>
   </section>
 
