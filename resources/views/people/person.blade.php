@@ -6,10 +6,15 @@
   </div>
   @if ( $post->post_parent == 630 )
   @php $terms = get_the_terms( get_the_ID(), 'issue' ); @endphp
+  @php $id = get_the_ID() @endphp
+  
+  @php $post_categories = get_post_primary_category($id, 'issue');  @endphp
+  @php $primary_category = $post_categories['primary_category']; @endphp
+  
   <div class="h-1"></div>
     @if($terms)
     <div class="text-sm leading-5 font-medium text-brand">
-      <span class="">@php echo $terms[0]->name; @endphp</span>
+      <span class="">@php echo $post_categories['primary_category']->name  @endphp</span>
     </div>
     @endif
   @else
