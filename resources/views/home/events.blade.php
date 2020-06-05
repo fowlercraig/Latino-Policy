@@ -13,8 +13,8 @@
   if ( $parent->have_posts() ):
 @endphp
 
-<section id="events" class="bg-brand-dark pt-10 lg:pt-20 overflow-hidden">
-  <div class="container space-y-4 sm:space-y-0">
+<section id="events" class="bg-brand-dark pt-10 lg:pt-20 overflow-hidden relative">
+  <div class="container space-y-4 sm:space-y-0 relative z-10">
     <header class="col-span-1 lg:col-span-2 ">
       <div class="grid grid-cols-4 items-center gap-4">
         <div class="col-span-4 sm:col-span-3">
@@ -51,6 +51,9 @@
       @php endwhile; @endphp
     </div>
 
+  </div>
+  <div class="opacity-50 absolute top-0 left-0 pointer-events-none z-0 -mt-24">
+    <img class="w-1/2" data-rellax-speed="5" alt="Pattern" src="@asset('images/halftone.png')">
   </div>
 </section>
 

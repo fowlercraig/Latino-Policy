@@ -61,7 +61,7 @@
           <div class="relative">
             <button 
               type="button" 
-              @click="workMenuOpen = !workMenuOpen; issuesMenuOpen = false; peopleMenuOpen = false" 
+              @click="workMenuOpen = !workMenuOpen; issuesMenuOpen = false; peopleMenuOpen = false; vrpMenuOpen = false" 
               x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': workMenuOpen, 'text-gray-500': !workMenuOpen }" class="group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 text-gray-500">
               <span>Work</span>
               <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': workMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': workMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
@@ -83,7 +83,7 @@
           <div class="relative">
             <button 
               type="button" 
-              @click="vrpMenuOpen = !vrpMenuOpen; workMenuOpen = false; issuesMenuOpen = false" 
+              @click="vrpMenuOpen = !vrpMenuOpen; workMenuOpen = false; issuesMenuOpen = false; peopleMenuOpen = false" 
               x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': vrpMenuOpen, 'text-gray-500': !vrpMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
               <span>Voting Rights Project</span>
               <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': vrpMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
@@ -94,7 +94,7 @@
           <div class="relative">
             <button 
               type="button" 
-              @click="peopleMenuOpen = !peopleMenuOpen; workMenuOpen = false; issuesMenuOpen = false" 
+              @click="peopleMenuOpen = !peopleMenuOpen; workMenuOpen = false; issuesMenuOpen = false; vrpMenuOpen = false;" 
               x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': peopleMenuOpen, 'text-gray-500': !peopleMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
               <span>People</span>
               <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
