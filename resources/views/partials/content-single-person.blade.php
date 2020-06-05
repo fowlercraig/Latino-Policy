@@ -1,13 +1,13 @@
 <article @php post_class() @endphp>
   
   <div class="bg-gray-50 py-4 md:py-10 mb-20">
-    <div class="container space-y-4 lg:space-y-0 lg:grid grid-cols-3 gap-12">
+    <div class="container space-y-4 lg:space-y-0 lg:grid grid-cols-4 xl:grid-cols-4 gap-12">
 
-      <div class="col-span-1 flex-none bg-gray-900 -ml-1 overflow-hidden">
-        <?php the_post_thumbnail( 'medium', array( 'class' => 'object-cover object-top w-full h-full' ) ); ?>
+      <div class="col-span-2 xl:col-span-2 flex-none -ml-1 overflow-hidden">
+        <?php the_post_thumbnail( 'medium', array( 'class' => 'w-full' ) ); ?>
       </div>
 
-      <div class="col-span-2 space-y-4">
+      <div class="col-span-2 xl:col-span-2 space-y-4">
         <header class="py-4 flex border-b border-gray-200 items-center space-x-6">
 
           <div class="w-full">
