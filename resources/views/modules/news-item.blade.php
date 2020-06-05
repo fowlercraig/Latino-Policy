@@ -10,7 +10,6 @@
   }
 @endphp
 <a 
-  data-aos="fade-up" 
   target="@php echo $target @endphp" 
   href="@php echo $link @endphp" 
   title="@php echo $title @endphp" 
@@ -18,7 +17,11 @@
   <span class="sr-only"><?php the_title(); ?></span>
   <div class="relative @if ( $count == 2) aspect-ratio lg:aspect-ratio--4x3 @endif">
     <div class="@if ( $count == 2) absolute inset-0 @endif">
+      @if(has_post_thumbnail())
       <?php the_post_thumbnail( 'medium', array( 'class' => 'object-cover object-top transition ease duration-300 w-full h-full' ) ); ?>
+      @else
+      <div class="aspect-ratio aspect-ratio--16x9 bg-gray-900"></div>
+      @endif
     </div>
   </div>
   @if(get_the_terms(get_the_ID(), 'issue'))

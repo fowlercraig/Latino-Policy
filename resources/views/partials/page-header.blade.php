@@ -6,7 +6,7 @@
 <div class="page-header bg-brand-darker relative">
   <div class="container relative z-10">
     <div class="grid grid-cols-5">
-      <div class="container col-span-5  @if ( has_post_thumbnail() ) lg:col-span-2 @endif py-10 space-y-4">
+      <div class="col-span-5  @if ( has_post_thumbnail() ) lg:col-span-2 @endif py-10 space-y-4">
         @if (is_tax( 'issue' ))
         <a
           title="Opens @php echo $parent_title @endphp in same window"
@@ -19,15 +19,17 @@
         <a
           title="Opens @php echo $parent_title @endphp in same window"
           href="@php echo $parent_url @endphp"  
-          class="inline-block font-medium text-gray-300 transition duration-200 border-b border-transparent hover:border-gray-300">
+          class="parent-link inline-block font-medium text-gray-300 transition duration-200 border-b border-transparent hover:border-gray-300">
           &larr; Back to @php echo $parent_title @endphp
         </a>
         @endif
         <h1 class="font-display uppercase font-extrabold text-white tracking-tight sm:leading-19 sm:text-8xl mb-0">{!! App::title() !!}</h1>
-        @if (!is_archive() || !is_search())
+        @if (!is_archive() || !is_search() )
+        @if ( '' !== get_post()->post_content )
         <div class="font-medium xl:font-normal text-gray-300 -mt-1 max-w-3xl xl:text-xl">
           @php the_content() @endphp
         </div>
+        @endif
         @endif
       </div>
       @if (!is_archive())
