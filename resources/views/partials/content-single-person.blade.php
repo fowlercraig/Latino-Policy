@@ -1,6 +1,6 @@
 <article @php post_class() @endphp>
   
-  <div class="bg-gray-50 py-4 md:py-10 mb-20">
+  <div class="bg-gray-50 py-4 md:py-10 mb-20 relative">
     <div class="container space-y-4 lg:space-y-0 lg:grid grid-cols-4 xl:grid-cols-4 gap-12">
 
       <div class="col-span-2 xl:col-span-2 flex-none -ml-1 overflow-hidden lg:order-last">
@@ -92,6 +92,9 @@
           {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
         </footer>
       </div>
+    </div>
+    <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
+      <img class="w-1/2 opacity-25" alt="Pattern" src="@asset('images/halftone.png')">
     </div>
   </div>
 </article>
