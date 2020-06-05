@@ -22,7 +22,7 @@
               <span class="text-white font-medium">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</span>
               @php endif; @endphp
             </div>
-            <h2 class="text-2xl sm:text-3xl leading-7 sm:leading-10 font-bold tracking-tight text-white">
+            <h2 class="font-display uppercase text-2xl sm:text-3xl xl:text-5xl leading-7 sm:leading-10 xl:leading-13 font-bold tracking-tight text-white">
               <span class="bg-transparent group-hover:bg-brand-darker transition ease duration-150 py-1">@php the_title(); @endphp</span>
             </h2>
             <div class="flex-grow"></div>

@@ -21,7 +21,7 @@
               <a title="Opens @php echo get_the_terms(get_the_ID(), 'role')[0]->name; @endphp Page" href="/people/@php echo get_the_terms(get_the_ID(), 'role')[0]->slug; @endphp" class="text-brand hover:underline">@php echo get_the_terms(get_the_ID(), 'role')[0]->name; @endphp</a>
               @endif
             </div>
-            <h1 class="entry-title mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl">{!! get_the_title() !!}</h1>
+            <h1 class="font-display uppercase entry-title mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-7xl">{!! get_the_title() !!}</h1>
 
             <div class=""></div>
 
