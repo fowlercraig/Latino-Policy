@@ -147,16 +147,49 @@ function is_tree($pid) {      // $pid = The ID of the page we're looking for pag
 
 
 add_filter( 'get_the_archive_title', function ($title) {    
-        if ( is_category() ) {    
-                $title = single_cat_title( '', false );    
-            } elseif ( is_tag() ) {    
-                $title = single_tag_title( '', false );    
-            } elseif ( is_author() ) {    
-                $title = '<span class="vcard">' . get_the_author() . '</span>' ;    
-            } elseif ( is_tax() ) { //for custom post types
-                $title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
-            } elseif (is_post_type_archive()) {
-                $title = post_type_archive_title( '', false );
+    if ( is_category() ) {    
+            $title = single_cat_title( '', false );    
+        } elseif ( is_tag() ) {    
+            $title = single_tag_title( '', false );    
+        } elseif ( is_author() ) {    
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;    
+        } elseif ( is_tax() ) { //for custom post types
+            $title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
+        } elseif (is_post_type_archive()) {
+            $title = post_type_archive_title( '', false );
+        }
+    return $title;    
+});
+
+function get_post_primary_category($post_id, $term='category', $return_all_categories=false){
+    $return = array();
+
+    if (class_exists('WPSEO_Primary_Term')){
+        // Show Primary category by Yoast if it is enabled & set
+        $wpseo_primary_term = new WPSEO_Primary_Term( $term, $post_id );
+        $primary_term = get_term($wpseo_primary_term->get_primary_term());
+
+        if (!is_wp_error($primary_term)){
+            $return['primary_category'] = $primary_term;
+        }
+    }
+
+    if (empty($return['primary_category']) || $return_all_categories){
+        $categories_list = get_the_terms($post_id, $term);
+
+        if (empty($return['primary_category']) && !empty($categories_list)){
+            $return['primary_category'] = $categories_list[0];  //get the first category
+        }
+        if ($return_all_categories){
+            $return['all_categories'] = array();
+
+            if (!empty($categories_list)){
+                foreach($categories_list as &$category){
+                    $return['all_categories'][] = $category->term_id;
+                }
             }
-        return $title;    
-    });
+        }
+    }
+
+    return $return;
+}

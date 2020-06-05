@@ -12,7 +12,7 @@
       <div class="col-span-2 xl:col-span-2 space-y-4">
         <header class="space-y-3">
 
-          <div class="text-sm sm:text-base font-medium rounded overflow-hidden">
+          <div class="text-sm font-medium rounded overflow-hidden">
             @if(get_the_terms(get_the_ID(), 'role'))
             <a href="/people/" title="Opens People Page" class="text-brand hover:underline">People</a>
             <span class="text-gray-400">→</span>
@@ -35,7 +35,10 @@
             <div class="font-medium issues inline-flex flex-wrap space-x-px">
               @php $terms = get_the_terms(get_the_ID(), 'issue'); @endphp
               @foreach ($terms as $term)
-              <a href="@php echo $term->slug; @endphp" class="flex-none text-brand hover:underline">@php echo $term->name; @endphp</a>
+              <a 
+                title="Opens @php echo $term->name; @endphp Taxonomy in same window" 
+                href="/research/?issue=@php echo $term->slug; @endphp" 
+                class="flex-none text-brand hover:underline">@php echo $term->name; @endphp</a>
               <span class="last:hidden">,</span>
               @endforeach
             </div>
