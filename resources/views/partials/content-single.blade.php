@@ -10,7 +10,10 @@
 
         <div class="text-xs sm:text-base font-medium rounded overflow-hidden">
           @if(get_the_terms(get_the_ID(), 'resource'))
-          <a href="@php echo $resource @endphp" class="text-brand px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'resource')[0]->name; @endphp</a>
+          <a 
+            title="Opens @php echo $term->name; @endphp Taxonomy in same window" 
+            href="@php echo get_the_permalink(696) @endphp?resource=@php echo get_the_terms(get_the_ID(), 'resource')[0]->slug; @endphp" 
+            class="text-brand px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'resource')[0]->name; @endphp</a>
           <span class="text-gray-400">→</span>
           @endif
 
@@ -20,14 +23,18 @@
           @endif
 
           @if(get_the_terms(get_the_ID(), 'issue'))
-          <a href="@php echo $issue @endphp" class="text-brand px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</a>
-          @if (get_the_terms(get_the_ID(), 'issue')[1]->name)
-          <a href="@php echo $issue @endphp" class="text-brand px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'issue')[1]->name; @endphp</a>
+          <div class="font-medium issues inline-flex flex-wrap space-x-px">
+            @php $terms = get_the_terms(get_the_ID(), 'issue'); @endphp
+            @foreach ($terms as $term)
+            <a 
+              title="Opens @php echo $term->name; @endphp Taxonomy in same window" 
+              href="@php echo get_the_permalink(696) @endphp?issue=@php echo $term->slug; @endphp" 
+              class="flex-none text-brand hover:underline">@php echo $term->name; @endphp</a>
+            <span class="last:hidden">,</span>
+            @endforeach
+          </div>
           @endif
-          @if (get_the_terms(get_the_ID(), 'issue')[2]->name)
-          <a href="@php echo $issue @endphp" class="text-brand px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'issue')[2]->name; @endphp</a>
-          @endif
-          @endif
+
         </div>
         <h1 class="entry-title mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl">{!! get_the_title() !!}</h1>
 
