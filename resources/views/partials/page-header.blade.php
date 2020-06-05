@@ -3,8 +3,8 @@
   $parent_url = get_the_permalink($parent);
   $parent_title = get_the_title($parent);
 @endphp
-<div class="page-header bg-brand-darker">
-  <div class="containers">
+<div class="page-header bg-brand-darker relative">
+  <div class="container relative z-10">
     <div class="grid grid-cols-5">
       <div class="container col-span-5  @if ( has_post_thumbnail() ) lg:col-span-2 @endif py-10 space-y-4">
         @if (is_tax( 'issue' ))
@@ -42,5 +42,8 @@
       @endif
       @endif
     </div>
+  </div>
+  <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
+    <img class="w-1/2" alt="Pattern" src="@asset('images/halftone.png')">
   </div>
 </div>
