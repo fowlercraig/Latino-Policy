@@ -14,19 +14,18 @@ if ( $parent->have_posts() ) : @endphp
 
   @php
     if ($post->post_name == 'staff'):
-      $bgColor = 'blue-100';
+      $bgColor = 'blue-200';
     elseif ($post->post_name == 'fellows'):
-      $bgColor = 'red-100';
+      $bgColor = 'red-200';
     elseif ($post->post_name == 'experts'):
-      $bgColor = 'teal-100';
+      $bgColor = 'pink-200';
     else:
-      $bgColor = 'purple-100';
+      $bgColor = 'indigo-200';
     endif;
   @endphp
 
   <div class="sr-only">
-    Hidden Classes
-    <div class="bg-blue-100 bg-red-100 bg-teal-100 bg-purple-100"></div>
+    Hidden Classes <div class="bg-blue-100 bg-red-100 bg-pink-100 bg-indigo-100"></div>
   </div>
 
   <div class="h-px bg-black-5"></div>
@@ -40,8 +39,8 @@ if ( $parent->have_posts() ) : @endphp
         <div class="h-1"></div>
         <a 
           class="inline-block font-bold border-b-2 border-brand pb-1 text-brand transition ease duration-200 hover:border-brand-light" 
-          href="@php echo $member_group_term->slug; @endphp">
-          View all @php echo $member_group_term->name; @endphp
+          href="@php the_permalink(); @endphp">
+          View all @php the_title(); @endphp
         </a>
       </header>
 

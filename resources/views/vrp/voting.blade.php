@@ -21,4 +21,7 @@
       </div>
     </div>
   </div>
+  <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
+    <img class="w-1/2" alt="Pattern" src="@asset('images/halftone.png')">
+  </div>
 </div>
