@@ -31,7 +31,7 @@
     @if (App\display_sidebar())
     </div>
 
-    <aside class="sidebar order-first relative sticky">
+    <aside class="sidebar order-first relative">
       @include('partials.sidebar')
     </aside>
 
