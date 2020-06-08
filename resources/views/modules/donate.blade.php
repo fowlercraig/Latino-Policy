@@ -1,7 +1,13 @@
-@php $donate = get_field('donate'); @endphp
+@if (is_page(637))
+  $url = 'https://giving.ucla.edu/campaign/?amount=' . $amount . '&OrgType=S&OrgNum=1320&fund=64616o'
+@else 
+  $url = 'https://giving.ucla.edu/campaign/?amount=' . $amount . '&OrgType=S&OrgNum=800&fund=63922O'
+@endif
+
+@php $donate = get_field('donate',754); @endphp
 <div class="relative overflow-hidden">
   <div class="py-20 bg-brand-lightest overflow-hidden relative">
-    <div class="container grid grid-cols-1 md:grid-cols-5 gap-8">
+    <div class="container grid grid-cols-1 md:grid-cols-5 gap-8 relative z-20">
       <div class="col-span-1 md:col-span-5">
         <div class="h-1 bg-red-600 w-32"></div>
       </div>
@@ -37,5 +43,11 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
+    <img class="w-1/2" alt="Pattern" src="@asset('images/halftone.png')">
+  </div>
+  <div class="absolute top-0 inset-y-0 right-0 pointer-events-none z-0 hidden lg:block">
+    <img alt="Donate" class="object-cover h-full" src="@asset('images/donate.svg')">
   </div>
 </div>
