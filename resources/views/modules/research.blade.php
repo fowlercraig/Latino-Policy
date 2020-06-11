@@ -16,7 +16,7 @@
         <a
           class="{{ $learnmore }}"
           title="Opens @php the_title() @endphp in the same window"  
-          href="@php echo get_the_permalink($page) @endphp"  
+          href="/research"  
         >Learn More</a>
       </div>
     </div>
