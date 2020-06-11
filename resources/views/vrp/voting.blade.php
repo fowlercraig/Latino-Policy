@@ -1,7 +1,7 @@
 @php $page = 637; @endphp
 <div class="bg-black" data-aos="fade-up">
   <div class="sm:grid grid-cols-2 items-center">
-    <div class="aspect-ratio aspect-ratio--16x9 sm:aspect-ratio--1x1 md:aspect-ratio--7x5 bg-gray-900 sm:order-last relative">
+    <div class="overflow-hidden aspect-ratio aspect-ratio--16x9 sm:aspect-ratio--1x1 md:aspect-ratio--7x5 bg-gray-900 sm:order-last relative">
       <div class="absolute inset-x-0">
         @php $alt = get_post_meta($page, '_wp_attachment_image_alt', true); @endphp
         <img 
