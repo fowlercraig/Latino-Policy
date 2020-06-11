@@ -24,11 +24,11 @@
   <div class="space-y-2 lg:space-y-0 grid lg:grid lg:grid-cols-2">
     <header class="col-span-1 lg:col-span-2 pb-8"> 
       <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-extrabold tracking-tight text-brand-darker mb-0">
-        From the Research Archive
+        From the Research Library
       </h2> 
       <div class="h-1"></div>
       <a class="inline-block font-bold border-b-2 border-brand pb-1 text-brand transition ease duration-200 hover:border-brand-light" href="@php echo $link['url'] @endphp">
-        More from the Research Archive
+        More from the Research Library
       </a>
     </header>
 

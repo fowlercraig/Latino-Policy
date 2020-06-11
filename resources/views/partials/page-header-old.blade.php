@@ -21,7 +21,7 @@
             title="Opens @php echo $parent_title @endphp in same window"
             href="@php echo $parent_url @endphp"  
             class="inline-block font-medium text-gray-300 transition duration-200 border-b border-transparent hover:border-gray-300">
-            &larr; Back to Research Archive
+            &larr; Back to Research Library
           </a>
           @endif
           @if ($parent)
