@@ -1,3 +1,5 @@
+@if(!get_field('disable_events_section'))
+
 @php
   $link = get_field('events_link');
   $ids = get_field('events', false, false);
@@ -59,3 +61,4 @@
 
 @endif
 @php wp_reset_postdata() @endphp
+@endif

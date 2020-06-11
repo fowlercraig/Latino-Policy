@@ -1,7 +1,7 @@
 @if (is_page(637))
-  $url = 'https://giving.ucla.edu/campaign/?amount=' . $amount . '&OrgType=S&OrgNum=1320&fund=64616o'
+  @php $url = 'https://giving.ucla.edu/campaign/?amount=' . $amount . '&OrgType=S&OrgNum=1320&fund=64616o' @endphp
 @else 
-  $url = 'https://giving.ucla.edu/campaign/?amount=' . $amount . '&OrgType=S&OrgNum=800&fund=63922O'
+  @php $url = 'https://giving.ucla.edu/campaign/?amount=' . $amount . '&OrgType=S&OrgNum=800&fund=63922O' @endphp
 @endif
 
 @php $donate = get_field('donate',754); @endphp
