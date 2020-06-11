@@ -26,7 +26,7 @@
           <div class="text-brand-lighter">@php echo $items['description'] @endphp</div>
           @if ($items['link'])
           <div class="h-px"></div>
-          <div><a href="@php echo $item['link']['url']; @endphp" class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white">Learn More</a></div>
+          <div><a href="@php echo $items['link']['url']; @endphp" class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white">Learn More</a></div>
           @endif
         </div>
       </div>
