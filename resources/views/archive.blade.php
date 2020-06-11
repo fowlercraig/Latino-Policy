@@ -5,7 +5,7 @@
   <div class="container">
     <div class="h-10"></div>
     @if (App\display_sidebar())
-    <div class="sticky-container md:grid grid-col-1 lg:grid-cols-3 gap-12">
+    <div class="sticky-container flex flex-wrap lg:grid lg:grid-cols-3 gap-12">
     <div class="col-span-2">
     @endif
 
@@ -31,7 +31,7 @@
     @if (App\display_sidebar())
     </div>
 
-    <aside class="sidebar order-first relative">
+    <aside class="w-full col-span-1 sidebar order-first relative mb-10 lg:mb-0">
       @include('partials.sidebar')
     </aside>
 
