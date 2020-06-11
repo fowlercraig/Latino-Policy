@@ -35,7 +35,7 @@
     </div>
     <div id="current" class="flex flex-wrap -m-6">
       @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
-      @include('people.fellow')
+      @include('people.person')
       @php endwhile; endif; @endphp
     </div>
   </section>
