@@ -11,7 +11,7 @@
       @endphp
       <div class="@php echo $rdiv[$rand_keys]; @endphp duration-300 ease group-hover:bg-brand-dark">
       @endif
-        <div class="aspect-ratio aspect-ratio--1x1 md:aspect-ratio--16x9 @if ( $count == 3)lg:aspect-ratio--3x4 @else lg:aspect-ratio--7x5 @endif overflow-hidden">
+        <div class="relative aspect-ratio aspect-ratio--1x1 md:aspect-ratio--16x9 @if ( $count == 3)lg:aspect-ratio--3x4 @else lg:aspect-ratio--7x5 @endif overflow-hidden">
           <div class="absolute inset-0 p-4 sm:p-8 space-y-2 sm:space-y-6 z-20 flex flex-col">
             <div class="text-xs sm:text-base rounded overflow-hidden space-x-px">
               @php if(get_the_terms(get_the_ID(), 'resource')): @endphp
@@ -30,7 +30,9 @@
               <div class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white">Learn More</div>
             </div>
           </div>
-          @php the_post_thumbnail( 'large', array( 'class' => 'opacity-25 group-hover:opacity-50 object-cover transition ease duration-300 w-full h-full' ) ); @endphp
+          <div class="absolute inset-0">
+            @php the_post_thumbnail( 'large', array( 'class' => 'opacity-25 group-hover:opacity-50 object-cover transition ease duration-300 w-full h-full' ) ); @endphp
+          </div>
         </div>
       </div>
     </div>
