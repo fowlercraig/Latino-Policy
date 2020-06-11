@@ -19,7 +19,7 @@
         </div>
         <div class="col-span-2 space-y-2 relative">
           <div class="xl:-mr-48">
-            <h2 class="font-display uppercase text-2xl sm:text-3xl lg:text-7xl leading-9 font-extrabold text-white sm:text-4xl sm:leading-10 lg:leading-16 lg:tracking-tight">
+            <h2 class="font-display uppercase text-3xl sm:text-3xl lg:text-7xl  leading-7 sm:leading-9 font-extrabold text-white sm:text-4xl sm:leading-10 lg:leading-16 lg:tracking-tight">
               @php echo $items['title'] @endphp
             </h2>
           </div>

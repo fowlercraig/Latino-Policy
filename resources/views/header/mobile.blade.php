@@ -46,7 +46,7 @@
       </div>
       <div class="py-6 px-5 space-y-6">
         <div class="grid grid-cols-2 gap-4">
-          <a href="/research-library" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
+          <a href="/research" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
             Research Library
           </a>
           <a href="/press-archive" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
