@@ -19,10 +19,10 @@
       <div class="w-full md:w-1/2 lg:w-1/5 mb-3 sm:mb-0 p-md pr-0">
         <div 
           data-background-options='{"source":"<?php echo $thumb_url; ?>"}'
-          class="aspect-ratio aspect-ratio--1x1 bg-brand-darker background rounded shadow relative">
+          class="aspect-ratio aspect-ratio--1x1 bg-brand-lighter background rounded shadow relative">
             <div class="absolute inset-0 overflow-hidden p-6">
-              @php $image = get_field('icon'); @endphp
-              <img class="object-fit h-full mx-auto" src="@php echo $image['url']; @endphp" alt="@php echo $image['alt']; @endphp">
+              @php $image = get_field('icon'); $size = 'large'; @endphp
+              @php echo wp_get_attachment_image( $image, $size ); @endphp
             </div>
           </div>
       </div>
