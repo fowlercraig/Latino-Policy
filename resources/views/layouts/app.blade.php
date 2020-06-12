@@ -3,7 +3,7 @@
   @include('partials.head')
   <body <?php body_class('text-gray-500 transition duration-500') ?>>
     @if (is_front_page())
-    <div x-data="{ open: true }" @click.away="open = false">
+    <div x-data="{ open: false }" @click.away="open = false">
     @else
     <div x-data="{ open: false }" @click.away="open = false">
     @endif

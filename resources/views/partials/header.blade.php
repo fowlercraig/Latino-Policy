@@ -1,6 +1,102 @@
-<div class="">
-  <div class="container bg-white max-w-none">
-    <nav class="flex space-x-3 py-2 justify-between md:justify-end items-center">
+<div class="bg-white">
+  @include('header.subscribe')
+</div>
+<div @click.away="donateMenuOpen = false" x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-40 relative bg-white sticky">
+  <div class="relative z-10">
+    <div class="flex justify-between items-center py-5 sm:py-4 w-full container">
+      <div>
+        <a href="/" class="flex">
+          <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
+        </a>
+      </div>
+      <div class="-mr-2 -my-2 lg:hidden">
+        <button @click="mobileMenuOpen = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+          <span class="sr-only">Open Mobile Menu</span>
+          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:items-center lg:justify-between lg:space-x-12">
+        <div class="flex items-center space-x-8">
+          <div class="relative">
+            <button 
+              @click="donateMenuOpen = !donateMenuOpen" x-state:on="Item active" x-state:off="Item inactive"
+              :class="{ 'bg-brand-darker': donateMenuOpen, 'bg-brand-dark': !donateMenuOpen }"
+              class="inline-flex rounded shadow-sm overflow-hidden bg-brand-dark hover:bg-brand-darker font-medium transition ease duration-200">
+              <span href="#" class="px-4 py-2 leading-6 text-white flex items-center space-x-1">
+                <span class="text-white">Make a Donation</span>
+                <div class="block pt-px transition ease duration-400" :class="{ 'pt-1': donateMenuOpen, 'pt-px': !donateMenuOpen }" >
+                  <i height="16" width="16" data-feather="chevron-down"></i>
+                </div>
+              </span>
+            </button>
+            @include('header.donate')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container py-4 border-t border-gray-100 flex justify-between items-center">
+    <nav class="flex space-x-3 xl:space-x-6">
+      <a 
+        @php $link = 658; @endphp
+        href="@php echo get_the_permalink($link) @endphp" 
+        class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+        @php echo get_the_title($link); @endphp
+      </a>
+      <div class="relative">
+        <button 
+          type="button" 
+          @click="workMenuOpen = !workMenuOpen; issuesMenuOpen = false; peopleMenuOpen = false; vrpMenuOpen = false" 
+          x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': workMenuOpen, 'text-gray-500': !workMenuOpen }" class="group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 text-gray-500">
+          <span>Work</span>
+          <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': workMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': workMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="relative">
+        <button 
+          type="button" 
+          @click="issuesMenuOpen = !issuesMenuOpen; workMenuOpen = false; peopleMenuOpen = false" 
+          x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': issuesMenuOpen, 'text-gray-500': !issuesMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+          <span>Issues</span>
+          <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': issuesMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': issuesMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="relative">
+        <button 
+          type="button" 
+          @click="vrpMenuOpen = !vrpMenuOpen; workMenuOpen = false; issuesMenuOpen = false; peopleMenuOpen = false" 
+          x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': vrpMenuOpen, 'text-gray-500': !vrpMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+          <span>Voting Rights Project</span>
+          <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': vrpMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="relative">
+        <button 
+          type="button" 
+          @click="peopleMenuOpen = !peopleMenuOpen; workMenuOpen = false; issuesMenuOpen = false; vrpMenuOpen = false;" 
+          x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': peopleMenuOpen, 'text-gray-500': !peopleMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+          <span>People</span>
+          <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <a 
+        @php $link = 656; @endphp
+        href="@php echo get_the_permalink($link) @endphp" 
+        class="hidden xl:block text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+        @php echo get_the_title($link); @endphp
+      </a>
+    </nav>
+    <nav class="flex space-x-3 justify-between md:justify-end items-center">
       <a 
         @php $link = 656; @endphp
         href="@php echo get_the_permalink($link) @endphp" 
@@ -33,103 +129,6 @@
         </svg>
       </a>
     </nav>
-    <div class="h-px bg-gray-100">
-  </div>
-  @include('header.subscribe')
-</div>
-<div @click.away="donateMenuOpen = false" x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-40 relative bg-white sticky">
-  <div class="relative z-10">
-    <div class="flex justify-between items-center py-5 sm:py-4 lg:justify-start lg:space-x-10 container  max-w-none">
-      <div>
-        <a href="/" class="flex">
-          <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
-        </a>
-      </div>
-      <div class="-mr-2 -my-2 lg:hidden">
-        <button @click="mobileMenuOpen = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-          <span class="sr-only">Open Mobile Menu</span>
-          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex-1 lg:flex lg:items-center lg:justify-between lg:space-x-12">
-        <nav class="flex space-x-3 xl:space-x-6">
-          <a 
-            @php $link = 658; @endphp
-            href="@php echo get_the_permalink($link) @endphp" 
-            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-            @php echo get_the_title($link); @endphp
-          </a>
-          <div class="relative">
-            <button 
-              type="button" 
-              @click="workMenuOpen = !workMenuOpen; issuesMenuOpen = false; peopleMenuOpen = false; vrpMenuOpen = false" 
-              x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': workMenuOpen, 'text-gray-500': !workMenuOpen }" class="group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 text-gray-500">
-              <span>Work</span>
-              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': workMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': workMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-              </svg>
-            </button>
-          </div>
-          <div class="relative">
-            <button 
-              type="button" 
-              @click="issuesMenuOpen = !issuesMenuOpen; workMenuOpen = false; peopleMenuOpen = false" 
-              x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': issuesMenuOpen, 'text-gray-500': !issuesMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-              <span>Issues</span>
-              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': issuesMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': issuesMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-              </svg>
-            </button>
-          </div>
-          <div class="relative">
-            <button 
-              type="button" 
-              @click="vrpMenuOpen = !vrpMenuOpen; workMenuOpen = false; issuesMenuOpen = false; peopleMenuOpen = false" 
-              x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': vrpMenuOpen, 'text-gray-500': !vrpMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-              <span>Voting Rights Project</span>
-              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': vrpMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-              </svg>
-            </button>
-          </div>
-          <div class="relative">
-            <button 
-              type="button" 
-              @click="peopleMenuOpen = !peopleMenuOpen; workMenuOpen = false; issuesMenuOpen = false; vrpMenuOpen = false;" 
-              x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': peopleMenuOpen, 'text-gray-500': !peopleMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-              <span>People</span>
-              <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-              </svg>
-            </button>
-          </div>
-          <a 
-            @php $link = 656; @endphp
-            href="@php echo get_the_permalink($link) @endphp" 
-            class="hidden xl:block text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-            @php echo get_the_title($link); @endphp
-          </a>
-        </nav>
-        <div class="flex items-center space-x-8">
-          <div class="relative">
-            <button 
-              @click="donateMenuOpen = !donateMenuOpen" x-state:on="Item active" x-state:off="Item inactive"
-              :class="{ 'bg-brand-darker': donateMenuOpen, 'bg-brand-dark': !donateMenuOpen }"
-              class="inline-flex rounded shadow-sm overflow-hidden bg-brand-dark hover:bg-brand-darker font-medium transition ease duration-200">
-              <span href="#" class="px-4 py-2 leading-6 text-white flex items-center space-x-1">
-                <span class="text-white">Make a Donation</span>
-                <div class="block pt-px transition ease duration-400" :class="{ 'pt-1': donateMenuOpen, 'pt-px': !donateMenuOpen }" >
-                  <i height="16" width="16" data-feather="chevron-down"></i>
-                </div>
-              </span>
-            </button>
-            @include('header.donate')
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   @include('header.work')
