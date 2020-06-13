@@ -59,7 +59,7 @@
       <div class="relative">
         <button 
           type="button" 
-          @click="issuesMenuOpen = !issuesMenuOpen; workMenuOpen = false; peopleMenuOpen = false" 
+          @click="issuesMenuOpen = !issuesMenuOpen; workMenuOpen = false; peopleMenuOpen = false; vrpMenuOpen = false" 
           x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': issuesMenuOpen, 'text-gray-500': !issuesMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
           <span>Issues</span>
           <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': issuesMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': issuesMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
