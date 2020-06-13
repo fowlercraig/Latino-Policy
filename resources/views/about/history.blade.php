@@ -7,7 +7,7 @@
           @php echo wp_get_attachment_image( $image, $size ); @endphp
         </div>
         <div class="space-y-2 lg:order-last">
-          <h2 class="text-2xl sm:text-3xl leading-9 font-extrabold tracking-tight text-brand-dark sm:text-4xl sm:leading-10">
+          <h2 class="text-2xl sm:text-3xl leading-9 font-bold tracking-tight text-brand-dark sm:text-4xl sm:leading-10">
             @php the_field('title') @endphp
           </h2>
           <div class="h-2"></div>

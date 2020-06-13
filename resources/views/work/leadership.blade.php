@@ -11,7 +11,7 @@
     <header> 
       <button 
         x-description="Expand/collapse question button" @click="openPanel = (openPanel === @php echo $i @endphp ? null : @php echo $i @endphp)"
-        class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-extrabold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13">
+        class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-bold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13">
         @php echo $v['title'] @endphp
       </button> 
     </header>
@@ -30,7 +30,7 @@
     <header> 
       <button 
         x-description="Expand/collapse question button" @click="openPanel = (openPanel === 3 ? null : 3)"
-        class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-extrabold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13 text-left">
+        class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-bold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13 text-left">
         FAQ
       </button> 
     </header>

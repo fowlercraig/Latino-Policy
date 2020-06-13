@@ -7,7 +7,7 @@
   <div class="py-20 space-y-10">
 
     <div class="container">
-      <h2 class="mt-1 text-4xl tracking-tight leading-10 font-extrabold text-brand sm:leading-none sm:text-6xl lg:text-5xl">
+      <h2 class="mt-1 text-4xl tracking-tight leading-10 font-bold text-brand sm:leading-none sm:text-6xl lg:text-5xl">
         Error 404
         <br class="inline">
         <span class="text-brand-darker">Page Not Found</span>

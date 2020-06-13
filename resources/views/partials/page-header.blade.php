@@ -15,7 +15,7 @@
     <div class="container">
       <div class="grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12">
         <div class="relative space-y-2">
-          <h1 class="uppercase font-display font-extrabold text-white tracking-tight sm:leading-15 sm:text-7xl mb-0">{!! App::title() !!}</h1>
+          <h1 class="uppercase font-display font-bold text-white tracking-tight sm:leading-15 sm:text-7xl mb-0">{!! App::title() !!}</h1>
           @if (is_tax( 'issue' ))
           <a
             title="Opens @php echo $parent_title @endphp in same window"

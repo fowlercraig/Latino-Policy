@@ -16,7 +16,7 @@
 <section id="news" class="bg-gray-50 relative overflow-hidden">
   <div class="container py-20 space-y-10 lg:space-y-0">
     <header class="col-span-1 lg:col-span-4 pb-8"> 
-      <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-extrabold tracking-tight text-brand-darker mb-0">
+      <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-bold tracking-tight text-brand-darker mb-0">
         Featured Events
       </h2> 
     </header>

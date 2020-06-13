@@ -1,6 +1,6 @@
 @php $items = get_field('carousel') @endphp
 <section id="slideshow" class="bg-black min-h-64 rellax">
-  <div class="carousel carousel-fades" data-carousel-options='{"autoAdvance":false,"pagination":false,"single":false}'>
+  <div class="carousels carousel-fades" data-carousel-options='{"autoAdvance":false,"pagination":false,"single":false}'>
     
     @foreach ($items as $item)
     
@@ -16,7 +16,7 @@
           </div>
           @endif
           @if ($item['title'])
-          <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-white sm:text-4xl xl:text-5xl sm:leading-10 xl:leading-13 mb-0">
+          <h2 class="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl xl:text-5xl sm:leading-10 xl:leading-13 mb-0">
             @php echo $item['title'] @endphp
           </h2>
           @endif

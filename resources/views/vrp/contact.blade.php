@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="col-span-2 space-y-2">
-          <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-extrabold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13">
+          <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-bold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13">
             @php echo $contact['title'] @endphp
           </h2>
           <div>@php echo $contact['description'] @endphp</div>

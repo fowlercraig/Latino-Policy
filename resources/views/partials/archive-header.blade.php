@@ -23,7 +23,7 @@
           &larr; Back to @php echo $parent_title @endphp
         </a>
         @endif
-        <h1 class="font-display uppercase font-extrabold text-white tracking-tight leading-13 sm:leading-19 text-6xl sm:text-8xl mb-0">{!! App::title() !!}</h1>
+        <h1 class="font-display uppercase font-bold text-white tracking-tight leading-13 sm:leading-19 text-6xl sm:text-8xl mb-0">{!! App::title() !!}</h1>
       </div>
     </div>
   </div>

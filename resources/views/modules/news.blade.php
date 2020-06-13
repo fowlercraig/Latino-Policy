@@ -16,7 +16,7 @@
 <section id="news">
   <div class="space-y-10 lg:space-y-0">
     <header class="col-span-1 lg:col-span-4 pb-8"> 
-      <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-extrabold tracking-tight text-brand-darker mb-0">
+      <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-bold tracking-tight text-brand-darker mb-0">
         @php the_field('press_headline') @endphp
       </h2> 
       @if($link)

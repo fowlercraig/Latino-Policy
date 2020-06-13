@@ -53,7 +53,7 @@
 
           </div>
 
-          <h1 class="entry-title mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl">{!! get_the_title() !!}</h1>
+          <h1 class="entry-title mt-1 text-4xl tracking-tight leading-10 font-bold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl">{!! get_the_title() !!}</h1>
           <div class="h-px bg-gray-200"></div>
 
           @if(get_field('title'))
