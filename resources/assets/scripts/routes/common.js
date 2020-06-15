@@ -3,7 +3,7 @@ import 'alpinejs'
 import AOS from 'aos';
 const feather = require('feather-icons')
 import Rellax from 'rellax';
-import { tns } from 'tiny-slider/src/tiny-slider';
+//import { tns } from 'tiny-slider/src/tiny-slider';
 
 // Formstone Core
 import 'formstone/dist/js/core';
@@ -21,11 +21,6 @@ export default {
   },
   finalize() {
     function build() {
-      AOS.init({
-        duration: 1200,
-        offset: 120,
-        once: true,
-      });
       feather.replace();
       new Rellax('.rellax');
       $('.carousel').carousel();  
@@ -33,14 +28,13 @@ export default {
         'reverse':true,
       });  
       $('.sticky').sticky(); 
-      /* eslint-disable no-unused-vars */
-      var slider = tns({
-        container: '.slider',
-        items: 3,
-        slideBy: 'page',
-        autoplay: true,
-      });
-      /* eslint-enable no-unused-vars */
+      setTimeout(function(){
+        AOS.init({
+          duration: 1200,
+          offset: 120,
+          once: true,
+        });  
+      },500);
     }
     build();
     //const swup = new Swup();
