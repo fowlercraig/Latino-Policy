@@ -27,7 +27,9 @@
             </h2>
             <div class="flex-grow"></div>
             <div>
-              <div class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white">Learn More</div>
+              <div class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white">
+                Learn More
+              </div>
             </div>
           </div>
           <div class="absolute inset-0">

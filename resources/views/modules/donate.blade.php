@@ -14,7 +14,7 @@
       <div class="w-full col-span-5 lg:col-span-3 md:mb-0 sm:space-y-2">
         <p class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display uppercase leading-9 sm:leading-11 lg:leading-14 xl:leading-16 text-brand-darker">@php echo $donate['title'] @endphp</p>
         <div class="h-1 bg-transparent w-32"></div>
-        <p>@php echo $donate['description'] @endphp</p>
+        <p class="sm:text-xl lg:text-lg xl:text-xl">@php echo $donate['description'] @endphp</p>
       </div>
       <div class="w-full col-span-5 lg:col-span-2">
         <div class="grid grid-cols-4 gap-2 mb-4">

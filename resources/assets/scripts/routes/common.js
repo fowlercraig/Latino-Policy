@@ -3,6 +3,7 @@ import 'alpinejs'
 import AOS from 'aos';
 const feather = require('feather-icons')
 import Rellax from 'rellax';
+import { tns } from 'tiny-slider/src/tiny-slider';
 
 // Formstone Core
 import 'formstone/dist/js/core';
@@ -32,6 +33,14 @@ export default {
         'reverse':true,
       });  
       $('.sticky').sticky(); 
+      /* eslint-disable no-unused-vars */
+      var slider = tns({
+        container: '.slider',
+        items: 3,
+        slideBy: 'page',
+        autoplay: true,
+      });
+      /* eslint-enable no-unused-vars */
     }
     build();
     //const swup = new Swup();

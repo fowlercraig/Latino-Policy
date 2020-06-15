@@ -1,5 +1,5 @@
 @php
-  $ids = get_field('litigation', false, false);
+  $ids = get_field('current_litigation', false, false);
   $args = array(
     'post_type'      => 'research',
     'posts_per_page' => -1,
@@ -16,7 +16,7 @@
   <header>
     <div>
       <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-bold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13">
-        Past Ligitation
+        Active Ligitation
       </h2> 
     </div>
     <div>
