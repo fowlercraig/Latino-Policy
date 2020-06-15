@@ -10,7 +10,7 @@
   if ( $parent->have_posts() ):
 @endphp
 
-<div class="bg-brand">
+<div class="bg-brand relative z-20">
   <div class="container py-3 font-medium space-x-6">
     @php $member_group_terms = get_terms( 'role' ); @endphp
     @php while ( $parent->have_posts() ) : $parent->the_post() @endphp
