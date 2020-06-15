@@ -38,7 +38,7 @@ module.exports = {
         'brand': ['komet','Inter var','Helvetica'],
       },
       height: {
-        'header': '350px',
+        'header': '400px',
         'circle': '500px',
       },
       width: {
