@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 h1,
 h2,
 h3,
@@ -49,3 +50,5 @@ html.is-animating .transition-fade {
 .container {
   @apply max-w-none;
 }
+
+/* purgecss end ignore */

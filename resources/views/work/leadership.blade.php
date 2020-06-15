@@ -3,7 +3,7 @@
   $faqitems = get_field('faq');
 @endphp
 
-<section id="sections" class="space-y-10 pt-20" x-data="{ openPanel: 0 }">
+<section id="sections" class="space-y-10 pt-20">
   @php $i = 0 @endphp
   @foreach (array_slice($sections, 1) as $k => $v)
   <div class="h-px bg-gray-100"></div>
