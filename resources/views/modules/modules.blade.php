@@ -4,15 +4,15 @@
   <div class="space-y-20 lg:space-y-20">
     @php $i = 0; @endphp
     @foreach ($items as $item)
-    <div data-aos="fade-up">
+    <div data-aos="fade-up" class="relative">
       <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12 lg:items-center">
-        <div class="col-span-3 @if ($i % 2 != 0): lg:order-last @endif">
+        <div class="col-span-3 @if ($i % 2 == 0): lg:order-last @endif">
           @php $image = $item['image']; $size = 'large'; @endphp
           @if ($item['link'])
           <a href="@php echo $item['link']['url'] @endphp" class="block transition duration-300 ease hover:shadow-xl">
             <div class="bg-gray-100">
               @if (wp_get_attachment_caption($image))
-              <span class="pt-2 pr-4 bg-white text-xs font-medium inline-block text-brand-dark absolute bottom-0">
+              <span class="pt-2 pr-4 bg-white text-xs font-medium inline-block text-brand-darker absolute bottom-0">
                 @php echo wp_get_attachment_caption($image); @endphp
               </span>
             @endif
@@ -26,7 +26,7 @@
           @else
           <div class="bg-gray-100">
             @if (wp_get_attachment_caption($image))
-              <span class="pt-2 pr-4 bg-white text-xs font-medium inline-block text-brand-dark absolute bottom-0">
+              <span class="pt-2 pr-4 bg-white text-xs font-medium inline-block text-brand-darker absolute bottom-0">
                 @php echo wp_get_attachment_caption($image); @endphp
               </span>
             @endif
@@ -39,16 +39,21 @@
           @endif
         </div>
         <div class="col-span-2 space-y-2">
-          <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-bold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13">
+          <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-bold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 xl:leading-13">
             @php echo $item['title'] @endphp
           </h2>
-          <div>@php echo $item['description'] @endphp</div>
+          <div class="sm:text-xl lg:text-lg xl:text-xl">@php echo $item['description'] @endphp</div>
           @if ($item['link'])
           <div class="h-px"></div>
           <div><a href="@php echo $item['link']['url']; @endphp" class="{{ $learnmore }}">Learn More</a></div>
           @endif
         </div>
       </div>
+      @if ($i % 2 != 0)
+      <div class="opacity-25 absolute top-0 -mt-10 right-0 w-1/2 pointer-events-none z-0 rellax">
+        <img alt="Pattern" src="@asset('images/halftone.png')">
+      </div>
+      @endif
     </div>
     @php $i++; @endphp
     @endforeach
