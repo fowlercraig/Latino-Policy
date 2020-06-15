@@ -8,7 +8,7 @@
     <div class="flex justify-between items-center py-5 sm:py-4 w-full container">
       <div>
         <a href="/" class="flex">
-          <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-12 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
+          <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-16 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
         </a>
       </div>
       <div class="-mr-2 -my-2 lg:hidden">

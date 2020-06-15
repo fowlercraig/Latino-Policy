@@ -16,7 +16,7 @@
   <header>
     <div>
       <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-bold tracking-tight text-brand-dark sm:text-4xl sm:leading-10 xl:leading-13">
-        Current Ligitation
+        Past Ligitation
       </h2> 
     </div>
     <div>

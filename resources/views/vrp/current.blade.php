@@ -9,6 +9,7 @@
     'orderby'        => 'post__in',
   );
   $parent = new WP_Query( $args );
+  if($id):
   if ( $parent->have_posts() ):
 @endphp
 
@@ -30,5 +31,6 @@
 
 </section>
 
+@endif
 @endif
 @php wp_reset_postdata() @endphp
