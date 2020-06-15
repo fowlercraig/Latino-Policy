@@ -1,7 +1,7 @@
 @php $image = get_field('press_image'); @endphp
 @php $link  = get_field('press_link'); @endphp
 <div class="container">
-  <section id="press-release" class="bg-brand-dark">
+  <section id="press-release" class="bg-brand-darker">
     <div class="sm:grid grid-cols-5 items-center">
       <div class="col-span-3 aspect-ratio aspect-ratio--16x9 sm:aspect-ratio--1x1 md:aspect-ratio--16x9 bg-gray-900 sm:order-last relative">
         <div class="absolute inset-0">

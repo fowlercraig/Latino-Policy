@@ -1,6 +1,6 @@
 @php $items = get_field('mission') @endphp
 @if ($items)
-<section id="about" class="bg-brand-dark pt-10 lg:pt-20 pb-64 relative">
+<section id="about" class="bg-brand-darker pt-10 lg:pt-20 pb-64 relative">
   <div class="container space-y-20 lg:space-y-40 relative z-10">
     <div>
       <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12 lg:items-center">

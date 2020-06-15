@@ -25,7 +25,7 @@
     </div>
     @if(get_the_terms(get_the_ID(), 'issue'))
     <div class="absolute bottom-0">
-      <span class="text-sm inline-block font-medium bg-brand-dark px-1 py-px text-white">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</span> 
+      <span class="text-sm inline-block font-medium bg-brand-darker px-1 py-px text-white">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</span> 
     </div>
     @endif
   </div>

@@ -32,7 +32,7 @@
               title="@php the_title(); @endphp" 
               class="p-6 block justify-start rounded-lg bg-gray-50 hover:bg-gray-100 transition ease-in-out duration-150 flex items-center">
                 <div class="w-32 flex-none mr-4">
-                  <div class="aspect-ratio aspect-ratio--1x1 bg-brand-dark rounded">
+                  <div class="aspect-ratio aspect-ratio--1x1 bg-brand-darker rounded">
                     @php $image = get_field('icon'); $size = 'large'; @endphp
                     @php echo wp_get_attachment_image( $image, $size ); @endphp
                   </div>

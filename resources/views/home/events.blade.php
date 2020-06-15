@@ -15,7 +15,7 @@
   if ( $parent->have_posts() ):
 @endphp
 
-<section id="events" class="bg-brand-dark pt-10 lg:pt-20 overflow-hidden relative">
+<section id="events" class="bg-brand-darker pt-10 lg:pt-20 overflow-hidden relative">
   <div class="container space-y-4 sm:space-y-0 relative z-10">
     <header class="col-span-1 lg:col-span-2 ">
       <div class="grid grid-cols-4 items-center gap-4">
