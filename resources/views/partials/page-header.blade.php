@@ -7,11 +7,11 @@
   @if (!is_archive())
   @if ( has_post_thumbnail() )
   <div class="bg-gray-900 h-64 md:h-header text-center rellax z-10">
-    <?php the_post_thumbnail( 'large', array( 'class' => 'opacity-75 object-cover transition ease duration-300 w-full h-full' ) ); ?>
+    <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover transition ease duration-300 w-full h-full' ) ); ?>
   </div>
   @endif
   @endif
-  <div class="py-6 pb-6 bg-brand-darker space-y-2 relative">
+  <div class="py-6 pb-6 bg-brand-darker space-y-2 relative -mt-1">
     <div class="container relative z-10">
       <div class="grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12">
         <div class="relative space-y-2">
