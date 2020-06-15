@@ -40,7 +40,7 @@
       </div>
     </div>
   </div>
-  <div class="opacity-50 absolute top-0 left-0 pointer-events-none z-0 -mt-24">
+  <div class="opacity-50 absolute top-0 left-0 pointer-events-none z-0">
     <img class="w-1/2" data-rellax-speed="5" alt="Pattern" src="@asset('images/halftone.png')">
   </div>
 </section>
