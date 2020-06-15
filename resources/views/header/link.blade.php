@@ -2,8 +2,8 @@
   <div class="flex items-center">
     @if (is_tree(7) || is_tree(154))
     <div class="flex-shrink-0">
-      <div class="h-24 w-24 rounded-md bg-brand-lighter group-hover:bg-brand-darker transition duration-150 ease">
-        <div class="p-1">
+      <div class="h-32 w-32 rounded-md bg-brand-lighter group-hover:bg-brand-darker transition duration-150 ease">
+        <div class="">
           @php $image = get_field('icon'); $size = 'large'; @endphp
           @php echo wp_get_attachment_image( $image, $size ); @endphp
         </div>
