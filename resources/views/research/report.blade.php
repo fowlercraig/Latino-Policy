@@ -27,8 +27,10 @@
             </h2>
             <div class="flex-grow"></div>
             <div>
-              <div class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white">
-                Learn More
+              <div
+                class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white relative group">
+                <span class="border-t-2 -mt-px border-white block absolute inset-x-0 top-0 w-0 group-hover:w-full transition-all duration-150 ease-in"></span>
+                Learn more
               </div>
             </div>
           </div>

@@ -25,7 +25,9 @@
           <a
             title="@php echo $item['title'] @endphp"
             href="@php echo $item['link']['url'] @endphp" 
-            class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white">@php echo $item['link']['title'] @endphp
+            class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white relative group">
+            <span class="border-t-2 -mt-px border-white block absolute inset-x-0 top-0 w-0 group-hover:w-full transition-all duration-150 ease-in"></span>
+            @php echo $item['link']['title'] @endphp
           </a>
           @endif
         </div>

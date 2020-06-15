@@ -26,7 +26,15 @@
           <div class="text-brand-lighter">@php echo $items['description'] @endphp</div>
           @if ($items['link'])
           <div class="h-px"></div>
-          <div><a href="@php echo $items['link']['url']; @endphp" class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white">Learn More</a></div>
+          <div>
+            <a
+              title="@php echo $items['link']['title']; @endphp"
+              href="@php echo $items['link']['url']; @endphp" 
+              class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-white relative group">
+              <span class="border-t-2 -mt-px border-white block absolute inset-x-0 top-0 w-0 group-hover:w-full transition-all duration-150 ease-in"></span>
+              Learn more
+            </a>
+          </div>
           @endif
         </div>
       </div>

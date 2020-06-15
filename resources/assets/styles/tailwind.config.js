@@ -95,6 +95,7 @@ module.exports = {
     shadow: ['responsive', 'hover', 'focus', 'group-hover'],
     translate: ['responsive', 'hover', 'focus', 'group-hover'],
     zIndex: ['responsive', 'hover', 'focus', 'group-hover'],
+    width: ['responsive', 'hover', 'focus', 'group-hover'],
     display: ['responsive', 'hover', 'focus', 'group-hover','last'],
   },
   plugins: [
