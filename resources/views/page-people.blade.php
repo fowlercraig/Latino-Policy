@@ -9,6 +9,7 @@
         @include('people.people-all')
         <div class="spacer"></div>
       </div>
+      <?php /*
       <div class="absolute top-0 left-0 hidden lg:block rellax" data-rellax-speed="-7">
         @php echo wp_get_attachment_image( 1300, 'large' ); @endphp
       </div>
@@ -25,14 +26,17 @@
           <div class="circle rounded-full h-circle w-circle"></div>
         </div>
       </div>
+      */?>
     </div>
 
+    <?php /*
     <style>
       .circle {
         background: rgb(39,116,174);
         background: radial-gradient(circle, rgba(39,116,174,1) 0%, rgba(39,116,174,0) 50%, rgba(0,212,255,0) 100%);
       }
     </style>
+    */ ?>
 
   @endwhile
 @endsection
