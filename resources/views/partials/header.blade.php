@@ -1,7 +1,9 @@
 <div class="bg-white">
   @include('header.subscribe')
 </div>
-<div @click.away="donateMenuOpen = false" x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-40 relative bg-white sticky">
+<div 
+  @click.away="workMenuOpen = false, issuesMenuOpen = false, vrpMenuOpen = false, peopleMenuOpen = false, donateMenuOpen = false" 
+  x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" class="z-40 relative bg-white sticky">
   <div class="relative z-10">
     <div class="flex justify-between items-center py-5 sm:py-4 w-full container">
       <div>
