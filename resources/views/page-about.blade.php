@@ -15,7 +15,7 @@
     </div>
 
     <div class="hidden entry-content">
-      <blockquote class="p-6 bg-gray-50 mb-4 border-l-2 border-brand"><p class="mb-0"></p></blockquote>
+      <blockquote class="p-6 bg-gray-50 mb-4 border-l-2 border-brand font-serif"><p class="mb-0"></p></blockquote>
     </div>
 
   @endwhile

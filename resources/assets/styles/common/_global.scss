@@ -26,11 +26,11 @@ h6 {
 }
 
 .entry-content blockquote {
-  @apply p-6 bg-gray-50 mb-4 border-l-2 border-brand;
+  @apply p-6 bg-gray-50 mb-4 border-l-2 border-brand font-serif;
 }
 
 .entry-content blockquote p {
-  @apply mb-0;
+  @apply mb-0 font-serif;
 }
 
 .nav-links > div {
