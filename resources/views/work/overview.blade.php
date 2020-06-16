@@ -8,9 +8,6 @@
     </header>
     <div class="lg:text-lg">@php echo $items['0']['description'] @endphp</div>
   </div>
-  <div class="opacity-25 w-1/2 absolute top-0 left-0 pointer-events-none z-0">
-    <img class="opacity-25" alt="Pattern" src="@asset('images/halftone.png')">
-  </div>
   <div class="absolute inset-0 overflow-hidden">
     <div class="absolute w-1/2 z-0 top-1/2 -translate-y-1/2 mt-10 right-0 transform text-brand-darker opacity-25 overflow-hidden">
       <svg fill="currentColor" class="w-full opacity-25 transform translate-x-1/4" viewBox="0 0 690 372" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
