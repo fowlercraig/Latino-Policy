@@ -23,6 +23,7 @@
             filters="true"
             placeholder="true" transition_container="false" 
             archive="true" 
+            css_classes="space-y-6"
             no_results_text="Sorry, nothing found"
          ]'); 
       @endphp
@@ -38,4 +39,10 @@
     </div>
     @endif
   </div>  
+
+  @php
+    // addeing this so purgecss doesn't purge generated classes by ALM
+  @endphp
+  <div class="my-10 h-px bg-gray-100 hidden"></div>
+
 @endsection
