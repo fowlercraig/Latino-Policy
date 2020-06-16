@@ -36,8 +36,11 @@
       <div class="flex">
         <span class="font-medium">Filter</span>
         <div id="current-filters" class="space-x-1 ml-2">
+          <button data-filter="*" class="inline-block font-medium text-brand transition ease duration-200 hover:border-brand-light" href="@php echo $link['url'] @endphp">
+            All Fellows
+          </button>
           @php 
-            $string = 'All Fellows, Policy Fellows, Voting Rights Project Policy Fellows, Senior Fellows';
+            $string = 'Policy Fellows, Voting Rights Project Policy Fellows, Senior Policy Fellows';
             $string = preg_replace('/\.$/', '', $string);
             $array = explode(', ', $string);
             foreach($array as $value):
