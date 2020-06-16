@@ -52,7 +52,7 @@
     </div>
     <div id="current" class="flex flex-wrap -m-6">
       @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
-      @include('people.fellow')
+      @include('people.fellow-current')
       @php endwhile; endif; @endphp
     </div>
   </section>
