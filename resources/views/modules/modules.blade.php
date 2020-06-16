@@ -1,7 +1,7 @@
 @php $items = get_field('modules') @endphp
 @if ($items)
 <section id="modules">
-  <div class="space-y-20 lg:space-y-20">
+  <div class="space-y-20 lg:space-y-16">
     @php $i = 0; @endphp
     @foreach ($items as $item)
     <div data-aos="fade-up" class="relative">

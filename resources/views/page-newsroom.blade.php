@@ -4,7 +4,7 @@
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
     @include('newsroom.feature')
-    <div class="space-y-10 lg:space-y-20">
+    <div class="space-y-10 lg:space-y-16">
       <div></div>
       @include('newsroom.press')
       @include('newsroom.events')

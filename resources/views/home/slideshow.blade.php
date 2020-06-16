@@ -1,6 +1,6 @@
 @php $items = get_field('carousel') @endphp
-<section id="slideshow" class="bg-black min-h-64">
-  <div class="carousel carousel-fades" data-carousel-options='{"autoAdvance":false,"pagination":false,"single":false}'>
+<section id="slideshow" class="bg-black min-h-64 relative">
+  <div class="carousel carousel-fades" data-carousel-options='{"autoAdvance":false,"pagination":false,"single":false,"controls":{"container":".controls","previous":".prev","next":".next"}}'>
   @foreach ($items as $item)
     <div class="slide pb-10 lg:pt-48 lg:pb-32 bg-black relative">
       <div class="lg:absolute inset-0 z-0 order-first">
@@ -34,5 +34,15 @@
       </div>
     </div>
   @endforeach
+  </div>
+  <div class="absolute inset-x-0 left-0 bottom-0 z-40">
+    <div class="container">
+      <div class="controls">
+        <div class="flex">
+          <button class="prev h-10 w-10 md:h-16 md:w-16 flex items-center justify-center text-white bg-brand hover:bg-brand-dark transition transition ease-in-out duration-150 hover:scale-110"><i data-feather="chevron-left"></i></button>
+          <button class="next h-10 w-10 md:h-16 md:w-16 flex items-center justify-center text-white bg-brand hover:bg-brand-dark transition transition ease-in-out duration-150 hover:scale-110"><i data-feather="chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

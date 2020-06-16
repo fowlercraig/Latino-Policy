@@ -2,7 +2,7 @@
 @php $contact = get_field('contact_us') @endphp
 
 <section id="modules">
-  <div class="space-y-20 lg:space-y-20">
+  <div class="space-y-20 lg:space-y-16">
     <div data-aos="fade-up">
       <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12 lg:items-center">
         <div class="col-span-3 lg:order-last">

@@ -30,6 +30,17 @@
       @php endwhile; @endphp
     </div>
 
+    <div class="absolute inset-x-0 left-0 bottom-0 z-40">
+      <div class="container">
+        <div class="controls">
+          <div class="flex">
+            <button class="prev h-10 w-10 flex items-center justify-center text-white bg-brand hover:bg-brand-dark transition transition ease-in-out duration-150 hover:scale-110"><i data-feather="chevron-left"></i></button>
+            <button class="next h-10 w-10 flex items-center justify-center text-white bg-brand hover:bg-brand-dark transition transition ease-in-out duration-150 hover:scale-110"><i data-feather="chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
