@@ -12,15 +12,17 @@
       <div class="@php echo $rdiv[$rand_keys]; @endphp duration-300 ease group-hover:bg-brand-dark">
       @endif
         <div class="relative aspect-ratio aspect-ratio--1x1 md:aspect-ratio--16x9 @if ( $count == 3)lg:aspect-ratio--3x4 @else lg:aspect-ratio--7x5 @endif overflow-hidden">
-          <div class="absolute inset-0 p-4 sm:p-8 space-y-2 sm:space-y-6 z-20 flex flex-col">
-            <div class="text-xs sm:text-base rounded overflow-hidden space-x-px">
-              @php if(get_the_terms(get_the_ID(), 'resource')): @endphp
-              <span class="text-white font-medium">@php echo get_the_terms(get_the_ID(), 'resource')[0]->name; @endphp</span>
-              <span class="text-white font-medium">→</span>
-              @php endif; @endphp
-              @php if(get_the_terms(get_the_ID(), 'issue')): @endphp
-              <span class="text-white font-medium">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</span>
-              @php endif; @endphp
+          <div class="absolute inset-0 p-4 pt-0 sm:p-8 sm:pt-0 space-y-2 sm:space-y-6 z-20 flex flex-col">
+            <div class="text-xs sm:text-base space-x-px">
+              <div class="bg-brand inline-block py-1 px-2">
+                @php if(get_the_terms(get_the_ID(), 'resource')): @endphp
+                <span class="text-white font-medium">@php echo get_the_terms(get_the_ID(), 'resource')[0]->name; @endphp</span>
+                <span class="text-white font-medium">→</span>
+                @php endif; @endphp
+                @php if(get_the_terms(get_the_ID(), 'issue')): @endphp
+                <span class="text-white font-medium">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</span>
+                @php endif; @endphp
+              </div>
             </div>
             <h2 class="font-display uppercase text-3xl sm:text-3xl xl:text-5xl leading-7 sm:leading-10 xl:leading-13 font-bold tracking-tight text-white">
               <span class="bg-transparent group-hover:bg-brand-darker transition ease duration-150 py-1">@php the_title(); @endphp</span>

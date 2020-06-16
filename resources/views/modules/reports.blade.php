@@ -28,11 +28,11 @@
     </header>
 
     @if ( $parent->post_count == 3)
-    <div class="grid lg:grid lg:grid-cols-3">
+    <div class="grid lg:grid lg:grid-cols-3 gap-8">
     @elseif ( $parent->post_count == 1)
-    <div class="grid lg:grid lg:grid-cols-1">
+    <div class="grid lg:grid lg:grid-cols-1 gap-8">
     @else
-    <div class="grid lg:grid lg:grid-cols-2">
+    <div class="grid lg:grid lg:grid-cols-2 gap-8">
     @endif
     @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
       @if ( $parent->post_count == 1)
