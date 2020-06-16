@@ -19,7 +19,7 @@
           </h2>
           @endif
           @if ($item['description'])
-          <div class="text-white-75">@php echo $item['description'] @endphp</div>
+          <div class="sm:text-xl lg:text-lg xl:text-xl text-white-75">@php echo $item['description'] @endphp</div>
           @endif
           @if ($item['link'])
           <a

@@ -12,13 +12,13 @@
       @include('home.mission')
       @include('home.projects')
 
-      <div class="container space-y-20">
+      <div class="container space-y-10 lg:space-y-14">
         <div class="h-px bg-transparent"></div>
         @include('vrp.voting')
         @include('modules.news')
       </div>
 
-      <div class="h-20 bg-transparent"></div>
+      <div class="h-16 bg-transparent"></div>
       @include('home.events')
       @include('modules.donate')
     </div>

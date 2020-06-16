@@ -23,7 +23,7 @@
               @php echo $items['title'] @endphp
             </h2>
           </div>
-          <div class="text-brand-lighter">@php echo $items['description'] @endphp</div>
+          <div class="text-brand-lighter sm:text-xl lg:text-lg xl:text-xl">@php echo $items['description'] @endphp</div>
           @if ($items['link'])
           <div class="h-px"></div>
           <div>
