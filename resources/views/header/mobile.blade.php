@@ -52,12 +52,6 @@
           <a href="/press-archive" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
             Press Archive
           </a>
-          <a href="#" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
-            Careers
-          </a>
-          <a href="#" class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-600 transition ease-in-out duration-150">
-            Campus Resources
-          </a>
         </div>
       </div>
     </div>

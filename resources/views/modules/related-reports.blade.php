@@ -21,7 +21,7 @@
 @endphp
 
 <section id="reports">
-  <div class="space-y-2 lg:space-y-0 grid lg:grid lg:grid-cols-2">
+  <div class="space-y-2 lg:space-y-0 grid lg:grid lg:grid-cols-2 gap-10">
     <header class="col-span-1 lg:col-span-2 pb-8"> 
       <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-bold tracking-tight text-brand-darker mb-0">
         From the Research Library
