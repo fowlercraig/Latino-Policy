@@ -2,7 +2,6 @@
 @tailwind components;
 // Main
 @import url("https://use.typekit.net/kti3btr.css");
-@import "common/global";
 // Plugins
 @import url(~formstone/dist/css/carousel.css);
 @import url(~formstone/dist/css/sticky.css);
@@ -10,11 +9,17 @@
 @import url(~aos/dist/aos.css);
 @import url(~tiny-slider/dist/tiny-slider.css);
 // Components
+
+/* purgecss start ignore */
+@import "common/global";
 @import "components/fonts";
 @import "components/wp-classes";
 @import "components/aspect";
 @import "components/typography";
 @import "components/carousel";
 @import "components/searchfilter";
+@import "layouts/tinymce";
+
+/* purgecss end ignore */
 
 @tailwind utilities;
