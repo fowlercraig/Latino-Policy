@@ -15,7 +15,7 @@
   href="<?php the_permalink(); ?>" title="Opens @php the_title(); @endphp in the same window"
   class="block w-full relative group" data-aos="fade-up">
   <div class="lg:p-10 transition transform ease duration-300 group-hover:bg-brand-darker h-full transform group-hover:scale-105">
-    <div class="rounded flex flex-wrap relative z-20">
+    <div class="rounded flex flex-wrap relative z-20 items-center lg:items-start px-4 lg:px-0">
       <div class="w-full md:w-1/2 lg:w-1/5 mb-3 sm:mb-0 pr-0">
         <div 
           data-background-options='{"source":"<?php echo $thumb_url; ?>"}'
@@ -30,7 +30,7 @@
         <h2 class="text-brand-darker font-bold mb-0 md:text-2xl lg:text-3xl xl:text-4xl group-hover:text-white transition ease duration-400 tracking-tight leading-tight">
           @php the_title(); @endphp
         </h2>
-        <div class="text-gray-600 group-hover:text-white-75 text-sm md:text-base lg:text-lg"><?php the_excerpt(); ?></div>
+        <div class="text-gray-600 group-hover:text-white-75 text-base sm:text-xl lg:text-lg xl:text-xl"><?php the_excerpt(); ?></div>
         <div></div>
         <span 
           class="inline-block font-brand text-brand-darker uppercase font-medium tracking-wider text-sm border-t-2 border-brand-dark pt-2 group-hover:border-white group-hover:text-white transition duration-300 ease" 

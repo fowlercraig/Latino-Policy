@@ -6,7 +6,7 @@
     <div class="space-y-6 container space-y-16">
       <div></div>
       @include('modules.overview')
-      <div class="max-w-7xl mx-auto grid grid-cols-2 border-4 border-brand-darker bg-white">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 border-4 border-brand-darker bg-white">
         @include('modules.children')
       </div>
     </div>
