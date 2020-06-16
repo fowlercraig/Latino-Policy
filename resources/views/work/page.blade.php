@@ -5,6 +5,7 @@
     @include('partials.page-header')
     <div class="space-y-10 lg:space-y-16 container max-w-none">
       <div class="h-px"></div>
+      @include('modules.overview')
       @if (!is_page('leadership'))
         @if (is_page(9))
           @include('vrp.voting')

@@ -21,7 +21,7 @@
       </div>
       <div class="hidden lg:flex lg:items-center lg:justify-between lg:space-x-12">
         <div class="text-right">
-          <div class="mb-1">
+          <div class="mb-2 space-x-2">
             <a 
               @php $link = 656; @endphp
               href="@php echo get_the_permalink($link) @endphp" 
