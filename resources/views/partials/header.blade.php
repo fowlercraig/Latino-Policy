@@ -52,7 +52,7 @@
     </div>
   </div>
   <div class="container py-4 border-t border-gray-100 hidden lg:flex justify-between items-center">
-    <nav class="flex space-x-3 xl:space-x-6 font-brand uppercase text-lg">
+    <nav class="flex space-x-3 xl:space-x-6 font-brand uppercase tracking-wider">
       <a 
         @php $link = 658; @endphp
         href="@php echo get_the_permalink($link) @endphp" 

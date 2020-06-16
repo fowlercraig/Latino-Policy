@@ -35,7 +35,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         'display': ['alternate-gothic-atf','Inter var','Helvetica'],
-        'brand': ['karbonmedium','Inter var','Helvetica'],
+        'brand': ['komet','Inter var','Helvetica'],
       },
       height: {
         'header': '400px',

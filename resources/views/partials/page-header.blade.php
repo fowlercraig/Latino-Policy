@@ -33,11 +33,11 @@
           </a>
           @endif
         </div>
-        @if (!is_archive() || !is_search())
+        @php if (!is_archive() && !is_page(696) && !is_search()): @endphp
         <div class="font-medium text-gray-300 -mt-1">
           @php the_content() @endphp
         </div>
-        @endif
+        @php endif; @endphp
       </div>
     </div>
     <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
