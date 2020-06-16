@@ -30,7 +30,7 @@
   </div>
   @endif
   <div class="h-1"></div>
-  <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">
+  <h5 class="text-lg leading-6 font-medium text-brand-darker mb-0">
     @php the_title(); @endphp
   </h5>
   <div class="flex-grow h-2"></div>

@@ -15,7 +15,7 @@
   title="@php echo $title @endphp" 
   class="sm:-m-6 sm:-mt-8 sm:p-6 flex flex-col justify-start rounded-lg sm:hover:bg-gray-50 transition ease-in-out duration-150">
   <span class="sr-only"><?php the_title(); ?></span>
-  <div class="relative aspect-ratio lg:aspect-ratio--4x3">
+  <div class="relative aspect-ratio aspect-ratio--4x3">
     <div class="absolute inset-0">
       @if(has_post_thumbnail())
       <?php the_post_thumbnail( 'medium', array( 'class' => 'object-cover object-top transition ease duration-300 w-full h-full' ) ); ?>
@@ -30,7 +30,7 @@
     @endif
   </div>
   <div class="h-1"></div>
-  <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">
+  <h5 class="text-lg leading-6 font-medium text-brand-darker mb-0">
     @php the_title(); @endphp
   </h5>
   <div class="flex-grow h-2"></div>

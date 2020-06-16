@@ -20,7 +20,19 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:items-center lg:justify-between lg:space-x-12">
-        <div class="flex items-center space-x-8">
+        <div class="text-right">
+          <div class="mb-1">
+            <a 
+              @php $link = 656; @endphp
+              href="@php echo get_the_permalink($link) @endphp" 
+              class="text-sm font-medium hidden lg:block xl:hidden">
+              @php echo get_the_title($link); @endphp
+            </a>
+            <a class="text-sm font-medium" href="/press-archive">Press Archive</a>
+            <a class="text-sm font-medium" href="/research">Research Library</a>
+            <span class="text-gray-300">|</span>
+            <button @click="open = true;" class="text-sm font-medium">Subscribe</button>
+          </div>
           <div class="relative">
             <button 
               @click="donateMenuOpen = !donateMenuOpen" x-state:on="Item active" x-state:off="Item inactive"
@@ -39,8 +51,8 @@
       </div>
     </div>
   </div>
-  <div class="container py-4 border-t border-gray-100 flex justify-between items-center">
-    <nav class="flex space-x-3 xl:space-x-6">
+  <div class="container py-4 border-t border-gray-100 hidden lg:flex justify-between items-center">
+    <nav class="flex space-x-3 xl:space-x-6 font-brand uppercase">
       <a 
         @php $link = 658; @endphp
         href="@php echo get_the_permalink($link) @endphp" 
@@ -52,7 +64,7 @@
           type="button" 
           @click="workMenuOpen = !workMenuOpen; issuesMenuOpen = false; peopleMenuOpen = false; vrpMenuOpen = false" 
           x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': workMenuOpen, 'text-gray-500': !workMenuOpen }" class="group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 text-gray-500">
-          <span>Work</span>
+          <span class="uppercase">Work</span>
           <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': workMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': workMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
           </svg>
@@ -63,7 +75,7 @@
           type="button" 
           @click="issuesMenuOpen = !issuesMenuOpen; workMenuOpen = false; peopleMenuOpen = false; vrpMenuOpen = false" 
           x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': issuesMenuOpen, 'text-gray-500': !issuesMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-          <span>Issues</span>
+          <span class="uppercase">Issues</span>
           <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': issuesMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': issuesMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
           </svg>
@@ -74,7 +86,7 @@
           type="button" 
           @click="vrpMenuOpen = !vrpMenuOpen; workMenuOpen = false; issuesMenuOpen = false; peopleMenuOpen = false" 
           x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': vrpMenuOpen, 'text-gray-500': !vrpMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-          <span>Voting Rights Project</span>
+          <span class="uppercase">Voting Rights Project</span>
           <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': vrpMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
           </svg>
@@ -85,7 +97,7 @@
           type="button" 
           @click="peopleMenuOpen = !peopleMenuOpen; workMenuOpen = false; issuesMenuOpen = false; vrpMenuOpen = false;" 
           x-state:on="Item active" x-state:off="Item inactive" :class="{ 'text-gray-900': peopleMenuOpen, 'text-gray-500': !peopleMenuOpen }" class="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-          <span>People</span>
+          <span class="uppercase">People</span>
           <svg x-state-on="Item active" x-state:on="Item active" x-state-off="Item inactive" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-gray-500" :class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" x-bind-class="{ 'text-gray-600': peopleMenuOpen, 'text-gray-500': !workMenuOpen }" fill="currentColor" viewBox="0 0 20 20" null="[object Object]">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
           </svg>
@@ -99,16 +111,6 @@
       </a>
     </nav>
     <nav class="flex space-x-3 justify-between md:justify-end items-center">
-      <a 
-        @php $link = 656; @endphp
-        href="@php echo get_the_permalink($link) @endphp" 
-        class="text-sm font-medium hidden lg:block xl:hidden">
-        @php echo get_the_title($link); @endphp
-      </a>
-      <a class="text-sm font-medium" href="/press-archive">Press Archive</a>
-      <a class="text-sm font-medium" href="/research">Research Library</a>
-      <span class="text-gray-300">|</span>
-      <button @click="open = true;" class="text-sm font-medium">Subscribe</button>
       @php $url = get_field('facebook','option') @endphp
       <a href="<?php echo $url['url']; ?>" title="Opens Facebook in a new window" class="text-gray-500 hover:text-gray-300 hidden md:block">
         <span class="sr-only">Facebook</span>

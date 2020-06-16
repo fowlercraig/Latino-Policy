@@ -16,7 +16,7 @@ module.exports = {
       colors: {
         'brand': '#2774AE',
         'brand-darker': '#003B5C',
-        'brand-dark': '#005587',
+        'brand-dark': '#003B5C',
         'brand-light': '#8BB8E8',
         'brand-lighter': '#C3D7EE',
         'brand-lightest': '#eeeff2',
@@ -35,7 +35,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         'display': ['alternate-gothic-atf','Inter var','Helvetica'],
-        'brand': ['komet','Inter var','Helvetica'],
+        'brand': ['karbonmedium','Inter var','Helvetica'],
       },
       height: {
         'header': '400px',

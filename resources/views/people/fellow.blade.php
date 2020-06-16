@@ -15,7 +15,7 @@
   @else
   <div class="h-1"></div>
   @endif
-  <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">@php the_title(); @endphp</h5>
+  <h5 class="text-lg leading-6 font-medium text-brand-darker mb-0">@php the_title(); @endphp</h5>
   <p class="text-sm hidden sm:block">
     <?php the_field('title'); ?>  
   </p>

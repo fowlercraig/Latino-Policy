@@ -16,7 +16,7 @@ class TailwindExtractor {
 
 const purgecssWordpress = {
   whitelistPatterns: [
-      /^(is-|has-|will-|js-|fs-|feather-|word-|aos-|aspect-)/,
+      /^(is-|has-|will-|js-|fs-|feather-|word-|aos-|wp-|aspect-)/,
       /^rtl(-.*)?$/,
       /^home(-.*)?$/,
       /^blog(-.*)?$/,
@@ -65,20 +65,20 @@ const purgecssWordpress = {
 
 module.exports = {
   plugins: [
-    new ImageminPlugin({
-      optipng: { optimizationLevel: 2 },
-      gifsicle: { optimizationLevel: 3 },
-      pngquant: { quality: '65-90', speed: 4 },
-      svgo: {
-        plugins: [
-          { removeUnknownsAndDefaults: false },
-          { cleanupIDs: false },
-          { removeViewBox: false },
-        ],
-      },
-      plugins: [imageminMozjpeg({ quality: 65 })],
-      disable: (config.enabled.watcher),
-    }),
+    //new ImageminPlugin({
+    //  optipng: { optimizationLevel: 2 },
+    //  gifsicle: { optimizationLevel: 3 },
+    //  pngquant: { quality: '65-90', speed: 4 },
+    //  svgo: {
+    //    plugins: [
+    //      { removeUnknownsAndDefaults: false },
+    //      { cleanupIDs: false },
+    //      { removeViewBox: false },
+    //    ],
+    //  },
+    //  plugins: [imageminMozjpeg({ quality: 65 })],
+    //  disable: (config.enabled.watcher),
+    //}),
     new PurgecssPlugin({
       paths: glob.sync([
         'app/**/*.php',

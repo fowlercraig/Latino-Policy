@@ -15,7 +15,7 @@
   @else
   <div class="h-1"></div>
   @endif
-  <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">@php echo get_the_title( $p->ID ); @endphp</h5>
+  <h5 class="text-lg leading-6 font-medium text-brand-darker mb-0">@php echo get_the_title( $p->ID ); @endphp</h5>
   <p class="text-sm hidden sm:block"><?php echo get_field('title', $p->ID); ?></p>
   <div class="flex-grow h-2"></div>
   @if ( $post->post_parent != 630 )

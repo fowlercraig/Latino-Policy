@@ -20,7 +20,7 @@
           @php echo wp_get_attachment_image( $image, $size ); @endphp
         </div>
         <div class="space-y-2">
-          <h2 class="text-2xl sm:text-3xl leading-9 font-bold tracking-tight text-brand-dark sm:text-4xl sm:leading-10">
+          <h2 class="text-2xl sm:text-3xl leading-9 font-bold tracking-tight text-brand-darker sm:text-4xl sm:leading-10">
             @php echo $impact['title'] @endphp
           </h2>
           <div class="h-2"></div>
@@ -40,7 +40,7 @@
               @endif
               title="Opens @php the_title(); @endphp in new window" 
               class="p-6 block space-y-2 justify-start rounded-lg bg-gray-50 hover:bg-gray-100 transition ease-in-out duration-150">
-                <h5 class="text-lg leading-6 font-medium text-brand-dark mb-0">@php the_title(); @endphp</h5>
+                <h5 class="text-lg leading-6 font-medium text-brand-darker mb-0">@php the_title(); @endphp</h5>
                 <p class="text-sm">@php echo get_the_excerpt(); @endphp</p>
                 <div class="flex-grow h-1"></div>
                 <p class="bg-brand rounded-full inline-block p-2 px-4 mt-auto text-sm leading-5 font-medium text-white align-bottom">

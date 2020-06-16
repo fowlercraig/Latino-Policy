@@ -30,7 +30,7 @@
     @if ( $parent->post_count == 2)
     <div class="sm:grid lg:grid lg:grid-cols-2 gap-8 lg:gap-12">
     @else
-    <div class="sm:grid lg:grid lg:grid-cols-4 gap-8 lg:gap-12">
+    <div class="space-y-6 sm:space-y-0 sm:grid lg:grid lg:grid-cols-4 gap-8 lg:gap-12">
     @endif
       @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
       @include('modules.news-item',['count' => $parent->post_count])

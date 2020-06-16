@@ -25,7 +25,7 @@
   <div class="bg-white">
     <div class="container py-6 sm:py-8 lg:py-12 grid grid-cols-5 col-gap-10">
       <div class="col-span-2 space-y-2 pr-10 border-r border-gray-100">
-        <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-bold tracking-tight text-brand-dark mb-0">
+        <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-bold tracking-tight text-brand-darker mb-0">
           @php echo get_the_title($link); @endphp
         </h2> 
         <div class="text-sm">@php echo get_the_excerpt($link) @endphp</div>

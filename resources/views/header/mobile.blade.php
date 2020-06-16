@@ -33,7 +33,7 @@
               @endphp
               @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
               <a href="@php the_permalink(); @endphp" class="-m-3 space-x-4 flex items-center p-3 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
-                <div class="text-lg leading-6 font-medium text-brand-dark">
+                <div class="text-lg leading-6 font-medium text-brand-darker">
                   @php the_title(); @endphp
                 </div>
                 <div class="flex-grow"></div>

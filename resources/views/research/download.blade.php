@@ -5,7 +5,7 @@
     <i height="18" width="18" data-feather="download"></i>
   </div>
   <div>
-    <p class="text-brand-dark font-medium text-sm">Download Full Report</p>
+    <p class="text-brand-darker font-medium text-sm">Download Full Report</p>
     <p class="text-gray-500 font-medium text-xs">@php echo $file['title']; @endphp</p>
   </div>
 </a>

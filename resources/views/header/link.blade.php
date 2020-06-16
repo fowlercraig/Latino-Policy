@@ -11,7 +11,7 @@
     </div>
     @endif
     <div class="ml-4">
-      <h5 class="text-2xl sm:text-xl xl:text-2xl leading-6 sm:leading-6 font-bold tracking-tight text-brand-dark mb-0">@php the_title(); @endphp</h5>
+      <h5 class="text-2xl sm:text-xl xl:text-2xl leading-6 sm:leading-6 font-bold tracking-tight text-brand-darker mb-0">@php the_title(); @endphp</h5>
       <p class="text-gray-500 font-medium text-sm">
         Learn more
       </p>

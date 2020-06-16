@@ -33,14 +33,9 @@
         <div class="text-gray-600 group-hover:text-white-75 text-sm md:text-base lg:text-lg"><?php the_excerpt(); ?></div>
         <div></div>
         <span 
-          class="inline-block font-brand text-brand-dark uppercase font-medium tracking-wider text-sm border-t-2 border-brand-dark pt-2 group-hover:border-white group-hover:text-white transition duration-300 ease" 
+          class="inline-block font-brand text-brand-darker uppercase font-medium tracking-wider text-sm border-t-2 border-brand-dark pt-2 group-hover:border-white group-hover:text-white transition duration-300 ease" 
           >Learn More</span>
       </div>
-    </div>
-    <div class="opacity-25 group-hover:opacity-25 absolute top-0 left-0 pointer-events-none">
-      <img 
-        alt="Pattern"
-        src="@asset('images/Pattern-white.png')" srcset="@asset('images/Pattern-white.png') 1x, @asset('images/Pattern-white@2x.png') 2x, @asset('images/Pattern-white@3x.png') 3x">
     </div>
   </div>
 </a>
