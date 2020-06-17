@@ -89,6 +89,7 @@
     "purgecss-webpack-plugin": "^1.5.0",
     "purgecss-with-wordpress": "^2.3.0",
     "rellax": "^1.12.1",
+    "tailwindcss-typography": "2.x",
     "tiny-slider": "^2.9.2"
   }
 }

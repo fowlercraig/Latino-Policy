@@ -2,7 +2,7 @@
 <section id="slideshow" class="bg-black min-h-64 relative">
   <div class="carousel carousel-fades" data-carousel-options='{"autoAdvance":false,"pagination":false,"single":false,"controls":{"container":".controls","previous":".prev","next":".next"}}'>
   @foreach ($items as $item)
-    <div class="slide pb-10 lg:pt-48 lg:pb-32 bg-black relative">
+    <div class="slide pb-10 lg:pt-64 lg:pb-32 bg-black relative">
       <div class="lg:absolute inset-0 z-0 order-first">
         <img alt='@php echo $item["image"]["alt"]; @endphp' class="object-cover w-full h-full" src='@php echo $item["image"]["url"]; @endphp' />
       </div>
