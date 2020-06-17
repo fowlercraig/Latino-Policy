@@ -20,7 +20,23 @@ export default {
     // JavaScript to be fired on all pages
   },
   finalize() {
+    /* eslint-disable no-unused-vars */
+    window.addEventListener('scroll', function(ev) {
+      var slider = document.getElementById('slideshow');
+      var header = document.getElementById('header');
+      var distanceToTop = slider.getBoundingClientRect().top;
+      console.log(distanceToTop);
+      if (distanceToTop < 25) {
+        header.classList.add('bg-brand-darker');
+        header.classList.add('bg-opacity-90');
+      } else {
+        header.classList.remove('bg-brand-darker');
+        header.classList.remove('bg-opacity-90');
+      }
+    });
+    /* eslint-enable no-unused-vars */
     function build() {
+
       feather.replace();
       new Rellax('.rellax');
       $('.carousel').carousel();  

@@ -13,6 +13,11 @@ module.exports = {
       },
     },
     extend: {
+      backgroundOpacity: {
+        '85': '0.85',
+        '90': '0.90',
+        '95': '0.95',
+      },
       colors: {
         'brand': '#2774AE',
         'brand-darker': '#003B5C',

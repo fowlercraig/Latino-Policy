@@ -13,10 +13,11 @@
   @include('header.subscribe')
 </div>
 <div 
+  id="header" 
   @click.away="workMenuOpen = false, issuesMenuOpen = false, vrpMenuOpen = false, peopleMenuOpen = false, donateMenuOpen = false" 
   x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" 
   @if (is_front_page())
-  class="z-40 fixed inset-x-0 top-0">
+  class="z-40 fixed inset-x-0 top-0 transition duration-300 ease">
   @else
   class="z-40 relative bg-white sticky">
   @endif
@@ -56,8 +57,8 @@
           <div class="relative">
             <button 
               @click="donateMenuOpen = !donateMenuOpen" x-state:on="Item active" x-state:off="Item inactive"
-              :class="{ 'bg-brand-darker': donateMenuOpen, 'bg-brand-dark': !donateMenuOpen }"
-              class="inline-flex rounded shadow-sm overflow-hidden bg-brand-dark hover:bg-brand-darker font-medium transition ease duration-200">
+              :class="{ 'bg-brand-darker': donateMenuOpen, 'bg-brand': !donateMenuOpen }"
+              class="inline-flex rounded shadow-sm overflow-hidden bg-brand hover:bg-brand-darker font-medium transition ease duration-200">
               <span class="px-4 py-2 leading-6 text-white flex items-center space-x-1">
                 <span class="text-white">Make a Donation</span>
                 <div class="block pt-px transition ease duration-400" :class="{ 'pt-1': donateMenuOpen, 'pt-px': !donateMenuOpen }" >
