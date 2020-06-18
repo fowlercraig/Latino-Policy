@@ -5,8 +5,10 @@
     @include('partials.page-header')
     <div class="space-y-20 container">
       <div class="h-px bg-transparent"></div>
-      @include('modules.matters')
-      <div class="h-px bg-gray-100"></div>
+      @if (get_field('matters'))
+        @include('modules.matters')
+        <div class="h-px bg-gray-100"></div>
+      @endif
       @include('modules.needtoknow')
       <div class="h-px bg-gray-100"></div>
       @include('modules.reports')
