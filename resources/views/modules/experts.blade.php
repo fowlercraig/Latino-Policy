@@ -27,7 +27,7 @@
         </a>
         @endif
       </div>
-      <div>
+      <div class="sm:text-xl lg:text-lg xl:text-xl">
         @php the_field('description'); @endphp
       </div>
     </header>

@@ -26,12 +26,10 @@ export default {
       var header = document.getElementById('header');
       var distanceToTop = slider.getBoundingClientRect().top;
       console.log(distanceToTop);
-      if (distanceToTop < 25) {
+      if (distanceToTop < 100) {
         header.classList.add('bg-brand-darker');
-        header.classList.add('bg-opacity-90');
       } else {
         header.classList.remove('bg-brand-darker');
-        header.classList.remove('bg-opacity-90');
       }
     });
     /* eslint-enable no-unused-vars */
