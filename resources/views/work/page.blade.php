@@ -22,6 +22,11 @@
         @include('modules.experts')
         @include('work.leadership')
       @endif
+
+      @if (is_page(15))
+        @php // If Research Page @endphp
+        @include('modules.research')
+      @endif
       @include('partials.back')
     </div>
   @endwhile
