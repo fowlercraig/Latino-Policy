@@ -14,10 +14,12 @@
       <div class="text-gray-300">@php echo get_the_excerpt($page) @endphp</div>
       <div>
         <a
-          class="{{ $learnmore }}"
-          title="Opens @php the_title() @endphp in the same window"  
+          title="Opens Research Library in same window"
           href="/research"  
-        >Learn More</a>
+          class="inline-block font-bold border-t-2 border-b-0 border-red-500 pt-1 text-white relative group sm:text-xl lg:text-lg xl:text-xl">
+          <span class="border-t-2 -mt-px border-red-800 block absolute inset-x-0 top-0 w-0 group-hover:w-full transition-all duration-150 ease-in z-10"></span>
+          Learn More
+        </a>
       </div>
     </div>
   </div>
