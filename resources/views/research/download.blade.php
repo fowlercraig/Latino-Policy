@@ -1,6 +1,6 @@
 @php
   $file = get_field('file');
-  if ( is_singular( 'research' ) ) {
+  if ( is_singular( 'research' ) || is_singular( 'event' ) || is_singular( 'press' ) ) {
     $name = 'text-white';
     $role = 'text-white-50';
     $back = 'bg-white';

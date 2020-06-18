@@ -2,12 +2,20 @@
   <header class="pt-10 bg-brand-darker">
     <div class="container group relative z-10">
       <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12">
+        @if (has_post_thumbnail())
         <div class="col-span-3 lg:order-last">
           <div class="h-full">
             @php the_post_thumbnail( 'large', array( 'class' => 'block object-cover h-full w-full' ) ); @endphp
           </div>
         </div>
-        <div class="col-span-2 space-y-4 lg:pb-10">
+        @endif
+        <div class="
+          @if (has_post_thumbnail())
+          col-span-2 
+          @else
+          col-span-5
+          @endif
+          space-y-4 lg:pb-10">
 
           <div class="bg-brand inline-block py-1 px-2">
             @php if(get_the_terms(get_the_ID(), 'resource')): @endphp

@@ -1,6 +1,6 @@
 @php
   $posts = get_field('people');
-  if ( is_singular( 'research' ) ) {
+  if ( is_singular( 'research' ) || is_singular( 'event' ) || is_singular( 'press' ) ) {
     $name = 'text-white';
     $role = 'text-white-50';
   } else {
