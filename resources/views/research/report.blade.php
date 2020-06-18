@@ -25,7 +25,7 @@
               </div>
             </div>
             <h2 class="font-display uppercase text-3xl sm:text-3xl xl:text-5xl leading-7 sm:leading-10 xl:leading-13 font-bold tracking-tight text-white">
-              <span class="bg-transparent group-hover:bg-brand-darker transition ease duration-150 py-1">@php the_title(); @endphp</span>
+              <span class="bg-transparent transition ease duration-150 py-1">@php the_title(); @endphp</span>
             </h2>
             <div class="flex-grow"></div>
             <div>
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="absolute inset-0">
-            @php the_post_thumbnail( 'large', array( 'class' => 'opacity-25 group-hover:opacity-50 object-cover transition ease duration-300 w-full h-full' ) ); @endphp
+            @php the_post_thumbnail( 'large', array( 'class' => 'opacity-50 group-hover:opacity-25 object-cover transition ease duration-300 w-full h-full' ) ); @endphp
           </div>
         </div>
       </div>
