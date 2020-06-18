@@ -19,6 +19,12 @@
       <h2 class="text-2xl sm:text-4xl leading-7 sm:leading-10 font-bold tracking-tight text-brand-darker mb-0">
         Featured Events
       </h2> 
+      @if(get_field('events_description'))
+      <div class="h-1"></div>
+      <p class="sm:text-xl lg:text-lg xl:text-xl">
+        @php the_field('events_description') @endphp
+      </p>
+      @endif
     </header>
 
     @if ( $parent->post_count == 2)

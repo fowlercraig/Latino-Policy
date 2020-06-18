@@ -7,7 +7,9 @@
     <div class="space-y-10 lg:space-y-16">
       <div></div>
       @include('newsroom.press')
+      @if(!get_field('disable_events_section'))
       @include('newsroom.events')
+      @endif
       @include('newsroom.press-archive')
     </div>
   @endwhile
