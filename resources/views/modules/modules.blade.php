@@ -53,6 +53,7 @@
               <span class="border-t-2 -mt-px border-brand-darker block absolute inset-x-0 top-0 w-0 group-hover:w-full transition-all duration-150 ease-in"></span>
               Learn More
             </a>
+          </div>
           @endif
         </div>
       </div>
