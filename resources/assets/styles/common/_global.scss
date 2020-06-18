@@ -34,6 +34,12 @@ h6 {
   @apply mb-0 font-serif;
 }
 
+.entry-cotent {
+  & h1 {
+    font-size: 15rem;
+  }
+}
+
 .nav-links > div {
   @apply inline-block;
 }

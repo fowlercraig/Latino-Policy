@@ -1,5 +1,12 @@
 @php
   $posts = get_field('people');
+  if ( is_singular( 'research' ) ) {
+    $name = 'text-white';
+    $role = 'text-white-50';
+  } else {
+    $name = 'text-brand-darker';
+    $role = 'text-gray-500';
+  }
 @endphp
 
 @php if( $posts ): @endphp
@@ -14,8 +21,8 @@
           class="object-cover w-full h-full">
       </div>
       <div>
-        <p class="text-brand-darker font-medium text-sm">@php echo get_the_title( $people->ID ); @endphp</p>
-        <p class="text-gray-500 font-medium text-xs">@php echo get_the_terms($people->ID, 'role')[0]->name; @endphp</p>
+        <p class="@php echo $name @endphp font-medium text-sm">@php echo get_the_title( $people->ID ); @endphp</p>
+        <p class="@php echo $role @endphp font-medium text-xs">@php echo get_the_terms($people->ID, 'role')[0]->name; @endphp</p>
       </div>
     </a>
     @php endforeach; wp_reset_postdata(); @endphp

@@ -1,90 +1,57 @@
 <article @php post_class() @endphp>
-  
-  <div class="bg-gray-50 py-4 md:py-10 mb-20 relative">
-    <div class="container space-y-4 lg:space-y-0 lg:grid grid-cols-4 xl:grid-cols-4 gap-12 sticky-container">
-
-      <div class="col-span-2 xl:col-span-2 flex-none -ml-1 overflow-hidden lg:order-last relative">
-        <div class="sticky w-full" data-sticky-options='{"offset":100, "minWidth":"1024px"}' data-sticky-container='.sticky-container'>
-          <?php the_post_thumbnail( 'large', array( 'class' => 'w-full' ) ); ?>
+  <header class="pt-10 bg-brand-darker">
+    <div class="container group relative z-10">
+      <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12">
+        <div class="col-span-3 lg:order-last">
+          <div class="h-full">
+            @php the_post_thumbnail( 'large', array( 'class' => 'block object-cover h-full w-full' ) ); @endphp
+          </div>
         </div>
-      </div>
+        <div class="col-span-2 space-y-4 lg:pb-10">
 
-      <div class="col-span-2 xl:col-span-2 space-y-4">
-        <header class="space-y-3">
-
-          <div class="text-sm font-medium rounded overflow-hidden">
-
-            @if(is_singular( 'event' )||is_singular( 'press' ))
-            <a 
-              title="Opens Press Archive in same window" 
-              href="/press-archive" 
-              class="text-brand px-1 hover:underline">Press Archive</a>
-            <span class="text-gray-400">→</span>
-            @endif
-
-            @if(is_singular( 'research' ))
-            <a 
-              title="Opens Research Library in same window" 
-              href="/research" 
-              class="text-brand px-1 hover:underline">Research Library</a>
-            <span class="text-gray-400">→</span>
-            @endif
-
-            @if(get_the_terms(get_the_ID(), 'resource'))
-            <a 
-              title="Opens @php echo $term->name; @endphp Taxonomy in same window" 
-              href="@php echo get_the_permalink(696) @endphp?resource=@php echo get_the_terms(get_the_ID(), 'resource')[0]->slug; @endphp" 
-              class="text-brand px-1 hover:underline">@php echo get_the_terms(get_the_ID(), 'resource')[0]->name; @endphp</a>
-            <span class="text-gray-400">→</span>
-            @endif
-
-            @if(get_the_terms(get_the_ID(), 'issue'))
-            <div class="font-medium issues inline-flex flex-wrap space-x-px">
-              @php $terms = get_the_terms(get_the_ID(), 'issue'); @endphp
-              @foreach ($terms as $term)
-              <a 
-                title="Opens @php echo $term->name; @endphp Taxonomy in same window" 
-                href="@php echo get_the_permalink(696) @endphp?issue=@php echo $term->slug; @endphp" 
-                class="flex-none text-brand hover:underline">@php echo $term->name; @endphp</a>
-              <span class="last:hidden">,</span>
-              @endforeach
-            </div>
-            @endif
-
+          <div class="bg-brand inline-block py-1 px-2">
+            @php if(get_the_terms(get_the_ID(), 'resource')): @endphp
+            <span class="text-white font-medium">@php echo get_the_terms(get_the_ID(), 'resource')[0]->name; @endphp</span>
+            <span class="text-white font-medium">→</span>
+            @php endif; @endphp
+            @php if(get_the_terms(get_the_ID(), 'issue')): @endphp
+            <span class="text-white font-medium">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</span>
+            @php endif; @endphp
           </div>
 
-          <h1 class="entry-title mt-1 text-4xl tracking-tight leading-10 font-bold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl">{!! get_the_title() !!}</h1>
-          <div class="h-px bg-gray-200"></div>
+          <h1 class="entry-title mt-1 text-4xl tracking-tight leading-10 font-bold text-white sm:leading-none sm:text-6xl lg:text-5xl">{!! get_the_title() !!}</h1>
 
-          @if(get_field('title'))
-          <div class="px-1 text-gray-500">@php the_field('title') @endphp</div>
+          <div class="text-white-75">
+            @php the_excerpt() @endphp
+          </div>
+
+          @if (get_field('people'))
+          <div class="h-px bg-white-25"></div>
+          @include('research.authors')
           @endif
 
-          @if(get_field('association'))
-          <div class="px-1 text-gray-500">@php the_field('association') @endphp</div>
+          @if (get_field('people'))
+          <div class="h-px bg-white-25"></div>
+          @include('research.download')
           @endif
 
-        </header>
-
-        @if (get_field('people'))
-        @include('research.authors')
-        <div class="h-px bg-gray-200"></div>
-        @endif
-
-        @if (get_field('people'))
-        @include('research.download')
-        @endif
-
-        <div class="entry-content">
-          @php the_content() @endphp
         </div>
-        <footer>
-          {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-        </footer>
       </div>
     </div>
     <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
-      <img class="w-1/2 opacity-25" alt="Pattern" src="@asset('images/halftone.png')">
+      <img class="w-1/2" alt="Pattern" src="@asset('images/halftone.png')">
+    </div>
+  </header>
+  <div class="h-10"></div>
+  <div class="container group">
+    <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12">
+      <div class="col-span-3">
+        <div class="entry-content">
+          @php the_content() @endphp
+        </div>
+      </div>
     </div>
   </div>
 </article>
+
+<div class="h-px bg-black-25 my-10"></div>
