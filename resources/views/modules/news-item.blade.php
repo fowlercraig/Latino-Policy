@@ -35,4 +35,5 @@
   </h5>
   <div class="flex-grow h-2"></div>
   <p class="mt-auto text-sm leading-5 font-medium text-brand align-bottom">Read More</p>
+  <div class="sm:hidden h-10"></div>
 </a>

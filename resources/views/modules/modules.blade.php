@@ -42,10 +42,17 @@
           <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-bold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 xl:leading-13">
             @php echo $item['title'] @endphp
           </h2>
-          <div class="sm:text-xl lg:text-lg xl:text-xl">@php echo $item['description'] @endphp</div>
+          <div class="sm:text-xl lg:text-lg xl:text-xl entry-content">@php echo $item['description'] @endphp</div>
           @if ($item['link'])
           <div class="h-px"></div>
-          <div><a href="@php echo $item['link']['url']; @endphp" class="{{ $learnmore }}">Learn More</a></div>
+          <div>
+            <a
+              title="@php echo $item['title'] @endphp"
+              href="@php echo $item['link']['url'] @endphp" 
+              class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-brand relative group sm:text-xl lg:text-lg xl:text-xl">
+              <span class="border-t-2 -mt-px border-brand-darker block absolute inset-x-0 top-0 w-0 group-hover:w-full transition-all duration-150 ease-in"></span>
+              Learn More
+            </a>
           @endif
         </div>
       </div>

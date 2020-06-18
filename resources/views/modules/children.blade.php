@@ -14,7 +14,7 @@
 <a
   href="<?php the_permalink(); ?>" title="Opens @php the_title(); @endphp in the same window"
   class="block w-full relative group" data-aos="fade-up">
-  <div class="lg:p-10 transition transform ease duration-300 group-hover:bg-brand-darker h-full transform group-hover:scale-105">
+  <div class="lg:p-10 transition transform ease duration-300 group-hover:bg-brand-darker h-full transform">
     <div class="rounded flex flex-wrap relative z-20 items-center lg:items-start px-4 lg:px-0">
       <div class="w-full md:w-1/2 lg:w-1/5 mb-3 sm:mb-0 pr-0">
         <div 
