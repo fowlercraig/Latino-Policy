@@ -32,7 +32,7 @@
           @endif
         </a>
       </div>
-      <div class="-mr-2 -my-2 lg:hidden">
+      <div class="-mr-2 -my-2 md:hidden">
         <button @click="mobileMenuOpen = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md @php echo $textColor @endphp hover:@php echo $textColor @endphp hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:@php echo $textColor @endphp transition duration-150 ease-in-out">
           <span class="sr-only">Open Mobile Menu</span>
           <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -40,15 +40,9 @@
           </svg>
         </button>
       </div>
-      <div class="hidden lg:flex lg:items-center lg:justify-between lg:space-x-12">
+      <div class="hidden md:flex lg:items-center lg:justify-between lg:space-x-12">
         <div class="text-right">
           <div class="mb-2 space-x-2 @php echo $textColor @endphp">
-            <a 
-              @php $link = 656; @endphp
-              href="@php echo get_the_permalink($link) @endphp" 
-              class="text-sm font-medium hidden lg:block xl:hidden">
-              @php echo get_the_title($link); @endphp
-            </a>
             <a class="text-sm font-medium" href="/press-archive">Press Archive</a>
             <a class="text-sm font-medium" href="/research">Research Library</a>
             <span class="opacity-50">|</span>
@@ -72,8 +66,8 @@
       </div>
     </div>
   </div>
-  <div class="container py-4 border-t @php echo $borderColor; @endphp hidden lg:flex justify-between items-center">
-    <nav class="flex space-x-3 xl:space-x-6 font-brand uppercase tracking-wider">
+  <div class="container py-4 border-t @php echo $borderColor; @endphp hidden md:flex justify-between items-center">
+    <nav class="flex space-x-3 xl:space-x-6 font-brand uppercase tracking-wider text-sm lg:text-base">
       <a 
         @php $link = 658; @endphp
         href="@php echo get_the_permalink($link) @endphp" 
@@ -127,7 +121,7 @@
       <a 
         @php $link = 656; @endphp
         href="@php echo get_the_permalink($link) @endphp" 
-        class="hidden xl:block leading-6 font-medium @php echo $textColor @endphp hover:@php echo $textHover; @endphp focus:outline-none focus:@php echo $textHover; @endphp transition ease-in-out duration-150">
+        class="leading-6 font-medium @php echo $textColor @endphp hover:@php echo $textHover; @endphp focus:outline-none focus:@php echo $textHover; @endphp transition ease-in-out duration-150">
         @php echo get_the_title($link); @endphp
       </a>
     </nav>

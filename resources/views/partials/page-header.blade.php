@@ -34,7 +34,7 @@
           @endif
         </div>
         @php if (!is_archive() && !is_page(696) && !is_search()): @endphp
-        <div class="font-medium text-gray-300 -mt-1">
+        <div class="sm:text-xl lg:text-lg xl:text-xl text-gray-300 -mt-1">
           @php the_content() @endphp
         </div>
         @php endif; @endphp
