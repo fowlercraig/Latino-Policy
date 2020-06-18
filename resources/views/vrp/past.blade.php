@@ -24,9 +24,11 @@
     </div>
   </header>
 
-  @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
-  @include('vrp.litigation')
-  @php endwhile; @endphp
+  <div class="grid lg:grid-cols-3">
+    @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
+    @include('vrp.litigation')
+    @php endwhile; @endphp
+  </div>
 
 </section>
 
