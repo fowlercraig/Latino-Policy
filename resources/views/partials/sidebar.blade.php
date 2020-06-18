@@ -1,6 +1,6 @@
 <div 
   data-sticky-options='{"offset":100, "minWidth":"1024px"}'
-  class="bg-gray-50 rounded p-8 font-medium text-xs space-y-3 lg:space-y-6" x-data="{ openPanel: 1 }">
+  class="bg-gray-200 bg-opacity-50 rounded p-8 font-medium text-xs space-y-3 lg:space-y-6" x-data="{ openPanel: 1 }">
   
   <form role="search" method="get" id="searchform" class="searchform mt-3 flex" action="/">
     <div class="flex flex-wrap rounded overflow-hidden w-full">
