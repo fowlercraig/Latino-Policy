@@ -11,8 +11,8 @@
     <div class="bg-gray-50 rounded overflow-hidden" data-aos="fade-up">
       <div class="border-l-8 border-brand-darker flex h-full">
         @if ($item['big_number'])
-        <div class="h-full p-6 py-6 bg-brand-darker text-white flex items-center justify-center flex-none mr-6">
-          <div class="text-center">
+        <div class="w-32 bg-brand-darker text-white items-center flex justify-center mr-6">
+          <div class="text-center w-32 py-4">
             <div class="font-display text-7xl leading-15">@php echo $item['big_number'] @endphp</div>
             <div class="uppercase font-brand">@php echo $item['small_label'] @endphp</div>
           </div>
