@@ -20,19 +20,6 @@ export default {
     // JavaScript to be fired on all pages
   },
   finalize() {
-    /* eslint-disable no-unused-vars */
-    window.addEventListener('scroll', function(ev) {
-      var slider = document.getElementById('slideshow');
-      var header = document.getElementById('header');
-      var distanceToTop = slider.getBoundingClientRect().top;
-      console.log(distanceToTop);
-      if (distanceToTop < 100) {
-        header.classList.add('bg-brand-darker');
-      } else {
-        header.classList.remove('bg-brand-darker');
-      }
-    });
-    /* eslint-enable no-unused-vars */
     function build() {
 
       feather.replace();

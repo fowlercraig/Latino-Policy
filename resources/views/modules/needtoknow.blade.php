@@ -20,7 +20,7 @@
         @else
         <div class="p-6 py-8 flex-none text-brand-darker"><i height="40" width="40" class="block" data-feather="alert-circle"></i></div>
         @endif
-        <div class="p-8 pl-0 lg:text-lg">@php echo $item['description'] @endphp</div>
+        <div class="p-8 pl-0 sm:text-xl lg:text-lg xl:text-xl">@php echo $item['description'] @endphp</div>
       </div>
     </div>
     @endforeach

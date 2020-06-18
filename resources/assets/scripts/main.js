@@ -7,7 +7,7 @@ import './autoload/**/*'
 // import local dependencies
 import Router from './util/Router';
 import common from './routes/common';
-//import home from './routes/home';
+import home from './routes/home';
 //import aboutUs from './routes/about';
 //import people from './routes/people';
 import fellows from './routes/fellows';
@@ -17,7 +17,7 @@ const routes = new Router({
   // All pages
   common,
   // Home page
-  //home,
+  home,
   // About Us page, note the change from about-us to aboutUs.
   //people,
   fellows,
