@@ -1,10 +1,15 @@
+@php $donate = get_field('donate',754); @endphp
+
 @if (is_page(637))
   @php $url = 'https://giving.ucla.edu/campaign/?amount=' . $amount . '&OrgType=S&OrgNum=1320&fund=64616o' @endphp
+  @php $title = get_field('donate_headline') @endphp
+  @php $desc = get_field('donate_description') @endphp
 @else 
   @php $url = 'https://giving.ucla.edu/campaign/?amount=' . $amount . '&OrgType=S&OrgNum=800&fund=63922O' @endphp
+  @php $title = $donate['title'] @endphp
+  @php $desc = $donate['description'] @endphp
 @endif
 
-@php $donate = get_field('donate',754); @endphp
 <div class="relative overflow-hidden">
   <div class="py-20 bg-brand-lightest overflow-hidden relative">
     <div class="container grid grid-cols-1 md:grid-cols-5 gap-8 relative z-20">
@@ -12,9 +17,11 @@
         <div class="h-1 bg-red-600 w-32"></div>
       </div>
       <div class="w-full col-span-5 lg:col-span-3 md:mb-0 sm:space-y-2">
-        <p class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display uppercase leading-9 sm:leading-11 lg:leading-14 xl:leading-16 text-brand-darker">@php echo $donate['title'] @endphp</p>
+        <p class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display uppercase leading-9 sm:leading-11 lg:leading-14 xl:leading-16 text-brand-darker">
+          @php echo $title @endphp
+        </p>
         <div class="h-1 bg-transparent w-32"></div>
-        <p class="sm:text-xl lg:text-lg xl:text-xl">@php echo $donate['description'] @endphp</p>
+        <p class="sm:text-xl lg:text-lg xl:text-xl">@php echo $desc @endphp</p>
       </div>
       <div class="w-full col-span-5 lg:col-span-2">
         <div class="grid grid-cols-4 gap-2 mb-4">

@@ -2,11 +2,14 @@
   if (is_front_page()) {
     $textColor = 'text-gray-200';
     $textHover = 'text-white';
-    $borderColor = 'border-white-25';
+    $borderColor = '';
   } else {
-    $textColor = 'text-gray-500';
-    $textHover = 'text-gray-900';
-    $borderColor = 'border-gray-100';
+    //$textColor = 'text-gray-500';
+    //$textHover = 'text-gray-900';
+    //$borderColor = '';
+    $textColor = 'text-gray-200';
+    $textHover = 'text-white';
+    $borderColor = '';
   } 
 @endphp
 <div class="bg-white">
@@ -19,7 +22,7 @@
   @if (is_front_page())
   class="z-40 fixed inset-x-0 top-0 transition duration-300 ease">
   @else
-  class="z-40 relative bg-white sticky">
+  class="z-40 relative">
   @endif
   <div class="relative z-10">
     <div class="flex justify-between items-center py-5 sm:py-4 w-full container">
@@ -66,7 +69,7 @@
       </div>
     </div>
   </div>
-  <div class="container py-4 border-t @php echo $borderColor; @endphp hidden md:flex justify-between items-center">
+  <div class="container h-16 @php echo $borderColor; @endphp hidden md:flex justify-between items-center">
     <nav class="flex space-x-3 xl:space-x-6 font-brand uppercase tracking-wider text-sm lg:text-base">
       <a 
         @php $link = 658; @endphp
@@ -127,7 +130,7 @@
     </nav>
     <nav class="flex space-x-3 justify-between md:justify-end items-center">
       @include('header.searchform')
-      
+
       @php $url = get_field('facebook','option') @endphp
       <a href="<?php echo $url['url']; ?>" title="Opens Facebook in a new window" class="@php echo $textColor @endphp hover:text-gray-300 hidden md:block">
         <span class="sr-only">Facebook</span>

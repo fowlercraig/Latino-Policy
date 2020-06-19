@@ -1,4 +1,4 @@
-@if (is_front_page())
+
 <form role="search" method="get" id="searchform" class="searchform" action="/">
   <div class="flex border-b border-white-25 py-1">
     <label class="sr-only screen-reader-text" for="s">Search for:</label>
@@ -9,7 +9,7 @@
     </button>
   </div>
 </form>
-@else
+<?php /*
 <form role="search" method="get" id="searchform" class="searchform" action="/">
   <div class="flex bg-gray-100 rounded focus:border-gray-200 py-1 px-2">
     <label class="sr-only screen-reader-text" for="s">Search for:</label>
@@ -20,4 +20,4 @@
     </button>
   </div>
 </form>
-@endif
+*/ ?>

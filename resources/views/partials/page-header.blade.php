@@ -3,7 +3,7 @@
   $parent_url = get_the_permalink($parent);
   $parent_title = get_the_title($parent);
 @endphp
-<div class="page-header -mt-10">
+<div class="page-header md:-mt-16">
   @if (!is_archive() && !is_search() )
   @if ( has_post_thumbnail() )
   <div class="bg-gray-900 h-64 md:h-header text-center rellax z-10">
@@ -11,10 +11,11 @@
   </div>
   @endif
   @endif
-  <div class="py-6 pb-6 bg-brand-darker space-y-2 relative -mt-1">
+  <div class="w-1/2 h-4 bg-brand-darker -mt-4 relative z-20"></div>
+  <div class="py-6 pb-6 bg-brand-darker space-y-2 relative -mt-1 relative z-30">
     <div class="container relative z-10">
       <div class="grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12">
-        <div class="relative space-y-2 bg-brand -my-8 py-8">
+        <div class="relative space-y-2">
           <h1 class="uppercase font-display font-bold text-white tracking-tight leading-16 xl:leading-20 text-7xl xl:text-8xl mb-0">{!! App::title() !!}</h1>
           @if (is_tax( 'issue' ))
           <a
@@ -40,7 +41,7 @@
         @php endif; @endphp
       </div>
     </div>
-    <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
+    <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0 -mt-4">
       <img class="w-1/2" alt="Pattern" src="@asset('images/halftone.png')">
     </div>
   </div>
