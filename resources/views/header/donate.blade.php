@@ -32,10 +32,10 @@
         <a 
           href="https://giveto.ucla.edu/fund/latino-policy-politics-initiative/" 
           class="rounded-md transition ease-in-out duration-150 flex items-center space-x-4 text-gray-500">
-          <div class="text-gray-300 flex-0 order-first">
+          <div class="text-brand-darker flex-0 order-first">
             <i height="40" width="40" class="block mt-px" data-feather="help-circle"></i>
           </div>
-          <p class="text-sm leading-5">
+          <p class="text-sm leading-5 text-right">
             Learn more about out how <br>LPPI utilizes your donation.
           </p>
         </a>

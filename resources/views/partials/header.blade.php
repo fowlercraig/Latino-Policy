@@ -3,7 +3,8 @@
     $textColor = 'text-gray-200';
     $headerColor = 'text-gray-200';
     $textHover = 'text-white';
-    $borderColor = '';
+    $borderColor = 'border-white-25';
+    $borderWidth = 'border-t';
   } else {
     //$textColor = 'text-gray-500';
     //$textHover = 'text-gray-900';
@@ -12,15 +13,13 @@
     $textColor = 'text-gray-200';
     $textHover = 'text-white';
     $borderColor = '';
+    $borderWidth = '';
   } 
 @endphp
-<div class="bg-white">
-  @include('header.subscribe')
-</div>
 <div 
   id="header" 
-  @click.away="workMenuOpen = false, issuesMenuOpen = false, vrpMenuOpen = false, peopleMenuOpen = false, donateMenuOpen = false" 
-  x-data="{ mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" 
+  @click.away="open = false, workMenuOpen = false, issuesMenuOpen = false, vrpMenuOpen = false, peopleMenuOpen = false, donateMenuOpen = false" 
+  x-data="{ open: true, mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" 
   @if (is_front_page())
   class="z-40 fixed inset-x-0 top-0 transition duration-300 ease">
   @else
@@ -48,10 +47,10 @@
       <div class="hidden md:flex lg:items-center lg:justify-between lg:space-x-12">
         <div class="text-right">
           <div class="mb-2 space-x-2 @php echo $headerColor @endphp">
-            <a class="text-sm font-medium" href="/press-archive">Press Archive</a>
-            <a class="text-sm font-medium" href="/research">Research Library</a>
+            <a class="text-sm font-medium hover:underline" href="/press-archive">Press Archive</a>
+            <a class="text-sm font-medium hover:underline" href="/research">Research Library</a>
             <span class="opacity-50">|</span>
-            <button @click="open = true;" class="text-sm font-medium">Subscribe</button>
+            <button @click="open = true;" class="text-sm font-medium hover:underline">Subscribe</button>
           </div>
           <div class="relative">
             <button 
@@ -71,7 +70,8 @@
       </div>
     </div>
   </div>
-  <div class="container h-16 @php echo $borderColor; @endphp hidden md:flex justify-between items-center">
+
+  <div class="container h-16 @php echo $borderWidth; @endphp @php echo $borderColor; @endphp hidden md:flex justify-between items-center">
     <nav class="flex space-x-3 xl:space-x-6 font-brand uppercase tracking-wider text-sm lg:text-base">
       <a 
         @php $link = 658; @endphp
@@ -162,5 +162,6 @@
   @include('header.vrp')
   @include('header.people')
   @include('header.mobile')
+  @include('header.subscribe')
 
 </div>
