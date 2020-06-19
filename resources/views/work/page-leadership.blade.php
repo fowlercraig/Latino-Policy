@@ -9,7 +9,7 @@
         <div class="container space-y-10 lg:space-y-16 relative z-10">
           <div class="h-px"></div>
           @include('modules.overview')
-          @include('work.overview')
+          @include('modules.modules')
           @include('modules.experts')
           <div class="h-px"></div>
         </div>
