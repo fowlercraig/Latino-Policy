@@ -19,7 +19,7 @@
     class="relative bg-white rounded overflow-hidden shadow-xl transform transition-all sm:max-w-4xl sm:w-full " 
     role="dialog" aria-modal="true" aria-labelledby="modal-headline">
     <div class="block absolute top-0 right-0 pt-4 pr-4">
-      <button @click="open = false;" type="button" class="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150" aria-label="Close">
+      <button id="close-cookies" @click="open = false;" type="button" class="text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150" aria-label="Close">
         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>

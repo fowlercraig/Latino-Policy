@@ -21,7 +21,7 @@
 <div 
   id="header" 
   @click.away="open = false, workMenuOpen = false, issuesMenuOpen = false, vrpMenuOpen = false, peopleMenuOpen = false, donateMenuOpen = false" 
-  x-data="{ open: @php echo $modal @endphp, mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" 
+  x-data="{ ...modal(), mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" 
   @if (is_front_page())
   class="z-40 fixed inset-x-0 top-0 transition duration-300 ease">
   @else
@@ -167,3 +167,27 @@
   @include('header.subscribe')
 
 </div>
+
+<script>
+  function setAgreeCookie() {
+    var expire=new Date();
+    expire=new Date(expire.getTime()+7776000000);
+    document.cookie="AMIR86=here; expires="+expire;
+  }
+  jQuery('#close-cookies').click(function(){ 
+    setAgreeCookie();
+    jQuery('#cookiebar').addClass('close-cookies');
+  });
+  function modal() {
+    var cookie = document.cookie.indexOf('AMIR86=');
+    if (cookie) {
+      return {
+        open: true,
+      }
+    } else {
+      return {
+        open: false,
+      }
+    }
+  }
+</script>
