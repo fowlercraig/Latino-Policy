@@ -13,8 +13,8 @@
       @include('work.leadership')
       @include('partials.back')
       <div class="h-px"></div>
-
-      <div class="absolute top-0 left-0 hidden lg:block rellax" data-rellax-speed="-7">
+    </div>
+    <div class="absolute top-0 left-0 hidden lg:block rellax" data-rellax-speed="-7">
         @php echo wp_get_attachment_image( 1300, 'large' ); @endphp
       </div>
       <div class="absolute top-1/3 right-0 hidden lg:block rellax" data-rellax-speed="-7">
