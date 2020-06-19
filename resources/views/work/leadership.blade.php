@@ -6,7 +6,6 @@
 <section id="sections" class="space-y-10 pt-20">
   @php $i = 0 @endphp
   @foreach (array_slice($sections, 1) as $k => $v)
-  <div class="h-px bg-gray-100"></div>
   <div class="lg:grid grid-cols-3 gap-12">
     <header> 
       <button 
@@ -24,7 +23,7 @@
   @php $i++ @endphp
   @endforeach
 
-  <div class="h-px bg-gray-100"></div>
+  <div class="h-px bg-gray-200 bg-opacity-50"></div>
 
   <div class="lg:grid grid-cols-3 gap-12">
     <header> 

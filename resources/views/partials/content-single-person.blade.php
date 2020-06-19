@@ -1,10 +1,10 @@
 <article @php post_class() @endphp>
   
   <div class="bg-brand-dark py-4 md:pb-10 pt-24 -mt-16 mb-20 relative text-white">
-    <div class="container space-y-4 lg:space-y-0 lg:grid grid-cols-4 xl:grid-cols-4 gap-12 sticky-container">
+    <div class="container space-y-4 lg:space-y-0 lg:grid grid-cols-4 xl:grid-cols-4 gap-12 sticky-container relative z-10">
 
       <div class="col-span-2 xl:col-span-2 flex-none -ml-1 overflow-hidden lg:order-last relative">
-        <div class="sticky w-full" data-sticky-options='{"offset":100, "minWidth":"1024px"}' data-sticky-container='.sticky-container'>
+        <div class="w-full" data-sticky-options='{"offset":100, "minWidth":"1024px"}' data-sticky-container='.sticky-container'>
           <?php the_post_thumbnail( 'large', array( 'class' => 'w-full' ) ); ?>
         </div>
       </div>
@@ -99,7 +99,7 @@
       </div>
     </div>
     <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
-      <img class="w-1/2 opacity-25" alt="Pattern" src="@asset('images/halftone.png')">
+      <img class="w-1/2" alt="Pattern" src="@asset('images/halftone.png')">
     </div>
   </div>
 </article>
