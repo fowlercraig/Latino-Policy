@@ -29,7 +29,7 @@
 
           <h1 class="entry-title mt-1 text-4xl tracking-tight leading-10 font-bold text-white sm:leading-none sm:text-6xl lg:text-5xl">{!! get_the_title() !!}</h1>
 
-          <div class="text-white-75">
+          <div class="text-white-75 sm:text-xl lg:text-lg xl:text-xl">
             @php the_excerpt() @endphp
           </div>
 
@@ -54,7 +54,7 @@
   <div class="container group">
     <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12">
       <div class="col-span-3">
-        <div class="entry-content">
+        <div class="entry-content sm:text-xl lg:text-lg xl:text-xl">
           @php the_content() @endphp
         </div>
       </div>

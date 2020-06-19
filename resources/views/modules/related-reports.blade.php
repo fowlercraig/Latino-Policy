@@ -1,8 +1,9 @@
 @php
+  $postType = get_post_type();
   $terms = get_the_terms( $post->ID , 'issue', 'string');
   $term_ids = wp_list_pluck($terms,'term_id');
   $args = array(
-    'post_type'      => array('research', 'press', 'event'),
+    'post_type'      => $postType,
     'posts_per_page' => 4,
     'order'          => 'ASC',
     'tax_query'      => array(
