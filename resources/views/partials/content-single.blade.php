@@ -1,5 +1,5 @@
 <article @php post_class() @endphp>
-  <header class="pt-10 bg-brand-darker">
+  <header class="pt-24 -mt-16 bg-brand-darker">
     <div class="container group relative z-10">
       <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12">
         @if (has_post_thumbnail())

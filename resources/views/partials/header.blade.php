@@ -5,6 +5,7 @@
     $textHover = 'text-white';
     $borderColor = 'border-white-25';
     $borderWidth = 'border-t';
+    $modal = 'true';
   } else {
     //$textColor = 'text-gray-500';
     //$textHover = 'text-gray-900';
@@ -14,12 +15,13 @@
     $textHover = 'text-white';
     $borderColor = '';
     $borderWidth = '';
+    $modal = 'false';
   } 
 @endphp
 <div 
   id="header" 
   @click.away="open = false, workMenuOpen = false, issuesMenuOpen = false, vrpMenuOpen = false, peopleMenuOpen = false, donateMenuOpen = false" 
-  x-data="{ open: true, mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" 
+  x-data="{ open: @php echo $modal @endphp, mobileMenuOpen: false, workMenuOpen: false, issuesMenuOpen: false, vrpMenuOpen: false, peopleMenuOpen: false, donateMenuOpen: false }" 
   @if (is_front_page())
   class="z-40 fixed inset-x-0 top-0 transition duration-300 ease">
   @else
