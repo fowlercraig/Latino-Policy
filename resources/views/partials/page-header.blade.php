@@ -4,7 +4,7 @@
   $parent_title = get_the_title($parent);
 @endphp
 <div class="page-header">
-  @if (!is_archive())
+  @if (!is_archive() && !is_search() )
   @if ( has_post_thumbnail() )
   <div class="bg-gray-900 h-64 md:h-header text-center rellax z-10">
     <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover transition ease duration-300 w-full h-full' ) ); ?>

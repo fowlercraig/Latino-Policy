@@ -126,6 +126,8 @@
       </a>
     </nav>
     <nav class="flex space-x-3 justify-between md:justify-end items-center">
+      @include('header.searchform')
+      
       @php $url = get_field('facebook','option') @endphp
       <a href="<?php echo $url['url']; ?>" title="Opens Facebook in a new window" class="@php echo $textColor @endphp hover:text-gray-300 hidden md:block">
         <span class="sr-only">Facebook</span>

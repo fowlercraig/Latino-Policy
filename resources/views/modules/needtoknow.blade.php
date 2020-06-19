@@ -8,11 +8,11 @@
       </h2> 
     </header>
     @foreach ($items as $item)
-    <div class="bg-gray-50 rounded overflow-hidden" data-aos="fade-up">
+    <div class="bg-brand-lightest text-brand-dark rounded overflow-hidden" data-aos="fade-up">
       <div class="border-l-8 border-brand-darker flex h-full">
         @if ($item['big_number'])
-        <div class="bg-brand-darker text-white items-center flex justify-center mr-6">
-          <div class="text-center p-4">
+        <div class="min-w-32 px-4 bg-brand-darker text-white items-center flex justify-center mr-6">
+          <div class="text-center min-w-32 py-4">
             <div class="font-display text-7xl leading-15">@php echo $item['big_number'] @endphp</div>
             <div class="uppercase font-brand">@php echo $item['small_label'] @endphp</div>
           </div>

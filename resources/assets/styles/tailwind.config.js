@@ -24,7 +24,7 @@ module.exports = {
         'brand-dark': '#003B5C',
         'brand-light': '#8BB8E8',
         'brand-lighter': '#C3D7EE',
-        'brand-lightest': '#eeeff2',
+        'brand-lightest': '#dce3e9',
         'white-25': 'rgba(255,255,255,.25)',
         'white-50': 'rgba(255,255,255,.50)',
         'white-75': 'rgba(255,255,255,.75)',
