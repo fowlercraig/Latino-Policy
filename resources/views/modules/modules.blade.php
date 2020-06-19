@@ -51,7 +51,7 @@
               href="@php echo $item['link']['url'] @endphp" 
               class="inline-block font-bold border-t-2 border-b-0 border-brand pt-1 text-brand relative group sm:text-xl lg:text-lg xl:text-xl">
               <span class="border-t-2 -mt-px border-brand-darker block absolute inset-x-0 top-0 w-0 group-hover:w-full transition-all duration-150 ease-in"></span>
-              Learn More
+              @php echo $item['title'] @endphp
             </a>
           </div>
           @endif

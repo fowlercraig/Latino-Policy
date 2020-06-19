@@ -3,18 +3,18 @@
   $parent_url = get_the_permalink($parent);
   $parent_title = get_the_title($parent);
 @endphp
-<div class="page-header">
+<div class="page-header -mt-10">
   @if (!is_archive() && !is_search() )
   @if ( has_post_thumbnail() )
   <div class="bg-gray-900 h-64 md:h-header text-center rellax z-10">
-    <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover transition ease duration-300 w-full h-full' ) ); ?>
+    <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover object-top transition ease duration-300 w-full h-full' ) ); ?>
   </div>
   @endif
   @endif
   <div class="py-6 pb-6 bg-brand-darker space-y-2 relative -mt-1">
     <div class="container relative z-10">
       <div class="grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12">
-        <div class="relative space-y-2">
+        <div class="relative space-y-2 bg-brand -my-8 py-8">
           <h1 class="uppercase font-display font-bold text-white tracking-tight leading-16 xl:leading-20 text-7xl xl:text-8xl mb-0">{!! App::title() !!}</h1>
           @if (is_tax( 'issue' ))
           <a

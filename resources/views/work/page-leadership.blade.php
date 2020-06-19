@@ -6,10 +6,22 @@
       @include('partials.page-header')
     </div>
     <div class="space-y-10 lg:space-y-16 container max-w-none relative z-10">
-      <div class="h-px"></div>
-      @include('modules.overview')
-      @include('work.overview')
+      <div class="relative">
+        <div class="relative z-10">
+        <div class="h-px"></div>
+        @include('modules.overview')
+        @include('work.overview')
       @include('modules.experts')
+    </div>
+        <div id="background" class="absolute inset-0 z-0 opacity-50"></div>
+        <style>
+          #background {
+            background: rgb(118,121,9);
+            background: linear-gradient(0deg, #fe9a4f 0%, #f7755a 49%, #eda6a0 100%);
+          }
+        </style>
+        </div>
+      
       @include('work.leadership')
       @include('partials.back')
       <div class="h-px"></div>
@@ -31,12 +43,5 @@
         </div>
       </div>
     </div>
-    <div id="background" class="absolute inset-0 z-0 opacity-50"></div>
-    <style>
-      #background {
-        background: rgb(118,121,9);
-        background: linear-gradient(0deg, #fe9a4f 0%, #f7755a 49%, #eda6a0 100%);
-      }
-    </style>
   @endwhile
 @endsection
