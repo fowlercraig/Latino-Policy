@@ -1,12 +1,14 @@
 @php 
   if (is_front_page()) {
     $textColor = 'text-gray-200';
+    $headerColor = 'text-gray-200';
     $textHover = 'text-white';
     $borderColor = '';
   } else {
     //$textColor = 'text-gray-500';
     //$textHover = 'text-gray-900';
     //$borderColor = '';
+    $headerColor = 'text-gray-500';
     $textColor = 'text-gray-200';
     $textHover = 'text-white';
     $borderColor = '';
@@ -45,7 +47,7 @@
       </div>
       <div class="hidden md:flex lg:items-center lg:justify-between lg:space-x-12">
         <div class="text-right">
-          <div class="mb-2 space-x-2 @php echo $textColor @endphp">
+          <div class="mb-2 space-x-2 @php echo $headerColor @endphp">
             <a class="text-sm font-medium" href="/press-archive">Press Archive</a>
             <a class="text-sm font-medium" href="/research">Research Library</a>
             <span class="opacity-50">|</span>
