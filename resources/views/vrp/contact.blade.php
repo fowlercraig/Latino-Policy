@@ -24,7 +24,7 @@
           <div>@php echo $contact['description'] @endphp</div>
           @if ($contact['link'])
           <div class="h-px"></div>
-          <div><a href="@php echo $contact['link']['url']; @endphp" class="{{ $learnmore }}">Learn More</a></div>
+          <div><a href="@php echo $contact['link']['url']; @endphp" class="{{ $learnmore }}">@php echo $contact['link']['title']; @endphp</a></div>
           @endif
         </div>
       </div>
