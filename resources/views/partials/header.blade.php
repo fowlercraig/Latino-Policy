@@ -182,7 +182,11 @@
     var cookie = document.cookie.indexOf('AMIR86=');
     if (cookie) {
       return {
+        @if (is_front_page())
         open: true,
+        @else
+        open: false,
+        @endif
       }
     } else {
       return {

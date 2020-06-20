@@ -58,6 +58,11 @@
           @php the_content() @endphp
         </div>
       </div>
+      <div class="col-span-2">
+        <div class="embed-container">
+          <?php the_field('video_embed'); ?>
+        </div>
+      </div>
     </div>
   </div>
 </article>

@@ -11,6 +11,7 @@
       @include('newsroom.events')
       @endif
       @include('newsroom.press-archive')
+      @include('newsroom.press-newsletter')
     </div>
   @endwhile
 @endsection

@@ -1,5 +1,5 @@
 <div class="container">
-  <a href="/press-archive" class="flex items-center h-64 justify-center bg-gray-100 relative overflow-hidden group hover:bg-brand-dark transition duration-300">
+  <a href="/press-archive" class="flex items-center h-64 justify-center bg-gray-200 bg-opacity-50 relative overflow-hidden group hover:bg-brand-dark transition duration-300">
     <div class="text-center space-y-2 group-hover:text-white transition duration-300 relative z-20">
       <p>For more, visit the</p>
       <div class="text-3xl leading-9 font-bold text-brand-darker font-display uppercase sm:text-4xl xl:text-6xl sm:leading-10 xl:leading-13 mb-0 group-hover:text-white transition duration-300">
