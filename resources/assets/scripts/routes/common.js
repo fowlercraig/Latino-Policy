@@ -11,9 +11,10 @@ import 'formstone/dist/js/mediaquery';
 import 'formstone/dist/js/touch';
 
 // Formstone Plugins
+import 'formstone/dist/js/cookie';
 import 'formstone/dist/js/carousel';
 import 'formstone/dist/js/sticky';
-import 'formstone/dist/js/checkpoint';
+import 'formstone/dist/js/lightbox';
 
 export default {
   init() {
@@ -25,8 +26,8 @@ export default {
       feather.replace();
       new Rellax('.rellax');
       $('.carousel').carousel();  
-      $('.checkpoint').checkpoint({
-        'reverse':true,
+      $('.lightbox').lightbox({
+        
       });  
       $('.sticky').sticky(); 
       setTimeout(function(){

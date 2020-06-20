@@ -13,7 +13,7 @@
   target="@php echo $target @endphp" 
   href="@php echo $link @endphp" 
   title="@php echo $title @endphp" 
-  class="sm:-m-6 sm:-mt-8 sm:p-6 flex flex-col justify-start rounded-lg sm:hover:bg-gray-50 transition ease-in-out duration-150">
+  class="flex flex-col justify-start rounded-lg transition ease-in-out duration-150">
   <span class="sr-only"><?php the_title(); ?></span>
   <div class="relative aspect-ratio aspect-ratio--4x3">
     <div class="absolute inset-0">

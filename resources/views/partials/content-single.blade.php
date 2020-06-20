@@ -58,13 +58,33 @@
           @php the_content() @endphp
         </div>
       </div>
+
+      @if (is_singular('event'))
+
       <div class="col-span-2">
-        <div class="embed-container">
-          <?php the_field('video_embed'); ?>
+        <div class="space-y-4">
+          @if(get_field('video_embed'))
+          <div class="embed-container">
+            <?php the_field('video_embed'); ?>
+          </div>
+          @endif
+          @if(get_field('gallery'))
+          <div class="grid grid-cols-4 gap-4">
+            @php $images = get_field('gallery') @endphp
+            @foreach ($images as $image)
+            <a class="lightbox transition duration-300 ease hover:opacity-75" href="@php echo $image['url'] @endphp">
+              <img class="w-full" src="@php echo $image['sizes']['thumbnail'] @endphp" />
+            </a>
+            @endforeach
+          </div>
+          @endif
         </div>
       </div>
+
+      @endif
+
     </div>
   </div>
 </article>
 
-<div class="h-px bg-black-25 my-10"></div>
+<div class="h-px bg-black-5 my-10"></div>

@@ -23,12 +23,12 @@
       <div class="aspect-ratio aspect-ratio--16x9 bg-gray-900"></div>
       @endif
     </div>
+    @if(get_the_terms(get_the_ID(), 'issue'))
+    <div class="-mt-px absolute bottom-0">
+      <span class="text-sm inline-block bg-brand-darker px-1 py-px text-white">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</span> 
+    </div>
+    @endif
   </div>
-  @if(get_the_terms(get_the_ID(), 'issue'))
-  <div class="-mt-px">
-    <span class="text-sm inline-block bg-brand-darker px-1 py-px text-white">@php echo get_the_terms(get_the_ID(), 'issue')[0]->name; @endphp</span> 
-  </div>
-  @endif
   <div class="h-1"></div>
   <h5 class="text-lg leading-6 font-medium text-brand-darker mb-0">
     @php the_title(); @endphp

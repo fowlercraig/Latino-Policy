@@ -1,7 +1,7 @@
 <a class="block group" href="@php echo $item['link']['url']; @endphp">
   <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12 lg:items-center">
     <div class="col-span-3 lg:order-last">
-      <div class="aspect-ratio aspect-ratio--8x5 bg-gray-100 relative">
+      <div class="aspect-ratio aspect-ratio--8x5 bg-gray-100 relative overflow-hidden">
         <div class="absolute inset-0">
           <?php the_post_thumbnail( 'large', array( 'class' => 'group-hover:scale-105 transform transition ease duration-1000 object-cover transition ease duration-300 w-full h-full' ) ); ?>
         </div>
