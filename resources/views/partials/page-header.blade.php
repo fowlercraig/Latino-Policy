@@ -9,7 +9,6 @@
   <div class="bg-gray-900 h-64 md:h-header text-center rellax z-10 overflow-hidden">
     <?php the_post_thumbnail( 'large', array( 'class' => 'object-cover object-top transition ease duration-300 w-full h-full' ) ); ?>
   </div>
-  <div class="w-1/2 h-4 bg-brand-darker -mt-4 relative z-20 hidden lg:block"></div>
   @endif
   @endif
   @if ( has_post_thumbnail() )
@@ -45,7 +44,6 @@
         @php endif; @endphp
       </div>
     </div>
-    <div class="absolute bg-black-25 w-1/2 top-0 h-full right-0 hidden lg:block"></div>
     <div class="opacity-25 absolute top-0 left-0 pointer-events-none z-0">
       <img class="w-1/2" alt="Pattern" src="@asset('images/halftone.png')">
     </div>
