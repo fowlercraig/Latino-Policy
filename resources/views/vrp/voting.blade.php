@@ -7,7 +7,7 @@
         <img 
           class="object-cover w-full h-full object-top"
           alt="@php echo $alt @endphp"
-          src="<?php echo get_the_post_thumbnail_url($page,'full'); ?>" />
+          src="@php echo wp_get_attachment_image( get_field('widget_image', $page), 'full' ); @endphp" />
         </div>
     </div>
     <div class="space-y-4 p-4 sm:p-8">

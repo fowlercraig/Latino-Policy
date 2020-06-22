@@ -13,7 +13,6 @@
         'terms'    => $term_ids,
         'operator' => 'IN' //Or 'AND' or 'NOT IN'
        )),
-    'ignore_sticky_posts' => 1,
     'orderby' => 'rand',
     'post__not_in'=>array($post->ID)
   );
