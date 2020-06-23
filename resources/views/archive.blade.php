@@ -21,8 +21,9 @@
          [ajax_load_more 
             id="your_alm_id" 
             filters="true"
+            post_type="any"
             placeholder="true" transition_container="false" 
-            archive="true" 
+            archive="true"
             css_classes="space-y-6"
             no_results_text="Sorry, nothing found"
          ]'); 
@@ -41,7 +42,7 @@
   </div>  
 
   @php
-    // addeing this so purgecss doesn't purge generated classes by ALM
+    // adding this so purgecss doesn't purge generated classes by ALM
   @endphp
   <div class="my-10 h-px bg-gray-100 hidden"></div>
 

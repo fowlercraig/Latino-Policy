@@ -3,7 +3,7 @@
   $parent_url = get_the_permalink($parent);
   $parent_title = get_the_title($parent);
 @endphp
-<div class="page-header bg-brand-darker relative md:-mt-16 pt-24">
+<div class="page-header bg-brand-darker relative md:-mt-16 pt-12">
   <div class="relative z-10">
     <div class="block">
       <div class="container col-span-5  @if ( has_post_thumbnail() ) lg:col-span-2 @endif py-6 md:py-10 space-y-4">
