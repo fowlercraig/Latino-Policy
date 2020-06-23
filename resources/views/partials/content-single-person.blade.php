@@ -23,10 +23,10 @@
           </div>
 
           <h1 class="font-display uppercase entry-title mt-1 text-4xl tracking-tight leading-10 font-bold text-white sm:leading-none sm:text-6xl lg:text-7xl">{!! get_the_title() !!}</h1>
-          <div class="border-t border-white-25"></div>
 
           <div class="isssues">
             @if(is_singular( 'person' ) && get_the_terms(get_the_ID(), 'issue'))
+            <div class="border-t border-white-25"></div>
             <span class="font-medium text-gray-100">Issues</span>
             <span class="text-white-75">→</span>
             @endif
@@ -54,6 +54,10 @@
 
             @if(get_field('affiliation'))
             <div class="font-medium">@php the_field('affiliation') @endphp</div>
+            @endif
+
+            @if(get_field('association'))
+            <div class="font-medium">@php the_field('association') @endphp</div>
             @endif
           </div>
 

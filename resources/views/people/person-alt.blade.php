@@ -17,6 +17,9 @@
   @endif
   <h5 class="text-lg leading-6 font-medium text-brand-darker mb-0">@php echo get_the_title( $p->ID ); @endphp</h5>
   <p class="text-sm hidden sm:block"><?php echo get_field('title', $p->ID); ?></p>
+  @if( get_field('association', $p->ID) )
+  <p class="text-sm hidden sm:block"><?php echo get_field('association', $p->ID); ?></p>
+  @endif
   <div class="flex-grow h-2"></div>
   @if ( $post->post_parent != 630 )
   <p class="mt-auto text-sm leading-5 font-medium text-brand">Learn more →</p>

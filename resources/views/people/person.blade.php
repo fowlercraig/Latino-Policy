@@ -22,6 +22,9 @@
   @endif
   <h5 class="text-lg leading-6 font-medium text-brand-darker mb-0">@php the_title(); @endphp</h5>
   <p class="text-sm hidden sm:block"><?php the_field('title'); ?></p>
+  @if( has_term('', 'advisor') )
+  <p class="text-sm hidden sm:block"><?php the_field('association'); ?></p>
+  @endif
   <div class="flex-grow h-2"></div>
   @if ( $post->post_parent != 630 )
   <p class="mt-auto text-sm leading-5 font-medium text-brand">Learn more →</p>
