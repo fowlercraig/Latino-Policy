@@ -46,6 +46,6 @@
     </button>
   </dt>
   <dd class="mt-2 pr-12" x-show="openPanel === 3">
-    @php echo do_shortcode('[ajax_load_more_filters id="issues" target="your_alm_id"]'); @endphp
+    @php echo do_shortcode('[ajax_load_more_filters id="experts" target="your_alm_id"]'); @endphp
   </dd>
 </div>
