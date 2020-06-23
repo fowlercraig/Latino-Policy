@@ -23,7 +23,7 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-12">
 
       @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
-      @include('people.person')
+      @include('people.person-alt')
       @php endwhile; endif; @endphp
 
     </div>
