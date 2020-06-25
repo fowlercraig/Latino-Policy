@@ -26,7 +26,7 @@
 
           <div class="isssues">
             @if(is_singular( 'person' ) && get_the_terms(get_the_ID(), 'issue'))
-            <div class="border-t border-white-25"></div>
+            <div class="border-t border-white-25 mb-2"></div>
             <span class="font-medium text-gray-100">Issues</span>
             <span class="text-white-75">→</span>
             @endif
@@ -35,10 +35,10 @@
             <div class="font-medium issues inline-flex flex-wrap space-x-px">
               @php $terms = get_the_terms(get_the_ID(), 'issue'); @endphp
               @foreach ($terms as $term)
-              <a 
+              <span 
                 title="Opens @php echo $term->name; @endphp Taxonomy in same window" 
                 href="/research/?issue=@php echo $term->slug; @endphp" 
-                class="flex-none text-gray-100 hover:underline">@php echo $term->name; @endphp</a>
+                class="flex-none text-gray-100">@php echo $term->name; @endphp</span>
               <span class="last:hidden">,</span>
               @endforeach
             </div>
