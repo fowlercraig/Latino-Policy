@@ -9,7 +9,7 @@
     'orderby'        => 'post__in',
   );
   $parent = new WP_Query( $args );
-  if($id):
+  if($ids):
   if ( $parent->have_posts() ):
 @endphp
 
