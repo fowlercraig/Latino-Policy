@@ -66,6 +66,7 @@
           @if(get_field('video_embed'))
           <div class="embed-container">
             <?php the_field('video_embed'); ?>
+            <iframe src="" class="hidden"></iframe>
           </div>
           @endif
           @if(get_field('gallery'))
