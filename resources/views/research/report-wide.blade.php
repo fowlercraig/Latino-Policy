@@ -22,7 +22,9 @@
           </div>
         </div>
         <div class="aspect-ratio aspect-ratio--1x1 md:aspect-ratio--16x9 @if ( $count == 3)lg:aspect-ratio--3x4 @else lg:aspect-ratio--7x5 @endif bg-gray-900 overflow-hidden">
-          <?php the_post_thumbnail( 'large', array( 'class' => 'opacity-75 group-hover:opacity-100 object-cover transition ease duration-300 w-full h-full' ) ); ?>
+          <div class="absolute inset-0">
+            <?php the_post_thumbnail( 'large', array( 'class' => 'opacity-75 group-hover:opacity-100 object-cover transition ease duration-300 w-full h-full' ) ); ?>
+          </div>
         </div>
       </div>
     </div>
