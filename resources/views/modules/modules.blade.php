@@ -5,7 +5,7 @@
     @php $i = 0; @endphp
     @foreach ($items as $item)
     <div data-aos="fade-up" class="relative">
-      <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12 lg:items-center">
+      <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12 lg:items-center relative z-10">
         <div class="col-span-3 @if ($i % 2 == 0): lg:order-last @endif">
           @php $image = $item['image']; $size = 'large'; @endphp
           @if ($item['link'])
@@ -59,7 +59,7 @@
       </div>
       @if ($i % 2 != 0)
       <div class="opacity-25 absolute top-0 -mt-10 right-0 w-1/2 pointer-events-none z-0 rellax">
-        <img alt="Pattern" src="@asset('images/halftone.png')">
+        <img alt="Pattern" class="opacity-50" src="@asset('images/halftone.png')">
       </div>
       @endif
     </div>
