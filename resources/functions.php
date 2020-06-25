@@ -260,6 +260,7 @@ add_filter('alm_filters_researchfilters_people', function(){
 
          // Add All Item
         $values[] = array( 
+
             'label' => 'All',
             'value' => ''
         );   
@@ -275,5 +276,34 @@ add_filter('alm_filters_researchfilters_people', function(){
     }        
 
     return $values; // Return values 
+
+});
+
+
+add_filter('alm_filters_researchfilters_resource', function(){ 
+
+    // Define empty array
+   $values = []; 
+   
+   // Get all categories
+   $args = array(
+    'post_type'      => 'research',
+    'order' => 'ASC',
+    'orderby' => 'name',
+    'taxonomy' => 'resource',
+    'hide_empty' => true,
+   );  
+   $terms = get_terms($args);
+   
+    // Loop terms
+   if($terms){            
+      foreach( $terms as $term ) { 
+         $values[] = array(
+            'label' => $term->name,
+            'value' => $term->slug
+         );
+      }          
+   }        
+   return $values; // Return values 
 
 });
