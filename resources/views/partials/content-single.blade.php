@@ -73,7 +73,7 @@
           <div class="grid grid-cols-4 gap-4">
             @php $images = get_field('gallery') @endphp
             @foreach ($images as $image)
-            <a class="lightbox transition duration-300 ease hover:opacity-75" href="@php echo $image['url'] @endphp">
+            <a class="lightbox transition duration-300 ease hover:opacity-75" data-lightbox-gallery="photo_gallery" href="@php echo $image['url'] @endphp">
               <img class="w-full" src="@php echo $image['sizes']['thumbnail'] @endphp" />
             </a>
             @endforeach

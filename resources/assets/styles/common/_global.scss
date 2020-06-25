@@ -77,4 +77,8 @@ html.is-animating .transition-fade {
   max-height: 100% !important;
 }
 
+.fs-lightbox-image_container img {
+  max-width: 99999px;
+}
+
 /* purgecss end ignore */
