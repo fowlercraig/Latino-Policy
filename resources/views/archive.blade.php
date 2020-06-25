@@ -21,10 +21,11 @@
          [ajax_load_more 
             id="your_alm_id" 
             filters="true"
-            post_type="research"
+            post_type="press, event, research"
             placeholder="true" transition_container="false" 
             archive="true"
             css_classes="space-y-6"
+            filters_scroll="true"
             no_results_text="Sorry, nothing found"
          ]'); 
       @endphp

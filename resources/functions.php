@@ -193,3 +193,87 @@ function get_post_primary_category($post_id, $term='category', $return_all_categ
 
     return $return;
 }
+
+add_filter('alm_filters_pressfilters_people', function(){ 
+
+    // Define empty array
+    $values = []; 
+
+    // Get all categories
+    $doctors = get_posts(array(
+        'post_type'         => 'person',
+        'posts_per_page'    => -1,
+        'order'             => 'ASC',
+        'tax_query'         => array(
+            array(
+                'taxonomy' => 'role',
+                'field'    => 'id',
+                'terms'    => 'expert',
+                'operator' => 'IN' //Or 'AND' or 'NOT IN'
+            )
+        )
+    ));
+      
+    if( $doctors ){
+
+         // Add All Item
+        $values[] = array( 
+            'label' => 'All',
+            'value' => ''
+        );   
+
+        foreach( $doctors as $doctor ):
+            global $post;
+            $values[] = array(
+                'label' => get_the_title( $doctor->ID ),
+                'value' => $doctor->ID
+            );
+        endforeach;
+
+    }        
+
+    return $values; // Return values 
+
+});
+
+add_filter('alm_filters_researchfilters_people', function(){ 
+
+    // Define empty array
+    $values = []; 
+
+    // Get all categories
+    $doctors = get_posts(array(
+        'post_type'         => 'person',
+        'posts_per_page'    => -1,
+        'order'             => 'ASC',
+        'tax_query'         => array(
+            array(
+                'taxonomy' => 'role',
+                'field'    => 'id',
+                'terms'    => 'expert',
+                'operator' => 'IN' //Or 'AND' or 'NOT IN'
+            )
+        )
+    ));
+      
+    if( $doctors ){
+
+         // Add All Item
+        $values[] = array( 
+            'label' => 'All',
+            'value' => ''
+        );   
+
+        foreach( $doctors as $doctor ):
+            global $post;
+            $values[] = array(
+                'label' => get_the_title( $doctor->ID ),
+                'value' => $doctor->ID
+            );
+        endforeach;
+
+    }        
+
+    return $values; // Return values 
+
+});

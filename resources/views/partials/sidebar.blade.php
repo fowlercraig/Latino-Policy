@@ -24,11 +24,12 @@
   </form>
   
   @if ( is_archive( 'research' ) )
-  @include('partials.sidebar-research-filters')
+  @php echo do_shortcode('[ajax_load_more_filters id="researchfilters" target="your_alm_id"]') @endphp
   @endif 
 
   @if ( is_page(696) )
-  @include('partials.sidebar-press-filters')
+
+  @php echo do_shortcode('[ajax_load_more_filters id="pressfilters" target="your_alm_id"]') @endphp
   @endif 
 
   @php dynamic_sidebar('sidebar-primary') @endphp
