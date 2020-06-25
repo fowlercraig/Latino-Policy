@@ -21,7 +21,7 @@
          [ajax_load_more 
             id="your_alm_id" 
             filters="true"
-            post_type="any"
+            post_type="research"
             placeholder="true" transition_container="false" 
             archive="true"
             css_classes="space-y-6"
