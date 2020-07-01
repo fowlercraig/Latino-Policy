@@ -10,10 +10,10 @@
 @endphp
 
 @php if( $posts ): @endphp
-<div class="scrolling-touch md:scrolling-auto overflow-auto">
-  <div class="flex space-x-4">
+<div class="scrolling-touch md:scrolling-auto overflow-auto md:overflow-visible">
+  <div class="flex md:block space-x-4 md:space-x-0 md:space-y-2">
     @php foreach( $posts as $people ): @endphp
-    <a href="@php echo get_permalink( $people->ID ); @endphp" title="Authors Name" class="flex-none inline-flex items-center space-x-2 group">
+    <a href="@php echo get_permalink( $people->ID ); @endphp" title="Authors Name" class="md:mr-4 flex-none inline-flex items-center space-x-2 group">
       <div class="h-10 w-10 bg-brand-dark flex-none rounded-full overflow-hidden group-hover:scale-105 transition transform ease duration-300">
         <img 
           alt="@php echo get_the_title( $people->ID ); @endphp" 
