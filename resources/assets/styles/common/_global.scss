@@ -26,6 +26,10 @@ h6 {
   @apply text-brand underline;
 }
 
+.entry-content.dark a {
+  @apply text-white underline;
+}
+
 .entry-content blockquote {
   @apply p-6 bg-gray-50 mb-4 border-l-2 border-brand font-serif;
 }
