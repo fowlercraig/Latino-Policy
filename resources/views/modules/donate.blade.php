@@ -4,10 +4,14 @@
   @php $url = 'https://giving.ucla.edu/campaign/?amount=' . $amount . '&OrgType=S&OrgNum=1320&fund=64616o' @endphp
   @php $title = get_field('donate_headline') @endphp
   @php $desc = get_field('donate_description') @endphp
+  @php $OrgNum = '1320' @endphp
+  @php $fund = '64616o' @endphp
 @else 
   @php $url = 'https://giving.ucla.edu/campaign/?amount=' . $amount . '&OrgType=S&OrgNum=800&fund=63922O' @endphp
   @php $title = $donate['title'] @endphp
   @php $desc = $donate['description'] @endphp
+  @php $OrgNum = '800' @endphp
+  @php $fund = '63922O' @endphp
 @endif
 
 <div class="relative overflow-hidden">
@@ -34,7 +38,7 @@
             <div class="aspect-ratio aspect-ratio--16x9 relative">
               <a  
                 class="absolute inset-0 flex items-center justify-center bg-white shadow rounded transform transition ease duration-200 hover:shadow-2xl hover:border-transparent hover:scale-105" 
-                href="https://giving.ucla.edu/campaign/?amount=@php echo $amount @endphp&OrgType=S&OrgNum=800&fund=63922O"
+                href="https://giving.ucla.edu/campaign/?amount=@php echo $amount @endphp&OrgType=S&OrgNum=@php echo $OrgNum @endphp&fund=@php echo $fund @endphp"
                 title="Opens link to Donate Page in the amout of $@php echo $amount @endphp">
               <span class="text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-display text-brand-darker">$@php echo $amount @endphp</span>
               </a>
