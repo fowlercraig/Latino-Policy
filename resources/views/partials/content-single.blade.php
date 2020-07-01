@@ -29,6 +29,13 @@
 
           <h1 class="entry-title mt-1 text-4xl tracking-tight leading-10 font-bold text-white sm:leading-none sm:text-6xl lg:text-5xl">{!! get_the_title() !!}</h1>
 
+          @if(get_field('event_date'))
+          <div class="text-white font-medium">
+            <span class="text-brand-light">Event Date →</span>
+            <?php the_field('event_date'); ?>
+          </div>
+          @endif
+
           <div class="text-white-75 sm:text-xl lg:text-lg xl:text-xl">
             @php the_excerpt() @endphp
           </div>
