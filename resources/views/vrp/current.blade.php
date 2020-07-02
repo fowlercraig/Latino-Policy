@@ -17,7 +17,7 @@
   <header>
     <div>
       <h2 class="text-2xl sm:text-3xl xl:text-5xl leading-9 font-bold tracking-tight text-brand-darker sm:text-4xl sm:leading-10 xl:leading-13">
-        Active Ligitation
+        Recent Ligitation
       </h2> 
     </div>
     <div>
