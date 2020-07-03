@@ -169,6 +169,7 @@
 </div>
 
 <script>
+  // testing
   function setAgreeCookie() {
     var expire=new Date();
     expire=new Date(expire.getTime()+7776000000);
