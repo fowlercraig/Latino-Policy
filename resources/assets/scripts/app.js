@@ -2,7 +2,8 @@
  * External Dependencies
  */
 import 'jquery';
-import 'bootstrap';
+import Glide from '@glidejs/glide'
+new Glide('.glide').mount()
 
 $(document).ready(() => {
   // console.log('Hello world');

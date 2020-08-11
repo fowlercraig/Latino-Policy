@@ -1,12 +1,8 @@
-/** Config */
-@import 'config/variables';
-@import 'config/external';
+@tailwind base;
 
-/** Common */
-@import 'common/global';
+// Utilities
+@import './utilities/aspect';
+@import '~@glidejs/glide/dist/css/glide.core.min.css';
 
-/** Components */
-@import 'components';
-
-/** Partials */
-@import 'partials/header';
+@tailwind components;
+@tailwind utilities;

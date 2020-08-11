@@ -15,7 +15,7 @@ require('laravel-mix-copy-watched');
  */
 
 mix.setPublicPath('./dist')
-   .browserSync('sage.test');
+   .browserSync('lppi.dev.cc');
 
 mix.sass('resources/assets/styles/app.scss', 'styles')
    .sass('resources/assets/styles/editor.scss', 'styles')
@@ -38,6 +38,9 @@ mix.autoload({
 
 mix.options({
   processCssUrls: false,
+  postCss: [
+    require('tailwindcss')('./tailwind.config.js'),
+  ]
 });
 
 mix.sourceMaps(false, 'source-map')
