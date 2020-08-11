@@ -1,5 +1,5 @@
 <article class="aspect-ratio aspect-ratio--16x9 bg-gray-100">
-  <div class="absolute inset-0 container flex items-center">
+  <div class="absolute inset-0 flex items-center">
     <div class="space-y-4">
       <div>@include('partials.components.ui-eyebrow',['title' => $cat])</div>
       <div class="prose lg:prose-lg xl:prose-xl">

@@ -15,7 +15,7 @@
 
 <section>
   @include('partials.components.header-card',['title' => 'Featured Projects & Reports'])
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
     @include(
       'partials.components.report-card',[

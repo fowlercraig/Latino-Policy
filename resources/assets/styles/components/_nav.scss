@@ -1,0 +1,29 @@
+.nav {
+
+  & .menu-item {
+
+    @apply flex h-full items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 transition duration-150 ease-in-out;
+    
+    &:hover {
+      @apply text-gray-700 border-gray-300 outline-none
+    }
+
+    &:focus {
+      @apply text-gray-700 border-gray-300
+    }
+
+    &.current-menu-item {
+
+      @apply border-indigo-500 text-gray-900 transition;
+
+      &:focus {
+
+        @apply  outline-none border-indigo-700;
+
+      }
+
+    }
+
+  }
+
+}

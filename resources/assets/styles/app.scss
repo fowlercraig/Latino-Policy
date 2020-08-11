@@ -1,5 +1,6 @@
 @tailwind base;
 
+@import './components/nav';
 // Utilities
 @import './utilities/aspect';
 @import '~@glidejs/glide/dist/css/glide.core.min.css';
