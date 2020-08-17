@@ -3,7 +3,11 @@
 @import './components/nav';
 // Utilities
 @import './utilities/aspect';
-@import '~@glidejs/glide/dist/css/glide.core.min.css';
+@import '~tiny-slider/dist/tiny-slider.css';
 
 @tailwind components;
 @tailwind utilities;
+
+.container {
+  @apply max-w-none;
+}

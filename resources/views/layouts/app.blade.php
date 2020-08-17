@@ -1,6 +1,6 @@
 @include('partials.header')
 
-<div class="container max-w-full">
+<div class="">
   <main class="main">
     @yield('content')
   </main>

@@ -2,38 +2,45 @@
   $menuLocations = get_nav_menu_locations();
   $menuID = $menuLocations['primary_navigation'];
   $primaryNav = wp_get_nav_menu_items($menuID);
+  global $cookie;
 @endphp
 
-<header class="banner shadow-sm relative z-20">
+<header 
+  @click.away="open:false" 
+  x-data="{open:true}" 
+  class="banner inset-x-0 z-20 @if(is_front_page()) absolute @endif flex items-center sm:block">
 
   <div class="py-6">
     <div class="container flex justify-between items-center max-w-full">
-      <a class="brand" href="{{ home_url('/') }}">
-        {{ $siteName }}
+      <a class="brand flex" href="{{ home_url('/') }}">
+        @if (is_front_page())
+        <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-16 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_wht.svg')">
+        @else
+        <img alt="{{ get_bloginfo('name', 'display') }}" class="h-10 sm:h-16 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')">
+        @endif
       </a>
-
-      <nav class="nav-primary">
+      <nav class="nav-primary hidden sm:block">
         @if (has_nav_menu('primary_navigation'))
-          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav flex items-center space-x-2', 'echo' => false]) !!}
+          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav flex items-center space-x-2 text-white', 'echo' => false]) !!}
         @endif
       </nav>
     </div>
   </div>
 
-  <nav class="bg-white">
+  <nav class="lg:border-t border-white-25">
     <div class="container max-w-full">
       <div class="flex justify-between h-16">
+        
+        @if (has_nav_menu('primary_navigation'))
+          {!! wp_nav_menu([
+            'theme_location' => 'primary_navigation', 
+            'menu_class' => 'nav hidden lg:flex items-center space-x-8', 
+            'container_class' => 'flex px-2 lg:px-0',
+            'echo' => false
+          ]) !!}
+        @endif
           
-            @if (has_nav_menu('primary_navigation'))
-              {!! wp_nav_menu([
-                'theme_location' => 'primary_navigation', 
-                'menu_class' => 'nav hidden lg:flex items-center space-x-8', 
-                'container_class' => 'flex px-2 lg:px-0',
-                'echo' => false
-              ]) !!}
-            @endif
-          
-        <div class="flex-1 flex items-center justify-center px-2 lg:ml-6 lg:justify-end">
+        <div class="hidden flex-1 sm:flex items-center justify-center px-2 lg:ml-6 lg:justify-end">
           <div class="max-w-lg w-full lg:max-w-xs">
             <label for="search" class="sr-only">Search</label>
             <div class="relative">
@@ -127,5 +134,9 @@
       </div>
     </div>
   </nav>
+
+  @if(!$cookie)
+    @include('components.modal-subscribe')
+  @endif
 
 </header>

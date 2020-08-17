@@ -13,7 +13,7 @@
   if ( $parent->have_posts() ):
 @endphp
 
-<section>
+<section class="container max-w-full">
   @include('partials.components.header-card',['title' => 'Featured News'])
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
     @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp

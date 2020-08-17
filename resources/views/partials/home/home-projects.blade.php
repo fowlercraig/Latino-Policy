@@ -13,16 +13,16 @@
   if ( $parent->have_posts() ):
 @endphp
 
-<section>
+<section class="container max-w-full">
   @include('partials.components.header-card',['title' => 'Featured Projects & Reports'])
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
     @include(
       'partials.components.report-card',[
-        'cat'   => get_the_terms(get_the_ID(), 'issue')[0]->name,
-        'title' => get_the_title(),
-        'link'  => 'Learn More',
-        'url'   => get_the_permalink(),
+        'cat'       => get_the_terms(get_the_ID(), 'issue')[0]->name,
+        'title'     => get_the_title(),
+        'linkTitle' => 'Learn More',
+        'linkUrl'   => get_the_permalink(),
       ])
     @php endwhile; @endphp
   </div>

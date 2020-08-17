@@ -1,10 +1,17 @@
-<time class="updated" datetime="{{ get_post_time('c', true) }}">
-  {{ get_the_date() }}
-</time>
+@php $padding = 'pt-3' @endphp
 
-<p class="byline author vcard">
-  <span>{{ __('By', 'sage') }}</span>
-  <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn">
-    {{ get_the_author() }}
-  </a>
-</p>
+<div class="flex items-center font-medium space-x-1 prose @endphp">
+  <span class="text-brand-light">Event Date →</span>
+  <span class="text-white"><?php the_field('event_date'); ?></span>
+</div>
+
+<div class="divide-y divide-white divide-opacity-25 space-y-3"> 
+
+  <div class="prose prose-sm sm:prose lg:prose-lg @endphp @php echo $padding @endphp">
+    <div class="text-brand-lighter">@php echo get_the_excerpt() @endphp</div>
+  </div>
+
+  @include('partials.entry-experts',['textColor' => 'text-white' ])
+  @include('partials.entry-download',['textColor' => 'text-white' ])
+
+</div>

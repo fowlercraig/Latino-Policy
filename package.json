@@ -48,10 +48,15 @@
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "@tailwindcss/ui": "^0.5.0",
-    "alpinejs": "^2.5.0",
+    "alpinejs": "^2.6.0",
+    "aos": "^2.3.4",
     "bootstrap": "^4.5.0",
+    "feather-icons": "^4.28.0",
     "jquery": "^3.5.0",
+    "js-cookie": "^2.2.1",
     "popper.js": "^1.16.1",
-    "tailwindcss": "^1.6.2"
+    "tailwindcss": "^1.6.2",
+    "tailwindcss-responsive-embed": "^1.0.0",
+    "tiny-slider": "^2.9.3"
   }
 }
