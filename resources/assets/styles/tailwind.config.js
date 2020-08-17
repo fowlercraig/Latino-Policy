@@ -12,6 +12,33 @@ module.exports = {
         xl: '3rem',
       },
     },
+    typography: (theme) => ({
+      default: {
+        css: {
+          color: theme('colors.gray.500'),
+          lineHeight: "155%",
+          h1: {
+            fontWeight: theme('fontWeight.bold'),
+          },
+          li: {
+            marginTop:    '1px',
+            marginBottom: '1px',
+          },
+        },
+      },
+      'lg': {
+        css: {
+          lineHeight: "155%",
+          h1: {
+            fontWeight: theme('fontWeight.bold'),
+          },
+          li: {
+            marginTop:    '1px',
+            marginBottom: '1px',
+          },
+        },
+      },
+    }),
     extend: {
       backgroundOpacity: {
         '85': '0.85',

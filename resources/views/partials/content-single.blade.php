@@ -1,6 +1,6 @@
 <article @php post_class() @endphp>
   <header class="pt-24 -mt-16 bg-brand-darker">
-    <div class="container group relative z-10">
+    <div class="group relative z-10">
       <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12">
         @if (has_post_thumbnail())
         <div class="col-span-3 lg:order-last">
@@ -10,6 +10,7 @@
         </div>
         @endif
         <div class="
+          container
           @if (has_post_thumbnail())
           col-span-2 
           @else
@@ -27,7 +28,9 @@
             @php endif; @endphp
           </div>
 
-          <h1 class="entry-title mt-1 text-4xl tracking-tight leading-10 font-bold text-white sm:leading-none sm:text-6xl lg:text-5xl">{!! get_the_title() !!}</h1>
+          <div class="prose prose-sm sm:prose lg:prose-lg">
+            <h1><div class="text-white">{!! get_the_title() !!}</div></h1>
+          </div>
 
           @if(get_field('event_date'))
           <div class="text-white font-medium">
@@ -61,7 +64,7 @@
   <div class="container group">
     <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12">
       <div class="col-span-3">
-        <div class="entry-content sm:text-xl lg:text-lg xl:text-xl">
+        <div class="prose prose-sm sm:prose lg:prose-lg">
           @php the_content() @endphp
         </div>
       </div>
