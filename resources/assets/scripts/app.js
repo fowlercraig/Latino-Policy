@@ -26,12 +26,13 @@ $(document).ready(() => {
       items: 1,
       slideBy: 'page',
       nav: false,    
-      controls: false,
+      controls: true,
       autoplay: false,
       speed: 400,
       autoplayButtonOutput: false,
       mouseDrag: false,
       lazyload: true,
+      controlsContainer: "#carousel-controls"
     }
   }
 
