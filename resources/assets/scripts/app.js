@@ -8,7 +8,7 @@ import 'alpinejs'
 
 $(document).ready(() => {
 
-  feather.replace()
+  feather.replace();
 
   var options = {
     'gallery': {

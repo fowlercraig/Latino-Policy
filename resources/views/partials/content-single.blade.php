@@ -1,15 +1,15 @@
 <article @php(post_class())>
   <header class="bg-brand-dark flex flex-wrap">
     <div class="container pb-10 w-full lg:w-2/5 order-last lg:order-first">
-      <div class="space-y-3">
+      <div class="space-y-6">
         @include('partials.components.ui-eyebrow',[
           'title'     => 'Welcome to the Thing', 
           'bgColor'   => 'bg-brand', 
           'textColor' => 'text-white'
         ])
         <div class="prose prose-sm sm:prose lg:prose-lg max-w-none">
-          <h1 class="entry-title text-white">
-            {!! $title !!}
+          <h1 class="entry-title">
+            <span class="text-white">{!! $title !!}</span>
           </h1>
         </div>
         @include('partials.entry-meta',['textColor' => 'text-white' ])

@@ -13,6 +13,8 @@
   }
 @endphp
 
+@if($file)
+
 <div class="flex space-x-2 @php echo $spacing @endphp @php echo $textColor @endphp @endphp @php echo $padding @endphp">
   <a href="@php echo $file['url']; @endphp" download class="inline-flex items-center space-x-2 group">
     <div class="bg-white h-10 w-10 flex items-center justify-center @php echo $back; @endphp @php echo $icon; @endphp rounded-full group-hover:scale-105 transition transform ease duration-300">
@@ -24,3 +26,5 @@
     </div>
   </a>
 </div>
+
+@endif
