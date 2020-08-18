@@ -39,8 +39,8 @@
           </div>
           @endif
 
-          <div class="text-white-75 sm:text-xl lg:text-lg xl:text-xl">
-            @php the_excerpt() @endphp
+          <div class="text-white-75 prose prose-sm sm:prose lg:prose-lg">
+            <div class="text-white-75">@php the_excerpt() @endphp</div>
           </div>
 
           @if (get_field('people'))
@@ -48,7 +48,7 @@
           @include('research.authors')
           @endif
 
-          @if (get_field('people'))
+          @if (get_field('file'))
           <div class="h-px bg-white-25"></div>
           @include('research.download')
           @endif

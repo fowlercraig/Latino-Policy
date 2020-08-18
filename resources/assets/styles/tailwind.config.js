@@ -20,6 +20,18 @@ module.exports = {
           h1: {
             fontWeight: theme('fontWeight.bold'),
           },
+          h2: {
+            fontWeight: theme('fontWeight.bold'),
+          },
+          h3: {
+            fontWeight: theme('fontWeight.bold'),
+          },
+          h4: {
+            fontWeight: theme('fontWeight.bold'),
+          },
+          h5: {
+            fontWeight: theme('fontWeight.bold'),
+          },
           li: {
             marginTop:    '1px',
             marginBottom: '1px',
@@ -30,6 +42,18 @@ module.exports = {
         css: {
           lineHeight: "155%",
           h1: {
+            fontWeight: theme('fontWeight.bold'),
+          },
+          h2: {
+            fontWeight: theme('fontWeight.bold'),
+          },
+          h3: {
+            fontWeight: theme('fontWeight.bold'),
+          },
+          h4: {
+            fontWeight: theme('fontWeight.bold'),
+          },
+          h5: {
             fontWeight: theme('fontWeight.bold'),
           },
           li: {
