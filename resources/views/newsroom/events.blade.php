@@ -2,10 +2,9 @@
   $link = get_field('press_link');
   $ids = get_field('events', false, false);
   $args = array(
-    'post_type'      => array('research', 'press', 'event'),
+    'post_type'      => array('event'),
     'posts_per_page' => 3,
     'order'          => 'ASC',
-    'post__in'       => $ids,
     'post_status'    => 'any',
     'orderby'        => 'post__in',
   );
