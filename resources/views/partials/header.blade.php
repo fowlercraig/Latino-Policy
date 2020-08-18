@@ -19,7 +19,7 @@
   } 
   global $cookie;
   if($cookie){
-    $open = 'false';
+    $open = 'true';
   } else {
     $open = 'true';
   }

@@ -53,6 +53,7 @@
     
     <div class="mc-field-group">
       <label class="sr-only" for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+      <span class="text-red-600 right-0 top-0 px-3 py-1 absolute">*</span>
       <input 
         aria-label="Email Address" 
         class="required appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" 
@@ -63,8 +64,9 @@
         id="mce-EMAIL"
       >
     </div>
-    <div class="mc-field-group">
+    <div class="mc-field-group relative">
       <label class="sr-only" for="mce-FNAME">First Name  <span class="asterisk">*</span></label>
+      <span class="text-red-600 right-0 top-0 px-3 py-1 absolute">*</span>
       <input 
         aria-label="First Name" 
         class="required appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" 
@@ -77,6 +79,7 @@
     </div>
     <div class="mc-field-group">
       <label class="sr-only" for="mce-LNAME">Last Name  <span class="asterisk">*</span></label>
+      <span class="text-red-600 right-0 top-0 px-3 py-1 absolute">*</span>
       <input 
         aria-label="Last Name" 
         class="required appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" 
@@ -88,6 +91,7 @@
     </div>
     <div class="mc-field-group">
       <label class="sr-only" for="mce-MMERGE3">Organization  <span class="asterisk">*</span></label>
+      <span class="text-red-600 right-0 top-0 px-3 py-1 absolute">*</span>
       <input 
         aria-label="Organization" 
         class="required appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" 
