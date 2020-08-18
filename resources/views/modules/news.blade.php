@@ -5,7 +5,6 @@
     'post_type'      => array('research', 'press', 'event'),
     'posts_per_page' => 4,
     'order'          => 'ASC',
-    'post__in'       => $ids,
     'post_status'    => 'any',
     'orderby'        => 'post__in',
   );
