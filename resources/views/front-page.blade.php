@@ -4,7 +4,7 @@
 
 @section('content')
   @while(have_posts()) @php(the_post())
-    <div class="space-y-10">
+    <div class="space-y-6">
       @include('partials.home.home-carousel')
       @include('partials.home.home-mission')
       @include('partials.home.home-projects')

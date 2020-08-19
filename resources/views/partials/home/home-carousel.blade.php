@@ -18,11 +18,11 @@
   </div>
   <div class="absolute inset-x-0 bottom-0 z-40 text-white">
     <div id="carousel-controls" class="container flex controls items-center h-20 space-x-1 outline-none">
-      <button data-controls="prev" class="prev w-12 h-12 rounded-full flex items-center justify-center bg-brand bg-opacity-75 hover:bg-opacity-100 transition ease duration-300">
+      <button data-controls="prev" class="prev w-12 h-12 rounded-full flex items-center justify-center bg-brand transition ease duration-300">
         <i data-feather="chevron-left"></i>
         <span class="sr-only">Previous</span>
       </button>
-      <button data-controls="next" class="next w-12 h-12 rounded-full flex items-center justify-center bg-brand bg-opacity-75 hover:bg-opacity-100 transition ease duration-300">
+      <button data-controls="next" class="next w-12 h-12 rounded-full flex items-center justify-center bg-brand transition ease duration-300">
         <i data-feather="chevron-right"></i>
         <span class="sr-only">Next</span>
       </button>

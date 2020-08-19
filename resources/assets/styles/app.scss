@@ -1,9 +1,9 @@
 @tailwind base;
 
-@import './components/nav';
-// Utilities
-@import './utilities/aspect';
+@import url("https://use.typekit.net/kti3btr.css");
 @import '~tiny-slider/dist/tiny-slider.css';
+@import './components/nav';
+@import './utilities/aspect';
 
 @tailwind components;
 @tailwind utilities;

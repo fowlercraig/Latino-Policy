@@ -71,6 +71,19 @@ module.exports = {
       },
     }),
     extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        'display': ['alternate-gothic-atf','Inter var','Helvetica'],
+        'brand': ['komet','Inter var','Helvetica'],
+      },
+      fontSize: {
+        'display-xxs':  ['2.0rem', '90%'],
+        'display-xs':   ['3.0rem', '90%'],
+        'display':      ['4.0rem', '80%'],
+        'display-sm':   ['3.5rem', '90%'],
+        'display-lg':   ['4.5rem', '80%'],
+        'display-xl':   ['5.0rem', '80%'],
+      },
       colors: {
         'brand' : {
           default: '#2774AE',
