@@ -7,7 +7,7 @@
   x-transition:leave="transition ease-in duration-150" 
   x-transition:leave-start="opacity-100 translate-y-0" 
   x-transition:leave-end="opacity-0 translate-y-1" 
-  class="absolute right-0 transform mt-3 px-2 w-screen max-w-xs sm:px-0">
+  class="absolute right-0 transform mt-3 px-2 w-screen max-w-xs sm:px-0" style="display: none;">
   <div class="rounded-lg shadow-lg">
     <div class="rounded-lg shadow-xs overflow-hidden">
       <div class="z-20 relative grid gap-6 bg-white px-4 py-4 sm:gap-8 sm:p-8">
