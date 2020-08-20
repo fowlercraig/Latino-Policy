@@ -14,6 +14,7 @@
   }
 @endphp
 
+@if($file)
 <div>
   <a href="@php echo $file['url']; @endphp" download class="inline-flex items-center space-x-2 group">
     <div class="h-10 w-10 flex flex-none items-center justify-center @php echo $back; @endphp @php echo $icon; @endphp rounded-full group-hover:scale-105 transition transform ease duration-300">
@@ -25,7 +26,9 @@
     </div>
   </a>
 </div>
+@endif
 
+@if($files)
 @foreach ($files as $item)
 <div>
   <a href="@php echo $item['file']['url']; @endphp" download class="inline-flex items-center space-x-2 group">
@@ -39,3 +42,4 @@
   </a>
 </div>
 @endforeach
+@endif
