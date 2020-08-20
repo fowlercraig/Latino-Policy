@@ -6,7 +6,13 @@
     'posts_per_page' => 4,
     'order'          => 'ASC',
     'post_status'    => 'any',
-    'orderby'        => 'post__in',
+    'tax_query'      => array(
+        array(
+            'taxonomy' => 'resource',
+            'operator' => 'NOT IN',
+            'terms'    => array('court-filings-opinions'),
+        )
+    )
   );
   $parent = new WP_Query( $args );
   if ( $parent->have_posts() ):
