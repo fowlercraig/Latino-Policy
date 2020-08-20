@@ -13,6 +13,7 @@
       @endif
         <div class="relative aspect-ratio aspect-ratio--1x1 md:aspect-ratio--16x9 @if ( $count == 3)lg:aspect-ratio--3x4 @else lg:aspect-ratio--7x5 @endif overflow-hidden">
           <div class="absolute inset-0 p-4 pt-0 sm:p-8 sm:pt-0 space-y-2 sm:space-y-6 z-20 flex flex-col">
+            @php if(get_the_terms(get_the_ID(), 'resource') || get_the_terms(get_the_ID(), 'issue')): @endphp
             <div class="text-xs sm:text-base space-x-px">
               <div class="bg-brand inline-block py-1 px-2">
                 @php if(get_the_terms(get_the_ID(), 'resource')): @endphp
@@ -24,6 +25,13 @@
                 @php endif; @endphp
               </div>
             </div>
+            @else
+            <div class="text-xs sm:text-base space-x-px invisible">
+              <div class="bg-brand inline-block py-1 px-2">
+                &nbsp;
+              </div>
+            </div>
+            @endif
             <h2 class="font-display uppercase text-3xl sm:text-3xl xl:text-5xl leading-7 sm:leading-10 xl:leading-13 font-bold tracking-tight text-white">
               <span class="bg-transparent transition ease duration-150 py-1">@php the_title(); @endphp</span>
             </h2>
