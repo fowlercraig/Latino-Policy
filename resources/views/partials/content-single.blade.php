@@ -39,6 +39,13 @@
           </div>
           @endif
 
+          @if(is_singular('research'))
+          <div class="text-white font-medium">
+            <span class="text-brand-light">Posted →</span>
+            @php echo get_the_date( 'M dS, Y', $post->ID ) @endphp
+          </div>
+          @endif
+
           <div class="text-white-75 prose prose-sm sm:prose lg:prose-lg">
             <div class="text-white-75">@php the_excerpt() @endphp</div>
           </div>
