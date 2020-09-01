@@ -40,7 +40,7 @@
             All Fellows
           </button>
           @php 
-            $string = 'Policy Fellows, Voting Rights Project Policy Fellows, Senior Policy Fellows';
+            $string = 'Policy Fellows, Voting Rights Project Fellows, Senior Policy Fellows';
             $string = preg_replace('/\.$/', '', $string);
             $array = explode(', ', $string);
             foreach($array as $value):
