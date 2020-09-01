@@ -28,6 +28,19 @@
         @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
         @include('header.link')
         @php endwhile @endphp
+        <a href="/research/?_issue=voting-rights-project" title="Research Library" class="flex hover:bg-gray-50 transition ease duration-300">
+          <div class="flex items-center">
+            <div class="ml-4">
+              <h5 class="text-2xl sm:text-xl xl:text-2xl leading-6 sm:leading-6 font-bold tracking-tight text-brand-darker mb-0">Research Library</h5>
+              <p class="text-gray-500 font-medium text-sm">
+                Learn more
+              </p>
+            </div>
+          </div>
+          <div class="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition transform ease duration-150 text-brand pr-2">
+            <i data-feather="chevron-right"></i>
+          </div>
+        </a>
       </div>
     </div>
   </div>

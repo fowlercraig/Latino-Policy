@@ -319,3 +319,5 @@ function cookie_redirect() {
   }
 }
 add_action( 'init', __NAMESPACE__ . '\\cookie_redirect');
+
+show_admin_bar(false);
