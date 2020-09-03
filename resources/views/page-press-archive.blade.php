@@ -17,6 +17,7 @@
     @endif
 
     <div class="space-y-6">
+      <ul id="alm-selected-filters"></ul>
       @php echo do_shortcode('
          [ajax_load_more 
             id="your_alm_id" 
