@@ -1,4 +1,4 @@
-<div x-description="Mobile menu, show/hide based on mobile menu state." x-show="mobileMenuOpen" x-transition:enter="duration-200 ease-out" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute z-20  top-0 inset-x-0 p-2 transition transform origin-top-right xl:hidden">
+<div x-description="Mobile menu, show/hide based on mobile menu state." x-show="mobileMenuOpen" x-transition:enter="duration-200 ease-out" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute z-20  top-0 inset-x-0 p-2 transition transform origin-top-right xl:hidden" style="display: none;">
   <div class="rounded-lg shadow-lg">
     <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
       <div class="pt-5 pb-6 px-5 space-y-6 sm:space-y-8 sm:pb-8">
