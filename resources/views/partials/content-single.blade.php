@@ -97,5 +97,3 @@
 </article>
 
 <div class="h-px bg-black-5 my-10"></div>
-
-@include('partials.photoswipe')
