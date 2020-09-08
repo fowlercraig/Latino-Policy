@@ -26,11 +26,10 @@
 
 
   @if ( is_archive( 'research' ) )
-  @php echo do_shortcode('[ajax_load_more_filters id="researchfilters" target="your_alm_id"]') @endphp
+  @php echo do_shortcode('[ajax_load_more_filters id="research_library_filters" target="your_alm_id"]') @endphp
   @endif 
 
   @if ( is_page(696) )
-
   @php echo do_shortcode('[ajax_load_more_filters id="pressfilters" target="your_alm_id"]') @endphp
   @endif 
 
