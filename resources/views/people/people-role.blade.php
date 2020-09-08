@@ -18,7 +18,7 @@
 @endphp
 
   <div class="h-px bg-gray-100"></div>
-
+  
   <section id="experts-@php echo $member_group_term->name; @endphp">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 lg:gap-12">
 
