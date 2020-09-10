@@ -1,6 +1,6 @@
 <article @php(post_class())>
 
-  <div class="bg-gray-50">
+  <div class="bg-brand-dark">
 
     <div class="flex flex-wrap">
 
@@ -17,8 +17,10 @@
           @include('partials.components.ui-eyebrow',['title' => get_the_terms(get_the_ID(), 'resource')[0]->name])
         </div>
 
-        <header class="prose lg:prose-lg xl:prose-xl mb-4 max-w-none text-white">
-          <h1 class="entry-title">{!! $title !!}</h1>
+        <header class="prose lg:prose-lg xl:prose-xl mb-4 max-w-none">
+          <h1 class="entry-title">
+            <span class="text-white">{!! $title !!}</span>
+          </h1>
         </header>
 
         <div class="divide-y divide-gray-100">

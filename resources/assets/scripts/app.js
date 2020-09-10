@@ -14,10 +14,15 @@ $(document).ready(() => {
     'gallery': {
       container: '.gallery',
       loop: true,
-      items: 3,
+      items: 1,
       speed: 400,
-      lazyload: true,
+      lazyload: false,
       mouseDrag: true,
+      autoplayButtonOutput: false,
+      controls: true,
+      nav: false,  
+      autoplay: false,
+      controlsContainer: '#carousel-controls',
     },
     'carousel': {
       container: '.carousel',

@@ -71,6 +71,9 @@ module.exports = {
       },
     }),
     extend: {
+      height: {
+        'header': '400px',
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         'display': ['alternate-gothic-atf','Inter var','Helvetica'],
@@ -83,6 +86,7 @@ module.exports = {
         'display-sm':   ['3.5rem', '90%'],
         'display-lg':   ['4.5rem', '80%'],
         'display-xl':   ['5.0rem', '80%'],
+        'display-xxl':  ['6.0rem', '80%'],
       },
       colors: {
         'brand' : {
@@ -114,6 +118,7 @@ module.exports = {
     backgroundColor: ['responsive', 'even', 'hover', 'focus'],
     flexDirection: ['responsive', 'hover', 'focus', 'even'],
     padding: ['responsive', 'hover', 'focus', 'even', 'odd'],
+    opacity: ['responsive', 'hover', 'focus', 'group-hover'],
     aspectRatio: ['responsive']
   },
   plugins: [
