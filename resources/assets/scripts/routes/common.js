@@ -20,7 +20,7 @@ import 'formstone/dist/js/sticky';
 import 'formstone/dist/js/lightbox';
 
 //import accordion from './accordion';
-import photoswipe from './photoswipe';
+//import photoswipe from './photoswipe';
 
 export default {
   init() {
@@ -28,7 +28,7 @@ export default {
   },
   finalize() {
 
-    photoswipe
+    //photoswipe,
 
     function build() {
 

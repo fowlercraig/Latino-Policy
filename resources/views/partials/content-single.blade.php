@@ -87,6 +87,7 @@
           </div>
           @endif
           @include('components.gallery')
+          @include('partials.photoswipe')
         </div>
       </div>
 

@@ -33,5 +33,3 @@
   @endforeach
 </div>
 @endif
-
-@include('partials.photoswipe')

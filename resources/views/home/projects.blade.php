@@ -2,9 +2,9 @@
   $link = get_field('reports_link');
   $ids = get_field('reports', false, false);
   $args = array(
-    'post_type'      => array('research', 'press', 'event'),
+    'post_type'      => array('research'),
     'posts_per_page' => 4,
-    'order'          => 'ASC',
+    'order'          => 'DESC',
     'post_status'    => 'any',
     'tax_query'      => array(
         array(
