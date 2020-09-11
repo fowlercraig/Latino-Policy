@@ -26,11 +26,11 @@
 
 
   @if ( is_archive( 'research' ) )
-  @php echo do_shortcode('[ajax_load_more_filters id="research_library_filters" target="your_alm_id"]') @endphp
+  @include('partials.sidebar-press')
   @endif 
 
   @if ( is_page(696) )
-  @php echo do_shortcode('[ajax_load_more_filters id="pressfilters" target="your_alm_id"]') @endphp
+  @include('partials.sidebar-press')
   @endif 
 
   @php dynamic_sidebar('sidebar-primary') @endphp
