@@ -26,7 +26,7 @@
 
 
   @if ( is_archive( 'research' ) )
-  @include('partials.sidebar-press')
+  @include('partials.sidebar-research')
   @endif 
 
   @if ( is_page(696) )

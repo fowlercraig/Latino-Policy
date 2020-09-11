@@ -30,16 +30,6 @@
     );
   } 
 
-  $works = get_field('work','option');
-  $work_values = [];
-
-  foreach($works as $work) { 
-    $work_values[] = array(
-      'label' => $work->name,
-      'value' => $work->slug
-    );
-  } 
-
   $terms = get_categories($args);  
   $filter_array = array(
     "id" =>  "testing",
@@ -47,14 +37,6 @@
     "date_created" =>  1598996575,
     "date_modified" =>  1598996724,
     "filters" =>  array(
-        array(
-            "key"           =>  "taxonomy",
-            "field_type"    =>  "radio",
-            "taxonomy"      =>  "issue",
-            "taxonomy_operator" =>  "IN",
-            "title"         =>  "Work",
-            "values"        =>  $work_values,
-        ),
         array(
             "key"           =>  "taxonomy",
             "field_type"    =>  "radio",
