@@ -11,7 +11,7 @@
   </div>
   @endif
   @endif
-  @if ( has_post_thumbnail() )
+  @if ( has_post_thumbnail() && !is_search() )
   <div class="py-6 pb-6 bg-brand-darker relative -mt-1">
   @else
   <div class="py-6 pt-24 pb-6 bg-brand-darker relative -mt-1">

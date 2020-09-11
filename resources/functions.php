@@ -321,3 +321,10 @@ function cookie_redirect() {
 add_action( 'init', __NAMESPACE__ . '\\cookie_redirect');
 
 show_admin_bar(false);
+
+function my_alm_query_args_searchwp($args){   
+   $engine = 'default'; // default = default
+   $args = apply_filters('alm_searchwp', $args, $engine); // Make call to alm_searchwp filter
+   return $args;
+}
+add_filter( 'alm_query_args_searchwp', 'my_alm_query_args_searchwp');
