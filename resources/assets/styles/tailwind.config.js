@@ -18,18 +18,23 @@ module.exports = {
           color: theme('colors.gray.500'),
           lineHeight: "155%",
           h1: {
+            color: theme('colors.brand-darker'),
             fontWeight: theme('fontWeight.bold'),
           },
           h2: {
+            color: theme('colors.brand-darker'),
             fontWeight: theme('fontWeight.bold'),
           },
           h3: {
+            color: theme('colors.brand-darker'),
             fontWeight: theme('fontWeight.bold'),
           },
           h4: {
+            color: theme('colors.brand-darker'),
             fontWeight: theme('fontWeight.bold'),
           },
           h5: {
+            color: theme('colors.brand-darker'),
             fontWeight: theme('fontWeight.bold'),
           },
           li: {
@@ -42,18 +47,23 @@ module.exports = {
         css: {
           lineHeight: "155%",
           h1: {
+            color: theme('colors.brand-darker'),
             fontWeight: theme('fontWeight.bold'),
           },
           h2: {
+            color: theme('colors.brand-darker'),
             fontWeight: theme('fontWeight.bold'),
           },
           h3: {
+            color: theme('colors.brand-darker'),
             fontWeight: theme('fontWeight.bold'),
           },
           h4: {
+            color: theme('colors.brand-darker'),
             fontWeight: theme('fontWeight.bold'),
           },
           h5: {
+            color: theme('colors.brand-darker'),
             fontWeight: theme('fontWeight.bold'),
           },
           li: {

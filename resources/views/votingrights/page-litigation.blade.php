@@ -8,6 +8,7 @@
       @include('modules.overview')
       @include('vrp.current')
       @include('vrp.past')
+      @include('vrp.news')
       @include('partials.back')
     </div>
   @endwhile
