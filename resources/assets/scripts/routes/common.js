@@ -30,6 +30,26 @@ export default {
 
     function build() {
 
+      /*eslint-disable */
+      (function($) {
+      var allPanels = $('.alm-filter ul').hide();
+        
+      $('.alm-filter .alm-filter--title').click(function() {
+          var $this = $(this);
+          var $target =  $this.next();
+
+          console.log($this);
+
+          if(!$target.hasClass('active')){
+             allPanels.removeClass('active').hide();
+             $target.addClass('active').show();
+          }
+          
+        return false;
+      });
+      })(jQuery);
+      /*eslint-enable */
+
       var initPhotoSwipeFromDOM = function(gallerySelector) {
 
     // parse slide data (url, title, size ...) from DOM elements 
