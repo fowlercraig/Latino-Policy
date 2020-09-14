@@ -1,22 +1,7 @@
-/** Search form */
-.search-form {
-  @apply flex items-center;
+form input[type=text] {
+  @apply appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight;
 }
 
-.search-form label {
-  @apply mb-4;
-
-  font-weight: normal;
-}
-
-.search-form .search-field {
-  @apply block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded;
-}
-
-.search-form .search-submit {
-  @apply inline-block align-middle text-center select-none border font-normal whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-grey-lightest bg-grey;
-
-  &:hover {
-    @apply bg-grey-light;
-  }
+form input[type=text]:focus {
+  @apply outline-none bg-white border-gray-500;
 }
