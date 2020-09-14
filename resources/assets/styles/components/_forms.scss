@@ -1,7 +1,22 @@
-form input[type=text] {
-  @apply appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight;
+.prose form input[type=text],
+.prose form textarea {
+  @apply shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight text-base;
 }
 
-form input[type=text]:focus {
-  @apply outline-none bg-white border-gray-500;
+.prose form select {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight text-base;
+}
+
+.prose form input[type=text]:focus,
+.prose form textarea:focus {
+  @apply outline-none shadow-outline;
+}
+
+.prose form ul li {
+  @apply pl-0;
+}
+
+.prose form ul li::before {
+  content: "";
+  display: none;
 }
