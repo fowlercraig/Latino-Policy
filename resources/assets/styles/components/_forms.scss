@@ -12,6 +12,18 @@
   @apply outline-none shadow-outline;
 }
 
+.prose form input[type=submit] {
+  @apply bg-brand-dark text-white font-bold py-2 px-4 rounded;
+}
+
+.prose form input[type=submit]:hover {
+  @apply bg-brand-darker;
+}
+
+.prose form input[type=submit]:focus {
+  @apply outline-none shadow-outline;
+}
+
 .prose form ul li {
   @apply pl-0;
 }
