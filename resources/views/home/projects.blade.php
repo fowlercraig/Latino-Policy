@@ -5,11 +5,11 @@
     'post_type'      => array('research'),
     'posts_per_page' => 4,
     'order'          => 'DESC',
-    'post_status'    => 'any',
     'tax_query'      => array(
         array(
             'taxonomy' => 'resource',
             'operator' => 'NOT IN',
+            'field'    => 'slug',
             'terms'    => array('court-filings-opinions'),
         )
     )

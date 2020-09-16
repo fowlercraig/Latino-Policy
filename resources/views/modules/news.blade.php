@@ -2,11 +2,9 @@
   $link = get_field('press_link');
   $ids = get_field('press', false, false);
   $args = array(
-    'post_type'      => array('research', 'press', 'event'),
+    'post_type'      => array('press'),
     'posts_per_page' => 4,
-    'order'          => 'ASC',
-    'post_status'    => 'any',
-    'orderby'        => 'post__in',
+    'order'          => 'DESC',
   );
   $parent = new WP_Query( $args );
   if ( $parent->have_posts() ):
