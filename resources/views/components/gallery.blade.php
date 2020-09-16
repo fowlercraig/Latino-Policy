@@ -19,7 +19,7 @@
   @foreach ($images as $image)
   @if($count%8 == 1)<div class="slide"><div class="my-gallery grid grid-cols-4 gap-1 mb-6" itemscope itemtype="http://schema.org/ImageGallery">@endif
   <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a class="aspect-ratio aspect-ratio--1x1 bg-red-500 block relative" href="@php echo $image['url'] @endphp" itemprop="contentUrl" data-size="@php echo $image['width'] @endphpx@php echo $image['height'] @endphp">
+    <a class="aspect-ratio aspect-ratio--1x1 bg-black block relative" href="@php echo $image['url'] @endphp" itemprop="contentUrl" data-size="@php echo $image['width'] @endphpx@php echo $image['height'] @endphp">
       <div class="absolute inset-0">
         <img class="h-full w-full object-cover" src="@php echo $image['sizes']['medium'] @endphp" itemprop="thumbnail" alt="Image description" />
       </div>

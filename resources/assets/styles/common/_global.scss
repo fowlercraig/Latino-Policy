@@ -21,6 +21,7 @@ html.is-animating .transition-fade {
   overflow: hidden;
   max-width: 100%;
   height: auto;
+  max-height: 0;
 }
 
 .embed-container object,
