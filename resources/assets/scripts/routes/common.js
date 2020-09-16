@@ -273,8 +273,22 @@ initPhotoSwipeFromDOM('.my-gallery');
         'datavis': {
           container: '.datavis',
           loop: true,
-          items: 3,
+          items: 1,
+          responsive: {
+            640: {
+              edgePadding: 20,
+              gutter: 20,
+              items: 2,
+            },
+            700: {
+              gutter: 20,
+            },
+            900: {
+              items: 3,
+            },
+          },
           speed: 400,
+          gutter: 10,
           lazyload: false,
           mouseDrag: true,
           autoplayButtonOutput: false,

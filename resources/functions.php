@@ -312,7 +312,7 @@ function cookie_redirect() {
   $cookie_name = "thecookiemonster";
   global $cookie;
     if (!isset($_COOKIE[$cookie_name])) {
-      setcookie( $cookie_name, 1, time()+1209600, SITECOOKIEPATH, COOKIE_DOMAIN, false, true);
+      setcookie( $cookie_name, 1, time()+809600, SITECOOKIEPATH, COOKIE_DOMAIN, false, true);
       $cookie = false;
     } else {
       $cookie = true;
@@ -330,7 +330,8 @@ function my_alm_query_args_searchwp($args){
 add_filter( 'alm_query_args_searchwp', 'my_alm_query_args_searchwp');
 
 
-add_filter('post_gallery', 'my_post_gallery', 10, 2);
+add_filter('post_gallery',  __NAMESPACE__ . '\\my_post_gallery', 10, 2);
+
 function my_post_gallery($output, $attr) {
     global $post;
 
@@ -368,10 +369,9 @@ function my_post_gallery($output, $attr) {
 
     if (empty($attachments)) return '';
 
-    // Here's your actual output, you may customize it to your need
-    $output = "<div class=\"slideshow-wrapper\">\n";
-    $output .= "<div class=\"preloader\"></div>\n";
-    $output .= "<ul data-orbit>\n";
+    // Here's your actual output, you may customize it to your needs
+    $output .= "<div class=\"lg:-mx-32\">\n";
+    $output .= "<div id=\"datavis\">\n";
 
     // Now you loop through each attachment
     foreach ($attachments as $id => $attachment) {
@@ -380,12 +380,23 @@ function my_post_gallery($output, $attr) {
 //      $img = wp_get_attachment_image_src($id, 'my-custom-image-size');
         $img = wp_get_attachment_image_src($id, 'full');
 
-        $output .= "<li>\n";
+        $output .= "<div>\n";
         $output .= "<img src=\"{$img[0]}\" width=\"{$img[1]}\" height=\"{$img[2]}\" alt=\"\" />\n";
-        $output .= "</li>\n";
+        $output .= "</div>\n";
     }
 
-    $output .= "</ul>\n";
+    $output .= "</div>\n";
+
+    $output .= "<div id=\"carousel-controls\" class=\"flex controls justify-center items-center pt-4 space-x-1 outline-none\">\n";
+    $output .= "<button data-controls=\"prev\" class=\"prev w-8 h-8 text-white rounded-full flex items-center justify-center bg-brand transition ease duration-300\">\n";
+    $output .= "<i data-feather=\"chevron-left\"></i>\n";
+    $output .= "<span class=\"sr-only\">Previous</span>\n";
+    $output .= "</button>\n";
+    $output .= "<button data-controls=\"next\" class=\"next w-8 h-8 text-white rounded-full flex items-center justify-center bg-brand transition ease duration-300\">\n";
+    $output .= "<i data-feather=\"chevron-right\"></i>\n";
+    $output .= "<span class=\"sr-only\">Next</span>\n";
+    $output .= "</button>\n";
+    $output .= "</div>\n";
     $output .= "</div>\n";
 
     return $output;

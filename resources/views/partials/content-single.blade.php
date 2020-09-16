@@ -69,14 +69,21 @@
   </header>
   <div class="h-10"></div>
   <div class="container group">
+
+    @if (!is_singular('event'))
+
+    <div class="prose prose-sm sm:prose lg:prose-lg mx-auto">
+      @php the_content() @endphp
+    </div>
+
+    @else
+
     <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12">
       <div class="col-span-3">
         <div class="prose prose-sm sm:prose lg:prose-lg">
           @php the_content() @endphp
         </div>
       </div>
-
-      @if (is_singular('event'))
 
       <div class="col-span-2">
         <div class="space-y-4">
