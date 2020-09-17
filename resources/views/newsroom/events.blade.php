@@ -4,9 +4,7 @@
   $args = array(
     'post_type'      => array('event'),
     'posts_per_page' => 3,
-    'order'          => 'ASC',
-    'post_status'    => 'any',
-    'orderby'        => 'post__in',
+    'order'          => 'DESC',
   );
   $parent = new WP_Query( $args );
   if ( $parent->have_posts() ):
