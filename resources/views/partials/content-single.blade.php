@@ -1,7 +1,7 @@
 <article @php post_class() @endphp>
   <header class="pt-24 -mt-16 bg-brand-darker">
     <div class="group relative z-10">
-      <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12">
+      <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5">
         @if (has_post_thumbnail())
         <div class="col-span-3 lg:order-last">
           <div class="h-full">
@@ -84,8 +84,7 @@
       <div class="col-span-3">
         <div class="prose prose-sm sm:prose lg:prose-lg">
           @php the_content() @endphp
-
-          <h3>News & Press</h3>
+          @include('components.newslist')
         </div>
       </div>
 
