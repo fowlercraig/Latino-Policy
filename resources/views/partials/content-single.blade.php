@@ -84,6 +84,8 @@
       <div class="col-span-3">
         <div class="prose prose-sm sm:prose lg:prose-lg">
           @php the_content() @endphp
+
+          <h3>News & Press</h3>
         </div>
       </div>
 

@@ -17,9 +17,7 @@
     @endif
 
     <div class="space-y-6">
-    @while (have_posts()) @php the_post() @endphp
     @php echo do_shortcode('[ajax_load_more id="your_alm_id" filters="true" search="'. $term .'" post_type="any"]');  @endphp
-    @endwhile
     </div>
 
     <div class="h-20"></div>
