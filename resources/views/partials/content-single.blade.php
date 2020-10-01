@@ -60,6 +60,8 @@
           @include('research.download')
           @endif
 
+          <div class="h-4 lg:hidden"></div>
+
         </div>
       </div>
     </div>
