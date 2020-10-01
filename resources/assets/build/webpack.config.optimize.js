@@ -16,7 +16,7 @@ class TailwindExtractor {
 
 const purgecssWordpress = {
   whitelistPatterns: [
-      /^(is-|has-|will-|js-|fs-|feather-|word-|aos-|wp-|aspect-|embed-|tns-|alm-)/,
+      /^(is-|has-|will-|js-|fs-|feather-|word-|aos-|wp-|aspect-|pswp|embed-|tns-|alm-)/,
       /^rtl(-.*)?$/,
       /^home(-.*)?$/,
       /^blog(-.*)?$/,
