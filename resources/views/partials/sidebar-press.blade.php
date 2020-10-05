@@ -50,6 +50,14 @@
         array(
             "key"           =>  "taxonomy",
             "field_type"    =>  "radio",
+            "taxonomy"      =>  "issue",
+            "taxonomy_operator" =>  "IN",
+            "title"         =>  "Work",
+            "values"        =>  $work_values,
+        ),
+        array(
+            "key"           =>  "taxonomy",
+            "field_type"    =>  "radio",
             "taxonomy"      =>  "resource",
             "taxonomy_operator" =>  "IN",
             "title"         =>  "Resource Types",
