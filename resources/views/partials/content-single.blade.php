@@ -74,7 +74,7 @@
 
     @if (!is_singular('event'))
 
-    <div class="prose prose-sm sm:prose lg:prose-lg mx-auto">
+    <div class="prose prose-sm sm:prose lg:prose-lg">
       @php the_content() @endphp
     </div>
 
