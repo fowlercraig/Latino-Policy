@@ -4,9 +4,9 @@
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
     @include('people.people-header')
+
     <div class="container space-y-20">
-      @include('people.experts-filter')
-      @include('people.people-experts')
+      @include('people.experts-layout')
       @include('partials.back')
     </div>
   @endwhile
