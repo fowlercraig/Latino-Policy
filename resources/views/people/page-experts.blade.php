@@ -5,6 +5,7 @@
     @include('partials.page-header')
     @include('people.people-header')
     <div class="container space-y-20">
+      @include('people.experts-filter')
       @include('people.people-experts')
       @include('partials.back')
     </div>
