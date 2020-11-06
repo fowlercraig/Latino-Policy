@@ -30,56 +30,6 @@ export default {
 
     function build() {
 
-      /*eslint-disable */
-
-      //(function($) {
-      //  $(document).ready(function(){
-      //    var alm_is_animating = false; // Animating flag
-      //    $('.alm-filter-nav li').eq(0).addClass('text-red-600'); // Set initial active state
-//
-      //    // Btn Click Event
-      //    $('.alm-filter-nav li a').on('click', function(e){    
-      //      e.preventDefault();  
-      //      var el = $(this); // Our selected element     
-//
-      //      if(!el.hasClass('text-red-600') && !alm_is_animating){ // Check for active and !alm_is_animating  
-      //        alm_is_animating = true;   
-      //        el.parent().addClass('text-red-600').siblings('li').removeClass('text-red-600'); // Add active state
-//
-      //        var data = el.data(), // Get data values from selected menu item
-      //        transition = 'fade', // 'slide' | 'fade' | null
-      //        speed = '300'; //in milliseconds
-//
-      //        $.fn.almFilter(transition, speed, data); // Run the filter     
-      //      }      
-      //    });
-      //    $.fn.almFilterComplete = function(){      
-      //      alm_is_animating = false; // clear animating flag
-      //    };
-      //  })
-      //})(jQuery);
-
-      (function($) {
-        if ($('.alm-filter').hasClass('no-collapse')) {
-          } else {
-          var allPanels = $('.alm-filter ul').hide();
-            
-          $('.alm-filter .alm-filter--title').click(function() {
-              var $this = $(this);
-              var $target =  $this.next();
-
-              console.log($this);
-
-              if(!$target.hasClass('active')){
-                 allPanels.removeClass('active').hide();
-                 $target.addClass('active').show();
-              }
-              
-            return false;
-          });
-        }
-      })(jQuery);
-      /*eslint-enable */
 
       var initPhotoSwipeFromDOM = function(gallerySelector) {
 

@@ -54,6 +54,7 @@
             "taxonomy_operator" =>  "IN",
             "title"         =>  "Work",
             "values"        =>  $work_values,
+            "section_toggle" =>  "true",
         ),
         array(
             "key"           =>  "taxonomy",
@@ -62,6 +63,7 @@
             "taxonomy_operator" =>  "IN",
             "title"         =>  "Resource Types",
             "values"        =>  $resource_values,
+            "section_toggle" =>  "true",
         ),
         array(
             "key"           =>  "taxonomy",
@@ -70,6 +72,7 @@
             "taxonomy_operator" =>  "IN",
             "title"         =>  "Issues",
             "values"        =>  $issue_values,
+            "section_toggle" =>  "true",
         ),
         array(
             "key"           =>  "meta",
@@ -79,6 +82,7 @@
             "meta_type"     =>  "CHAR",
             "title"         =>  "Experts",
             "values"        =>  $values,
+            "section_toggle" =>  "true",
         )
     )
   );
