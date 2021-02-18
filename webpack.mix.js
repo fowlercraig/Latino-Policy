@@ -14,7 +14,7 @@ require('@tinypixelco/laravel-mix-wp-blocks');
 
 mix
   .setPublicPath('./public')
-  .browserSync('sage.test');
+  .browserSync('latino-policy.dev.cc');
 
 mix
   .sass('resources/styles/app.scss', 'styles')

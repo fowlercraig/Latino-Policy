@@ -1,8 +1,9 @@
 /**
  * External Dependencies
  */
-import 'jquery';
+import 'alpinejs'
+const feather = require('feather-icons')
 
 $(document).ready(() => {
-  // console.log('Hello world');
+  feather.replace()
 });

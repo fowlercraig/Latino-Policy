@@ -195,3 +195,21 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer'
     ] + $config);
 });
+
+// ACF Options Page
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page('Site Settings');
+}
+
+// Cookie Situation
+function cookie_redirect() {
+  $cookie_name = "thecookiemonster";
+  global $cookie;
+    if (!isset($_COOKIE[$cookie_name])) {
+      setcookie( $cookie_name, 1, time()+809600, SITECOOKIEPATH, COOKIE_DOMAIN, false, true);
+      $cookie = false;
+    } else {
+      $cookie = true;
+  }
+}
+add_action( 'init', __NAMESPACE__ . '\\cookie_redirect');
