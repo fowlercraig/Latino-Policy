@@ -5,7 +5,7 @@
   @set($modalState, 'true')
 @endif
 
-<div class="container" x-data="{ subscribe: {{ $modalState }} }">
+<div x-data="{ subscribe: {{ $modalState }} }">
 
   <a class="sr-only focus:not-sr-only" href="#main">
     {{ __('Skip to content') }}
@@ -13,7 +13,7 @@
 
   @include('partials.header')
 
-    <main id="main" class="py-8 prose max-w-none main">
+    <main id="main" class="max-w-none main text-gray-600 space-y-8 md:space-y-12 xl:space-y-20">
       @yield('content')
     </main>
 

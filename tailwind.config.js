@@ -1,7 +1,14 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: [],
+  purge: {
+    content: [
+      './app/**/*.php',
+      './resources/**/*.php',
+      './resources/**/*.vue',
+      './resources/**/*.js',
+    ],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     aspectRatio: {
@@ -11,6 +18,7 @@ module.exports = {
       4: '4',
       5: '5',
       6: '6',
+      7: '7',
       9: '9',
       16: '16',
       21: '21',
@@ -30,20 +38,32 @@ module.exports = {
         DEFAULT: {
           css: {
             color: '',
+            a: {
+              textDecoration: 'none',
+            },
             p: {
               color: '',
+              lineHeight: theme('lineHeight.normal'),
             },
             h1: {
               color: '',
+              lineHeight: theme('lineHeight.snug'),
+              letterSpacing: theme('letterSpacing.tight'),
             },
             h2: {
               color: '',
+              lineHeight: theme('lineHeight.snug'),
+              letterSpacing: theme('letterSpacing.tight'),
             },
             h3: {
               color: '',
+              lineHeight: theme('lineHeight.snug'),
+              letterSpacing: theme('letterSpacing.tight'),
             },
             h4: {
               color: '',
+              lineHeight: theme('lineHeight.snug'),
+              letterSpacing: theme('letterSpacing.tight'),
             },
           },
         },

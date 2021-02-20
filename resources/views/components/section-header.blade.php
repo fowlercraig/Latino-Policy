@@ -1,1 +1,8 @@
-<h2>{{ $title }}</h2>
+<section class="space-y-2">
+  <h2 class="tracking-tight font-bold text-4xl text-brand-dark">{{ $title }}</h2>
+  @include('components.button-animated-top',[
+    'cta'     =>'Read More', 
+    'classes' =>'', 
+    'url'     => '#'
+  ])
+</section>

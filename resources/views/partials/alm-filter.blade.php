@@ -32,7 +32,7 @@
     "filters" =>  array(
       array(
         "key"               =>  "taxonomy",
-        "field_type"        =>  "radio",
+        "field_type"        =>  "checkbox",
         "taxonomy"          =>  "resource",
         "taxonomy_operator" =>  "IN",
         "section_toggle"    =>  "true",
@@ -41,7 +41,7 @@
       ),
       array(
         "key"               =>  "taxonomy",
-        "field_type"        =>  "radio",
+        "field_type"        =>  "checkbox",
         "taxonomy"          =>  "issue",
         "taxonomy_operator" =>  "IN",
         "title"             =>  "Issues",
@@ -51,8 +51,8 @@
       array(
         "key"               =>  "meta",
         "field_type"        =>  "radio",
-        "meta_key"          =>  "people",
-        "meta_operator"     =>  "IN",
+        "meta_key"          =>  "contributors",
+        "meta_operator"     =>  "LIKE",
         "meta_type"         =>  "CHAR",
         "acf"               =>  true,
         "title"             =>  "Experts",

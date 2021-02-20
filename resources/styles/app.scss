@@ -1,4 +1,26 @@
 @import 'tailwindcss/base';
+@import url(~aos/dist/aos.css);
+
+@font-face {
+  font-family: 'Primary-A';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/lppi-font-a.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Primary-B';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/lppi-font-b.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Primary-C';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/lppi-font-c.woff') format('woff');
+}
 
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';

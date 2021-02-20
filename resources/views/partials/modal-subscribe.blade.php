@@ -7,7 +7,8 @@
   x-transition:leave="ease-in duration-200"
   x-transition:leave-start="opacity-100"
   x-transition:leave-end="opacity-0"
-  class="fixed inset-0 bg-black bg-opacity-25 flex items-center justify-center z-50">
+  class="fixed inset-0 flex items-center justify-center z-50">
+  <div @click="subscribe = false" class="absolute inset-0 bg-black bg-opacity-25"></div>
   <div class="bg-white w-full max-w-4xl rounded shadow-xl relative flex">
     <button @click="subscribe = false" class="p-4 absolute right-0">
       <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
