@@ -6,7 +6,7 @@
 
 @hasposts
   <section>
-    <div class="-mt-40 mb-2">
+    <div class="md:-mt-40">
       <ul class="carousel">
         @posts
           <li>@include('components.item-hero')</li>

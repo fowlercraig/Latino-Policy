@@ -1,4 +1,4 @@
-<div class="py-8 md:py-12 xl:py-20 bg-brand-lightest container">
+<div class="py-5 md:py-12 xl:py-20 bg-brand-lightest container">
   <div class="mb-4">
     <div class="h-0.5 w-32 bg-red-600"></div>
   </div>
@@ -10,12 +10,12 @@
       </div>
     </div>
     <div>
-      <ul class="grid grid-cols-4 gap-2">
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-2">
         @set($numbers, array(10, 25, 50, 100, 250, 500, 750, 1000))
         @foreach($numbers as $number)
         @set($url,'https://giving.ucla.edu/campaign/?amount='.$number.'&OrgType=S&OrgNum=800&fund=63922O')
-          <li class="tracking-tight text-brand-dark font-bold text-3xl xl:text-3xl leading-7 xl:leading-none font-primary-a uppercase">
-            <a target="blank" href="{!!$url!!}" class="p-6 shadow-sm hover:shadow-xl transition ease duration-300 bg-white block rounded">
+          <li class="tracking-tight text-brand-dark font-bold text-2xl md:text-3xl xl:text-3xl leading-7 xl:leading-none font-primary-a uppercase">
+            <a target="blank" href="{!!$url!!}" class="p-3 md:p-6 shadow-sm hover:shadow-xl transition ease duration-300 bg-white block rounded">
               <span class="block text-center">${{$number}}</span>
             </a>
           </li>

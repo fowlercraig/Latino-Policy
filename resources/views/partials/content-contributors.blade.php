@@ -1,8 +1,6 @@
 @set($terms, get_the_terms( $post->ID , 'issue', 'string'))
 @set($term_ids, wp_list_pluck($terms,'term_id'))
 
-{{ var_dump($term_ids) }}
-
 @query([
   'post_type'       => 'people',
   'posts_per_page'  => 6,

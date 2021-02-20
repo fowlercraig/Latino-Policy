@@ -1,8 +1,8 @@
 @set($title,'Voting Rights Project')
-@set($desc,'The UCLA Voting Rights Project is the flagship project of the UCLA Latino Policy & Politics Initiative aimed at creating an accessible and equitable system of voting for all Americans through impact litigation, research, and clinical education to expand access to the ballot box.')
+@set($desc,'<p>The UCLA Voting Rights Project is the flagship project of the UCLA Latino Policy & Politics Initiative aimed at creating an accessible and equitable system of voting for all Americans through impact litigation, research, and clinical education to expand access to the ballot box.</p>')
 
 <section>
-  <div class="container bg-black pr-0">
+  <div class="container bg-black pr-0" data-aos="fade-up">
     <div class="text-white flex flex-wrap items-center">
       <div class="w-full md:w-1/3 md:order-last h-64 md:h-auto">
         @image(3549, 'full', ['alt' => 'Voting Rights Project', 'class' => 'w-full h-full object-cover'])

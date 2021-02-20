@@ -20,15 +20,18 @@
       </div>
       <div>
         @include('components.button-animated',[
-          'cta'=>'Learn More', 
-          'url'=>get_the_permalink()
+          'cta'     =>'Learn More', 
+          'classes' =>'',
+          'url'      =>get_the_permalink()
         ])
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-4 md:gap-6">
-      @posts
-        <a href="@permalink" class="p-6 bg-gray-100 hover:bg-gray-200">@title</a>
-      @endposts
+    <div>
+      <div class="grid grid-cols-2 gap-2 md:gap-4">
+        @posts
+          <a href="@permalink" class="p-6 bg-gray-100 hover:bg-gray-200">@title</a>
+        @endposts
+      </div>
     </div>
   </div>
 </div>

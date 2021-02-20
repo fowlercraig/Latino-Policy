@@ -1,7 +1,7 @@
 @set($title, get_bloginfo('description'))
-@set($desc,'The UCLA Latino Policy & Politics Initiative addresses the most critical domestic policy challenges facing Latinos and other communities of color through research, advocacy, mobilization, and leadership development to expand genuine opportunity for all Americans.')
+@set($desc,'<p>The UCLA Latino Policy & Politics Initiative addresses the most critical domestic policy challenges facing Latinos and other communities of color through research, advocacy, mobilization, and leadership development to expand genuine opportunity for all Americans.</p>')
 
-<section class="bg-brand-darker pt-8 md:pt-12 xl:pt-20 overflow-hidden">
+<section class="bg-brand-darker pt-6 md:pt-12 xl:pt-20 overflow-hidden">
   <div class="container">
     <div class="text-white grid md:grid-cols-3 gap-6 items-center 2xl:items-start">
       <div class="space-y-4 relative z-20">

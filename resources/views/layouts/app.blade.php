@@ -13,7 +13,7 @@
 
   @include('partials.header')
 
-    <main id="main" class="max-w-none main text-gray-600 space-y-8 md:space-y-12 xl:space-y-20">
+    <main id="main" class="max-w-none main text-gray-600 space-y-5 md:space-y-12 xl:space-y-20">
       @yield('content')
     </main>
 
