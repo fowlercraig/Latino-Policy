@@ -4,9 +4,7 @@
   @while(have_posts()) @php(the_post())
     @include('partials.page-header')
     @include('partials.page-blocks')
-    @include('partials.about-work')
-    @include('partials.about-impact')
-    @include('components.divider')
-    @include('partials.about-history')
+    @include('partials.list-people',['title'=>'Current Fellows','role'=>'fellows','limit'=>8])
+    @include('partials.info-blocks')
   @endwhile
 @endsection

@@ -4,7 +4,7 @@
   >
   <div class="container">
     <div 
-      class="h-16 md:h-28 md:border-b border-opacity-25 flex justify-between items-center"
+      class="h-16 md:h-24 md:border-b border-opacity-25 flex justify-between items-center"
       @if(is_front_page())
         :class="{ 'border-gray-400': menu, 'border-white': !menu }"
       @else

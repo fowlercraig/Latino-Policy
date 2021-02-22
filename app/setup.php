@@ -65,7 +65,8 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
-        'social_navigation' => __('Social Navigation', 'sage')
+        'social_navigation' => __('Social Navigation', 'sage'),
+        'people_navigation' => __('People Navigation', 'sage')
     ]);
 
     /**
@@ -180,10 +181,10 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
+        'before_widget' => '<section class="widget prose text-sm %1$s %2$s">',
         'after_widget' => '</section>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
+        'before_title' => '<h4 class="text-brand-dark">',
+        'after_title' => '</h4>'
     ];
 
     register_sidebar([
@@ -214,3 +215,18 @@ function cookie_redirect() {
   }
 }
 add_action( 'init', __NAMESPACE__ . '\\cookie_redirect');
+
+add_filter( 'get_the_archive_title', function ($title) {    
+if ( is_category() ) {    
+$title = single_cat_title( '', false );    
+} elseif ( is_tag() ) {    
+$title = single_tag_title( '', false );    
+} elseif ( is_author() ) {    
+$title = '<span class="vcard">' . get_the_author() . '</span>' ;    
+} elseif ( is_tax() ) { //for custom post types
+$title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
+} elseif (is_post_type_archive()) {
+$title = post_type_archive_title( '', false );
+}
+return $title;    
+});

@@ -1,8 +1,10 @@
-<section class="space-y-2">
-  <h2 class="tracking-tight font-bold text-2xl sm:text-4xl text-brand-dark">{{ $title }}</h2>
-  @include('components.button-animated-top',[
+<section>
+  <div class="prose prose-sm sm:prose md:prose-2xl">
+    <h2 class="text-brand-dark">{{ $title }}</h2>
+  </div>
+  {{-- @include('components.button-animated-top',[
     'cta'     =>'Read More', 
     'classes' =>'', 
     'url'     => '#'
-  ])
+  ]) --}}
 </section>

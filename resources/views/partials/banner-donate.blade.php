@@ -1,4 +1,4 @@
-<div class="py-5 md:py-12 xl:py-20 bg-brand-lightest container">
+<div class="py-5 md:py-12 xl:py-20 bg-gray-100 container">
   <div class="mb-4">
     <div class="h-0.5 w-32 bg-red-600"></div>
   </div>

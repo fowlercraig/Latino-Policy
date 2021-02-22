@@ -9,11 +9,11 @@
   {{-- Spacer --}}
   <div class="h-2"></div>
   {{-- Latest Research --}}
-  @include('partials.list-research')
+  @include('partials.list-research',['title'=>'Recent Projects & Reports'])
   {{-- Spacer --}}
   <div class="h-0 md:h-12 xl:h-20"></div>
   {{-- Voting Rights Project Banner --}}
-  @include('partials.vrp-banner')
+  @include('partials.banner-vrp')
   {{-- Spacer --}}
   <div class="h-5 md:h-12 xl:h-20"></div>
   {{-- Latest News --}}
@@ -21,7 +21,7 @@
   {{-- Spacer --}}
   <div class="h-5 md:h-12 xl:h-20"></div>
   {{-- Donation Banner --}}
-  @include('partials.donate-banner',[
+  @include('partials.banner-donate',[
     'title' =>'Join Us in Expanding <br> Opportunity for All Americans',
     'desc'  =>'<p>Your gift will help us inform meaningful policy change that improves the economic, political, and social landscape for Latinos and other communities of color.</p>'
   ])

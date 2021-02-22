@@ -43,7 +43,6 @@ module.exports = {
             },
             p: {
               color: '',
-              lineHeight: theme('lineHeight.normal'),
             },
             h1: {
               color: '',
@@ -95,6 +94,7 @@ module.exports = {
       display: ['responsive', 'hover', 'focus', 'group-hover'],
       width: ['responsive', 'hover', 'focus', 'group-hover'],
       borderWidth: ['responsive', 'hover', 'focus', 'group-hover','last'],
+      space: ['hover', 'focus'],
     },
   },
   plugins: [
