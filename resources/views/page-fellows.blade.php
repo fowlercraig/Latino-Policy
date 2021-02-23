@@ -3,6 +3,7 @@
 @section('content')
   @while(have_posts()) @php(the_post())
     @include('partials.page-header')
-    @includeFirst(['partials.content-page', 'partials.content'])
+    @include('partials.list-fellows-current')
+    @include('partials.list-fellows-past')
   @endwhile
 @endsection
