@@ -34,7 +34,12 @@
       @includeFirst(['components.filter-'.$section])
       <div id="isotope" class="isotope flex flex-wrap -m-2 md:-m-3 xl:-m-5">
         @posts
-          <div class="iso-person w-1/4 p-2 md:p-3 xl:p-5 filter-{{ preg_replace('/\s*/', '', $filter) }}">
+          @notempty($in)
+            @set($filter,get_field('title'))
+          @else
+            @set($filter,get_field('graduation_year'))
+          @endnotempty
+          <div class="iso-person w-1/4 p-2 md:p-3 xl:p-5 filter-{!! preg_replace('/\s*/', '', $filter) !!}">
             @include('components.item-people')
           </div>
         @endposts
