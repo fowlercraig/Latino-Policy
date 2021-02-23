@@ -1,4 +1,4 @@
-@if(!is_archive())
+@notempty($post->post_parent)
   @set($parent, $post->post_parent)
   @if($parent)
     <div class="font-medium prose">
@@ -8,4 +8,4 @@
       </a>
     </div>
   @endif
-@endif
+@endnotempty

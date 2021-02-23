@@ -1,1 +1,1 @@
-Related Content goes here.
+<div>Related Content goes here.</div>

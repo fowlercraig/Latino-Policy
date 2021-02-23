@@ -1,1 +1,5 @@
-<hr class="border-0 h-px bg-gray-100" />
+@empty($classes)
+  @set($classes,'bg-gray-100')
+@endempty
+
+<hr class="border-0 h-px {{ $classes }}" />

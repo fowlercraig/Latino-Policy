@@ -19,7 +19,7 @@
   @include('components.section-header',['title'=>'Related Content'])
   <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
     @posts
-      @includeFirst(['components.item-'.get_post_type(), 'components.item-research'])
+      @includeFirst(['components.item-'.get_post_type(), 'components.item-people'])
     @endposts
   </div>
 @endhasposts
