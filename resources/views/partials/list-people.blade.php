@@ -1,18 +1,20 @@
 @empty($limit)
-   @set($limit,4)
+  @set($limit,4)
 @endempty
+
+@empty($ids)
+  @set($ids,'')
+@endempty
+
+@notempty($role)
+  
+@endnotempty
 
 @query([
   'post_type'       => array('people'),
   'posts_per_page'  => $limit,
+  'post__in'        => $ids,
   'order'           => 'DESC',
-  'tax_query'      => array(
-    array(
-      'taxonomy' => 'role',
-      'field'    => 'slug',
-      'terms'    => $role,
-      'operator' => 'IN'
-     )),
 ])
 
 @hasposts

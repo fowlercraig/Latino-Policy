@@ -77,6 +77,9 @@ module.exports = {
           'lightest': '#dce3e9',
         }
       },
+      spacing: {
+        'header': '400px',
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         'primary-a': ['Primary-A','Inter var', ...defaultTheme.fontFamily.sans],

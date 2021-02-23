@@ -1,8 +1,10 @@
+@set($people,3709)
+
 @extends('layouts.app')
 
 @section('content')
   @include('partials.page-header')
-  @include('partials.list-people',['title'=>'Featured Staff','role'=>'staff'])
+  @include('partials.list-people',['title'=>'Featured Staff','ids'=>get_field('staff',$people)])
   @include('components.divider')
   @include('partials.list-people',['title'=>'Featured Experts','role'=>'experts'])
   @include('components.divider')
