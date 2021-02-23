@@ -1,5 +1,6 @@
 <article @php(post_class('space-y-5 md:space-y-12 xl:space-y-20'))>
-  <div class="bg-brand-lighter py-5 md:py-12 xl:py-20 bg-brand-lightest">
+  <div class="bg-brand-dark text-brand-lighter md:pt-12 md:-mt-12 ">
+    <div class="h-px bg-white opacity-10"></div>
     <header class="container grid sm:grid-cols-2 gap-5 md:gap-10">
       <div class="md:order-last -mx-4 -mt-5 md:mx-0">
         <div class="aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 bg-brand-dark relative sticky top-10">
@@ -11,7 +12,7 @@
       </div>
       <div class="space-y-4">
         @includeFirst(['components.eyebrow-'.get_post_type(), 'components.eyebrow'])
-        <h1 class="tracking-tight font-bold text-4xl sm:text-5xl text-brand-dark">{!! $title !!}</h1>
+        <h1 class="tracking-tight font-bold text-4xl sm:text-5xl text-white">{!! $title !!}</h1>
         @include('partials/entry-meta')
         @excerpt
         @include('components.divider')

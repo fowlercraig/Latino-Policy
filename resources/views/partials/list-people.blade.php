@@ -1,6 +1,10 @@
+@empty($limit)
+   @set($limit,4)
+@endempty
+
 @query([
   'post_type'       => array('people'),
-  'posts_per_page'  => 4,
+  'posts_per_page'  => $limit,
   'order'           => 'DESC',
   'tax_query'      => array(
     array(
