@@ -5,7 +5,7 @@
 @hasfields('related_research')
   @set($posts_in, get_field('related_research'))
 @else
-  @set($posts_in, ''))
+  @set($posts_in, '')
 @endhasfields
 
 @query([

@@ -39,8 +39,10 @@
   <footer>
     <div class="container space-y-5 md:space-y-12 xl:space-y-20">
       @include('components.divider')
-      @includeFirst(['partials.content-related-'.get_post_type(), 'partials.content-related'])
-      @includeFirst(['partials.content-realted-'.get_post_type(), 'partials.content-contributors'])
+      @include('partials.content-related')
+      @include('partials.content-contributors')
+      {{-- @includeFirst(['partials.content-related-'.get_post_type(), 'partials.content-related'])
+      @includeFirst(['partials.content-related-'.get_post_type(), 'partials.content-contributors']) --}}
     </div>
   </footer>
 
