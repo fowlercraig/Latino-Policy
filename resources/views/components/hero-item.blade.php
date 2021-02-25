@@ -10,7 +10,7 @@
     <div class="container">
       <div class="prose prose-sm sm:prose mb-6 text-white">
         <h4>@sub('subtitle')</h4>
-        <h1 class="tracking-tight">@sub('title')</h1>
+        <h1 class="tracking-tight"><span class="font-bold">@sub('title')</span></h1>
         <p class="opacity-75">@sub('description')</p>
       </div>
       @hasfield('link')

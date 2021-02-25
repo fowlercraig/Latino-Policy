@@ -82,7 +82,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        'primary-a': ['Primary-A','Inter var', ...defaultTheme.fontFamily.sans],
+        'primary-a': ['aktiv-grotesk-condensed','Inter var', ...defaultTheme.fontFamily.sans],
         'primary-b': ['Primary-B','Inter var', ...defaultTheme.fontFamily.sans],
         'primary-c': ['Primary-C','Inter var', ...defaultTheme.fontFamily.sans],
       },
