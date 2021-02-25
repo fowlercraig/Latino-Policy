@@ -36,5 +36,9 @@
   }
 }
 
+.container {
+  @apply max-w-screen-2xl;
+}
+
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';

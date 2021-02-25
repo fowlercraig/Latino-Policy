@@ -2,13 +2,15 @@
   
   <header class="bg-brand-dark text-brand-lighter md:pt-12 md:-mt-12">
     <div class="h-px bg-white opacity-10"></div>
-    <div class="container pt-6 grid sm:grid-cols-2 gap-5 md:gap-10">
+    <div class="container pt-6 grid lg:grid-cols-2 gap-5 md:gap-10">
 
-      <div class="shadow-xl md:order-last">
-        @image(get_post_thumbnail_id(), 'large', ['alt' => ' ', 'class' => 'w-full h-full object-cover'])
+      <div class="lg:order-last">
+        <div class="shadow-xl">
+          @image(get_post_thumbnail_id(), 'large', ['alt' => ' ', 'class' => 'w-full h-full object-cover'])
+        </div>
       </div>
 
-      <div class="space-y-4">
+      <div class="space-y-4 pb-6">
         @includeFirst(['components.eyebrow-'.get_post_type(), 'components.eyebrow'])
         <div class="prose prose-sm sm:prose md:prose-lg mx-auto sm:mx-auto">
           <h1 class="tracking-tight text-white">

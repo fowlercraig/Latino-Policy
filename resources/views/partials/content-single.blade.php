@@ -1,40 +1,47 @@
 <article @php(post_class('space-y-5 md:space-y-12 xl:space-y-20'))>
-  <div class="bg-brand-dark text-brand-lighter md:pt-12 md:-mt-12 ">
+  
+  <header class="bg-brand-dark text-brand-lighter md:pt-12 md:-mt-12">
     <div class="h-px bg-white opacity-10"></div>
-    <header class="container grid sm:grid-cols-2 gap-5 md:gap-10">
-      <div class="md:order-last -mx-4 -mt-5 md:mx-0">
-        <div class="aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 bg-brand-dark relative sticky top-10">
-          <div class="absolute inset-0">
-            @set($image, get_post_thumbnail_id())
-            @image($image, 'large', ['alt' => ' ', 'class' => 'w-full h-full object-cover'])
-          </div>
+    <div class="container pt-6 grid lg:grid-cols-2 gap-5 md:gap-10">
+
+      <div class="lg:order-last">
+        <div class="shadow-xl">
+          @image(get_post_thumbnail_id(), 'large', ['alt' => ' ', 'class' => 'w-full h-full object-cover'])
         </div>
       </div>
-      <div class="space-y-4">
+
+      <div class="space-y-4 pb-6">
         @includeFirst(['components.eyebrow-'.get_post_type(), 'components.eyebrow'])
-        <h1 class="tracking-tight font-bold text-4xl sm:text-5xl text-white">{!! $title !!}</h1>
+        <div class="prose prose-sm sm:prose md:prose-lg mx-auto sm:mx-auto">
+          <h1 class="tracking-tight text-white">
+            <span class="leading-none block">{!! $title !!}</span>
+          </h1>
+        </div>
         @include('partials/entry-meta')
         @excerpt
-        @include('components.divider')
+        @include('components.divider',['classes'=>'bg-white opacity-20'])
         @includeFirst(['components.entry-contributors-'.get_post_type(), 'components.entry-contributors'])
-        @include('components.divider')
-        @includeFirst(['components.entry-downloads-'.get_post_type(), 'components.entry-downloads'])
-        @include('components.divider')
       </div>
-    </header>
-  </div>
 
-  <div class="container space-y-12">
-    <div class="entry-content prose">
+    </div>
+  </header>
+
+  <div class="container grid sm:grid-cols-2 gap-5 md:gap-10">
+    <div class="prose entry-content max-w-full space-y-4">
       @php(the_content())
     </div>
-
-    <footer>
-      {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-    </footer>
-
-    {{-- @includeFirst(['partials.content-related-'.get_post_type(), 'partials.content-related']) --}}
-    {{-- @includeFirst(['partials.content-realted-'.get_post_type(), 'partials.content-contributors']) --}}
+    <div class="prose entry-content max-w-full space-y-10">
+      @include('partials.research-moreinfo')
+      @include('partials.event-downloads')
+    </div>
   </div>
-  
+
+  <footer>
+    <div class="container space-y-5 md:space-y-12 xl:space-y-20">
+      @include('components.divider')
+      @includeFirst(['partials.content-related-'.get_post_type(), 'partials.content-related'])
+      @includeFirst(['partials.content-realted-'.get_post_type(), 'partials.content-contributors'])
+    </div>
+  </footer>
+
 </article>
