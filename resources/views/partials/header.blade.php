@@ -13,10 +13,10 @@
       >
       <a class="brand" href="{{ home_url('/') }}">
         @if(is_front_page())
-          <img :class="{ 'hidden': menu, 'block': !menu }" class="h-10 sm:h-16 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_wht.svg')" alt="{!! $siteName !!}">
-          <img :class="{ 'block': menu, 'hidden': !menu }" class="h-10 sm:h-16 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')" alt="{!! $siteName !!}">
+          <div :class="{ 'hidden': menu, 'block': !menu }">@svg('images/Bxd_Blk_LPPI_Luskin_wht.svg', 'h-10 sm:h-16 w-auto', ['aria-label' => $siteName])</div>
+          <div :class="{ 'block': menu, 'hidden': !menu }">@svg('images/Bxd_Blk_LPPI_Luskin_D.svg', 'h-10 sm:h-16 w-auto', ['aria-label' => $siteName])</div>
         @else
-          <img class="h-10 sm:h-16 w-auto" src="@asset('images/Bxd_Blk_LPPI_Luskin_D.svg')" alt="{!! $siteName !!}">
+          @svg('images/Bxd_Blk_LPPI_Luskin_D.svg', 'h-10 sm:h-16 w-auto', ['aria-label' => $siteName])
         @endif
       </a>
       @include('partials.sm-menu')
