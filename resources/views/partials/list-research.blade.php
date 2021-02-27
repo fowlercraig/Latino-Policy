@@ -1,7 +1,12 @@
+@empty($ids)
+  @set($ids,'')
+@endempty
+
 @query([
   'post_type'       => array('research'),
   'posts_per_page'  => 4,
   'order'           => 'DESC',
+  'post__in'        => $ids
 ])
 
 @hasposts

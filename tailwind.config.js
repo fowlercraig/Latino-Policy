@@ -78,7 +78,7 @@ module.exports = {
         }
       },
       spacing: {
-        'header': '400px',
+        'header': '375px',
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],

@@ -11,9 +11,9 @@
     <div class="text-base">@sub('description')</div>
     @hassub('link')
       @include('components.button-animated',[
-        'cta'=>'Learn More', 
-        'classes'=>'', 
-        'url'=>'#'
+        'cta'     => get_sub_field('link')['title'],
+        'classes' => '', 
+        'url'     => get_sub_field('link')['url']
       ])
     @endsub
   </div>

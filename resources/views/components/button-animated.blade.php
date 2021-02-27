@@ -1,3 +1,7 @@
+@empty($url)
+  @set($url,'#')
+@endempty
+
 <a class="font-medium inline-block space-y-1 group text-sm sm:text-base no-underline {{ $classes }}" href="{{ $url }}">
   <span class="block order-last">{{ $cta }}</span>
   <div class="relative bg-brand-lighter">
