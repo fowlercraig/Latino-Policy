@@ -21,7 +21,14 @@
       </a>
       @include('partials.sm-menu')
       <div class="hidden md:block space-y-2 text-right">
-        <div class="text-sm font-medium tracking-tight flex items-center space-x-2 text-gray-600">
+        <div 
+          class="text-sm font-medium tracking-tight flex items-center space-x-2"
+          @if(is_front_page())
+            :class="{ 'text-gray-600': menu, 'text-white': !menu }"
+          @else
+            :class="{ 'text-gray-600': menu, 'text-gray-600': !menu }"
+          @endif
+          >
           <a class="hover:underline" href="/research">Research Library</a>
           <a class="hover:underline" href="/press">Press Archive</a>
           <span class="opacity-30">|</span>
