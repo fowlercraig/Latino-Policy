@@ -15,6 +15,11 @@
         <div class="prose prose-sm sm:prose md:prose-lg">
           <h2 class="text-brand-dark">@title</h2>
           <div class="text-base">@excerpt</div>
+          @include('components.button-animated',[
+            'cta'=> 'Learn More', 
+            'classes' => '',
+            'url'=> get_permalink() 
+          ])
         </div>
       </div>
     @endposts

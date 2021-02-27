@@ -1,7 +1,23 @@
+@empty($tax)
+  @set($tax,'')
+  @set($tax_terms,'')
+@else
+  @php
+    $tax_terms = array(
+      array(
+        'taxonomy' => 'issue',
+        'terms'    => $tax,
+        'operator' => 'IN' //Or 'AND' or 'NOT IN'
+      )
+    )
+  @endphp
+@endempty  
+
 @query([
   'post_type'       => 'press',
   'posts_per_page'  => 4,
   'order'           => 'DESC',
+  'tax_query'       => $tax_terms
 ])
 
 @hasposts
