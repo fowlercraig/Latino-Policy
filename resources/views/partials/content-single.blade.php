@@ -41,8 +41,6 @@
       @include('components.divider')
       @include('partials.content-related')
       @include('partials.content-contributors')
-      {{-- @includeFirst(['partials.content-related-'.get_post_type(), 'partials.content-related'])
-      @includeFirst(['partials.content-related-'.get_post_type(), 'partials.content-contributors']) --}}
     </div>
   </footer>
 

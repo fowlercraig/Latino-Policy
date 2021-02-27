@@ -9,7 +9,7 @@
 @endhasfields
 
 @query([
-  'post_type'       => $posttype,
+  'post_type'       => 'research',
   'posts_per_page'  => 4,
   'order'           => 'ASC',
   'post__in'        => $posts_in,
