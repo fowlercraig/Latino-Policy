@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  @if( is_archive('people') || $post->post_parent == '3709' )
+  @if( is_archive('people') || is_page(3709) )
     @include('partials.page-header-people')
   @endif
 </div>
