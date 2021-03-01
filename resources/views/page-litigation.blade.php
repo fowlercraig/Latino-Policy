@@ -3,6 +3,7 @@
 @section('content')
   @while(have_posts()) @php(the_post())
     @include('partials.page-header')
-    @includeFirst(['partials.content-page', 'partials.content'])
+    @include('partials.list-litigation',['title'=>'Recent Litigation', 'ids' => get_field('recent_litigation')])
+    @include('partials.list-litigation',['title'=>'Past Litigation', 'ids' => get_field('past_litigation')])
   @endwhile
 @endsection

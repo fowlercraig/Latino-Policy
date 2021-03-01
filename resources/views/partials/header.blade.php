@@ -1,5 +1,5 @@
 <header 
-  class="banner relative z-40" x-data="{ menu: null }" @keydown.window.escape="menu = false" @mouseleave="menu = false"
+  class="banner relative z-40" x-data="{ menu: null }" @keydown.window.escape="menu = false" @mouseleave="setTimeout(() => menu = false, 100)"
   :class="{ 'bg-white text-gray-700': menu, 'bg-transparent text-white': !menu }"
   >
   <div class="container">
