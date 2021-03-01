@@ -2,6 +2,10 @@
   @set($url,'#')
 @endempty
 
+@empty($classes)
+  @set($classes,'')
+@endempty
+
 @empty($target)
   @set($target,'_self')
 @endempty

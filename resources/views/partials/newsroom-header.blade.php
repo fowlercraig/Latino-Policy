@@ -5,7 +5,7 @@
   'order'           => 'ASC',
 ])
 
-<div class="bg-brand-darker text-brand-lighter pt-6">
+<div class="bg-brand-darker text-brand-lighter pt-6 pb-12 2xl:pb-0 relative">
   <div class="container">
     <div class="carousel">
       @posts
@@ -35,6 +35,18 @@
           </div>
         </div>
       @endposts
+    </div>
+  </div>
+  <div class="absolute bottom-0 w-full">
+    <div class="container flex">
+      <button class="h-12 w-12 bg-brand flex items-center justify-center bg-opacity-75 hover:bg-opacity-50 transition ease duration-300">
+        <i height="20px" width="20px" data-feather="chevron-left"></i>
+        <span class="sr-only">Previous Slide</span>
+      </button>
+      <button class="h-12 w-12 bg-brand flex items-center justify-center bg-opacity-full hover:bg-opacity-50 transition ease duration-300">
+        <i height="20px" width="20px" data-feather="chevron-right"></i>
+        <span class="sr-only">Next Slide</span>
+      </button>
     </div>
   </div>
 </div>
