@@ -13,6 +13,7 @@
       @include('components.button-animated',[
         'cta'     => get_sub_field('link')['title'],
         'classes' => '', 
+        'target'  => get_sub_field('link')['target'], 
         'url'     => get_sub_field('link')['url']
       ])
     @endsub
