@@ -6,16 +6,28 @@
   @set($ids,'')
 @endempty
 
-@notempty($role)
-  
-@endnotempty
+@empty($role)
+  @set($role,'')
+  @set($role_terms,'')
+@else
+  @php
+    $role_terms = array(
+      array(
+        'taxonomy' => 'role',
+        'field' => 'slug',
+        'terms' => $role,
+      )
+    )
+  @endphp
+@endempty  
 
 @query([
   'post_type'       => array('people'),
   'posts_per_page'  => $limit,
   'post__in'        => $ids,
-  'orderby'         => 'menu_order', 
-  'order'           => 'ASC', 
+  'order'           => 'ASC',
+  'orderby'         => 'menu_order',
+  'tax_query'       => $role_terms
 ])
 
 @hasposts
