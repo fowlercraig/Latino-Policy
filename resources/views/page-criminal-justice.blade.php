@@ -5,7 +5,7 @@
     @include('partials.page-header')
     @include('partials.page-stats')
     @include('partials.list-research',['title'=>'Featured Projects', 'ids'=> get_field('reports')])
-    @include('partials.list-news',['title'=>'News & Press', 'tax'=>'mobility-opportunity'])
+    @include('partials.list-news',['title'=>'News & Press', 'tax'=>'criminal-justice'])
     @include('partials.list-people',['title'=>'Featured Experts','role'=>'experts', 'ids'=> get_field('experts') ])
     @include('partials.banner-research')
   @endwhile

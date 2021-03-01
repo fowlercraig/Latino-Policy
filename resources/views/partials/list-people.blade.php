@@ -14,7 +14,8 @@
   'post_type'       => array('people'),
   'posts_per_page'  => $limit,
   'post__in'        => $ids,
-  'order'           => 'DESC',
+  'orderby'         => 'menu_order', 
+  'order'           => 'ASC', 
 ])
 
 @hasposts

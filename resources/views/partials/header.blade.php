@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <div class="hidden md:block relative">
+  <div id="header" class="hidden md:block relative w-full">
     <div class="container">
       <div class="h-12 flex items-center justify-between">
         <nav class="nav-primary flex items-center space-x-3 lg:space-x-4 text-sm font-primary-c uppercase tracking-wider">
@@ -82,3 +82,29 @@
     </div>
   </div>
 </header>
+
+<script>
+  var h = document.getElementById("header");
+  var stuck = false;
+  var stickPoint = getDistance();
+
+  function getDistance() {
+    var topDist = h.offsetTop;
+    return topDist;
+  }
+
+  window.onscroll = function(e) {
+    var distance = getDistance() - window.pageYOffset;
+    var offset = window.pageYOffset;
+    if ( (distance <= 0) && !stuck) {
+      h.style.position = 'fixed';
+      h.style.top = '0px';
+      h.classList.add('bg-white', 'text-gray-600');
+      stuck = true;
+    } else if (stuck && (offset <= stickPoint)){
+      h.style.position = 'relative';
+      h.classList.remove('bg-white', 'text-gray-600');
+      stuck = false;
+    }
+  }
+</script>

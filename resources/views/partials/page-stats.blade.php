@@ -12,7 +12,7 @@
               </div>
             </div>
           </div>
-          <div class="prose prose-sm sm:prose p-3 md:p-6 bg-brand-lightest">@sub('description')</div>
+          <div class="text-sm sm:text-base md:text-lg xl:text-xl text-brand-dark p-3 md:p-6 bg-brand-lightest">@sub('description')</div>
         </div>
       @endfields
     </ul>

@@ -7,8 +7,8 @@
   </div>
   @if($url)
     @include('components.button-animated-top',[
-      'cta'     =>'Read More', 
-      'classes' =>'', 
+      'cta'     => 'Read More', 
+      'classes' => '', 
       'url'     => $url
     ])
   @endif

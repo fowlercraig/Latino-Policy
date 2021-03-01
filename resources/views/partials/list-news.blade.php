@@ -6,12 +6,16 @@
     $tax_terms = array(
       array(
         'taxonomy' => 'issue',
-        'terms'    => $tax,
-        'operator' => 'IN' //Or 'AND' or 'NOT IN'
+        'field' => 'slug',
+        'terms' => $tax,
       )
     )
   @endphp
 @endempty  
+
+@empty($title)
+  @set($title, 'Recent News & Press')
+@endempty
 
 @query([
   'post_type'       => 'press',
@@ -24,9 +28,9 @@
   <section>
     <div class="container space-y-6">
       @include('components.section-header',[
-        'title'     =>'Recent News & Press',
-        'btnLabel'  =>'Visit the Newsroom',
-        'btnLink'   =>'/newsroom',
+        'title'     => $title,
+        'btnLabel'  => 'Visit the Newsroom',
+        'btnLink'   => '/newsroom',
       ])
       <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-10">
         @posts
