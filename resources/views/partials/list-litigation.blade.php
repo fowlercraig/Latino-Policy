@@ -14,11 +14,13 @@
       @include('components.section-header',['title'=>$title])
       <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 xl:gap-10">
         @posts
-          <div class="border-b border-gray-100 pb-4 md:pb-6 xl:pb-10">
+          <div class="border-b border-gray-100 pb-4 md:pb-6 xl:pb-10 space-y-2">
             <div class="text-sm text-brand font-medium">@published</div>
-            <div class="prose">
-              <h3 class="text-brand-dark">@title</h3>
-            </div>
+            <a href="@permalink" class="prose block">
+              <h3 class="text-brand-dark">
+                @title
+              </h3>
+            </a>
           </div>
         @endposts
       </div>

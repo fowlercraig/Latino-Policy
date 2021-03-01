@@ -13,14 +13,29 @@
   @endphp
 @endempty  
 
+@empty($resource)
+  @set($resource,'')
+  @set($tax_terms,'')
+@else
+  @php
+    $tax_terms = array(
+      array(
+        'taxonomy' => 'resource',
+        'field' => 'slug',
+        'terms' => $resource,
+      )
+    )
+  @endphp
+@endempty  
+
 @empty($title)
   @set($title, 'Recent News & Press')
 @endempty
 
 @query([
-  'post_type'       => 'press',
+  'post_type'       => array('research','press'),
   'posts_per_page'  => 4,
-  'order'           => 'DESC',
+  'order'           => 'ASC',
   'tax_query'       => $tax_terms
 ])
 
