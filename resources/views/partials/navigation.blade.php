@@ -5,7 +5,9 @@
         @foreach ($navigation as $item)
           <a @mouseenter="menu !== '{!! $item->label !!}' ? menu = '{!! $item->label !!}' : menu = null " class="flex space-x-1 items-center relative hover:underline" href="{!! $item->url !!}">
             <span>{!! $item->label!!}</span> 
-            <i width="16px" height="16px" class="text-gray-300" data-feather="chevron-down"></i>
+            @if ($item->children)
+              <i width="16px" height="16px" class="text-gray-300" data-feather="chevron-down"></i>
+            @endif
           </a>
         @endforeach
       @endif
