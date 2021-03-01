@@ -9,7 +9,7 @@
   {{-- Spacer --}}
   <div class="h-2"></div>
   {{-- Latest Research --}}
-  @include('partials.list-research',['title'=>'Recent Projects & Reports'])
+  @include('partials.list-research',['title'=>'Recent Projects & Reports', 'limit'=>4])
   {{-- Spacer --}}
   <div class="h-0 md:h-12 xl:h-20"></div>
   {{-- Voting Rights Project Banner --}}

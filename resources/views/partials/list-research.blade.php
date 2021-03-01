@@ -2,9 +2,13 @@
   @set($ids,'')
 @endempty
 
+@empty($limit)
+  @set($limit,'4')
+@endempty
+
 @query([
   'post_type'       => array('research','press','event'),
-  'posts_per_page'  => -1,
+  'posts_per_page'  => $limit,
   'orderby'         => 'menu_order', 
   'order'           => 'ASC',
   'post__in'        => $ids
