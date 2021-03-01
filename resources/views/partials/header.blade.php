@@ -60,11 +60,11 @@
     if ( (distance <= 0) && !stuck) {
       h.style.position = 'fixed';
       h.style.top = '0px';
-      h.classList.add('bg-white', 'text-gray-600');
+      h.classList.add('bg-white', 'text-gray-600', 'shadow');
       stuck = true;
     } else if (stuck && (offset <= stickPoint)){
       h.style.position = 'relative';
-      h.classList.remove('bg-white', 'text-gray-600');
+      h.classList.remove('bg-white', 'text-gray-600', 'shadow');
       stuck = false;
     }
   }
