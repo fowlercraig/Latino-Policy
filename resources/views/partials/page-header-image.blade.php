@@ -1,4 +1,4 @@
-@if(!is_tax('role'))
+@if(!is_tax('role') && !is_archive())
   @if(get_the_post_thumbnail())
     <div class="md:pt-12 md:-mt-12 bg-brand-dark relative h-32 md:h-header">
       <div class="h-px bg-white opacity-10 relative z-10"></div>
