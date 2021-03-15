@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const tailwindJit = require("@tailwindcss/jit");
 require('@tinypixelco/laravel-mix-wp-blocks');
 
 /*
@@ -21,7 +22,9 @@ mix
   .sass('resources/styles/editor.scss', 'styles')
   .options({
     processCssUrls: false,
-    postCss: [require('tailwindcss')],
+    postCss: [
+      tailwindJit,
+    ],
   });
 
 mix

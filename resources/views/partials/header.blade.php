@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <div id="header" class="hidden md:block relative w-full">
+  <div id="header" class="hidden md:block relative w-full transition-all duration-200 ease">
     @include('partials.navigation')
   </div>
 </header>

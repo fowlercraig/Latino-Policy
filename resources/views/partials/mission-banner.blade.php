@@ -1,5 +1,5 @@
 @set($title, get_field('mission_eyebrow'))
-@set($desc,get_field('mission_content'))
+@set($desc, get_field('mission_content'))
 
 <section class="bg-brand-darker pt-6 md:pt-12 xl:pt-20 overflow-hidden">
   <div class="container">
