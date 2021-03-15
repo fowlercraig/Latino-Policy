@@ -1,5 +1,6 @@
 <div 
   x-show="subscribe"
+  x-cloak
   x-description="Flyout menu, show/hide based on flyout menu state."
   x-transition:enter="ease-out duration-300"
   x-transition:enter-start="opacity-0"

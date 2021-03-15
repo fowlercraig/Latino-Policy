@@ -6,9 +6,9 @@
     'orderby'        => 'menu_order',
     'tax_query'      => array(
       array(
-        'taxonomy' => 'role',
-        'terms'    => 'expert',
-        'operator' => 'IN' //Or 'AND' or 'NOT IN'
+        'taxonomy'   => 'role',
+        'field'      => 'slug',
+        'terms'      => 'experts',
       )
     )
   ));

@@ -22,8 +22,8 @@
   <div class="h-5 md:h-12 xl:h-20"></div>
   {{-- Donation Banner --}}
   @include('partials.banner-donate',[
-    'title' =>'Join Us in Expanding <br> Opportunity for All Americans',
-    'desc'  =>'<p>Your gift will help us inform meaningful policy change that improves the economic, political, and social landscape for Latinos and other communities of color.</p>'
+    'title' => get_field('donate_eyebrow'),
+    'desc'  => get_field('donate_content')
   ])
   {{-- Subscribe Popup --}}
   @include('partials.modal-subscribe')

@@ -1,6 +1,6 @@
 <div 
   id="dropdown-{!! $item->label !!}"  
-  x-show="menu === '{!! $item->label !!}'"
+  x-show="menu === '{!! $item->label !!}'" x-cloak
   x-description="Flyout menu, show/hide based on flyout menu state."> 
   <div class="py-6 md:py-10 grid grid-cols-2 gap-4 md:gap-6">
     <div class="space-y-4">

@@ -19,7 +19,7 @@
       <div class="h-3 bg-brand-lightest"></div>
     </div>
   
-    <div class="space-y-10">
+    <div class="immersive space-y-10">
       @layouts('sections_sections')
         
         @layout('text_area')
@@ -31,12 +31,21 @@
         @endlayout
 
         @layout('pullquote')
-          <div class="container">
-            <div class="prose mx-auto max-w-screen-md">
-              <blockquote>@sub('quote')</blockquote>
-              <span>@sub('attribution')</span>
+          <div class="prose mx-auto max-w-screen-md">
+            <div class="bg-brand-lightest p-6">
+              <blockquote class="tracking-tighter font-bold text-4xl font-primary-a uppercase">"@sub('quote')"</blockquote>
+              <span>— @sub('attribution')</span>
             </div>
           </div>
+          @style
+            .immersive blockquote {
+              color: #003c5f;
+              margin: 0;
+              font-style: normal;
+              padding: 0;
+              border: 0;
+            }
+          @endstyle
         @endlayout
 
         @layout('gallery')

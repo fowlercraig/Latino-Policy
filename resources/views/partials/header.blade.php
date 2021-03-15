@@ -34,7 +34,7 @@
           <span class="opacity-30">|</span>
           <a @click.prevent="subscribe = true" class="hover:underline" href="#">Subscribe</a>
         </div>
-        <button class="p-2 px-4 text-sm lg:text-base bg-brand text-white rounded font-medium">Make a Donation</button>
+        <button class="p-2 px-4 text-sm lg:text-base bg-brand border border-brand hover:bg-brand-dark transition ease duration-300 text-white rounded font-medium">Make a Donation</button>
       </div>
     </div>
   </div>

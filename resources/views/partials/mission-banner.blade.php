@@ -1,5 +1,5 @@
-@set($title, get_bloginfo('description'))
-@set($desc,'<p>The UCLA Latino Policy & Politics Initiative addresses the most critical domestic policy challenges facing Latinos and other communities of color through research, advocacy, mobilization, and leadership development to expand genuine opportunity for all Americans.</p>')
+@set($title, get_field('mission_eyebrow'))
+@set($desc,get_field('mission_content'))
 
 <section class="bg-brand-darker pt-6 md:pt-12 xl:pt-20 overflow-hidden">
   <div class="container">

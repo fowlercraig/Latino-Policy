@@ -1,6 +1,7 @@
 @query([
   'post_type'       => array('research'),
-  'posts_per_page'  => 1,
+  'post__in'        => get_field('carousel_carousel'),
+  'posts_per_page'  => -1,
   'order'           => 'DESC',
 ])
 

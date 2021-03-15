@@ -1,4 +1,4 @@
-<div class="relative" x-data="{ mobile: false }">
+<div class="relative" x-data="{ mobile: false }" x-cloak>
   <button @click="mobile = !mobile" class="block md:hidden bg-gray-100 rounded h-10 w-10 flex items-center justify-center">
     <div :class="{ 'hidden': mobile, 'block': !mobile }"><i stroke-width="1px" data-feather="menu"></i></div>
     <div :class="{ 'block': mobile, 'hidden': !mobile }"><i stroke-width="1px" data-feather="x"></i></div>
