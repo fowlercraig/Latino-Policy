@@ -56,14 +56,15 @@
             "section_toggle" =>  "true",
         ),
         array(
-            "key"           =>  "meta",
-            "field_type"    =>  "radio",
-            "meta_key"      =>  "people",
-            "meta_operator" =>  "IN",
-            "meta_type"     =>  "CHAR",
-            "title"         =>  "Experts",
-            "values"        =>  $values,
-            "section_toggle" =>  "true",
+            "key"               =>  "meta",
+            "field_type"        =>  "radio",
+            "meta_key"          =>  "people",
+            "meta_operator"     =>  "LIKE",
+            "meta_type"         =>  "CHAR",
+            "acf"               =>  true,
+            "title"             =>  "Experts",
+            "values"            =>  $values,
+            "section_toggle"    =>  "true",
         )
     ),
   );
