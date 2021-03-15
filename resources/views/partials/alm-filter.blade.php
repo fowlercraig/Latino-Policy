@@ -50,7 +50,7 @@
       ),
       array(
         "key"               =>  "meta",
-        "field_type"        =>  "radio",
+        "field_type"        =>  "select",
         "meta_key"          =>  "contributors",
         "meta_operator"     =>  "LIKE",
         "meta_type"         =>  "CHAR",
