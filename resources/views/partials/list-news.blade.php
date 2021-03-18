@@ -33,9 +33,10 @@
 @endempty
 
 @query([
-  'post_type'       => array('research','press'),
+  ##'post_type'       => array('research','press'),
+  'post_type'       => array('press'),
   'posts_per_page'  => 4,
-  'order'           => 'ASC',
+  'order'           => 'DESC',
   'tax_query'       => $tax_terms
 ])
 
