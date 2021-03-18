@@ -68,6 +68,9 @@ module.exports = {
           },
         },
       }),
+      fontSize: {
+        'nav': '1.0525rem',
+      },
       colors: {
         'brand': {
           DEFAULT: '#2774AE',
@@ -83,6 +86,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        'karbon': ['Karbon','Inter var', ...defaultTheme.fontFamily.sans],
         'primary-a': ['aktiv-grotesk-condensed','Inter var', ...defaultTheme.fontFamily.sans],
         'primary-b': ['Primary-B','Inter var', ...defaultTheme.fontFamily.sans],
         'primary-c': ['Primary-C','Inter var', ...defaultTheme.fontFamily.sans],

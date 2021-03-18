@@ -24,6 +24,13 @@
   src: url('../fonts/lppi-font-c.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Karbon';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/karbon-medium-webfont.woff') format('woff');
+}
+
 .widget .menu .menu-item:before {
   @apply bg-brand-dark opacity-25;
 }

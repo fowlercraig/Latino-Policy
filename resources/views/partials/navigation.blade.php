@@ -1,11 +1,11 @@
 <div class="container">
   <div class="h-12 flex items-center justify-between">
-    <ul class="nav-primary flex items-center text-sm font-primary-c uppercase tracking-wider">
+    <ul class="nav-primary flex items-center">
       @if ($navigation)
         @foreach ($navigation as $item)
           <li class="group" @mouseenter="menu=true " @mouseleave="menu = null">
             <a class="first:pl-0 px-3 lg:px-4 block flex space-x-1 items-center relative hover:underline" href="{!! $item->url !!}">
-              <span>{!! $item->label!!}</span> 
+              <span class="text-sm font-karbon text-nav uppercase tracking-wider">{!! $item->label!!}</span> 
               @if ($item->children)
                 <i width="16px" height="16px" class="text-gray-300" data-feather="chevron-down"></i>
               @endif
