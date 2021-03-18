@@ -5,7 +5,7 @@
   @set($modalState, 'true')
 @endif
 
-<div x-data="{ subscribe: {{ $modalState }} }">
+<div x-data="{ subscribe: {{ $modalState }}, menu: null }" @keydown.window.escape="menu = false" @mouseleave="setTimeout(() => menu = false, 100)">
 
   <a class="sr-only focus:not-sr-only" href="#main">
     {{ __('Skip to content') }}

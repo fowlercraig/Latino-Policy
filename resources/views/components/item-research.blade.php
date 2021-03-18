@@ -1,6 +1,6 @@
-<article class="overflow-hidden text-white" data-aos="fade-up">
-  <div class="aspect-w-4 aspect-h-3 md:aspect-w-21 md:aspect-h-9 lg:aspect-w-4 lg:aspect-h-3 bg-black relative">
-    <div class="absolute inset-0 opacity-50">
+<article class="text-white bg-black" data-aos="fade-up">
+  <div class="aspect-w-4 aspect-h-3 md:aspect-w-21 md:aspect-h-9 lg:aspect-w-4 lg:aspect-h-3 bg-black relative transform transition ease-in-out duration-500 hover:-translate-y-1 group">
+    <div class="absolute inset-0 opacity-50 group-hover:opacity-25 transition ease-in-out duration-500">
       @if(get_the_post_thumbnail())
         <img src="@thumbnail('full', false)" alt="@title" class="w-full h-full object-cover" />
       @else
