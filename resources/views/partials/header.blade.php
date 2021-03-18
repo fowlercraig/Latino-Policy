@@ -29,12 +29,14 @@
             :class="{ 'text-gray-600': menu, 'text-gray-600': !menu }"
           @endif
           >
-          <a class="hover:underline" href="/research">Research Library</a>
           <a class="hover:underline" href="/press">Press Archive</a>
+          <a class="hover:underline" href="/research">Research Library</a>
           <span class="opacity-30">|</span>
-          <a @click.prevent="subscribe = true" class="hover:underline" href="#">Subscribe</a>
+          <button @click.prevent="subscribe = true" class="hover:underline">Subscribe</button>
         </div>
-        <button class="p-2 px-4 text-sm lg:text-base bg-brand border border-brand hover:bg-brand-dark transition ease duration-300 text-white rounded font-medium">Make a Donation</button>
+        <div x-data="{ donateMenu:false }" class="relative">
+          @include('components/donate-menu')
+        </div>
       </div>
     </div>
   </div>
