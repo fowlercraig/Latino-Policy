@@ -10,7 +10,7 @@
           {!!$desc!!}
         </div>
       </div>
-      <div>
+      <div class="space-y-2">
         <ul class="grid grid-cols-2 md:grid-cols-4 gap-2">
           @set($numbers, array(10, 25, 50, 100, 250, 500, 750, 1000))
           @foreach($numbers as $number)
@@ -22,6 +22,9 @@
             </li>
           @endforeach
         </ul>
+        <div class="text-right">
+          <a target="_blank" href="https://giving.ucla.edu/campaign/?amount=''&OrgType=S&OrgNum=800&fund=63922O" class="inline-block p-2 px-4 text-sm lg:text-base bg-brand border border-brand hover:bg-brand-dark transition ease duration-300 text-white rounded font-medium">Make a Donation</a>
+        </div>
       </div>
     </div>
   </div>
