@@ -4,8 +4,9 @@
 
 <footer class="content-info text-gray-600 py-4 md:py-12 xl:py-20">
   <div class="container bg-brand-lightest md:flex py-4 md:py-12 xl:py-20">
-    <div class="space-y-4 w-full md:w-1/3 flex-none pt-4">
-      <p class="font-bold font-primary-a text-brand-dark uppercase tracking-tighter text-3xl leading-7">
+    <div class="space-y-4 w-full md:w-1/3 flex-none">
+      @svg('images/Bxd_Blk_LPPI_Luskin_D.svg', 'h-10 sm:h-10 w-auto', ['aria-label' => $siteName])
+      <p class="font-bold font-primary-a text-brand-dark uppercase tracking-tighter text-3xl">
         {{ bloginfo('description') }}
       </p>
       @if (has_nav_menu('social_navigation'))
@@ -21,7 +22,7 @@
         </ul>
       @endif
     </div>
-    <div class="w-full md:border-l md:pl-10 grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 xl:gap-10">
+    <div class="w-full md:pl-10 grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 xl:gap-10">
       @php(dynamic_sidebar('sidebar-footer'))
     </div>
   </div>

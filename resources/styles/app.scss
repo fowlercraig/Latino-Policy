@@ -31,8 +31,22 @@
   src: url('../fonts/karbon-medium-webfont.woff') format('woff');
 }
 
+.widget .menu .menu-item {
+  @apply pl-0 text-gray-600 my-0;
+}
+
 .widget .menu .menu-item:before {
-  @apply bg-brand-dark opacity-25;
+  @apply hidden;
+}
+
+.widget .menu .menu-item a,
+.widget p a {
+  @apply font-normal text-current transition ease duration-300;
+}
+
+.widget .menu .menu-item a:hover,
+.widget p a:hover {
+  @apply font-normal text-brand-darker underline;
 }
 
 .entry-content a {

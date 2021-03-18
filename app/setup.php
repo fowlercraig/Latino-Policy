@@ -181,7 +181,7 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget prose text-sm %1$s %2$s">',
+        'before_widget' => '<section class="widget leading-normal border-l border-brand-darker border-opacity-5 pl-4 md:pl-6 xl:pl-10 prose text-sm %1$s %2$s">',
         'after_widget' => '</section>',
         'before_title' => '<h4 class="text-brand-dark">',
         'after_title' => '</h4>'
