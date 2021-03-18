@@ -1,4 +1,4 @@
-<button @click="donateMenu = !donateMenu" class="p-2 px-4 text-sm lg:text-base bg-brand border border-brand hover:bg-brand-dark transition ease duration-300 text-white rounded font-medium">Make a Donation</button>
+<button @mouseenter="donateMenu = !donateMenu" class="p-2 px-4 text-sm lg:text-base bg-brand border border-brand hover:bg-brand-dark transition ease duration-300 text-white rounded font-medium">Make a Donation</button>
 
 <div 
   x-show="donateMenu" x-cloak 

@@ -1,4 +1,4 @@
-<div x-data="{ subscribe: false, menu: null }" @keydown.window.escape="menu = false" @mouseleave="setTimeout(() => menu = false, 100)">  
+<div x-data="{ subscribe: false, menu: null }" @keydown.window.escape="menu = false">  
 
   <a class="sr-only focus:not-sr-only" href="#main">
     {{ __('Skip to content') }}
