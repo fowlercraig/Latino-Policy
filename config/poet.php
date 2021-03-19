@@ -15,7 +15,7 @@ return [
     'post' => [
         'event' => [
             'enter_title_here' => 'Enter Event title',
-            ##'menu_icon' => 'dashicons-images-alt',
+            'menu_icon' => 'dashicons-images-alt',
             'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
             'show_in_rest' => true,
             'has_archive' => true,
@@ -26,7 +26,7 @@ return [
         ],
         'people' => [
             'enter_title_here' => 'Enter Name',
-            ##'menu_icon' => 'dashicons-art',
+            'menu_icon' => 'dashicons-admin-users',
             'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
             'show_in_rest' => true,
             'has_archive' => true,
@@ -35,9 +35,9 @@ return [
                 'plural' => 'People',
             ],
         ],
-        'press' => [
+        'pressss' => [
             'enter_title_here' => 'Enter Press name',
-            ##'menu_icon' => 'dashicons-media-spreadsheet',
+            'menu_icon' => 'dashicons-media-spreadsheet',
             'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
             'show_in_rest' => true,
             'has_archive' => true,
@@ -48,7 +48,7 @@ return [
         ],
         'research' => [
             'enter_title_here' => 'Enter Research name',
-            ##'menu_icon' => 'dashicons-media-spreadsheet',
+            'menu_icon' => 'dashicons-media-spreadsheet',
             'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
             'show_in_rest' => true,
             'has_archive' => true,
@@ -72,23 +72,41 @@ return [
     'taxonomy' => [
         'section' => [
             'links' => ['event'],
-            'meta_box' => 'radio',
+            'meta_box' => 'dropdown',
             'dashboard_glance' => true,
+            'labels' => [
+                'singular' => 'Section',
+                'plural' => 'Section',
+            ],
         ],
         'resource' => [
             'links' => ['event','press','research'],
-            'meta_box' => 'radio',
+            'meta_box' => 'dropdown',
             'dashboard_glance' => true,
+            'slug' => 'resource',
+            'labels' => [
+                'singular' => 'Resource',
+                'plural' => 'Resource',
+            ],
         ],
         'issue' => [
             'links' => ['event','press','research','people'],
-            'meta_box' => 'radio',
+            'meta_box' => 'dropdown',
+            'public' => true,
             'dashboard_glance' => true,
+            'labels' => [
+                'singular' => 'Issue',
+                'plural' => 'Issue',
+            ],
         ],
         'role' => [
             'links' => ['people'],
-            'meta_box' => 'radio',
+            'meta_box' => 'dropdown',
             'dashboard_glance' => true,
+            'labels' => [
+                'singular' => 'Role',
+                'plural' => 'Role',
+            ],
         ],
     ],
 
