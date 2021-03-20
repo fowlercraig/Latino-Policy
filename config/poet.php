@@ -35,7 +35,7 @@ return [
                 'plural' => 'People',
             ],
         ],
-        'pressss' => [
+        'press' => [
             'enter_title_here' => 'Enter Press name',
             'menu_icon' => 'dashicons-media-spreadsheet',
             'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
@@ -72,7 +72,7 @@ return [
     'taxonomy' => [
         'section' => [
             'links' => ['event'],
-            'meta_box' => 'dropdown',
+            'meta_box' => 'radio',
             'dashboard_glance' => true,
             'labels' => [
                 'singular' => 'Section',

@@ -27,12 +27,22 @@
   $filter_array = array(
     "id" =>  "filter_types",
     "style" =>  "change",
+    "reset_button" =>  true,
     "date_created" =>  1613608253,
     "date_modified" =>  1613609191,
     "filters" =>  array(
       array(
         "key"               =>  "taxonomy",
-        "field_type"        =>  "checkbox",
+        "field_type"        =>  "radio",
+        "taxonomy"          =>  "section",
+        "taxonomy_operator" =>  "IN",
+        "section_toggle"    =>  "true",
+        "title"             =>  "Work",
+        "classes"           =>  "text-sm"
+      ),
+      array(
+        "key"               =>  "taxonomy",
+        "field_type"        =>  "radio",
         "taxonomy"          =>  "resource",
         "taxonomy_operator" =>  "IN",
         "section_toggle"    =>  "true",
@@ -41,7 +51,7 @@
       ),
       array(
         "key"               =>  "taxonomy",
-        "field_type"        =>  "checkbox",
+        "field_type"        =>  "radio",
         "taxonomy"          =>  "issue",
         "taxonomy_operator" =>  "IN",
         "title"             =>  "Issues",

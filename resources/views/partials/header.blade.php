@@ -29,7 +29,7 @@
             :class="{ 'text-gray-600': menu, 'text-gray-600': !menu }"
           @endif
           >
-          <a class="hover:underline" href="/press">Press Archive</a>
+          <a class="hover:underline" href="/press-archive">Press Archive</a>
           <a class="hover:underline" href="/research">Research Library</a>
           <span class="opacity-30">|</span>
           <button @click.prevent="subscribe = true" class="hover:underline">Subscribe</button>

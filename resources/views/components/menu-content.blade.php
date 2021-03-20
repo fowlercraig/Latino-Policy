@@ -1,4 +1,4 @@
-<div id="dropdown-{!! $item->label !!}"> 
+
   <div class="container py-6 md:py-10 grid grid-cols-2 gap-4 md:gap-6">
     <div class="space-y-4">
       <div class="prose md:prose-lg lg:prose-xl max-w-full">
@@ -15,14 +15,19 @@
         ])
       </div>
     </div>
-    <div>
+    <div class="pt-2">
       <ul class="grid grid-cols-2 gap-2 md:gap-4">
         @foreach ($item->children as $child)
           <li class="block my-child-item {{ $child->classes ?? '' }} {{ $child->active ? 'active' : '' }}">
-            <a href="{{ $child->url }}" class="block p-6 bg-gray-100 hover:bg-gray-200">{!! $child->label !!}</a>
+            <a href="{{ $child->url }}" class="font-medium text-brand-dark block flex border rounded items-center hover:shadow-xl transition ease duration-500">
+              <div class="w-20 flex-none">
+                @set($image,get_field('icon', $child->objectId))
+                @image($image, 'thumbnail', ['alt' => 'LPPI', 'class' => 'object-cover w-full h-full'])
+              </div>
+              <span class="pr-4 leading-tight">{!! $child->label !!}</span>
+            </a>
           </li>
         @endforeach
       </ul>
     </div>
   </div>
-</div>

@@ -29,6 +29,7 @@
     "style" =>  "change",
     "date_created" =>  1613608253,
     "date_modified" =>  1613609191,
+    "reset_button" =>  true,
     "filters" =>  array(
       array(
         "key"               =>  "taxonomy",

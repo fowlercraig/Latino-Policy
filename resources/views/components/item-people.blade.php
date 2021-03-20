@@ -1,6 +1,6 @@
 <a href="@permalink" class="block group space-y-2">
   <div class="aspect-w-4 aspect-h-5 bg-black transition ease relative">
-    <div class="absolute inset-0 group-hover:opacity-90 transition ease duration-500 opacity-95">
+    <div class="absolute inset-0 group-hover:opacity-75 transition ease duration-500 opacity-95">
       @image(get_post_thumbnail_id(), 'full', ['alt' => ' ', 'class' => 'object-cover w-full h-full'])
     </div>
   </div>

@@ -11,7 +11,7 @@
               @endif
             </a>
             @if ($item->children)
-              <div class="bg-white p-6 absolute text-black inset-x-0 hidden invisible opacity-0 transition ease duration-500 group-hover:block group-hover:visible group-hover:opacity-100">
+              <div class="bg-white p-6 absolute text-black border-b inset-x-0 hidden invisible opacity-0 transition ease duration-500 group-hover:block group-hover:visible group-hover:opacity-100">
                 @include('components.menu-content')
               </div>
             @endif
