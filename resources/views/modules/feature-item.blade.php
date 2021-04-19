@@ -1,4 +1,10 @@
-<a class="block group" href="@php echo get_field('publication_link')['url']; @endphp" target="blank">
+@if( get_field('publication_link')['url'] )
+  @php $link = get_field('publication_link')['url']; @endphp
+@else
+  @php $link = get_the_permalink() @endphp
+@endif
+
+<a class="block group" href="{!! $link !!}" target="blank">
   <div class="space-y-2 lg:space-y-0 lg:grid grid-cols-5 gap-12 lg:items-center">
     <div class="col-span-3 lg:order-last">
       <div class="aspect-ratio aspect-ratio--8x5 bg-gray-100 relative overflow-hidden">
