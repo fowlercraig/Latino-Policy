@@ -20,9 +20,9 @@
       <div class="space-y-4">
         @posts
           <div class="block p-4 bg-white rounded border border-gray-100 hover:shadow-xl transition ease duration-500">
-            <div class="prose md:prose-xl">
+            <div class="prose md:prose-xl space-y-4">
               <h4><a href="@permalink">@title</a></h4>
-              <div class="text-sm">@excerpt</div>
+              <div class="text-sm">{!! wp_trim_words( get_the_excerpt(), 30, '...' ) !!}</div>
               @fields('downloads')
                 <div>
                   @set($file,get_sub_field('download'))

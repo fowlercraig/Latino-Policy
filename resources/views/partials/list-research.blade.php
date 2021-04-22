@@ -1,10 +1,7 @@
-@empty($ids)
-  @set($ids,'')
-@endempty
-
-@empty($limit)
-  @set($limit,'4')
-@endempty
+@extract([
+  'ids'     => $url ?? false,
+  'limit'   => $limit ?? 4,
+])
 
 @query([
   'post_type'       => array('research','press','event'),

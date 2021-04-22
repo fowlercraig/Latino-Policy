@@ -33,6 +33,7 @@ return [
             'labels' => [
                 'singular' => 'Person',
                 'plural' => 'People',
+                'slug' => 'person'
             ],
         ],
         'press' => [

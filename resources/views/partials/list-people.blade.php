@@ -1,14 +1,9 @@
-@empty($limit)
-  @set($limit,4)
-@endempty
-
-@empty($ids)
-  @set($ids,'')
-@endempty
-
-@empty($desc)
-  @set($desc,'')
-@endempty
+@extract([
+  'limit'   => $limit ?? 4,
+  'ids'     => $ids ?? false,
+  'desc'    => $desc ?? false,
+  //'role'    => $role ?? false,
+])
 
 @empty($role)
   @set($role,'')

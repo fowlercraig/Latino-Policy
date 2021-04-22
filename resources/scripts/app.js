@@ -10,13 +10,13 @@ import './fellows';
 
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faNewspaper } from '@fortawesome/free-regular-svg-icons';
-import { faArrowAltCircleRight, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faChevronCircleRight, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faInstagram, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 $(document).ready(() => {
   feather.replace()
   // Font Awesome Initiation
-  library.add(faFacebook, faTwitter, faInstagram, faYoutube, faLinkedin, faNewspaper, faArrowAltCircleRight, faChevronCircleRight);
+  library.add(faFacebook, faTwitter, faInstagram, faYoutube, faLinkedin, faNewspaper, faArrowAltCircleRight, faEnvelope, faChevronCircleRight);
   dom.watch()
   // Animate on Scroll
   setTimeout(function(){

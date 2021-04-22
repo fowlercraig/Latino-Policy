@@ -1,7 +1,9 @@
 @set($terms, get_the_terms( $post->ID , 'issue', 'string'))
 @set($term_ids, wp_list_pluck($terms,'term_id'))
 
-@hasfields('related_people')
+
+
+{{-- @hasfields('related_people')
   @set($posts_in, get_field('related_people'))
   @set($tax_query, '')
 @else
@@ -14,15 +16,15 @@
       'operator'    => 'IN'
      ))
   @endphp
-@endhasfields
+@endhasfields --}}
 
 @query([
   'post_type'       => 'people',
   'posts_per_page'  => 4,
   'order'           => 'ASC',
-  'tax_query'       => $tax_query,
+  //'tax_query'       => $tax_query,
   'orderby'         => 'rand',
-  'post__in'        => $posts_in,
+  //'post__in'        => $posts_in,
 ])
 
 @hasposts

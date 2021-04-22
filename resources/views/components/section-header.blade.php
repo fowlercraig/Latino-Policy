@@ -1,10 +1,8 @@
-@empty($url)
-  @set($url,'')
-@endempty
-
-@empty($desc)
-  @set($desc,'')
-@endempty
+@extract([
+  'url'     => $url ?? false,
+  'desc'    => $desc ?? false,
+  'title'   => $title ?? false,
+])
 
 <section class="space-y-2">
   <div class="grid grid-cols-2 gap-4 md:gap-6 xl:gap-10">

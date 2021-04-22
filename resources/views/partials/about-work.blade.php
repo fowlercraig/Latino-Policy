@@ -18,7 +18,11 @@
       @posts
         <a href="@permalink" class="block p-4 bg-white rounded shadow-sm flex lg:items-center hover:shadow-xl transition ease duration-500">
           <div class="w-1/3 md:w-1/5 flex-none">
-            <div class="aspect-w-1 aspect-h-1 bg-brand-dark"></div>
+            <div class="aspect-w-1 aspect-h-1 relative">
+              <div class="absolute inset-0">
+                @include('components.image',['imageid'=>get_field('icon')])
+              </div>
+            </div>
           </div>
           <div class="w-full pl-4 prose md:prose-xl">
             <h4>@title</h4>

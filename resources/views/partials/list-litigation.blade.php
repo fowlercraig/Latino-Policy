@@ -1,6 +1,7 @@
-@empty($ids)
-  @set($ids,'')
-@endempty
+@extract([
+  'ids'     => $ids ?? false,
+  'title'   => $title ?? false,
+])
 
 @query([
   'post_type'       => array('research','press','event'),
