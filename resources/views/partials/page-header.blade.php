@@ -1,3 +1,4 @@
+@global($post)
 <div class="md:pt-12 md:-mt-12 bg-brand-dark">
   @include('partials.page-header-image')
   <div class="page-header text-white py-4 md:py-4">
@@ -11,7 +12,7 @@
       </div>
     </div>
   </div>
-  @if( is_archive('people') || $post->post_parent == '3709' || is_page(3709) )
+  @if( is_post_type_archive('people') || $post->post_parent == '3709' || is_page(3709) )
     @include('partials.page-header-people')
   @endif
 </div>

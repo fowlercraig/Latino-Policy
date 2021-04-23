@@ -11,7 +11,14 @@
           </div>
         </div>
         <div class="col-span-3">
-          @shortcode('[ajax_load_more css_classes="space-y-10" post_type="event, press" transition_container_classes="space-y-10" meta_relation="AND" filters="true" id="6985964360"]')
+          @shortcode('[ajax_load_more 
+            css_classes="space-y-10" 
+            post_type="event, press" 
+            theme_repeater="press.php"
+            transition_container_classes="space-y-10" 
+            meta_relation="AND" filters="true" 
+            id="6985964360"
+          ]')
         </div>
       </div>
     </div>

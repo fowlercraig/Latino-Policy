@@ -20,7 +20,15 @@
         </div>
       </div>
       <div class="col-span-3">
-        @shortcode('[ajax_load_more archive="true" css_classes="space-y-10" transition_container_classes="space-y-10" meta_relation="AND" filters="true" id="6985964360"]')
+        @shortcode('[ajax_load_more 
+          archive="true" 
+          theme_repeater="' . get_post_type() . '.php"
+          css_classes="space-y-10" 
+          transition_container_classes="space-y-10" 
+          meta_relation="AND" 
+          filters="true" 
+          id="6985964360"
+        ]')
       </div>
     </div>
   </div>
