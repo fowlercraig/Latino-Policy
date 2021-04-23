@@ -1,12 +1,25 @@
 <?php
   $issues = get_the_terms(get_the_ID(), 'issue');
   $types  = get_the_terms(get_the_ID(), 'resource');
+  $link = get_field('publication_link');
+  if($link){
+    $link = get_field('publication_link')['url'];
+    $target = "_blank";
+  } else {
+    $link = get_permalink();
+  }
 ?>
 <div class="grid grid-cols-2 gap-10 <?php if (!has_post_thumbnail()) { ?> no-img<?php } ?>">
-  <a class="block group" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+  <a class="block group" href="<?php echo $link; ?>" title="<?php the_title(); ?>">
     <div class="aspect-w-7 aspect-h-5 relative bg-brand-darker">
-      <div class="absolute inset-0 group-hover:opacity-60 transition ease duration-300">
-        <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium', array( 'class' => 'w-full h-full object-cover' ) ); }?>
+      <div class="absolute inset-0 group-hover:opacity-60 transition ease duration-300 flex items">
+        <?php if ( has_post_thumbnail() ): ?>
+          <?php the_post_thumbnail( 'medium', array( 'class' => 'w-full h-full object-cover' ) ); ?>
+        <?php else: ?>
+          <div class="text-6xl text-brand absolute inset-0 flex items-center justify-center">
+            <i class="far fa-newspaper w-full h-full object-contain"></i>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </a>
@@ -19,13 +32,13 @@
       </div>
     <?php endif; ?>
     <h3>
-      <a class="block" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+      <a class="block" href="<?php echo $link; ?>" title="<?php the_title(); ?>">
         <span class="font-bold"><?php the_title(); ?></span>
       </a>
     </h3>
     <div class="leading-snug"><?php the_excerpt(); ?></div>
     <p class="text-sm font-medium space-x-1">
-      <a class="text-brand underline" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+      <a class="text-brand underline" href="<?php echo $link; ?>" title="<?php the_title(); ?>">
         <span>Read More</span>
       </a>
       <span>|</span>

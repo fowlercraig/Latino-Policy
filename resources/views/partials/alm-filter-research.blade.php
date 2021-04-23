@@ -24,7 +24,7 @@
     );
   }
 
-  $issues = get_field('issues','option');
+  $issues = get_field('issues_research','option');
   $issue_values = [];
 
   foreach($issues as $term) { 
@@ -34,7 +34,7 @@
     );
   } 
 
-  $resources = get_field('resources','option');
+  $resources = get_field('resources_research','option');
   $resource_values = [];
 
   foreach($resources as $resource) { 

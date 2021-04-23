@@ -41,6 +41,9 @@ module.exports = {
             color: '',
             a: {
               textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline',
+              }
             },
             p: {
               color: '',
