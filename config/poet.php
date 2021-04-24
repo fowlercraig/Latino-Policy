@@ -34,7 +34,9 @@ return [
                     'taxonomy'          => 'issue'
                 ),
                 'author',
-                'date'
+                'date' => array(
+                    'default'  => 'DESC',
+                )
             )
         ],
         'press' => [
@@ -58,7 +60,9 @@ return [
                     'taxonomy'          => 'issue'
                 ),
                 'author',
-                'date'
+                'date' => array(
+                    'default'  => 'DESC',
+                )
             )
 
         ],
@@ -87,7 +91,9 @@ return [
                     'taxonomy'          => 'issue'
                 ),
                 'author',
-                'date'
+                'date' => array(
+                    'default'  => 'DESC',
+                )
             )
         ],
         'people' => [
