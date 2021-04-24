@@ -1,5 +1,13 @@
+@if(get_field('publication_link'))
+  @set($link,get_field('publication_link')['url'])
+  @set($target,'_blank')
+@else
+  @set($link,get_permalink())
+  @set($target,'_blank')
+@endif
+
 <article class="space-y-3">
-  <a href="@permalink()" class="block">
+  <a href="{!! $link !!}" class="block">
     <div class="aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 bg-brand-dark relative">
       <div class="absolute inset-0 flex items-center justify-center">
         @if(get_the_post_thumbnail())
@@ -18,7 +26,7 @@
     @include('components.button-animated',[
       'cta'=>'Read More', 
       'classes'=>'', 
-      'url'=> get_permalink()
+      'url'=> $link
     ])
   </div>
 </article>
