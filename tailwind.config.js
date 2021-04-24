@@ -42,7 +42,7 @@ module.exports = {
             a: {
               textDecoration: 'none',
               '&:hover': {
-                textDecoration: 'underline',
+                //textDecoration: 'underline',
               }
             },
             p: {

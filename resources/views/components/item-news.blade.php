@@ -7,7 +7,7 @@
 @endif
 
 <article class="space-y-3">
-  <a href="{!! $link !!}" class="block">
+  <a href="{!! $link !!}" class="block relative cursor-pointer">
     <div class="aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 bg-brand-dark relative">
       <div class="absolute inset-0 flex items-center justify-center">
         @if(get_the_post_thumbnail())
