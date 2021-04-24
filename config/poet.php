@@ -23,6 +23,23 @@ return [
                 'singular' => 'Event',
                 'plural' => 'Events',
             ],
+            'admin_cols' => array(
+                'title',
+                'section' => array(
+                    'title'             => 'Section',
+                    'taxonomy'          => 'section'
+                ),
+                'resource' => array(
+                    'title'             => 'Resource',
+                    'taxonomy'          => 'resource'
+                ),
+                'issue' => array(
+                    'title'             => 'Issue',
+                    'taxonomy'          => 'issue'
+                ),
+                'author',
+                'date'
+            )
         ],
         'people' => [
             'enter_title_here' => 'Enter Name',
@@ -35,6 +52,18 @@ return [
                 'plural' => 'People',
                 'slug' => 'person'
             ],
+            'admin_cols' => array(
+                'title',
+                'issue' => array(
+                    'title'             => 'Issue',
+                    'taxonomy'          => 'issue'
+                ),
+                'role' => array(
+                    'title'             => 'Role',
+                    'taxonomy'          => 'role'
+                ),
+                'author',
+            )
         ],
         'press' => [
             'enter_title_here' => 'Enter Press name',
@@ -46,6 +75,20 @@ return [
                 'singular' => 'Press',
                 'plural' => 'Press',
             ],
+            'admin_cols' => array(
+                'title',
+                'resource' => array(
+                    'title'             => 'Resource',
+                    'taxonomy'          => 'resource'
+                ),
+                'issue' => array(
+                    'title'             => 'Issue',
+                    'taxonomy'          => 'issue'
+                ),
+                'author',
+                'date'
+            )
+
         ],
         'research' => [
             'enter_title_here' => 'Enter Research name',
@@ -57,6 +100,19 @@ return [
                 'singular' => 'Research',
                 'plural' => 'Research',
             ],
+            'admin_cols' => array(
+                'title',
+                'resource' => array(
+                    'title'             => 'Resource',
+                    'taxonomy'          => 'resource'
+                ),
+                'issue' => array(
+                    'title'             => 'Issue',
+                    'taxonomy'          => 'issue'
+                ),
+                'author',
+                'date'
+            )
         ],
     ],
 
@@ -73,7 +129,7 @@ return [
     'taxonomy' => [
         'section' => [
             'links' => ['event'],
-            'meta_box' => 'radio',
+            'meta_box' => 'simple',
             'dashboard_glance' => true,
             'labels' => [
                 'singular' => 'Section',
@@ -82,7 +138,7 @@ return [
         ],
         'resource' => [
             'links' => ['event','press','research'],
-            'meta_box' => 'dropdown',
+            'meta_box' => 'simple',
             'dashboard_glance' => true,
             'slug' => 'resource',
             'labels' => [
@@ -92,7 +148,7 @@ return [
         ],
         'issue' => [
             'links' => ['event','press','research','people'],
-            'meta_box' => 'dropdown',
+            'meta_box' => 'simple',
             'public' => true,
             'dashboard_glance' => true,
             'labels' => [
@@ -102,7 +158,7 @@ return [
         ],
         'role' => [
             'links' => ['people'],
-            'meta_box' => 'dropdown',
+            'meta_box' => 'simple',
             'dashboard_glance' => true,
             'labels' => [
                 'singular' => 'Role',
