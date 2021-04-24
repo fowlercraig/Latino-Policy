@@ -5,17 +5,18 @@
 ])
 
 <section class="space-y-2">
-  <div class="grid grid-cols-2 gap-4 md:gap-6 xl:gap-10">
+  <div class="@if($desc) grid grid-cols-2 gap-4 md:gap-6 xl:gap-10 @endif">
     <div class="prose md:prose-2xl">
       <h2 class="text-brand-dark">{{ $title }}</h2>
     </div>
-    <div class="prose">
-      {{ $desc }}
-    </div>
+    @if($desc)
+      <div class="prose">
+        {{ $desc }}
+      </div>
+    @endif
   </div>
   @if($url)
-    @include('components.button-animated-top',[
-      'cta'     => 'Read More', 
+    @include('components.button-animated',[
       'classes' => '', 
       'url'     => $url
     ])

@@ -4,10 +4,11 @@
 ])
 
 @query([
-  'post_type'       => array('research','press','event'),
+  //'post_type'       => array('research','press','event'),
+  'post_type'       => array('research'),
   'posts_per_page'  => $limit,
-  'orderby'         => 'menu_order', 
-  'order'           => 'ASC',
+  'orderby'         => 'date', 
+  'order'           => 'DESC',
   'post__in'        => $ids
 ])
 
