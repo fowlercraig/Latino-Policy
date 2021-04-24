@@ -13,9 +13,58 @@ return [
     */
 
     'post' => [
+        'research' => [
+            'enter_title_here' => 'Enter Research name',
+            'menu_icon' => 'dashicons-media-text',
+            'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
+            'show_in_rest' => true,
+            'has_archive' => true,
+            'labels' => [
+                'singular' => 'Research',
+                'plural' => 'Research',
+            ],
+            'admin_cols' => array(
+                'title',
+                'resource' => array(
+                    'title'             => 'Resource',
+                    'taxonomy'          => 'resource'
+                ),
+                'issue' => array(
+                    'title'             => 'Issue',
+                    'taxonomy'          => 'issue'
+                ),
+                'author',
+                'date'
+            )
+        ],
+        'press' => [
+            'enter_title_here' => 'Enter Press name',
+            'menu_icon' => 'dashicons-megaphone',
+            'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
+            'show_in_rest' => true,
+            'has_archive' => true,
+            'labels' => [
+                'singular' => 'Press',
+                'plural' => 'Press',
+            ],
+            'admin_cols' => array(
+                'title',
+                'resource' => array(
+                    'title'             => 'Resource',
+                    'taxonomy'          => 'resource'
+                ),
+                'issue' => array(
+                    'title'             => 'Issue',
+                    'taxonomy'          => 'issue'
+                ),
+                'author',
+                'date'
+            )
+
+        ],
         'event' => [
             'enter_title_here' => 'Enter Event title',
-            'menu_icon' => 'dashicons-images-alt',
+            'menu_icon' => 'dashicons-calendar',
             'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
             'show_in_rest' => true,
             'has_archive' => true,
@@ -63,55 +112,6 @@ return [
                     'taxonomy'          => 'role'
                 ),
                 'author',
-            )
-        ],
-        'press' => [
-            'enter_title_here' => 'Enter Press name',
-            'menu_icon' => 'dashicons-media-spreadsheet',
-            'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
-            'show_in_rest' => true,
-            'has_archive' => true,
-            'labels' => [
-                'singular' => 'Press',
-                'plural' => 'Press',
-            ],
-            'admin_cols' => array(
-                'title',
-                'resource' => array(
-                    'title'             => 'Resource',
-                    'taxonomy'          => 'resource'
-                ),
-                'issue' => array(
-                    'title'             => 'Issue',
-                    'taxonomy'          => 'issue'
-                ),
-                'author',
-                'date'
-            )
-
-        ],
-        'research' => [
-            'enter_title_here' => 'Enter Research name',
-            'menu_icon' => 'dashicons-media-spreadsheet',
-            'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
-            'show_in_rest' => true,
-            'has_archive' => true,
-            'labels' => [
-                'singular' => 'Research',
-                'plural' => 'Research',
-            ],
-            'admin_cols' => array(
-                'title',
-                'resource' => array(
-                    'title'             => 'Resource',
-                    'taxonomy'          => 'resource'
-                ),
-                'issue' => array(
-                    'title'             => 'Issue',
-                    'taxonomy'          => 'issue'
-                ),
-                'author',
-                'date'
             )
         ],
     ],
