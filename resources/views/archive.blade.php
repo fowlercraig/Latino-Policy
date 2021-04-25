@@ -12,15 +12,14 @@
   @endif
 
   <div class="container">
-    <div class="grid grid-cols-4 gap-10">
-      <div class="filter-wrapper">
-        <div class="p-6 bg-gray-50 text-sm">
+    <div class="grid lg:grid-cols-4 gap-10">
+      <div x-data="{expand:false}" class="filter-wrapper">
+        <button @click="expand = !expand" class="py-2 px-2 bg-gray-50 text-sm rounded font-medium block md:hidden w-full text-left">Filter</button>
+        <div :class="{'block': expand, 'hidden md:block': !expand}" class="p-2 md:p-6 bg-gray-50 text-sm rounded sticky top-20 mt-1 lg:mt-0">
           @shortcode('[ajax_load_more_filters id="research_library" target="6985964360"]')
-          {{-- @set($post_type,get_queried_object())
-          @includeFirst(['partials.alm-filter-' . get_post_type(), 'partials.alm-filter'], ['id'=>6985964360]) --}}
         </div>
       </div>
-      <div class="col-span-3">
+      <div class="lg:col-span-3">
         @shortcode('[ajax_load_more 
           archive="true" 
           id="research_library"

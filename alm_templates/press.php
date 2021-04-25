@@ -9,7 +9,7 @@
     $link = get_permalink();
   }
 ?>
-<div class="grid grid-cols-2 gap-10 <?php if (!has_post_thumbnail()) { ?> no-img<?php } ?>">
+<div class="grid md:grid-cols-2 gap-4 md:gap-10 <?php if (!has_post_thumbnail()) { ?> no-img<?php } ?>">
   <a class="block group" href="<?php echo $link; ?>" title="<?php the_title(); ?>">
     <div class="aspect-w-7 aspect-h-5 relative bg-brand-darker">
       <div class="absolute inset-0 group-hover:opacity-60 transition ease duration-300 flex items">
@@ -23,7 +23,7 @@
       </div>
     </div>
   </a>
-  <div class="prose max-w-full space-y-2">
+  <div class="prose prose-sm sm:prose max-w-full space-y-2">
     <?php if($types && $issues): ?>
       <div class="bg-brand h-8 px-3 inline-flex items-center text-white space-x-1 text-xs font-medium">
         <?php if($types): ?><span class="flex-none"><?php echo $types[0]->name; ?></span><?php endif; ?>
