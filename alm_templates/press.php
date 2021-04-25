@@ -30,6 +30,10 @@
         <span>→</span>
         <?php if($issues): ?><span class="flex-none"><?php echo $issues[0]->name; ?></span><?php endif; ?>
       </div>
+    <?php else: ?>
+      <div class="bg-brand h-8 px-3 inline-flex items-center text-white space-x-1 text-xs font-medium">
+        <span class="flex-none">News &amp; Press</span>
+      </div>
     <?php endif; ?>
     <h3>
       <a class="block" href="<?php echo $link; ?>" title="<?php the_title(); ?>">

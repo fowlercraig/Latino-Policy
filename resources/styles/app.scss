@@ -3,6 +3,13 @@
 @import url(~aos/dist/aos.css);
 @import url(~tiny-slider/dist/tiny-slider.css);
 
+h3.alm-filter-section-title {
+  @apply mb-1 #{!important};
+}
+.alm-filter--item {
+  @apply rounded border-0 shadow text-sm ring-brand ring-opacity-20;
+}
+
 @font-face {
   font-family: 'Primary-A';
   font-weight: 400;

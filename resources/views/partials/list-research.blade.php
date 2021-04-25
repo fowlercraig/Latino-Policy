@@ -1,13 +1,14 @@
 @extract([
-  'ids'     => $url ?? false,
+  'ids'     => $ids ?? false,
   'limit'   => $limit ?? 4,
+  'orderby' => $orderby ?? 'date',
 ])
 
 @query([
   //'post_type'       => array('research','press','event'),
   'post_type'       => array('research'),
   'posts_per_page'  => $limit,
-  'orderby'         => 'date', 
+  'orderby'         => $orderby,
   'order'           => 'DESC',
   'post__in'        => $ids
 ])

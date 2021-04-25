@@ -15,13 +15,15 @@
     <div class="grid grid-cols-4 gap-10">
       <div class="filter-wrapper">
         <div class="p-6 bg-gray-50 text-sm">
-          @set($post_type,get_queried_object())
-          @includeFirst(['partials.alm-filter-' . get_post_type(), 'partials.alm-filter'], ['id'=>6985964360])
+          @shortcode('[ajax_load_more_filters id="research_library" target="6985964360"]')
+          {{-- @set($post_type,get_queried_object())
+          @includeFirst(['partials.alm-filter-' . get_post_type(), 'partials.alm-filter'], ['id'=>6985964360]) --}}
         </div>
       </div>
       <div class="col-span-3">
         @shortcode('[ajax_load_more 
           archive="true" 
+          id="research_library"
           theme_repeater="' . get_post_type() . '.php"
           css_classes="space-y-10" 
           transition_container_classes="space-y-10" 

@@ -4,7 +4,7 @@
     @image(get_post_thumbnail_id(), 'full', ['alt' => 'LPPI', 'class' => 'object-cover w-full h-full'])
   </div>
   <div class="relative">
-    <div class="py-12 flex items-end md:items-center">
+    <div class="pt-12 pb-16 flex items-end md:items-center">
       <div class="container">
         <div class="h-40"></div>
         <div class="md:w-2/3 space-y-4 pb-8 md:pb-0">

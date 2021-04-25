@@ -10,7 +10,7 @@
 <div class="container">
   <div class="border-4 border-brand-dark grid xl:grid-cols-2">
     @posts
-      <div class="flex space-x-4 md:space-x-6 p-4 md:p-6 transition ease duration-300 hover:bg-gray-50 group">
+      <div class="flex space-x-4 md:space-x-6 p-4 md:p-6 transition ease duration-300 hover:bg-gray-50 group relative">
         <div class="w-20 h-20 lg:h-32 lg:w-32 flex-none relative rounded bg-white shadow group-hover:shadow-2xl transform group-hover:-translate-y-1 transition ease duration-500">
           <div class="absolute inset-0">
             @set($image,get_field('icon'))
@@ -23,9 +23,11 @@
           @include('components.button-animated',[
             'cta'=> 'Learn More', 
             'classes' => '',
+            'span' => true,
             'url'=> get_permalink() 
           ])
         </div>
+        <a href="@permalink" class="block absolute inset-0"></a>
       </div>
     @endposts
   </div>

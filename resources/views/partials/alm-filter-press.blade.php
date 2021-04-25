@@ -24,6 +24,16 @@
     );
   }
 
+  $sections = get_field('work','option');
+  $sections_values = [];
+
+  foreach($sections as $term) { 
+    $sections_values[] = array(
+      'label' => $term->name,
+      'value' => $term->slug
+    );
+  } 
+
   $issues = get_field('issues','option');
   $issue_values = [];
 
@@ -51,14 +61,25 @@
     "date_created" =>  1613608253,
     "date_modified" =>  1613609191,
     "reset_button" =>  true,
+    "reset_button_label" =>  "Reset Filters",
     "filters" =>  array(
+      array(
+        "key"           =>  "taxonomy",
+        "field_type"    =>  "radio",
+        "taxonomy"      =>  "section",
+        "taxonomy_operator" =>  "IN",
+        "title"         =>  "Work",
+        //"values"        =>  $sections_values,
+        "section_toggle" =>  "true",
+      ),
       array(
         "key"           =>  "taxonomy",
         "field_type"    =>  "radio",
         "taxonomy"      =>  "resource",
         "taxonomy_operator" =>  "IN",
         "title"         =>  "Resource Types",
-        "values"        =>  $resource_values,
+        //"values"        =>  $resource_values,
+        "show_count"    =>  true,
         "section_toggle" =>  "true",
       ),
       array(
@@ -67,7 +88,8 @@
         "taxonomy"      =>  "issue",
         "taxonomy_operator" =>  "IN",
         "title"         =>  "Issues",
-        "values"        =>  $issue_values,
+        //"values"        =>  $issue_values,
+        "show_count"    =>  true,
         "section_toggle" =>  "true",
       ),
       array(
@@ -79,6 +101,7 @@
         "acf"               =>  true,
         "title"             =>  "Experts",
         "values"            =>  $experts_values,
+        "show_count"    =>  true,
         "section_toggle"    =>  "true",
       )
     )

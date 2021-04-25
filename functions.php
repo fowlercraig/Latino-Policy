@@ -37,3 +37,68 @@ function remove_posts_menu() {
 }
 add_action('admin_menu', 'remove_posts_menu');
 
+add_filter('alm_filters_press_filters_contributors', function(){ 
+
+  $values = []; 
+
+  $experts = get_posts(array(
+    'post_type'      => 'people',
+    'posts_per_page' => -1,
+    'order'          => 'ASC',
+    'orderby'        => 'menu_order',
+    'tax_query'      => array(
+      array(
+        'taxonomy'   => 'role',
+        'field'      => 'slug',
+        'terms'      => 'experts',
+      )
+    )
+  ));
+  $values = [];
+  // $values[] = array(
+  //   'label' => 'All Experts',
+  //   'value' => ''
+  // );
+  
+  foreach($experts as $expert) { 
+    $values[] = array(
+      'label' => get_the_title( $expert->ID ),
+      'value' => $expert->ID,
+    );
+  } 
+   
+  return $values; // Return values 
+});
+
+add_filter('alm_filters_research_library_contributors', function(){ 
+
+  $values = []; 
+
+  $experts = get_posts(array(
+    'post_type'      => 'people',
+    'posts_per_page' => -1,
+    'order'          => 'ASC',
+    'orderby'        => 'menu_order',
+    'tax_query'      => array(
+      array(
+        'taxonomy'   => 'role',
+        'field'      => 'slug',
+        'terms'      => 'experts',
+      )
+    )
+  ));
+  $values = [];
+  // $values[] = array(
+  //   'label' => 'All Experts',
+  //   'value' => ''
+  // );
+  
+  foreach($experts as $expert) { 
+    $values[] = array(
+      'label' => get_the_title( $expert->ID ),
+      'value' => $expert->ID,
+    );
+  } 
+   
+  return $values; // Return values 
+});

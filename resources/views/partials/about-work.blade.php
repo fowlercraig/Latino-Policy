@@ -25,7 +25,7 @@
             </div>
           </div>
           <div class="w-full pl-4 prose md:prose-xl">
-            <h4>@title</h4>
+            <h4 class="text-brand-dark">@title</h4>
             <div class="text-sm">@excerpt</div>
           </div>
         </a>

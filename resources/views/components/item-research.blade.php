@@ -1,4 +1,4 @@
-<article class="text-white bg-black relative group" data-aos="fade-up">
+<article class="text-white bg-black relative group lg:h-full lg:min-h-[400px]" data-aos="fade-up">
   <div class="bg-black relative transform transition ease-in-out duration-500 hover:-translate-y-1 h-full relative">
     <div class="absolute inset-0 opacity-50 group-hover:opacity-25 transition ease-in-out duration-500">
       @if(get_the_post_thumbnail())
