@@ -45,6 +45,10 @@ module.exports = {
                 //textDecoration: 'underline',
               }
             },
+            li: {
+              marginTop: '5px',
+              marginBottom: '5px',
+            },
             p: {
               color: '',
             },

@@ -3,13 +3,15 @@
   'ids'     => $ids ?? false,
   'desc'    => $desc ?? false,
   'role'    => $role ?? false,
+  'tax'     => $tax ?? false,
   'orderby' => $orderby ?? 'menu_order',
 ])
 
-@set($role_terms,null)
+@set($tax_terms,null)
+@set($currentPerson,null)
 
 @if($role)
-  @set($role_terms,array(
+  @set($tax_terms,array(
     array(
       'taxonomy' => 'role',
       'field' => 'slug',
@@ -18,13 +20,28 @@
   ))
 @endif
 
+@if($tax)
+  @set($tax_terms,array(
+    array(
+      'taxonomy' => 'issue',
+      'field' => 'slug',
+      'terms' => $tax,
+    )
+  ))
+@endif
+
+@if(is_singular('people'))
+  @set($currentPerson, get_the_ID())
+@endif
+
 @query([
   'post_type'       => array('people'),
   'posts_per_page'  => $limit,
   'post__in'        => $ids,
-  'order'           => 'DESC',
+  'post__not_in'    => array($currentPerson),
+  'order'           => 'ASC',
   'orderby'         => $orderby,
-  'tax_query'       => $role_terms
+  'tax_query'       => $tax_terms
 ])
 
 @hasposts

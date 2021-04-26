@@ -26,11 +26,10 @@
     </div>
   </header>
 
-  <footer>
-    <div class="container space-y-5 md:space-y-12 xl:space-y-20">
-      {{-- @include('partials.content-related') --}}
-      {{-- @include('partials.content-contributors') --}}
-    </div>
+  <footer class="space-y-5 md:space-y-12 xl:space-y-20">
+    @set($issues, get_the_terms(get_the_ID(), 'issue'))
+    @include('partials.list-research',['title'=>'Related Research & Reports', 'limit'=>-1 ])
+    @include('partials.list-people',['title'=>'Related Experts', 'limit'=> 4, 'tax'=> $issues[0]->slug ])
   </footer>
 
 </article>

@@ -75,6 +75,7 @@ return [
             'labels' => [
                 'singular' => 'Event',
                 'plural' => 'Events',
+                'slug' => 'event',
             ],
             'admin_cols' => array(
                 'title',

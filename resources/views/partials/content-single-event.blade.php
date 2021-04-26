@@ -18,9 +18,10 @@
           </h1>
         </div>
         @include('partials/entry-meta')
-        @excerpt
         @include('components.divider',['classes'=>'bg-white opacity-20'])
-        @includeFirst(['components.entry-contributors-'.get_post_type(), 'components.entry-contributors'])
+        @excerpt
+        {{-- @include('components.divider',['classes'=>'bg-white opacity-20'])
+        @includeFirst(['components.entry-contributors-'.get_post_type(), 'components.entry-contributors']) --}}
       </div>
 
     </div>
@@ -37,12 +38,11 @@
     </div>
   </div>
 
-  <footer>
-    <div class="container space-y-5 md:space-y-12 xl:space-y-20">
-      @include('components.divider')
-      @includeFirst(['partials.content-related-'.get_post_type(), 'partials.content-related'])
-      @includeFirst(['partials.content-realted-'.get_post_type(), 'partials.content-contributors'])
-    </div>
+  <footer class="space-y-5 md:space-y-12 xl:space-y-20">
+    @set($issues, get_the_terms(get_the_ID(), 'issue'))
+    @include('components.divider')
+    @include('partials.list-research',['title'=>'Related Research & Reports', 'limit'=>4, 'tax'=> $issues[0]->slug ])
+    @include('partials.list-people',['title'=>'Related Experts', 'limit'=> 4, 'tax'=> $issues[0]->slug ])
   </footer>
 
 </article>

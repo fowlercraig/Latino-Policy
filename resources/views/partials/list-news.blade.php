@@ -4,6 +4,7 @@
   'tax'       => $tax ?? false,
   'orderby'   => $orderby ?? 'date',
   'post_type' => $post_type ?? 'press',
+  'tax'       => $tax ?? false,
 ])
 
 @set($tax_terms,null)

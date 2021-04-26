@@ -1,18 +1,42 @@
 @extract([
   'ids'       => $ids ?? false,
+  'tax'       => $tax ?? false,
   'limit'     => $limit ?? 4,
   'orderby'   => $orderby ?? 'date',
   'post_type' => $post_type ?? 'research',
 ])
 
+@set($tax_terms,null)
+@set($meta_terms,null)
+
+@if($tax)
+  @set($tax_terms,array(
+    array(
+      'taxonomy'  => 'issue',
+      'field'     => 'slug',
+      'terms'     => $tax,
+    )
+  ))
+@endif
+
+@if(is_singular('people'))
+  @set($meta_terms,array(
+    array(
+      'key'     => 'contributors',
+      'value'   => '"' . get_the_ID() . '"',
+      'compare' => 'LIKE'
+    )
+  ))
+@endif
 
 @query([
-  //'post_type'       => array('research','press','event'),
   'post_type'       => $post_type,
   'posts_per_page'  => $limit,
+  'post__in'        => $ids,
+  'tax_query'       => $tax_terms,
+  'meta_query'      => $meta_terms,
   'orderby'         => $orderby,
   'order'           => 'DESC',
-  'post__in'        => $ids
 ])
 
 @hasposts
