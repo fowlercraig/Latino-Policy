@@ -26,19 +26,21 @@ $(document).ready(() => {
       once:       false,
     })
   },200);
-  var slider = tns({
-    container: '.carousel',
-    loop: true,
-    mode: 'gallery',
-    items: 1,
-    slideBy: 'page',
-    nav: false,    
-    controls: true,
-    autoplay: false,
-    speed: 400,
-    autoplayButtonOutput: false,
-    mouseDrag: true,
-    lazyload: true,
-    controlsContainer: '#carousel-controls',
-  });
+  if ( document.getElementById("carousel") ) {
+    var slider = tns({
+      container: '#carousel',
+      loop: true,
+      mode: 'gallery',
+      items: 1,
+      slideBy: 'page',
+      nav: false,    
+      controls: true,
+      autoplay: false,
+      speed: 400,
+      autoplayButtonOutput: false,
+      mouseDrag: true,
+      lazyload: true,
+      controlsContainer: '#carousel-controls',
+    });
+  }
 });

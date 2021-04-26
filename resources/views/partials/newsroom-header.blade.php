@@ -8,7 +8,7 @@
 
 <div class="bg-brand-darker text-brand-lighter pt-6 pb-12 2xl:pb-0 relative">
   <div class="container">
-    <ul class="carousel">
+    <ul id="carousel" class="carousel">
       @posts
         <li class="carousel-slide">
           <div class="grid xl:grid-cols-2 gap-4 xl:gap-10">

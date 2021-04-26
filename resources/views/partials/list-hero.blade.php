@@ -8,7 +8,7 @@
 @hasposts
   <section class="relative bg-black">
     <div class="md:-mt-40 relative">
-      <ul class="carousel">
+      <ul id="carousel" class="carousel">
         @posts
           <li>@include('components.item-hero')</li>
         @endposts
