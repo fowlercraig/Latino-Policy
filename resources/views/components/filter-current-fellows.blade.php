@@ -15,7 +15,7 @@
   <div class="mr-1">Filter</div>
   <div class="space-x-1 text-gray-400">
     <span>|</span>
-    <button class="text-brand" data-filter="*">All Fellows</button>
+    <button class="text-current" data-filter="*">All Fellows</button>
   </div>
   @foreach($years as $year)
   <div class="space-x-1 text-gray-400">
