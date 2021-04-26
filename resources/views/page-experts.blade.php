@@ -16,7 +16,7 @@
           :class="{ 'block': sidebarOpen, 'hidden': !sidebarOpen }"
           class="hidden md:block absolute md:relative bg-white shadow-lg z-20 p-4 md:p-0 md:shadow-none md:w-48 lg:w-64 flex-none md:border-r md:border-gray-100 pr-4 md:pr-6 xl:pr-10">
           <div class="md:sticky top-20">
-            @shortcode('[ajax_load_more_filters id="issues" target="6985964360"]')
+            @shortcode('[ajax_load_more_filters id="experts" target="6985964360"]')
           </div>
         </div>
         <div class="w-full">

@@ -19,9 +19,15 @@
       @foreach ($item->children as $child)
         <li class="block my-child-item {{ $child->classes ?? '' }} {{ $child->active ? 'active' : '' }}">
           <a href="{{ $child->url }}" class="font-medium text-brand-dark block flex border rounded items-center hover:shadow-xl transition ease duration-500">
-            <div class="w-20 flex-none">
-              @set($image,get_field('icon', $child->objectId))
-              @image($image, 'thumbnail', ['alt' => 'LPPI', 'class' => 'object-cover w-full h-full'])
+            @set($image,get_field('icon', $child->objectId))
+            <div class="w-20 h-20 flex-none flex items-center justify-center">
+              @if($image)
+                @image($image, 'thumbnail', ['alt' => 'LPPI', 'class' => 'object-cover w-full h-full'])
+              @else
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              @endif
             </div>
             <span class="pr-4 leading-tight">{!! $child->label !!}</span>
           </a>

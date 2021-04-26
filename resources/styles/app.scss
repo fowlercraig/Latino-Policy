@@ -3,58 +3,9 @@
 @import url(~aos/dist/aos.css);
 @import url(~tiny-slider/dist/tiny-slider.css);
 
-h3.alm-filter-section-title {
-  @apply mb-1 #{!important};
-}
-.alm-filter--item {
-  @apply rounded border-0 shadow text-sm ring-brand ring-opacity-20;
-}
-
-@font-face {
-  font-family: 'Primary-A';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/lppi-font-a.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Primary-B';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/lppi-font-b.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Primary-C';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/lppi-font-c.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Karbon';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/karbon-medium-webfont.woff') format('woff');
-}
-
-.widget .menu .menu-item {
-  @apply pl-0 text-gray-600 my-0;
-}
-
-.widget .menu .menu-item:before {
-  @apply hidden;
-}
-
-.widget .menu .menu-item a,
-.widget p a {
-  @apply font-normal text-current transition ease duration-300;
-}
-
-.widget .menu .menu-item a:hover,
-.widget p a:hover {
-  @apply font-normal text-brand-darker underline;
-}
+@import './fonts';
+@import './alm';
+@import './menu';
 
 .entry-content a {
   text-decoration: underline;

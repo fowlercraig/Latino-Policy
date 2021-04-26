@@ -2,30 +2,28 @@
   'limit'   => $limit ?? 4,
   'ids'     => $ids ?? false,
   'desc'    => $desc ?? false,
-  //'role'    => $role ?? false,
+  'role'    => $role ?? false,
+  'orderby' => $orderby ?? 'menu_order',
 ])
 
-@empty($role)
-  @set($role,'')
-  @set($role_terms,'')
-@else
-  @php
-    $role_terms = array(
-      array(
-        'taxonomy' => 'role',
-        'field' => 'slug',
-        'terms' => $role,
-      )
+@set($role_terms,null)
+
+@if($role)
+  @set($role_terms,array(
+    array(
+      'taxonomy' => 'role',
+      'field' => 'slug',
+      'terms' => $role,
     )
-  @endphp
-@endempty  
+  ))
+@endif
 
 @query([
   'post_type'       => array('people'),
   'posts_per_page'  => $limit,
   'post__in'        => $ids,
-  'order'           => 'ASC',
-  'orderby'         => 'menu_order',
+  'order'           => 'DESC',
+  'orderby'         => $orderby,
   'tax_query'       => $role_terms
 ])
 
@@ -34,8 +32,10 @@
     <div class="container space-y-6">
       @include('components.section-header',['title'=>$title, 'desc'=>$desc])
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:gap-10">
-        @posts
-          @include('components.item-people')
+        @set($i,1)
+          @posts
+            @include('components.item-people')
+          @php $i++ @endphp
         @endposts
       </div>
     </div>

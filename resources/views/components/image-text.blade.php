@@ -1,6 +1,6 @@
 <div class="xl:grid xl:grid-cols-3 gap-4 md:gap-6 xl:gap-10 xl:items-center space-y-6" data-aos="fade-up">
   <div class="col-span-2 @if($i & 1) xl:order-last @endif">
-    <div class="aspect-w-16 aspect-h-9 bg-gray-100 relative">
+    <div class="aspect-w-16 aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 2xl:aspect-w-16 2xl:aspect-h-9 bg-gray-100 relative">
       @if(get_sub_field('image'))
         @image(get_sub_field('image'), 'large', ['alt' => ' ', 'class' => 'w-full h-full object-cover object-center'])
       @endif

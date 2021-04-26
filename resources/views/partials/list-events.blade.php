@@ -1,7 +1,8 @@
 @query([
   'post_type'       => array('event'),
   'posts_per_page'  => 3,
-  'order'           => 'ASC',
+  'orderby'         => 'date',
+  'order'           => 'DESC',
 ])
 
 @hasposts

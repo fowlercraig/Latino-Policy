@@ -1,41 +1,37 @@
-@empty($tax)
-  @set($tax,'')
-  @set($tax_terms,'')
-@else
-  @php
-    $tax_terms = array(
-      array(
-        'taxonomy' => 'issue',
-        'field' => 'slug',
-        'terms' => $tax,
-      )
-    )
-  @endphp
-@endempty  
+@extract([
+  'title'     => $title ?? 'Recent News & Press',
+  'resource'  => $resource ?? false,
+  'tax'       => $tax ?? false,
+  'orderby'   => $orderby ?? 'date',
+  'post_type' => $post_type ?? 'press',
+])
 
-@empty($resource)
-  @set($resource,'')
-  @set($tax_terms,'')
-@else
-  @php
-    $tax_terms = array(
-      array(
-        'taxonomy' => 'resource',
-        'field' => 'slug',
-        'terms' => $resource,
-      )
-    )
-  @endphp
-@endempty  
+@set($tax_terms,null)
 
-@empty($title)
-  @set($title, 'Recent News & Press')
-@endempty
+@if($tax)
+  @set($tax_terms,array(
+    array(
+      'taxonomy' => 'issue',
+      'field' => 'slug',
+      'terms' => $tax,
+    )
+  ))
+@endif
+
+@if($resource)
+  @set($tax_terms,array(
+    array(
+      'taxonomy' => 'resource',
+      'field' => 'slug',
+      'terms' => $resource,
+    )
+  ))
+@endif
 
 @query([
-  ##'post_type'       => array('research','press'),
-  'post_type'       => array('press'),
+  'post_type'       => $post_type,
   'posts_per_page'  => 4,
+  'orderby'         => $orderby,
   'order'           => 'DESC',
   'tax_query'       => $tax_terms
 ])

@@ -22,7 +22,7 @@
     <nav class="nav-primary flex items-center space-x-3 lg:space-x-4 text-sm">
       @include('partials.searchform')
       @if (has_nav_menu('social_navigation'))
-        <ul class="flex items-center space-x-4 text-white">
+        <ul class="flex items-center space-x-4 text-current">
           @set($menuLocations,get_nav_menu_locations())
           @set($menuID,$menuLocations['social_navigation'])
           @set($primaryNav,wp_get_nav_menu_items($menuID))
