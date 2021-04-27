@@ -5,9 +5,7 @@
 @set($contributors, get_field('contributors'))
 
 @if($contributors)
-  @include('components.divider',['classes'=>'bg-white opacity-20'])
-  <h3 class="font-medium text-sm {{ $textColor }}">Contributors</h3>
-  <div class="grid grid-cols-2 gap-2">
+  <div class="grid grid-cols-2 gap-4">
     @foreach( $contributors as $contributor )
       <a href="@permalink($contributor)" class="flex items-center">
         @set($image, get_post_thumbnail_id($contributor))
