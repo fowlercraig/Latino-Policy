@@ -108,11 +108,8 @@
 
         @layout('full_width_image')
           <div class="py-12">
-            <div class="aspect-w-16 aspect-h-9 bg-gray-900 text-gray-500 relative">
-              <div class="absolute inset-0 flex items-center justify-center">
-                Images go here.
-              </div>
-            </div>
+            @set($image,get_sub_field('image'))
+            @include('components.image',['imageid'=>$image])
           </div>
         @endlayout
 
