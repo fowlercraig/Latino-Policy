@@ -43,4 +43,35 @@ $(document).ready(() => {
       controlsContainer: '#carousel-controls',
     });
   }
+
 });
+
+const productCatsCarouselInit = () => {
+  const productCatsSlider = document.querySelectorAll('.immersive-carousel'); // container above slider
+  productCatsSlider.forEach(sliderWrapper => {
+    const slider = sliderWrapper.querySelector('.immersive-carousel__slider'); // container with slider
+    //const navContainer = sliderWrapper.querySelector('.immersive-carousel__thumbs');
+    const controlsContainer = sliderWrapper.querySelector('.immersive-carousel__controls');
+    const catSlider = tns({
+      container: slider,
+      loop: true,
+      mode: 'gallery',
+      items: 1,
+      slideBy: 'page',
+      nav: false,    
+      controls: true,
+      autoplay: false,
+      speed: 400,
+      autoplayButtonOutput: false,
+      mouseDrag: true,
+      lazyload: true,
+      //navContainer: navContainer,
+      navAsThumbnails: true,
+      controlsContainer: controlsContainer
+    });
+  });
+};
+if (document.querySelectorAll('.immersive-carousel')) {
+  console.log('hello');
+  productCatsCarouselInit();
+}

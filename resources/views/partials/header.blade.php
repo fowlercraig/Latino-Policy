@@ -15,12 +15,6 @@
         <div :class="{ 'text-black md:text-black': menu, 'text-black md:text-white': !menu }">
           @svg('images/lppi_logo.svg', 'h-10 md:h-16 w-auto', ['aria-label' => $siteName])
         </div>
-        {{-- @if(is_front_page())
-          <div :class="{ 'hidden': menu, 'block': !menu }">@svg('images/Bxd_Blk_LPPI_Luskin_wht.svg', 'h-10 sm:h-16 w-auto', ['aria-label' => $siteName])</div>
-          <div :class="{ 'block': menu, 'hidden': !menu }">@svg('images/Bxd_Blk_LPPI_Luskin_D.svg', 'h-10 sm:h-16 w-auto', ['aria-label' => $siteName])</div>
-        @else
-          @svg('images/Bxd_Blk_LPPI_Luskin_D.svg', 'h-10 sm:h-16 w-auto', ['aria-label' => $siteName])
-        @endif --}}
       </a>
       @include('partials.sm-menu')
       <div class="hidden md:block space-y-2 text-right">

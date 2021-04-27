@@ -17,7 +17,7 @@
         <div class="container relative">
           <div class="">
             @includeFirst(['components.eyebrow-'.get_post_type(), 'components.eyebrow'])
-            <h1 class="tracking-[100%] md:tracking-[100%] xl:tracking-[100%] font-bold text-5xl md:text-7xl xl:text-8xl font-primary-a uppercase">@title</h1>
+            <h1 class="tracking-[90%] font-bold text-5xl md:text-7xl xl:text-8xl font-primary-a uppercase">@title</h1>
           </div>
         </div>
       </div>
@@ -78,10 +78,29 @@
         @endlayout
 
         @layout('gallery')
-          <div class="container py-12">
-            <div class="aspect-w-16 aspect-h-9 bg-gray-900 text-gray-500 relative">
-              <div class="absolute inset-0 flex items-center justify-center">
-                Images go here.
+          <div class="py-12 container">
+            <div class="immersive-carousel relative">
+              <div class="immersive-carousel__slider">
+                @set($images, get_sub_field('images'))
+                @foreach($images as $image)
+                  <div class="relative">
+                    @include('components.image',['imageid'=>$image])
+                  </div>
+                @endforeach
+              </div>
+              <div class="immersive-carousel__controls text-white outline-none">
+                <button class="prev absolute m-3 top-[50%] translate-y-[-50%] border-2 border-white h-10 w-10 flex items-center justify-center rounded-full left-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                  <span class="sr-only">Previous</span>
+                </button>
+                <button class="next absolute m-3 top-[50%] translate-y-[-50%] border-2 border-white h-10 w-10 flex items-center justify-center rounded-full right-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span class="sr-only">Next</span>
+                </button>
               </div>
             </div>
           </div>
