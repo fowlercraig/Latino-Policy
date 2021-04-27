@@ -16,7 +16,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>
-    <div class="w-1/3 bg-brand flex-none overflow-hidden">
+    <div class="lg:w-1/3 bg-brand flex-none overflow-hidden">
       @set($image, get_field('image','options'))
       @image($image, 'medium', ['alt' => 'LPPI Subscribe', 'class' => 'h-full w-full object-cover m-0'])
     </div>
