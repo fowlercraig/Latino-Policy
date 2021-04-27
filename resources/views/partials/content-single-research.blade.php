@@ -18,10 +18,9 @@
           </h1>
         </div>
         @include('partials/entry-meta')
-        @include('components.divider',['classes'=>'bg-white opacity-20'])
         @excerpt
-        {{-- @include('components.divider',['classes'=>'bg-white opacity-20'])
-        @includeFirst(['components.entry-contributors-'.get_post_type(), 'components.entry-contributors']) --}}
+        @includeFirst(['components.entry-contributors-'.get_post_type(), 'components.entry-contributors'])
+        @include('components.entry-downloads')
       </div>
 
     </div>
@@ -30,11 +29,9 @@
   <div class="container grid sm:grid-cols-2 gap-5 md:gap-10">
     <div class="prose entry-content max-w-full space-y-4">
       @php(the_content())
-      @include('partials.event-newsmedia')
-      @include('partials.event-downloads')
     </div>
-    <div class="">
-      @include('partials.event-gallery')
+    <div class="prose entry-content max-w-full space-y-10">
+      @include('partials.research-moreinfo')
     </div>
   </div>
 
@@ -55,5 +52,13 @@
       'tax'   => $issues[0]->slug
     ])
   </footer>
+
+{{--   <footer>
+    <div class="container space-y-5 md:space-y-12 xl:space-y-20">
+      @include('components.divider')
+      @include('partials.content-related')
+      @include('partials.content-contributors')
+    </div>
+  </footer> --}}
 
 </article>

@@ -1,6 +1,8 @@
 @set($contributors, get_field('contributors'))
 
 @if($contributors)
+  @include('components.divider',['classes'=>'bg-white opacity-20'])
+  <h3 class="font-medium text-sm text-white opacity-75">Contributors</h3>
   <div class="grid grid-cols-2 gap-2">
     @foreach( $contributors as $contributor )
       <a href="@permalink($contributor)" class="flex items-center">

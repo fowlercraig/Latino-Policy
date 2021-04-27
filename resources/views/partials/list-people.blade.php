@@ -47,7 +47,7 @@
 @hasposts
   <section>
     <div class="container space-y-6">
-      @include('components.section-header',['title'=>$title, 'desc'=>$desc])
+      @include('components.section-header')
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:gap-10">
         @set($i,1)
           @posts

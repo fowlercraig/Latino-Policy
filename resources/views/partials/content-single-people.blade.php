@@ -28,8 +28,19 @@
 
   <footer class="space-y-5 md:space-y-12 xl:space-y-20">
     @set($issues, get_the_terms(get_the_ID(), 'issue'))
-    @include('partials.list-research',['title'=>'Reports from '. get_the_title() .' ', 'url'=>'/research/?contributors='.get_the_ID().'','cta'=>'More in the Research Library', 'limit'=>6 ])
-    @include('partials.list-people',['title'=>'Related Experts', 'limit'=> 4, 'tax'=> $issues[0]->slug ])
+    @include('partials.list-research',[
+      'title' =>'Reports from '. get_the_title() .' ', 
+      'url'   =>'/research/?contributors='.get_the_ID().'',
+      'cta'   =>'More in the Research Library', 
+      'limit' =>6 
+    ])
+    @include('partials.list-people',[
+      'title' =>'Related Experts', 
+      'limit' => 4,
+      'url'   => '/people/experts/',
+      'cta'   => 'More Experts',  
+      'tax'   => $issues[0]->slug
+    ])
   </footer>
 
 </article>
