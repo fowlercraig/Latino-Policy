@@ -75,7 +75,7 @@
           @endforeach
         </ul>
         <div class="space-y-2">
-          <p>3250 Public Affairs Building<br>Los Angeles, CA 90065</p>
+          <p>3250 Public Affairs Building<br>Los Angeles, CA 90095</p>
           <p>(310) 206-8431</p>
           <p><a class="leading-6 text-gray-500 hover:text-gray-900" href="mailto:latino@luskin.ucla.edu">latino@luskin.ucla.edu</a></p>
         </div>
