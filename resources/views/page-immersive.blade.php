@@ -7,7 +7,6 @@
 
 @section('content')
   @while(have_posts()) @php(the_post())
-
     <div>
       <div class="h-[90vh] bg-brand-dark text-white flex items-end py-12 relative">
         <div class="absolute inset-0 relative">
@@ -29,7 +28,9 @@
             <span>By:</span>
             <ul class="font-medium bg-brand-lightest inline-flex space-x-1 ">
               @foreach( $contributors as $contributor )
-                <li><a class="hover:underline" href="@permalink($contributor)">@title($contributor)</a>,</li>
+                <li>
+                  <a class="hover:underline" href="@permalink($contributor)">@title($contributor)@if(!$loop->last),@endif</a>
+                </li>
               @endforeach
             </ul>
           </div>
