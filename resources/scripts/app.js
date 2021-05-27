@@ -6,6 +6,8 @@ const feather = require('feather-icons')
 import AOS from 'aos';
 import Isotope from 'isotope-layout';
 import { tns } from 'tiny-slider/src/tiny-slider'
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css'; // optional for styling
 import './fellows';
 
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
@@ -15,6 +17,7 @@ import { faFacebook, faTwitter, faInstagram, faYoutube, faLinkedin } from '@fort
 
 $(document).ready(() => {
   feather.replace()
+  tippy('[data-tippy-content]');
   // Font Awesome Initiation
   library.add(faFacebook, faTwitter, faInstagram, faYoutube, faLinkedin, faNewspaper, faArrowAltCircleRight, faEnvelope, faChevronCircleRight);
   dom.watch()
