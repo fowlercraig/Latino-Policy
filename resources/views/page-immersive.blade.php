@@ -137,14 +137,16 @@
       @endlayouts
     </div>
 
-    <div class="container">
-      <div class="max-w-screen-lg mx-auto border-t py-10 space-y-6">
-        @include('components.section-header',['title'=>'Contributors'])
-        @includeFirst(['components.entry-contributors-immersive', 'components.entry-contributors'],[
-          'textColor' => 'text-brand-dark'
-        ])
+    @if($contributors)
+      <div class="container">
+        <div class="max-w-screen-lg mx-auto border-t py-10 space-y-6">
+          @include('components.section-header',['title'=>'Contributors'])
+          @includeFirst(['components.entry-contributors-immersive', 'components.entry-contributors'],[
+            'textColor' => 'text-brand-dark'
+          ])
+        </div>
       </div>
-    </div>
+    @endif
 
     <footer class="space-y-5 md:space-y-12 xl:space-y-20 bg-brand-lightest py-5 md:py-12 xl:py-20">
       @set($issues, get_the_terms(get_the_ID(), 'issue'))
@@ -160,6 +162,13 @@
         'limit' => 4,
         'url'   => '/people/experts/',
         'cta'   => 'More Experts',  
+        'tax'   => $issues[0]->slug
+      ])
+      @include('partials.list-news',[
+        'title' =>'Related Press', 
+        'limit' => 4,
+        'url'   => '/newsroom',
+        'cta'   => 'More News',  
         'tax'   => $issues[0]->slug
       ])
     </footer>
