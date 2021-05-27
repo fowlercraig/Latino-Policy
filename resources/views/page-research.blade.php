@@ -2,7 +2,7 @@
 
 @section('content')
   @while(have_posts()) @php(the_post())
-    @include('partials.page-header')
+    
     @include('partials.list-research',[
       'title'   =>'Featured Projects & Reports', 
       'ids'     => get_field('reports'),

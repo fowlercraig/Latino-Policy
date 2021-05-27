@@ -19,7 +19,9 @@
           @include('partials.page-header-child')
         </div>
         <div class="opacity-90 text-sm sm:text-base">
-          @excerpt
+          @if(!is_post_type_archive('research'))
+            @excerpt
+          @endif
         </div>
       </div>
     </div>

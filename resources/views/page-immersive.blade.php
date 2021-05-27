@@ -40,6 +40,14 @@
   
     <div class="immersive space-y-6 container prose mx-auto max-w-none">
       @layouts('sections_sections')
+
+        @layout('authors')
+          <div class="py-12">
+            <div class="prose author-block text-brand-dark border border-brand bg-brand-dark bg-opacity-10 p-6 rounded">
+              @sub('authors')
+            </div>
+          </div>
+        @endlayout
         
         @layout('text_area')
           @sub('text_content')
@@ -156,19 +164,19 @@
         'cta'   => 'Visit the Research Library', 
         'limit' => 4,
         'tax'   => $issues[0]->slug
-        ])
-      @include('partials.list-people',[
-        'title' =>'Related Experts', 
-        'limit' => 4,
-        'url'   => '/people/experts/',
-        'cta'   => 'More Experts',  
-        'tax'   => $issues[0]->slug
       ])
       @include('partials.list-news',[
         'title' =>'Related Press', 
         'limit' => 4,
         'url'   => '/newsroom',
         'cta'   => 'More News',  
+        'tax'   => $issues[0]->slug
+      ])
+      @include('partials.list-people',[
+        'title' =>'Related Experts', 
+        'limit' => 4,
+        'url'   => '/people/experts/',
+        'cta'   => 'More Experts',  
         'tax'   => $issues[0]->slug
       ])
     </footer>
