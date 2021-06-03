@@ -5,8 +5,8 @@
 /upgrade
 
 #Plugins
-/wp-all-import-pro
-/wpai-acf-add-on
-/custom-post-type-maker
+/plugins/wp-all-import-pro
+/plugins/wpai-acf-add-on
+/plugins/custom-post-type-maker
 
 .DS_Store
