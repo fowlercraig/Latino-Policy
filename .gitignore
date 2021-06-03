@@ -4,4 +4,9 @@
 /wflogs
 /upgrade
 
+#Plugins
+/wp-all-import-pro
+/wpai-acf-add-on
+/custom-post-type-maker
+
 .DS_Store
