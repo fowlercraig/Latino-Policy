@@ -27,5 +27,4 @@
     </div>
   </div>
 </footer>
-
 <div class="hidden leading-snug aspect-w-7 aspect-h-5"></div>
