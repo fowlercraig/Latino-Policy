@@ -1,0 +1,24 @@
+// body {
+//   @apply font-sans;
+// }
+
+// .brand {
+//   @apply text-3xl font-medium text-indigo-500;
+// }
+
+// .alm-filter--title {
+//   @apply border-b border-gray-200 #{!important}
+// }
+
+// .alm-filter--item {
+//   @apply rounded;
+// }
+
+[data-tippy-content] {
+  @apply text-brand-dark border-b border-dashed border-brand-dark cursor-pointer;
+  &:after {
+    @apply text-xs;
+    content: '(i)';
+    vertical-align: super,
+  }
+}
