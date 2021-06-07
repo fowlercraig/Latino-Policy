@@ -22,3 +22,7 @@
     vertical-align: super,
   }
 }
+
+.nomargin {
+  @apply m-0 #{!important}
+}
