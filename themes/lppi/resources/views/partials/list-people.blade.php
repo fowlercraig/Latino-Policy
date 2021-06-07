@@ -1,6 +1,6 @@
 @extract([
   'limit'   => $limit ?? 4,
-  'ids'     => $ids ?? false,
+  'posts'   => $posts ?? false,
   'desc'    => $desc ?? false,
   'role'    => $role ?? false,
   'tax'     => $tax ?? false,
@@ -34,15 +34,25 @@
   @set($currentPerson, get_the_ID())
 @endif
 
-@query([
-  'post_type'       => array('people'),
-  'posts_per_page'  => $limit,
-  'post__in'        => $ids,
-  'post__not_in'    => array($currentPerson),
-  'order'           => 'ASC',
-  'orderby'         => $orderby,
-  'tax_query'       => $tax_terms
-])
+
+@if($posts)
+  @query([
+    'post_type'       => array('people'),
+    'posts_per_page'  => $limit,
+    'post__in'        => $posts,
+    'order'           => 'ASC',
+    'orderby'         => $orderby,
+  ])
+@else
+  @query([
+    'post_type'       => array('people'),
+    'posts_per_page'  => $limit,
+    'post__not_in'    => array($currentPerson),
+    'order'           => 'ASC',
+    'orderby'         => $orderby,
+    'tax_query'       => $tax_terms
+  ])
+@endif
 
 @hasposts
   <section>

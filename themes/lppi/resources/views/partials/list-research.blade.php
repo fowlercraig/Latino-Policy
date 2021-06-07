@@ -1,5 +1,5 @@
 @extract([
-  'ids'       => $ids ?? false,
+  'posts'     => $posts ?? false,
   'tax'       => $tax ?? false,
   'limit'     => $limit ?? 4,
   'orderby'   => $orderby ?? 'date',
@@ -32,7 +32,8 @@
 @query([
   'post_type'       => $post_type,
   'posts_per_page'  => $limit,
-  'post__in'        => $ids,
+  'post__in'        => $posts,
+  'post__not_in'    => array($post->ID),
   'tax_query'       => $tax_terms,
   'meta_query'      => $meta_terms,
   'orderby'         => $orderby,

@@ -36,19 +36,20 @@
   </div>
 
   <footer class="space-y-5 md:space-y-12 xl:space-y-20">
-    @set($issues, get_the_terms(get_the_ID(), 'issue'))
+    @set($issues, get_the_terms(get_the_ID(), 'issue'))    
     @include('partials.list-research',[
       'title' => 'More on '.$issues[0]->name.' ', 
       'url'   => '/research/',
       'cta'   => 'Visit the Research Library', 
-      'limit' => 4,
+      'posts' => get_field('related_research'),
       'tax'   => $issues[0]->slug
       ])
     @include('partials.list-people',[
       'title' =>'Related Experts', 
       'limit' => 4,
       'url'   => '/people/experts/',
-      'cta'   => 'More Experts',  
+      'cta'   => 'More Experts', 
+      'posts' => get_field('related_people'), 
       'tax'   => $issues[0]->slug
     ])
   </footer>
