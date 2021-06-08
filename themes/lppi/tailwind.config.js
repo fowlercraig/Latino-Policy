@@ -46,8 +46,8 @@ module.exports = {
               }
             },
             li: {
-              marginTop: '5px',
-              marginBottom: '5px',
+              marginTop: '1px',
+              marginBottom: '1px',
             },
             p: {
               color: '',
