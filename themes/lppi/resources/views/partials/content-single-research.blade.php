@@ -52,6 +52,14 @@
       'posts' => get_field('related_people'), 
       'tax'   => $issues[0]->slug
     ])
+    @include('partials.list-news',[
+      'title' =>'Related News & Press', 
+      'limit' => 4,
+      'url'   => '/press-archive',
+      'cta'   => 'More Press', 
+      'posts' => get_field('related_news'), 
+      'tax'   => $issues[0]->slug
+    ])
   </footer>
 
 {{--   <footer>

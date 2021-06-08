@@ -1,5 +1,6 @@
 @extract([
   'title'     => $title ?? 'Recent News & Press',
+  'posts'     => $posts ?? false,
   'resource'  => $resource ?? false,
   'tax'       => $tax ?? false,
   'orderby'   => $orderby ?? 'date',
@@ -32,6 +33,7 @@
 @query([
   'post_type'       => $post_type,
   'posts_per_page'  => 4,
+  'post__in'        => $posts,
   'orderby'         => $orderby,
   'order'           => 'DESC',
   'tax_query'       => $tax_terms
